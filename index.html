@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Casa Vacanze - Sunshine Apartment</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159897;
+            --accent-color: #f2a154;
+            --bg-color: #f7f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+            --text-muted: #7f8c8d;
+            --radius: 12px;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* HEADER & LANG SWITCHER */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .lang-switcher {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid white;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* CONTAINER & CARDS */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 8px;
+        }
+
+        /* ACCESS HIGHLIGHTS (WIFI & CODE) */
+        .highlight-box {
+            background-color: #eef8f8;
+            border-left: 4px solid var(--secondary-color);
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .highlight-title {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .highlight-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .btn-copy {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        /* BUTTONS & LINKS */
+        .btn-action {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .btn-action:hover {
+            background-color: #13485d;
+        }
+
+        /* LISTS & GRID */
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .grid-item {
+            background: var(--bg-color);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .grid-item h3 {
+            font-size: 0.95rem;
+            color: var(--primary-color);
+        }
+
+        .grid-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLanguage('it')">IT</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <h1 id="app-title">Sunshine Apartment</h1>
+        <p id="app-subtitle">Benvenuto a bordo! La tua guida di soggiorno.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- ACCESSO E WI-FI -->
+        <div class="card">
+            <h2 id="sec-access-title">🔑 Accesso e Wi-Fi</h2>
+            
+            <div class="highlight-box">
+                <div>
+                    <div class="highlight-title" id="lbl-door-code">Codice Porta</div>
+                    <div class="highlight-value" id="door-code">1234#</div>
+                </div>
+                <button class="btn-copy" onclick="copyToClipboard('1234#')" id="btn-copy-door">Copia</button>
+            </div>
+
+            <div class="highlight-box">
+                <div>
+                    <div class="highlight-title" id="lbl-wifi-name">Rete Wi-Fi</div>
+                    <div class="highlight-value">Sunshine_Guest</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div>
+                    <div class="highlight-title" id="lbl-wifi-pass">Password Wi-Fi</div>
+                    <div class="highlight-value" id="wifi-pass">Welcome2026!</div>
+                </div>
+                <button class="btn-copy" onclick="copyToClipboard('Welcome2026!')" id="btn-copy-wifi">Copia</button>
+            </div>
+        </div>
+
+        <!-- POSIZIONE E INDIRIZZO -->
+        <div class="card">
+            <h2 id="sec-location-title">📍 Indirizzo e Mappa</h2>
+            <p><strong>Casa Vacanze Sunshine</strong></p>
+            <p id="address-text">Via Roma 123, 00100 Roma (RM)</p>
+            <a href="https://maps.google.com" target="_blank" class="btn-action" id="btn-maps">Apri in Google Maps</a>
+        </div>
+
+        <!-- REGOLE DELLA CASA -->
+        <div class="card">
+            <h2 id="sec-rules-title">📋 Regole della Casa</h2>
+            <ul class="info-list">
+                <li id="rule-1">🚭 Vietato fumare all'interno dell'appartamento.</li>
+                <li id="rule-2">🔇 Rispettare il silenzio dalle 22:00 alle 08:00.</li>
+                <li id="rule-3">🔑 Check-out entro le ore 10:00.</li>
+            </ul>
+        </div>
+
+        <!-- SMALTIMENTO RIFIUTI -->
+        <div class="card">
+            <h2 id="sec-trash-title">♻️ Gestione Rifiuti</h2>
+            <p id="trash-desc" style="margin-bottom: 10px;">Segui la raccolta differenziata. I bidoni principali si trovano in strada a 50m a destra dell'ingresso.</p>
+            <div class="grid-2">
+                <div class="grid-item">
+                    <h3 id="trash-org">Organico</h3>
+                    <p id="trash-org-days">Contenitore Marrone</p>
+                </div>
+                <div class="grid-item">
+                    <h3 id="trash-paper">Carta/Plastica</h3>
+                    <p id="trash-paper-days">Contenitori Giallo e Blu</p>
+                </div>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn-action" style="background-color: var(--secondary-color);" id="btn-trash-map">Mappa Centro di Raccolta</a>
+        </div>
+
+        <!-- SERVIZI UTILI E EMERGENZE -->
+        <div class="card">
+            <h2 id="sec-contacts-title">📞 Contatti e Servizi Utili</h2>
+            <ul class="info-list">
+                <li><strong>Emergenze (Polizia/Ambulanza):</strong> 112</li>
+                <li><strong id="lbl-doctor">Guardia Medica:</strong> +39 06 123456</li>
+                <li><strong id="lbl-host">Host (Mario):</strong> +39 333 1234567</li>
+                <li><strong>Taxi:</strong> +39 06 6645</li>
+            </ul>
+        </div>
+
+        <!-- RISTORANTI E ATTRAZIONI -->
+        <div class="card">
+            <h2 id="sec-guide-title">🍽️ Consigli Locali</h2>
+            <ul class="info-list">
+                <li>
+                    <strong>Trattoria da Gino</strong><br>
+                    <small id="rest-1-desc">Cucina tipica locale a 2 minuti a piedi.</small>
+                </li>
+                <li>
+                    <strong>Museo Civico</strong><br>
+                    <small id="sight-1-desc">Aperto Mar-Dom 09:00-19:00.</small>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <p id="footer-text">Buon soggiorno! Per qualsiasi necessità contattaci via WhatsApp.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        /* DIZIONARIO TRADUZIONI */
+        const translations = {
+            it: {
+                "app-subtitle": "Benvenuto a bordo! La tua guida di soggiorno.",
+                "sec-access-title": "🔑 Accesso e Wi-Fi",
+                "lbl-door-code": "Codice Porta",
+                "lbl-wifi-name": "Rete Wi-Fi",
+                "lbl-wifi-pass": "Password Wi-Fi",
+                "btn-copy-door": "Copia",
+                "btn-copy-wifi": "Copia",
+                "sec-location-title": "📍 Indirizzo e Mappa",
+                "btn-maps": "Apri in Google Maps",
+                "sec-rules-title": "📋 Regole della Casa",
+                "rule-1": "🚭 Vietato fumare all'interno dell'appartamento.",
+                "rule-2": "🔇 Rispettare il silenzio dalle 22:00 alle 08:00.",
+                "rule-3": "🔑 Check-out entro le ore 10:00.",
+                "sec-trash-title": "♻️ Gestione Rifiuti",
+                "trash-desc": "Segui la raccolta differenziata. I bidoni principali si trovano in strada a 50m a destra dell'ingresso.",
+                "trash-org": "Organico",
+                "trash-org-days": "Contenitore Marrone",
+                "trash-paper": "Carta/Plastica",
+                "trash-paper-days": "Contenitori Giallo e Blu",
+                "btn-trash-map": "Mappa Centro di Raccolta",
+                "sec-contacts-title": "📞 Contatti e Servizi Utili",
+                "lbl-doctor": "Guardia Medica:",
+                "lbl-host": "Host (Mario):",
+                "sec-guide-title": "🍽️ Consigli Locali",
+                "rest-1-desc": "Cucina tipica locale a 2 minuti a piedi.",
+                "sight-1-desc": "Aperto Mar-Dom 09:00-19:00.",
+                "footer-text": "Buon soggiorno! Per qualsiasi necessità contattaci via WhatsApp."
+            },
+            en: {
+                "app-subtitle": "Welcome aboard! Your stay guide.",
+                "sec-access-title": "🔑 Access & Wi-Fi",
+                "lbl-door-code": "Door Code",
+                "lbl-wifi-name": "Wi-Fi Network",
+                "lbl-wifi-pass": "Wi-Fi Password",
+                "btn-copy-door": "Copy",
+                "btn-copy-wifi": "Copy",
+                "sec-location-title": "📍 Address & Map",
+                "btn-maps": "Open in Google Maps",
+                "sec-rules-title": "📋 House Rules",
+                "rule-1": "🚭 No smoking inside the apartment.",
+                "rule-2": "🔇 Quiet hours from 10:00 PM to 08:00 AM.",
+                "rule-3": "🔑 Check-out by 10:00 AM.",
+                "sec-trash-title": "♻️ Waste Disposal",
+                "trash-desc": "Please separate waste. Main bins are located outside, 50 meters to the right.",
+                "trash-org": "Organic",
+                "trash-org-days": "Brown Bin",
+                "trash-paper": "Paper/Plastic",
+                "trash-paper-days": "Yellow & Blue Bins",
+                "btn-trash-map": "Recycling Center Map",
+                "sec-contacts-title": "📞 Contacts & Useful Info",
+                "lbl-doctor": "Medical Guard:",
+                "lbl-host": "Host (Mario):",
+                "sec-guide-title": "🍽️ Local Tips",
+                "rest-1-desc": "Traditional local food, 2 min walk.",
+                "sight-1-desc": "Open Tue-Sun 09:00 AM - 07:00 PM.",
+                "footer-text": "Enjoy your stay! For any need, message us on WhatsApp."
+            }
+        };
+
+        /* CAMBIO LINGUA */
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const dictionary = translations[lang];
+            for (let id in dictionary) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = dictionary[id];
+                }
+            }
+        }
+
+        /* COPIA NEGLI APPUNTI */
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copiato negli appunti: ' + text);
+            }).catch(err => {
+                console.error('Errore durante la copia: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
