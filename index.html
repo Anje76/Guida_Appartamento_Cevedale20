@@ -1,617 +1,692 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Casa Vacanze - Sunshine Apartment</title>
-    <!-- FontAwesome per le icone a linea -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* CSS RESET & VARIABLES */
-        :root {
-            --bg-color: #f7e9da; /* Beige chiaro di sfondo dell'immagine */
-            --header-bg: #e5d1bc; /* Beige più scuro per il banner */
-            --icon-color: #5d4037; /* Marrone scuro per le icone e il testo */
-            --label-color: #3e2723; /* Marrone scurissimo/nero per le etichette bilingue */
-            --btn-footer-bg: #e5d1bc; /* Stesso beige più scuro per il footer */
-            --modal-bg: #ffffff; /* Bianco per il contenuto delle modali */
-            --accent-color: #a1887f; /* Marrone medio per accenti e bordi */
-            
-            --text-serif: 'Playfair Display', serif; /* Font con serifa per i titoli */
-            --text-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font pulito per il resto */
-            --radius-circle: 50%;
-            --radius-round: 20px;
-            --shadow: 0 4px 10px rgba(0,0,0,0.08);
-            
-            /* Asset per l'effetto timbro/cerchio irregolare. */
-            --irregular-circle-bg: url("data:image/png;base64,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");
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cevedale 20 - Il tuo rifugio in Val di Sole</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2c5e3b;
+      --primary-light: #eef5f0;
+      --secondary: #d97706;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #374151;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --radius: 12px;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--label-color);
-            font-family: var(--text-sans);
-            line-height: 1.4;
-            padding-bottom: 60px; /* Spazio per il footer fisso */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    body {
+      background-color: #f3f4f6;
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
 
-        /* CONTAINER SIMULAZIONE SMARTPHONE (Opzionale, per demo) */
-        /* Rimuovi questo container se vuoi che l'app sia full-screen su mobile */
-        .phone-container {
-            width: 100%;
-            max-width: 420px; /* Larghezza tipica smartphone */
-            background-color: var(--bg-color);
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Ombra per simulare il telefono */
-        }
+    /* Header & Navbar */
+    header {
+      background: linear-gradient(135deg, #1e3a29 0%, #2c5e3b 100%);
+      color: white;
+      padding: 20px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
 
-        /* HEADER */
-        header {
-            background-color: var(--header-bg);
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom-left-radius: var(--radius-round);
-            border-bottom-right-radius: var(--radius-round);
-            margin-bottom: 20px;
-        }
+    .nav-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        header h1 {
-            font-family: var(--text-serif);
-            font-size: 1.8rem;
-            color: var(--icon-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        header p {
-            font-size: 0.9rem;
-            color: var(--label-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
+    .brand i {
+      font-size: 1.5rem;
+      color: #34d399;
+    }
 
-        /* GRID MAIN CONTENT */
-        main {
-            flex: 1;
-            padding: 10px 20px;
-        }
+    .brand h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
 
-        .icon-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 colonne come immagine */
-            gap: 20px;
-            justify-items: center;
-            align-items: start;
-        }
+    /* Lang Selector */
+    .lang-selector {
+      position: relative;
+    }
 
-        .grid-item {
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.2s;
-        }
+    .lang-select {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+    }
 
-        .grid-item:active {
-            transform: scale(0.95); /* Effetto clic */
-        }
+    .lang-select option {
+      background-color: var(--dark);
+      color: white;
+    }
 
-        /* EFFETTO CERCHIO IMPRESSO/TIMBRO */
-        .icon-circle {
-            width: 80px; /* Dimensione cerchio */
-            height: 80px;
-            background-color: transparent;
-            background-image: var(--irregular-circle-bg); /* Immagine cerchio irregolare */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-            position: relative;
-        }
+    /* Main Container */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
 
-        /* Icona all'interno */
-        .icon-circle i {
-            font-size: 2.2rem; /* Dimensione icona */
-            color: var(--icon-color);
-        }
+    /* Hero Banner */
+    .hero-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border-top: 4px solid var(--primary);
+    }
 
-        /* Etichetta bilingue scura */
-        .icon-label {
-            font-size: 0.75rem;
-            color: var(--label-color);
-            text-transform: uppercase;
-            font-weight: bold;
-            line-height: 1.2;
-            max-width: 90px;
-            word-wrap: break-word;
-        }
+    .hero-card h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
 
-        /* FOOTER FISSO */
-        footer {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 40px);
-            max-width: 380px;
-            text-align: center;
-            z-index: 10;
-        }
+    .hero-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
 
-        .btn-contact {
-            display: block;
-            width: 100%;
-            background-color: var(--btn-footer-bg);
-            color: var(--label-color);
-            font-family: var(--text-sans);
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 15px;
-            border: none;
-            border-radius: 30px; /* Molto arrotondato come nell'immagine */
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: background 0.2s;
-        }
+    .quick-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
 
-        .btn-contact:active {
-            background-color: #d8c3ae;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
 
-        /* MODALI (POPUP) */
-        .modal {
-            display: none; /* Nascosta di default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5); /* Sfondo scuro semitrasparente */
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
 
-        .modal.open {
-            display: flex; /* Mostra quando aperta */
-        }
+    .btn-secondary {
+      background-color: var(--primary-light);
+      color: var(--primary);
+    }
 
-        .modal-content {
-            background-color: var(--modal-bg);
-            width: 100%;
-            max-width: 400px;
-            border-radius: var(--radius-round);
-            padding: 25px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            max-height: 90vh;
-            overflow-y: auto; /* Scrollbar interna se contenuto lungo */
-        }
+    .btn-warning {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
 
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
 
-        .modal-header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 15px;
-        }
+    /* Section Cards */
+    .section-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
 
-        .modal-header h2 {
-            font-family: var(--text-serif);
-            color: var(--icon-color);
-            text-transform: uppercase;
-            font-size: 1.4rem;
-        }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-light);
+    }
 
-        .modal-body h3 {
-            color: var(--icon-color);
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
+    .section-title i {
+      font-size: 1.25rem;
+    }
 
-        .modal-body p, .modal-body li {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-            color: #555;
-        }
+    /* Content Elements */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
 
-        .modal-body ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    .info-box {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
 
-        /* Stile bilingue all'interno delle modali */
-        .lang-it { font-weight: bold; color: var(--label-color); }
-        .lang-en { font-style: italic; color: #777; }
+    .info-box.alert {
+      background: #fffbe3;
+      border-color: #fcd34d;
+    }
 
-        /* PULSANTI DI AZIONE NELLE MODALI (es. Mappe, Copia) */
-        .btn-modal-action {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            margin-top: 10px;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
+    .info-box h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
 
-        .btn-modal-action:active { background-color: #8d6e63; }
+    .info-box p, .info-box ul {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
 
-        .btn-copy {
-            background-color: #e0e0e0;
-            color: #333;
-            margin-left: 10px;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-        }
+    .info-box ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
 
-        /* RESPONSIVE: GRIGLIA A 2 COLONNE SU SCHERMI MOLTO STRETTI */
-        @media (max-width: 360px) {
-            .icon-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-            .icon-circle {
-                width: 70px;
-                height: 70px;
-            }
-            .icon-circle i {
-                font-size: 1.9rem;
-            }
-        }
-    </style>
+    .info-box li {
+      margin-bottom: 4px;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .badge-important {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .badge-info {
+      background: #e0f2fe;
+      color: #075985;
+    }
+
+    /* Schedule Table */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    .schedule-table th, .schedule-table td {
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .schedule-table th {
+      background-color: var(--primary-light);
+      color: var(--primary);
+    }
+
+    /* Contacts Grid */
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .contact-card {
+      background: var(--primary-light);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .contact-card h5 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .contact-card a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 30px;
+    }
+
+    @media (min-width: 640px) {
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .full-width {
+        grid-column: span 2;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Container simulazione smartphone (rimuovi per full-screen su mobile) -->
-    <div class="phone-container">
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <h1>CEVEDALE 20</h1>
+      </div>
+      <div class="lang-selector">
+        <select id="languageSelect" class="lang-select" onchange="changeLanguage(this.value)">
+          <option value="it">🇮🇹 IT</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="de">🇩🇪 DE</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
-        <header>
-            <h1>Benvenuti!/Welcome!</h1>
-            <p>Tocca le icone / Tap on the icons</p>
-        </header>
+  <div class="container">
 
-        <main>
-            <div class="icon-grid">
-                
-                <!-- 1. Benvenuto -->
-                <div class="grid-item" onclick="openModal('modal-welcome')">
-                    <div class="icon-circle"><i class="far fa-building"></i></div>
-                    <p class="icon-label">Benvenuto/ Welcome</p>
-                </div>
-
-                <!-- 2. Posizione -->
-                <div class="grid-item" onclick="openModal('modal-location')">
-                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
-                    <p class="icon-label">Posizione/ Location</p>
-                </div>
-
-                <!-- 3. Check-in & Out -->
-                <div class="grid-item" onclick="openModal('modal-checkinout')">
-                    <div class="icon-circle"><i class="fas fa-key"></i></div>
-                    <p class="icon-label">Check-in & Check-out</p>
-                </div>
-
-                <!-- 4. Info/FAQ -->
-                <div class="grid-item" onclick="openModal('modal-faq')">
-                    <div class="icon-circle"><i class="far fa-comment-dots"></i></div>
-                    <p class="icon-label">Info/ FAQ</p>
-                </div>
-
-                <!-- 5. Regole -->
-                <div class="grid-item" onclick="openModal('modal-rules')">
-                    <div class="icon-circle"><i class="fas fa-home"></i></div>
-                    <p class="icon-label">Regole/ Rules</p>
-                </div>
-
-                <!-- 6. Escursioni -->
-                <div class="grid-item" onclick="openModal('modal-excursions')">
-                    <div class="icon-circle"><i class="fas fa-mountain"></i></div>
-                    <p class="icon-label">Escursioni/ Excursions & Tours</p>
-                </div>
-
-                <!-- 7. Consigli Locali -->
-                <div class="grid-item" onclick="openModal('modal-tips')">
-                    <div class="icon-circle"><i class="far fa-heart"></i></div>
-                    <p class="icon-label">Consigli Locali/ Local Tips</p>
-                </div>
-
-                <!-- 8. Recensione -->
-                <div class="grid-item" onclick="openModal('modal-review')">
-                    <div class="icon-circle"><i class="fas fa-star-half-alt"></i></div>
-                    <p class="icon-label">Recensione/ Review</p>
-                </div>
-
-                <!-- 9. Istruzioni -->
-                <div class="grid-item" onclick="openModal('modal-appliances')">
-                    <div class="icon-circle"><i class="fas fa-cogs"></i></div>
-                    <p class="icon-label">Istruzioni/ Appliances</p>
-                </div>
-
-                <!-- 10. Cose da Visitare -->
-                <div class="grid-item" onclick="openModal('modal-places')">
-                    <div class="icon-circle"><i class="fas fa-camera"></i></div>
-                    <p class="icon-label">Cose da Visitare/ Places to Visit</p>
-                </div>
-
-                <!-- 11. Wi-Fi -->
-                <div class="grid-item" onclick="openModal('modal-wifi')">
-                    <div class="icon-circle"><i class="fas fa-wifi"></i></div>
-                    <p class="icon-label">Wi-Fi</p>
-                </div>
-
-                <!-- 12. Trasporti -->
-                <div class="grid-item" onclick="openModal('modal-transport')">
-                    <div class="icon-circle"><i class="fas fa-bus"></i></div>
-                    <p class="icon-label">Trasporti/ Transportation</p>
-                </div>
-
-            </div>
-        </main>
-
-        <footer>
-            <button class="btn-contact" onclick="openModal('modal-contact')">Contattaci/Contact Us</button>
-        </footer>
-
-    </div> <!-- Fine phone-container -->
-
-
-    <!-- ===========================
-         SEZIONE MODALI (POPUP)
-         =========================== -->
-
-    <!-- 1. Modale Benvenuto -->
-    <div id="modal-welcome" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-welcome')">&times;</button>
-            <div class="modal-header"><h2>Benvenuto / Welcome</h2></div>
-            <div class="modal-body">
-                <p class="lang-it">Ciao! Siamo felici di ospitarti nel Sunshine Apartment. Questa guida digitale contiene tutto ciò che devi sapere per un soggiorno perfetto.</p>
-                <p class="lang-en">Hi! We are happy to host you at Sunshine Apartment. This digital guide contains everything you need to know for a perfect stay.</p>
-            </div>
-        </div>
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <h2 data-i18n="welcomeTitle">Benvenuti in Val di Sole!</h2>
+      <p data-i18n="welcomeSubtitle">Il tuo rifugio a Malè - Galleria Cevedale, Via IV Novembre 16</p>
+      
+      <div class="quick-buttons">
+        <a href="https://goo.gl/maps/K9Th2YR95PNBmDfk8" target="_blank" class="btn btn-primary">
+          <i class="fa-solid fa-location-dot"></i> <span data-i18n="btnMaps">Mappa Casa</span>
+        </a>
+        <a href="https://goo.gl/maps/X9xyFnYqPgE7Awp18" target="_blank" class="btn btn-secondary">
+          <i class="fa-solid fa-recycle"></i> <span data-i18n="btnCrm">Mappa CRM</span>
+        </a>
+      </div>
     </div>
 
-    <!-- 2. Modale Posizione -->
-    <div id="modal-location" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-location')">&times;</button>
-            <div class="modal-header"><h2>Posizione / Location</h2></div>
-            <div class="modal-body">
-                <p><strong>Sunshine Apartment</strong></p>
-                <p>Via Roma 123, 00100 Roma (RM)</p>
-                <a href="https://maps.google.com" target="_blank" class="btn-modal-action">Apri in Google Maps / Open Maps</a>
-            </div>
+    <!-- Section 1: Accesso & Parcheggio -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-key"></i>
+        <h3 data-i18n="secAccessTitle">Accesso & Parcheggio</h3>
+      </div>
+      <div class="info-grid">
+        <div class="info-box">
+          <h4><i class="fa-solid fa-square-p"></i> <span data-i18n="parkingTitle">Posto Auto Riservato</span></h4>
+          <p data-i18n="parkingDesc">Utilizzate il <strong>Posto Auto n. 20</strong> (righe gialle) situato adiacente allo spigolo posteriore destro dell'edificio, indicato dal cartello sul muro. Si raggiunge girando attorno all'edificio in senso orario. Posti liberi non numerati sono disponibili davanti all'ingresso della galleria.</p>
         </div>
+
+        <div class="info-box">
+          <h4><i class="fa-solid fa-door-open"></i> <span data-i18n="entranceTitle">Ingresso e Portone</span></h4>
+          <p data-i18n="entranceDesc">L'ingresso si trova all'interno della <strong>Galleria Cevedale</strong>. Il portone principale rimane aperto dalle 8:00 alle 18:00 (basta spingere). Negli altri orari utilizzare la chiave.</p>
+        </div>
+
+        <div class="info-box full-width">
+          <h4><i class="fa-solid fa-vault"></i> <span data-i18n="keyboxTitle">Cassetta di Sicurezza & Chiavi</span></h4>
+          <p data-i18n="keyboxDesc">L'appartamento è al 1° piano (scala o ascensore), corridoio a destra, 2ª porta a destra (Appartamento 20, campanello <i>FLAMINI-GIANGRANDI</i>).</p>
+          <ul style="margin-top: 8px;">
+            <li data-i18n="keyStep1">Aprire il coperchio nero della cassetta a lato della porta, inserire la combinazione e ruotare il pomellino in alto in senso orario.</li>
+            <li data-i18n="keyStep2"><strong>3 Chiavi:</strong> La più lunga apre l'appartamento; le due corte aprono il portone in galleria e la porta di uscita al piano terra lato destro (comoda per le valigie).</li>
+            <li data-i18n="keyStep3">Richiudere la cassetta, ruotare il pomellino in senso antiorario e resettare il codice su 0-0-0-0. Non lasciare mai la combinazione a vista.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <!-- 3. Modale Check-in & Out -->
-    <div id="modal-checkinout" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-checkinout')">&times;</button>
-            <div class="modal-header"><h2>Check-in & Check-out</h2></div>
-            <div class="modal-body">
-                <h3>Check-in</h3>
-                <p class="lang-it">Disponibile dalle ore 15:00. <br> Codice apertura porta principale:</p>
-                <p class="lang-en">Available from 3:00 PM. <br> Main door access code:</p>
-                <p><strong>1234#</strong> <button class="btn-modal-action btn-copy" onclick="copyText('1234#')">Copia/Copy</button></p>
-                
-                <h3>Check-out</h3>
-                <p class="lang-it">Entro le ore 10:00. Si prega di lasciare le chiavi sul tavolo.</p>
-                <p class="lang-en">By 10:00 AM. Please leave the keys on the table.</p>
-            </div>
+    <!-- Section 2: Cucina & Impianti -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-fire-burner"></i>
+        <h3 data-i18n="secKitchenTitle">Cucina & Elettrodomestici</h3>
+      </div>
+      <div class="info-grid">
+        <div class="info-box alert full-width">
+          <span class="badge badge-important" data-i18n="badgeImportant">IMPORTANTE</span>
+          <h4><i class="fa-solid fa-bolt"></i> <span data-i18n="powerTitle">Gestione Carico Elettrico</span></h4>
+          <p data-i18n="powerDesc">Per evitare distacchi di corrente, <strong>non utilizzare il piano cottura ad induzione contemporaneamente ad altri elettrodomestici ad alto consumo</strong> (forno, lavatrice, asciugacapelli, aspirapolvere). Usare al massimo 2 piastre con potenza complessiva indicata non superiore a 10-12 (es. acqua a 6-7, sugo a 4-5).</p>
         </div>
+
+        <div class="info-box">
+          <h4><i class="fa-solid fa-utensils"></i> <span data-i18n="cookwareTitle">Pentole e Moka</span></h4>
+          <p data-i18n="cookwareDesc">Nel mobile accanto al frigo trovate pentole "Abert", casseruola "Ikea" e padelle antiaderenti compatibili con l'induzione. La caffettiera Moka "Barazzoni" è compatibile ma <strong>non va usata a potenza superiore a 5</strong> per evitare errori.</p>
+        </div>
+
+        <div class="info-box">
+          <h4><i class="fa-solid fa-lock"></i> <span data-i18n="lockTitle">Blocco Sicurezza Piano Cotura</span></h4>
+          <p data-i18n="lockDesc">Se sul display del piano cottura compare il simbolo <strong>L</strong> o una chiave, è attivo il blocco sicurezza. Per sbloccarlo, tenere premuto per alcuni secondi il simbolo <strong>CHIAVE</strong>.</p>
+        </div>
+
+        <div class="info-box full-width">
+          <h4><i class="fa-solid fa-plug"></i> <span data-i18n="fuseTitle">Ripristino Corrente (Contatore)</span></h4>
+          <p data-i18n="fuseDesc">In caso di black-out interno, riattivare gli interruttori vicini alla porta d'ingresso. Se è scattato il contatore generale: scendere al piano <strong>-1</strong> con l'ascensore, entrare nella porta subito a destra. Il contatore è in alto a destra, identificato dal n° <strong>20</strong> e targhetta <i>FLAMINI-GIANGRANDI</i>.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- 4. Modale Info/FAQ -->
-    <div id="modal-faq" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-faq')">&times;</button>
-            <div class="modal-header"><h2>Info / FAQ</h2></div>
-            <div class="modal-body">
-                <h3>Raccolta Rifiuti / Waste Disposal</h3>
-                <p class="lang-it">I bidoni si trovano in strada, 50m a destra. Seguire i colori:</p>
-                <p class="lang-en">Bins are on the street, 50m to the right. Follow the colors:</p>
-                <ul>
-                    <li>🟤 Organico / Organic</li>
-                    <li>🔵 Carta / Paper</li>
-                    <li>🟡 Plastica / Plastic</li>
-                </ul>
-            </div>
+    <!-- Section 3: Raccolta Differenziata -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-trash-can"></i>
+        <h3 data-i18n="secWasteTitle">Gestione Rifiuti</h3>
+      </div>
+      <div class="info-grid">
+        <div class="info-box">
+          <h4><i class="fa-solid fa-apple-whole"></i> <span data-i18n="organicTitle">Rifiuti Organici (Umido)</span></h4>
+          <p data-i18n="organicDesc">I bidoni marroni si trovano all'ingresso del Poliambulatorio (a 20 metri dall'appartamento). Sollevare il <strong>coperchio piccolo rotondo</strong> (non quello grande quadrato).</p>
         </div>
+
+        <div class="info-box">
+          <h4><i class="fa-solid fa-dumpster"></i> <span data-i18n="unsortedTitle">Indifferenziato (Tessera)</span></h4>
+          <p data-i18n="unsortedDesc">Nello stesso punto si trova la campana-collettore. Si apre tramite la <strong>Tessera Verde</strong> presente nell'espositore di legno sul mobile TV in soggiorno. Max <strong>2-3 scarichi a settimana</strong> (contingentati dal Comune, si possono inserire 2 sacchetti insieme).</p>
+        </div>
+
+        <div class="info-box full-width">
+          <h4><i class="fa-solid fa-recycle"></i> <span data-i18n="crmTitle">Centro Recupero Materiali (CRM) & Eco Isola</span></h4>
+          <p data-i18n="crmDesc">Plastica, carta e vetro vanno conferiti al CRM in <i>Località Molini, 3</i> portando la stessa tessera verde. Quando il CRM è chiuso, è attiva l'<strong>Eco Isola</strong> esterna (fino alle ore 22:00) accessibile sempre tramite la tessera.</p>
+          
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th data-i18n="thDay">Giorno</th>
+                <th data-i18n="thHours">Orari CRM Malè</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="dayMon">Lunedì</td><td data-i18n="closedEco">Chiuso (Attiva Eco Isola)</td></tr>
+              <tr><td data-i18n="dayTue">Martedì</td><td>08:30 - 12:00 | 14:00 - 17:30</td></tr>
+              <tr><td data-i18n="dayWed">Mercoledì</td><td>08:30 - 12:00 | 14:00 - 17:30</td></tr>
+              <tr><td data-i18n="dayThu">Giovedì</td><td>08:30 - 12:00 | 14:00 - 17:30</td></tr>
+              <tr><td data-i18n="dayFri">Venerdì</td><td data-i18n="closedEco">Chiuso (Attiva Eco Isola)</td></tr>
+              <tr><td data-i18n="daySat">Sabato</td><td>08:30 - 12:00 | 14:00 - 17:30</td></tr>
+              <tr><td data-i18n="daySun">Domenica</td><td data-i18n="closedEco">Chiuso (Attiva Eco Isola)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <!-- 5. Modale Regole -->
-    <div id="modal-rules" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-rules')">&times;</button>
-            <div class="modal-header"><h2>Regole / Rules</h2></div>
-            <div class="modal-body">
-                <ul>
-                    <li class="lang-it">🚭 Vietato fumare all'interno.</li>
-                    <li class="lang-en">🚭 No smoking inside.</li>
-                    <li class="lang-it">🔇 Rispettare il silenzio dalle 22:00 alle 08:00.</li>
-                    <li class="lang-en">🔇 Quiet hours from 10:00 PM to 08:00 AM.</li>
-                </ul>
-            </div>
-        </div>
+    <!-- Section 4: Check-out -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <h3 data-i18n="secCheckoutTitle">Istruzioni Check-out</h3>
+      </div>
+      <div class="info-box full-width">
+        <p data-i18n="checkoutIntro">Nel giorno della partenza vi chiediamo gentilmente di completare queste veloci operazioni:</p>
+        <ul style="margin-top: 10px;">
+          <li data-i18n="coStep1">Non lasciare rifiuti all'interno dell'appartamento.</li>
+          <li data-i18n="coStep2">Riporre le tessere dei rifiuti e il telecomando TV nell'espositore in legno in soggiorno.</li>
+          <li data-i18n="coStep3">Chiudere bene tutte le finestre.</li>
+          <li data-i18n="coStep4">Liberare l'appartamento entro le <strong>ore 10:00</strong>.</li>
+          <li data-i18n="coStep5">Riporre il mazzo di chiavi nella cassetta di sicurezza esterna resettando il codice.</li>
+          <li data-i18n="coStep6">Informarci tempestivamente di qualsiasi disguido o problema verificatosi durante il soggiorno.</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- 6. Modale Escursioni -->
-    <div id="modal-excursions" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-excursions')">&times;</button>
-            <div class="modal-header"><h2>Escursioni / Tours</h2></div>
-            <div class="modal-body">
-                <p class="lang-it">Sentiero del Belvedere: passeggiata panoramica di 1 ora.</p>
-                <p class="lang-en">Belvedere Trail: scenic 1-hour walk.</p>
-            </div>
+    <!-- Section 5: Contatti -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-address-book"></i>
+        <h3 data-i18n="secContactsTitle">Contatti & Assistenza</h3>
+      </div>
+      <p data-i18n="contactsIntro">Siamo a vostra completa disposizione per qualsiasi necessità:</p>
+      <div class="contacts-grid">
+        <div class="contact-card">
+          <h5>Angelo Giangrandi</h5>
+          <a href="tel:+393276867296"><i class="fa-solid fa-phone"></i> +39 327 686 7296</a>
+          <a href="mailto:anje76@gmail.com"><i class="fa-solid fa-envelope"></i> anje76@gmail.com</a>
         </div>
+        <div class="contact-card">
+          <h5>Silvia Flamini</h5>
+          <a href="tel:+393284151764"><i class="fa-solid fa-phone"></i> +39 328 415 1764</a>
+          <a href="mailto:silviaflam76@gmail.com"><i class="fa-solid fa-envelope"></i> silviaflam76@gmail.com</a>
+        </div>
+      </div>
     </div>
 
-    <!-- 7. Modale Consigli Locali -->
-    <div id="modal-tips" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-tips')">&times;</button>
-            <div class="modal-header"><h2>Consigli / Local Tips</h2></div>
-            <div class="modal-body">
-                <h3>Trattoria da Gino</h3>
-                <p class="lang-it">Cucina tipica locale a 2 minuti a piedi.</p>
-                <p class="lang-en">Traditional local food, 2 min walk.</p>
-            </div>
-        </div>
-    </div>
+    <footer>
+      <p>© Cevedale 20 - Malè (TN) | Val di Sole</p>
+    </footer>
 
-    <!-- 8. Modale Recensione -->
-    <div id="modal-review" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-review')">&times;</button>
-            <div class="modal-header"><h2>Recensione / Review</h2></div>
-            <div class="modal-body">
-                <p class="lang-it">Speriamo che il tuo soggiorno sia stato fantastico! Lasciaci una recensione su Airbnb o Booking.</p>
-                <p class="lang-en">We hope you had a fantastic stay! Please leave us a review on Airbnb or Booking.</p>
-            </div>
-        </div>
-    </div>
+  </div>
 
-    <!-- 9. Modale Istruzioni -->
-    <div id="modal-appliances" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-appliances')">&times;</button>
-            <div class="modal-header"><h2>Istruzioni / Appliances</h2></div>
-            <div class="modal-body">
-                <h3>Lavatrice / Washing Machine</h3>
-                <p class="lang-it">Manuale d'uso rapido disponibile nel cassetto.</p>
-                <p class="lang-en">Quick user manual available in the drawer.</p>
-            </div>
-        </div>
-    </div>
+  <script>
+    // Dictionary with translations
+    const i18nData = {
+      it: {
+        welcomeTitle: "Benvenuti in Val di Sole!",
+        welcomeSubtitle: "Il tuo rifugio a Malè - Galleria Cevedale, Via IV Novembre 16",
+        btnMaps: "Mappa Casa",
+        btnCrm: "Mappa CRM",
+        secAccessTitle: "Accesso & Parcheggio",
+        parkingTitle: "Posto Auto Riservato",
+        parkingDesc: "Utilizzate il Posto Auto n. 20 (righe gialle) situato adiacente allo spigolo posteriore destro dell'edificio, indicato dal cartello sul muro. Si raggiunge girando attorno all'edificio in senso orario. Posti liberi non numerati sono disponibili davanti all'ingresso della galleria.",
+        entranceTitle: "Ingresso e Portone",
+        entranceDesc: "L'ingresso si trova all'interno della Galleria Cevedale. Il portone principale rimane aperto dalle 8:00 alle 18:00 (basta spingere). Negli altri orari utilizzare la chiave.",
+        keyboxTitle: "Cassetta di Sicurezza & Chiavi",
+        keyboxDesc: "L'appartamento è al 1° piano (scala o ascensore), corridoio a destra, 2ª porta a destra (Appartamento 20, campanello FLAMINI-GIANGRANDI).",
+        keyStep1: "Aprire il coperchio nero della cassetta a lato della porta, inserire la combinazione e ruotare il pomellino in alto in senso orario.",
+        keyStep2: "3 Chiavi: La più lunga apre l'appartamento; le due corte aprono il portone in galleria e la porta di uscita al piano terra lato destro (comoda per le valigie).",
+        keyStep3: "Richiudere la cassetta, ruotare il pomellino in senso antiorario e resettare il codice su 0-0-0-0. Non lasciare mai la combinazione a vista.",
+        secKitchenTitle: "Cucina & Elettrodomestici",
+        badgeImportant: "IMPORTANTE",
+        powerTitle: "Gestione Carico Elettrico",
+        powerDesc: "Per evitare distacchi di corrente, non utilizzare il piano cottura ad induzione contemporaneamente ad altri elettrodomestici ad alto consumo (forno, lavatrice, asciugacapelli, aspirapolvere). Usare al massimo 2 piastre con potenza complessiva non superiore a 10-12 (es. acqua a 6-7, sugo a 4-5).",
+        cookwareTitle: "Pentole e Moka",
+        cookwareDesc: "Nel mobile accanto al frigo trovate pentole 'Abert', casseruola 'Ikea' e padelle antiaderenti compatibili con l'induzione. La caffettiera Moka 'Barazzoni' è compatibile ma non va usata a potenza superiore a 5 per evitare errori.",
+        lockTitle: "Blocco Sicurezza Piano Cottura",
+        lockDesc: "Se sul display del piano cottura compare il simbolo L o una chiave, è attivo il blocco sicurezza. Per sbloccarlo, tenere premuto per alcuni secondi il simbolo CHIAVE.",
+        fuseTitle: "Ripristino Corrente (Contatore)",
+        fuseDesc: "In caso di black-out interno, riattivare gli interruttori vicini alla porta d'ingresso. Se è scattato il contatore generale: scendere al piano -1 con l'ascensore, entrare nella porta subito a destra. Il contatore è in alto a destra, identificato dal n° 20 e targhetta FLAMINI-GIANGRANDI.",
+        secWasteTitle: "Gestione Rifiuti",
+        organicTitle: "Rifiuti Organici (Umido)",
+        organicDesc: "I bidoni marroni si trovano all'ingresso del Poliambulatorio (a 20 metri dall'appartamento). Sollevare il coperchio piccolo rotondo (non quello grande quadrato).",
+        unsortedTitle: "Indifferenziato (Tessera)",
+        unsortedDesc: "Nello stesso punto si trova la campana-collettore. Si apre tramite la Tessera Verde presente nell'espositore di legno sul mobile TV in soggiorno. Max 2-3 scarichi a settimana (contingentati dal Comune, si possono inserire 2 sacchetti insieme).",
+        crmTitle: "Centro Recupero Materiali (CRM) & Eco Isola",
+        crmDesc: "Plastica, carta e vetro vanno conferiti al CRM in Località Molini, 3 portando la stessa tessera verde. Quando il CRM è chiuso, è attiva l'Eco Isola esterna (fino alle ore 22:00) accessibile sempre tramite la tessera.",
+        thDay: "Giorno",
+        thHours: "Orari CRM Malè",
+        dayMon: "Lunedì",
+        dayTue: "Martedì",
+        dayWed: "Mercoledì",
+        dayThu: "Giovedì",
+        dayFri: "Venerdì",
+        daySat: "Sabato",
+        daySun: "Domenica",
+        closedEco: "Chiuso (Attiva Eco Isola)",
+        secCheckoutTitle: "Istruzioni Check-out",
+        checkoutIntro: "Nel giorno della partenza vi chiediamo gentilmente di completare queste veloci operazioni:",
+        coStep1: "Non lasciare rifiuti all'interno dell'appartamento.",
+        coStep2: "Riporre le tessere dei rifiuti e il telecomando TV nell'espositore in legno in soggiorno.",
+        coStep3: "Chiudere bene tutte le finestre.",
+        coStep4: "Liberare l'appartamento entro le ore 10:00.",
+        coStep5: "Riporre il mazzo di chiavi nella cassetta di sicurezza esterna resettando il codice.",
+        coStep6: "Informarci tempestivamente di qualsiasi disguido o problema verificatosi durante il soggiorno.",
+        secContactsTitle: "Contatti & Assistenza",
+        contactsIntro: "Siamo a vostra completa disposizione per qualsiasi necessità:"
+      },
+      en: {
+        welcomeTitle: "Welcome to Val di Sole!",
+        welcomeSubtitle: "Your retreat in Malè - Galleria Cevedale, Via IV Novembre 16",
+        btnMaps: "House Map",
+        btnCrm: "Recycling Map",
+        secAccessTitle: "Access & Parking",
+        parkingTitle: "Reserved Parking Space",
+        parkingDesc: "Please use Parking Space No. 20 (yellow lines) located adjacent to the rear right corner of the building, marked with a sign '20' on the wall. Reach it by driving clockwise around the building. Free unnumbered spaces are available in front of the gallery entrance.",
+        entranceTitle: "Building Entrance",
+        entranceDesc: "The entrance is inside Galleria Cevedale. The main door is usually open from 8:00 AM to 6:00 PM (just push). Outside these hours, use the keys.",
+        keyboxTitle: "Key Safe & Keys",
+        keyboxDesc: "The apartment is on the 1st floor (stairs or elevator), hallway to the right, 2nd door on the right (Apt 20, doorbell FLAMINI-GIANGRANDI).",
+        keyStep1: "Open the black cover on the key box beside the door, enter the code, and turn the top knob clockwise.",
+        keyStep2: "3 Keys: The longest opens the apartment door; the two shorter ones open the gallery entrance and the ground floor side exit door towards the parking.",
+        keyStep3: "Close the key safe, turn knob counter-clockwise, and reset code to 0-0-0-0. Never leave the code visible.",
+        secKitchenTitle: "Kitchen & Appliances",
+        badgeImportant: "IMPORTANT",
+        powerTitle: "Electrical Power Management",
+        powerDesc: "To prevent power outages, do not use the induction hob at the same time as other high-consumption appliances (oven, washing machine, hair dryer, vacuum cleaner). Use at most 2 hobs with total power setting under 10-12.",
+        cookwareTitle: "Pots & Moka Coffee Maker",
+        cookwareDesc: "Induction-compatible pots and pans are in the cabinet next to the fridge. The Barazzoni Moka pot is compatible but MUST NOT be used above power level 5.",
+        lockTitle: "Induction Hob Child Lock",
+        lockDesc: "If an 'L' or key symbol appears on the hob display, safety lock is active. Hold the KEY symbol for a few seconds to unlock.",
+        fuseTitle: "Circuit Breaker / Fuse Box",
+        fuseDesc: "If power trips internally, check switches near the front door. If the main meter tripped: go to floor -1 by elevator, enter door on the right. Main meter #20 is top right (labeled FLAMINI-GIANGRANDI).",
+        secWasteTitle: "Waste & Recycling",
+        organicTitle: "Organic Waste",
+        organicDesc: "Brown bins are near the local health center (Poliambulatorio, 20m away). Lift the small round lid (not the large square one).",
+        unsortedTitle: "General Waste (Green Card)",
+        unsortedDesc: "Use the green card (in the wooden holder on the TV stand) to open the underground container next to the organic bins. Max 2-3 uses per week.",
+        crmTitle: "Recycling Center (CRM) & Eco Isola",
+        crmDesc: "Plastic, paper, and glass must be taken to CRM (Loc. Molini 3) using the same green card. When CRM is closed, the outdoor Eco Isola is available until 10:00 PM.",
+        thDay: "Day",
+        thHours: "CRM Malè Hours",
+        dayMon: "Monday",
+        dayTue: "Tuesday",
+        dayWed: "Wednesday",
+        dayThu: "Thursday",
+        dayFri: "Friday",
+        daySat: "Saturday",
+        daySun: "Sunday",
+        closedEco: "Closed (Eco Isola Active)",
+        secCheckoutTitle: "Check-out Instructions",
+        checkoutIntro: "On your departure day, please kindly complete the following:",
+        coStep1: "Do not leave any garbage inside the apartment.",
+        coStep2: "Return waste cards and TV remote to the wooden stand.",
+        coStep3: "Close all windows securely.",
+        coStep4: "Check out by 10:00 AM.",
+        coStep5: "Return keys to the keybox and scramble the code.",
+        coStep6: "Inform us of any issues or defects experienced.",
+        secContactsTitle: "Contacts & Support",
+        contactsIntro: "We are at your full disposal during your stay:"
+      },
+      de: {
+        welcomeTitle: "Willkommen im Val di Sole!",
+        welcomeSubtitle: "Ihre Unterkunft in Malè - Galleria Cevedale, Via IV Novembre 16",
+        btnMaps: "Haus Karte",
+        btnCrm: "Müllplatz Karte",
+        secAccessTitle: "Anreise & Parken",
+        parkingTitle: "Reservierter Parkplatz",
+        parkingDesc: "Bitte nutzen Sie den Parkplatz Nr. 20 (gelbe Linien) an der hinteren rechten Ecke des Gebäudes (Schild '20'). Im Uhrzeigersinn um das Gebäude fahren. Weitere freie Plätze stehen vor der Galerie zur Verfügung.",
+        entranceTitle: "Hauseingang",
+        entranceDesc: "Der Eingang befindet sich in der Galleria Cevedale. Die Haupttür ist von 8:00 bis 18:00 Uhr geöffnet (einfach drücken). Außerhalb dieser Zeiten Schlüssel nutzen.",
+        keyboxTitle: "Schlüsselsafe & Schlüssel",
+        keyboxDesc: "Wohnung im 1. Stock (Aufzug vorhanden), Flur rechts, 2. Tür rechts (Apt. 20, FLAMINI-GIANGRANDI).",
+        keyStep1: "Schwarze Abdeckung am Schlüsselsafe öffnen, Code eingeben und oberen Drehknopf im Uhrzeigersinn drehen.",
+        keyStep2: "3 Schlüssel: Der längste öffnet die Wohnungstür, die 2 kurzen öffnen die Galerietür und den Seitenausgang unten.",
+        keyStep3: "Safe schließen, Drehknopf zurückdrehen und Code auf 0-0-0-0 zurücksetzen.",
+        secKitchenTitle: "Küche & Geräte",
+        badgeImportant: "WICHTIG",
+        powerTitle: "Strombelastung beachten",
+        powerDesc: "Um Stromausfälle zu vermeiden, das Induktionskochfeld NICHT gleichzeitig mit anderen stromintensiven Geräten (Ofen, Waschmaschine, Föhn) nutzen. Max. 2 Kochzonen (Gesamtleistung max. 10-12).",
+        cookwareTitle: "Töpfe & Moka",
+        cookwareDesc: "Induktionsgeeignete Töpfe stehen im Schrank neben dem Kühlschrank. Die Moka-Kaffeekanne nur bis max. Stufe 5 verwenden.",
+        lockTitle: "Kindersicherung Kochfeld",
+        lockDesc: "Zeigt das Display ein 'L' oder Schlüsselsymbol, ist die Kindersicherung aktiv. Das SCHLÜSSEL-Symbol einige Sekunden gedrückt halten.",
+        fuseTitle: "Sicherungskasten / Hauptzähler",
+        fuseDesc: "Bei Stromausfall Schalter an der Wohnungstür prüfen. Falls der Hauptzähler auslöst: Mit dem Aufzug ins Geschoss -1 fahren, Tür rechts. Zähler Nr. 20 oben rechts.",
+        secWasteTitle: "Mülltrennung",
+        organicTitle: "Biomüll (Umido)",
+        organicDesc: "Braune Tonnen beim Gesundheitszentrum (Poliambulatorio, 20m). Bitte nur den kleinen runden Deckel öffnen.",
+        unsortedTitle: "Restmüll (Grüne Karte)",
+        unsortedDesc: "Mit der grünen Karte aus dem Holzständer beim Fernseher lässt sich der Unterflurbehälter öffnen. Max. 2-3 Nutzungen pro Woche.",
+        crmTitle: "Wertstoffhof (CRM) & Eco Isola",
+        crmDesc: "Plastik, Papier und Glas zum Wertstoffhof (Loc. Molini 3) bringen. Wenn geschlossen, die Außen-Eco-Isola bis 22:00 Uhr nutzen.",
+        thDay: "Tag",
+        thHours: "Öffnungszeiten CRM Malè",
+        dayMon: "Montag",
+        dayTue: "Dienstag",
+        dayWed: "Mittwoch",
+        dayThu: "Donnerstag",
+        dayFri: "Freitag",
+        daySat: "Samstag",
+        daySun: "Sonntag",
+        closedEco: "Geschlossen (Eco Isola aktiv)",
+        secCheckoutTitle: "Abreise-Hinweise",
+        checkoutIntro: "Am Abreisetag bitten wir Sie um Folgendes:",
+        coStep1: "Keinen Müll in der Wohnung zurücklassen.",
+        coStep2: "Müllkarten und TV-Fernbedienung in den Holzständer legen.",
+        coStep3: "Alle Fenster fest schließen.",
+        coStep4: "Abreise bis spätestens 10:00 Uhr.",
+        coStep5: "Schlüssel in den Schlüsselsafe legen und Code verstellen.",
+        coStep6: "Bitte informieren Sie uns über etwaige Probleme.",
+        secContactsTitle: "Kontakt & Hilfe",
+        contactsIntro: "Wir stehen Ihnen bei Fragen gerne zur Verfügung:"
+      }
+    };
 
-    <!-- 10. Modale Cose da Visitare -->
-    <div id="modal-places" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-places')">&times;</button>
-            <div class="modal-header"><h2>Visitare / Places</h2></div>
-            <div class="modal-body">
-                <h3>Museo Civico</h3>
-                <p class="lang-it">Aperto Mar-Dom 09:00-19:00.</p>
-                <p class="lang-en">Open Tue-Sun 09:00 AM - 07:00 PM.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 11. Modale Wi-Fi -->
-    <div id="modal-wifi" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-wifi')">&times;</button>
-            <div class="modal-header"><h2>Wi-Fi</h2></div>
-            <div class="modal-body">
-                <p><strong>Rete / Network:</strong> Sunshine_Guest</p>
-                <p><strong>Password:</strong> Welcome2026!</p>
-                <button class="btn-modal-action" onclick="copyText('Welcome2026!')">Copia Password / Copy Password</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- 12. Modale Trasporti -->
-    <div id="modal-transport" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-transport')">&times;</button>
-            <div class="modal-header"><h2>Trasporti / Transport</h2></div>
-            <div class="modal-body">
-                <h3>Taxi</h3>
-                <p>+39 06 6645</p>
-                <h3>Bus</h3>
-                <p class="lang-it">Linea 120 per il centro (fermata a 100m).</p>
-                <p class="lang-en">Line 120 to city center (stop at 100m).</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modale Contattaci (Footer) -->
-    <div id="modal-contact" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-contact')">&times;</button>
-            <div class="modal-header"><h2>Contattaci / Contact Us</h2></div>
-            <div class="modal-body">
-                <h3>Host (Mario)</h3>
-                <p>+39 333 1234567</p>
-                <h3>Emergenze / Emergencies</h3>
-                <p>Polizia/Ambulanza: 112</p>
-                <p>Guardia Medica: +39 06 123456</p>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ===========================
-         SEZIONE JAVASCRIPT
-         =========================== -->
-    <script>
-        /* FUNZIONI PER GESTIRE LE MODALI (POPUP) */
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.add('open');
-            // Blocca lo scroll della pagina di sfondo
-            document.body.style.overflow = 'hidden'; 
+    function changeLanguage(lang) {
+      if (!i18nData[lang]) return;
+      
+      // Update all elements with data-i18n
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18nData[lang][key]) {
+          el.innerHTML = i18nData[lang][key];
         }
+      });
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('open');
-            // Ripristina lo scroll della pagina di sfondo
-            document.body.style.overflow = 'auto';
-        }
+      // Update HTML lang attribute and save preference
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+    }
 
-        /* Chiudi la modale cliccando sullo sfondo scuro */
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('open');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        /* FUNZIONE PER COPIARE TESTO NEGLI APPUNTI */
-        function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Copiato negli appunti: ' + text);
-            }).catch(err => {
-                console.error('Errore durante la copia: ', err);
-            });
-        }
-    </script>
+    // Load saved language on startup or default to Italian
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'it';
+      document.getElementById('languageSelect').value = savedLang;
+      changeLanguage(savedLang);
+    });
+  </script>
 </body>
 </html>
