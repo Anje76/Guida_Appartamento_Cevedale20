@@ -1,696 +1,346 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Casa Vacanze - Sunshine Apartment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cevedale 20 - Il Tuo Rifugio in Val di Sole</title>
+  <style>
+    :root {
+      --primary: #2d5a27;
+      --primary-dark: #1e3d1a;
+      --accent: #d97706;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
 
-    <!-- Font Google: Playfair Display per i titoli e Plus Jakarta Sans per il testo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-    <!-- FontAwesome per le icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-    <style>
-        /* CSS RESET & VARIABLES */
-        :root {
-            --bg-color: #f7e9da;       /* Beige chiaro di sfondo */
-            --header-bg: #e5d1bc;     /* Beige calcolante per header/footer */
-            --icon-color: #5d4037;    /* Marrone scuro elegante */
-            --label-color: #3e2723;   /* Marrone intenso/scuro */
-            --btn-footer-bg: #e5d1bc; /* Colore pulsante footer */
-            --modal-bg: #ffffff;     /* Sfondo modale pulito */
-            --accent-color: #a1887f;   /* Dettagli e accenti */
-            
-            --text-serif: 'Playfair Display', Georgia, serif;
-            --text-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
-            
-            --radius-round: 24px;
-            --shadow-sm: 0 4px 12px rgba(62, 39, 35, 0.06);
-            --shadow-lg: 0 12px 32px rgba(62, 39, 35, 0.15);
-        }
+    header {
+      text-align: center;
+      padding: 24px 16px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
 
-        body {
-            background-color: #e2d2c1;
-            color: var(--label-color);
-            font-family: var(--text-sans);
-            line-height: 1.4;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
+    header p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
 
-        /* CONTAINER SIMULAZIONE SMARTPHONE */
-        .phone-container {
-            width: 100%;
-            max-width: 430px;
-            background-color: var(--bg-color);
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
-            padding-bottom: 90px;
-        }
+    .nav-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 24px;
+    }
 
-        /* HEADER */
-        header {
-            background-color: var(--header-bg);
-            padding: 36px 20px 26px;
-            text-align: center;
-            border-bottom-left-radius: var(--radius-round);
-            border-bottom-right-radius: var(--radius-round);
-            box-shadow: var(--shadow-sm);
-        }
+    .nav-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 12px 8px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
 
-        header h1 {
-            font-family: var(--text-serif);
-            font-size: 1.65rem;
-            font-weight: 700;
-            color: var(--icon-color);
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 6px;
-        }
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
 
-        header p {
-            font-size: 0.78rem;
-            color: var(--label-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            opacity: 0.9;
-        }
+    .nav-btn span.icon {
+      font-size: 1.4rem;
+    }
 
-        /* MAIN & GRID */
-        main {
-            flex: 1;
-            padding: 24px 16px;
-        }
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
 
-        .icon-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px 10px;
-            justify-items: center;
-            align-items: start;
-        }
+    .card h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid var(--bg);
+      padding-bottom: 8px;
+    }
 
-        .grid-item {
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.15s ease;
-        }
+    .info-list {
+      list-style: none;
+    }
 
-        .grid-item:active {
-            transform: scale(0.92);
-        }
+    .info-list li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
 
-        /* EFFETTO CERCHIO IMPRESSO/TIMBRO VINTAGE */
-        .icon-circle {
-            width: 78px;
-            height: 78px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-            position: relative;
-            /* Bordi irregolari organici per simulare lo stile timbro */
-            border: 2px dashed var(--icon-color);
-            border-radius: 48% 52% 54% 46% / 52% 48% 52% 48%;
-            background: rgba(229, 209, 188, 0.25);
-            box-shadow: inset 0 0 0 2px var(--bg-color), inset 0 0 0 3px var(--icon-color);
-        }
+    .info-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
 
-        /* Varianti di forma casuale per un look artigianale */
-        .grid-item:nth-child(2n) .icon-circle {
-            border-radius: 54% 46% 48% 52% / 48% 54% 46% 54%;
-        }
+    .badge {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
 
-        .grid-item:nth-child(3n) .icon-circle {
-            border-radius: 50% 50% 46% 54% / 54% 46% 54% 46%;
-        }
+    .alert-box {
+      background: #fffbeeb;
+      border-left: 4px solid var(--accent);
+      padding: 12px;
+      border-radius: 6px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
 
-        .icon-circle i {
-            font-size: 2rem;
-            color: var(--icon-color);
-        }
+    .btn-link {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 8px;
+    }
 
-        .icon-label {
-            font-size: 0.72rem;
-            color: var(--label-color);
-            text-transform: uppercase;
-            font-weight: 700;
-            line-height: 1.25;
-            letter-spacing: 0.3px;
-            max-width: 95px;
-            word-wrap: break-word;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
 
-        /* FOOTER FISSO */
-        footer {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 40px);
-            max-width: 390px;
-            text-align: center;
-            z-index: 10;
-        }
+    th, td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
 
-        .btn-contact {
-            display: block;
-            width: 100%;
-            background-color: var(--btn-footer-bg);
-            color: var(--label-color);
-            font-family: var(--text-sans);
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 16px;
-            border: 1.5px solid var(--icon-color);
-            border-radius: 40px;
-            cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            transition: background 0.2s, transform 0.15s;
-        }
+    th {
+      background-color: var(--bg);
+      color: var(--text-muted);
+    }
 
-        .btn-contact:active {
-            transform: scale(0.98);
-            background-color: #d8c3ae;
-        }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
 
-        /* MODALI (POPUP) */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(62, 39, 35, 0.45);
-            backdrop-filter: blur(4px);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
+    .contact-card {
+      background: var(--bg);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
 
-        .modal.open {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-content {
-            background-color: var(--modal-bg);
-            width: 100%;
-            max-width: 380px;
-            border-radius: var(--radius-round);
-            padding: 28px 24px 24px;
-            position: relative;
-            box-shadow: var(--shadow-lg);
-            max-height: 85vh;
-            overflow-y: auto;
-            transform: translateY(15px) scale(0.96);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .modal.open .modal-content {
-            transform: translateY(0) scale(1);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: var(--bg-color);
-            font-size: 1.2rem;
-            color: var(--icon-color);
-            cursor: pointer;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s;
-        }
-
-        .close-modal:active {
-            background-color: var(--header-bg);
-        }
-
-        .modal-header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 1.5px solid var(--bg-color);
-            padding-bottom: 14px;
-        }
-
-        .modal-header h2 {
-            font-family: var(--text-serif);
-            color: var(--icon-color);
-            text-transform: uppercase;
-            font-size: 1.35rem;
-            letter-spacing: 0.5px;
-        }
-
-        .modal-body h3 {
-            color: var(--icon-color);
-            margin-top: 16px;
-            margin-bottom: 6px;
-            font-size: 1rem;
-            font-weight: 700;
-        }
-
-        .modal-body p, .modal-body li {
-            font-size: 0.92rem;
-            margin-bottom: 8px;
-            color: #4a3c38;
-            line-height: 1.45;
-        }
-
-        .modal-body ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .modal-body li {
-            padding: 4px 0;
-        }
-
-        .lang-it { font-weight: 600; color: var(--label-color); }
-        .lang-en { font-style: italic; color: #73615a; margin-bottom: 12px; }
-
-        .btn-modal-action {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            background-color: var(--icon-color);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 18px;
-            border-radius: 12px;
-            font-weight: 600;
-            margin-top: 14px;
-            border: none;
-            cursor: pointer;
-            font-size: 0.88rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn-modal-action:active { opacity: 0.88; }
-
-        .btn-copy {
-            width: auto;
-            display: inline-flex;
-            background-color: var(--header-bg);
-            color: var(--label-color);
-            margin-left: 8px;
-            padding: 6px 12px;
-            font-size: 0.78rem;
-            border-radius: 8px;
-            margin-top: 0;
-        }
-
-        /* Notifica Toast per la copia */
-        .toast {
-            position: fixed;
-            bottom: 90px;
-            left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            background: var(--label-color);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 2000;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .toast.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 360px) {
-            .icon-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-            }
-            .icon-circle {
-                width: 72px;
-                height: 72px;
-            }
-            .icon-circle i {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="phone-container">
+  <header>
+    <h1>Cevedale 20</h1>
+    <p>Il tuo rifugio in Val di Sole • Malè (TN)</p>
+  </header>
 
-        <header>
-            <h1>Benvenuti! / Welcome!</h1>
-            <p>Tocca le icone / Tap on the icons</p>
-        </header>
+  <!-- Pulsanti di Navigazione Rapida Dashboard -->
+  <div class="nav-buttons">
+    <button class="nav-btn active" onclick="scrollToSection('accesso')">
+      <span class="icon">📍</span> Accesso
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('cucina')">
+      <span class="icon">🍳</span> Cucina
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('rifiuti')">
+      <span class="icon">♻️</span> Rifiuti
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('checkout')">
+      <span class="icon">🚪</span> Check-out
+    </button>
+    <button class="nav-btn" onclick="scrollToSection('contatti')">
+      <span class="icon">📞</span> Contatti
+    </button>
+  </div>
 
-        <main>
-            <div class="icon-grid">
-                
-                <!-- 1. Benvenuto -->
-                <div class="grid-item" onclick="openModal('modal-welcome')">
-                    <div class="icon-circle"><i class="far fa-building"></i></div>
-                    <p class="icon-label">Benvenuto / Welcome</p>
-                </div>
-
-                <!-- 2. Posizione -->
-                <div class="grid-item" onclick="openModal('modal-location')">
-                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
-                    <p class="icon-label">Posizione / Location</p>
-                </div>
-
-                <!-- 3. Check-in & Out -->
-                <div class="grid-item" onclick="openModal('modal-checkinout')">
-                    <div class="icon-circle"><i class="fas fa-key"></i></div>
-                    <p class="icon-label">Check-in & Check-out</p>
-                </div>
-
-                <!-- 4. Info/FAQ -->
-                <div class="grid-item" onclick="openModal('modal-faq')">
-                    <div class="icon-circle"><i class="far fa-comment-dots"></i></div>
-                    <p class="icon-label">Info / FAQ</p>
-                </div>
-
-                <!-- 5. Regole -->
-                <div class="grid-item" onclick="openModal('modal-rules')">
-                    <div class="icon-circle"><i class="fas fa-home"></i></div>
-                    <p class="icon-label">Regole / Rules</p>
-                </div>
-
-                <!-- 6. Escursioni -->
-                <div class="grid-item" onclick="openModal('modal-excursions')">
-                    <div class="icon-circle"><i class="fas fa-mountain"></i></div>
-                    <p class="icon-label">Escursioni / Tours</p>
-                </div>
-
-                <!-- 7. Consigli Locali -->
-                <div class="grid-item" onclick="openModal('modal-tips')">
-                    <div class="icon-circle"><i class="far fa-heart"></i></div>
-                    <p class="icon-label">Consigli / Local Tips</p>
-                </div>
-
-                <!-- 8. Recensione -->
-                <div class="grid-item" onclick="openModal('modal-review')">
-                    <div class="icon-circle"><i class="fas fa-star-half-alt"></i></div>
-                    <p class="icon-label">Recensione / Review</p>
-                </div>
-
-                <!-- 9. Istruzioni -->
-                <div class="grid-item" onclick="openModal('modal-appliances')">
-                    <div class="icon-circle"><i class="fas fa-cogs"></i></div>
-                    <p class="icon-label">Istruzioni / Appliances</p>
-                </div>
-
-                <!-- 10. Cose da Visitare -->
-                <div class="grid-item" onclick="openModal('modal-places')">
-                    <div class="icon-circle"><i class="fas fa-camera"></i></div>
-                    <p class="icon-label">Visitare / Places</p>
-                </div>
-
-                <!-- 11. Wi-Fi -->
-                <div class="grid-item" onclick="openModal('modal-wifi')">
-                    <div class="icon-circle"><i class="fas fa-wifi"></i></div>
-                    <p class="icon-label">Wi-Fi</p>
-                </div>
-
-                <!-- 12. Trasporti -->
-                <div class="grid-item" onclick="openModal('modal-transport')">
-                    <div class="icon-circle"><i class="fas fa-bus"></i></div>
-                    <p class="icon-label">Trasporti / Transport</p>
-                </div>
-
-            </div>
-        </main>
-
-        <footer>
-            <button class="btn-contact" onclick="openModal('modal-contact')">Contattaci / Contact Us</button>
-        </footer>
-
+  <!-- Modulo Accesso e Parcheggio -->
+  <div id="accesso" class="card">
+    <h2>📍 Accesso e Parcheggio</h2>
+    <p><strong>Indirizzo:</strong> Via IV Novembre 16, Malè (TN) – Galleria Cevedale[cite: 2]</p>
+    <a href="https://goo.gl/maps/K9Th2YR95PNBmDfk8" target="_blank" class="btn-link">Apri su Google Maps 🗺️</a>
+    
+    <div style="margin-top: 16px;">
+      <span class="badge">Posto Auto Riservato</span>
+      <ul class="info-list">
+        <li><strong>Posto Auto N. 20:</strong> Segnalato da righe gialle, situato adiacente allo spigolo posteriore destro dell'edificio[cite: 2]. Raggiungibile ruotando attorno al palazzo in senso orario[cite: 2].</li>
+        <li><strong>Posti gratuiti:</strong> Disponibili davanti all'ingresso della galleria (righe gialle senza numero)[cite: 2].</li>
+      </ul>
     </div>
 
-    <!-- MODALI (POPUP) -->
+    <div style="margin-top: 12px;">
+      <span class="badge">Ingresso e Keybox</span>
+      <ul class="info-list">
+        <li><strong>Portone condominiale:</strong> Aperto dalle 8:00 alle 18:00 (spingere per entrare)[cite: 2]. Negli altri orari utilizzare le chiavi[cite: 2].</li>
+        <li><strong>Posizione appartamento:</strong> 1° piano (ascensore disponibile)[cite: 2]. Girare a destra nel corridoio, seconda porta a destra (Appartamento 20, campanello FLAMINI-GIANGRANDI)[cite: 2].</li>
+        <li><strong>Cassetta di sicurezza (Keybox):</strong> Posizionata a lato della porta[cite: 2]. Aprire il coperchio nero, inserire la combinazione inviata per il check-in e ruotare il pomello in senso orario[cite: 2].</li>
+        <li><strong>Mazzo di chiavi:</strong> Contiene 3 chiavi (1 lunga per l'appartamento, 2 corte per il portone in galleria e la porta d'uscita al piano terra verso il parcheggio)[cite: 2].</li>
+        <li><strong>Chiusura Keybox:</strong> Richiudere, ruotare il pomello in senso antiorario e ripristinare il codice su <strong>0-0-0-0</strong>[cite: 2].</li>
+      </ul>
+    </div>
+  </div>
 
-    <!-- 1. Benvenuto -->
-    <div id="modal-welcome" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-welcome')">&times;</button>
-            <div class="modal-header"><h2>Benvenuto / Welcome</h2></div>
-            <div class="modal-body">
-                <p class="lang-it">Ciao! Siamo felici di ospitarti nel Sunshine Apartment. Questa guida digitale contiene tutto ciò che devi sapere per un soggiorno perfetto.</p>
-                <p class="lang-en">Hi! We are happy to host you at Sunshine Apartment. This digital guide contains everything you need to know for a perfect stay.</p>
-            </div>
-        </div>
+  <!-- Modulo Cucina ed Elettrodomestici -->
+  <div id="cucina" class="card">
+    <h2>🍳 Cucina e Contatore Elettrico</h2>
+    <p>Piano cottura ad induzione con pentolame dedicato nel mobile adiacente al frigorifero[cite: 2]:</p>
+    <ul class="info-list" style="margin-top: 8px;">
+      <li>Pentole "Abert", casseruola "Ikea" e 3 padelle antiaderenti compatibili[cite: 2].</li>
+      <li>Moka "Barazzoni" ad induzione (utilizzare a potenza non superiore a <strong>5</strong> per evitare errori)[cite: 2].</li>
+    </ul>
+
+    <div class="alert-box">
+      ⚠️ <strong>Gestione Potenza:</strong> Per prevenire distacchi elettrici, utilizzare al massimo 2 piastre contemporaneamente con somma di potenza non superiore a <strong>10-12</strong> (es. acqua a 6-7 e sugo a 4-5)[cite: 2]. Non accendere contemporaneamente altri elettrodomestici ad alto consumo (forno, lavatrice, phon, aspirapolvere)[cite: 2].
     </div>
 
-    <!-- 2. Posizione -->
-    <div id="modal-location" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-location')">&times;</button>
-            <div class="modal-header"><h2>Posizione / Location</h2></div>
-            <div class="modal-body">
-                <p><strong>Sunshine Apartment</strong></p>
-                <p>Via Roma 123, 00100 Roma (RM)</p>
-                <a href="https://maps.google.com" target="_blank" class="btn-modal-action"><i class="fas fa-directions"></i> Apri in Google Maps</a>
-            </div>
-        </div>
+    <ul class="info-list">
+      <li><strong>Blocco di Sicurezza (Display "L"):</strong> Se appare la lettera "L", tenere premuto il simbolo <strong>CHIAVE</strong> per sbloccare[cite: 2].</li>
+      <li><strong>Ripristino Contatore:</strong> Verificare prima gli interruttori vicino alla porta[cite: 2]. Se necessario accedere al contatore generale: piano seminterrato (-1), stanza subito a destra dell'ascensore, contatore in alto a destra contrassegnato dal <strong>N. 20 (FLAMINI-GIANGRANDI)</strong>[cite: 2].</li>
+    </ul>
+  </div>
+
+  <!-- Modulo Rifiuti -->
+  <div id="rifiuti" class="card">
+    <h2>♻️ Raccolta Differenziata</h2>
+    <p>A Malè la raccolta differenziata è obbligatoria[cite: 2].</p>
+
+    <ul class="info-list" style="margin-top: 10px;">
+      <li><strong>Rifiuti Organici (Umido):</strong> Conferire nei bidoni marroni situati a 20m dall'appartamento (ingresso Poliambulatorio)[cite: 2]. Sollevare il coperchio piccolo rotondo[cite: 2].</li>
+      <li><strong>Rifiuti Indifferenziati:</strong> Utilizzare la campana in muratura posizionata nello stesso punto dell'umido[cite: 2]. Aprire con la <strong>Tessera Collettore</strong> (presente sul mobile TV)[cite: 2]. Max 2-3 scarichi a settimana[cite: 2].</li>
+      <li><strong>Plastica, Carta e Vetro:</strong> Portare al Centro Recupero Materiali (CRM) con la <strong>Tessera CRM</strong> presente sul mobile TV[cite: 2].</li>
+    </ul>
+
+    <div style="margin-top: 12px;">
+      <p><strong>Centro Recupero Materiali (CRM) di Malè:</strong></p>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Località Molini, 3 • <a href="https://goo.gl/maps/X9xyFnYqPgE7Awp18" target="_blank">Mappa CRM</a>[cite: 2]</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Giorno</th>
+            <th>Orari di Apertura[cite: 2]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mar, Mer, Gio, Sab</td><td>08:30 - 12:00 / 14:00 - 17:30[cite: 2]</td></tr>
+          <tr><td>Lun, Ven, Dom</td><td>Chiuso (Attiva Eco Isola esterna fino alle 22:00)[cite: 2]</td></tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 
-    <!-- 3. Check-in & Out -->
-    <div id="modal-checkinout" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-checkinout')">&times;</button>
-            <div class="modal-header"><h2>Check-in & Check-out</h2></div>
-            <div class="modal-body">
-                <h3>Check-in</h3>
-                <p class="lang-it">Disponibile dalle ore 15:00.</p>
-                <p class="lang-en">Available from 3:00 PM.</p>
-                <p><strong>Codice porta / Door code:</strong> 1234# <button class="btn-modal-action btn-copy" onclick="copyText('1234#')"><i class="far fa-copy"></i> Copia</button></p>
-                
-                <h3>Check-out</h3>
-                <p class="lang-it">Entro le ore 10:00. Si prega di lasciare le chiavi sul tavolo.</p>
-                <p class="lang-en">By 10:00 AM. Please leave the keys on the table.</p>
-            </div>
-        </div>
+  <!-- Modulo Check-out -->
+  <div id="checkout" class="card">
+    <h2>🚪 Procedura di Check-out</h2>
+    <p>Da completare tassativamente entro le ore <strong>10:00</strong> del giorno di partenza[cite: 2]:</p>
+    <ul class="info-list" style="margin-top: 10px;">
+      <li>Rimuovere tutti i rifiuti presenti in casa[cite: 2].</li>
+      <li>Riporre le tessere dei rifiuti e il telecomando TV nell'espositore in legno sul mobile della TV[cite: 2].</li>
+      <li>Verificare la chiusura di tutte le finestre[cite: 2].</li>
+      <li>Riporre le chiavi nella cassetta di sicurezza esterna e azzerare il codice su <strong>0-0-0-0</strong>[cite: 2].</li>
+      <li>Informare la proprietà per qualsiasi problema riscontrato[cite: 2].</li>
+    </ul>
+  </div>
+
+  <!-- Modulo Contatti -->
+  <div id="contatti" class="card">
+    <h2>📞 Contatti & Assistenza</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <p><strong>Angelo Giangrandi</strong>[cite: 2]</p>
+        <p>📱 <a href="tel:+393276867296">+39 327 686 7296</a>[cite: 2]</p>
+        <p>✉️ <a href="mailto:anje76@gmail.com">anje76@gmail.com</a>[cite: 2]</p>
+      </div>
+      <div class="contact-card">
+        <p><strong>Silvia Flamini</strong>[cite: 2]</p>
+        <p>📱 <a href="tel:+393284151764">+39 328 415 1764</a>[cite: 2]</p>
+        <p>✉️ <a href="mailto:silviaflam76@gmail.com">silviaflam76@gmail.com</a>[cite: 2]</p>
+      </div>
     </div>
+  </div>
 
-    <!-- 4. Info/FAQ -->
-    <div id="modal-faq" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-faq')">&times;</button>
-            <div class="modal-header"><h2>Info / FAQ</h2></div>
-            <div class="modal-body">
-                <h3>Raccolta Rifiuti / Waste Disposal</h3>
-                <p class="lang-it">I bidoni si trovano in strada, 50m a destra. Seguire i colori:</p>
-                <p class="lang-en">Bins are on the street, 50m to the right. Follow the colors:</p>
-                <ul>
-                    <li>🟤 Organico / Organic</li>
-                    <li>🔵 Carta / Paper</li>
-                    <li>🟡 Plastica / Plastic</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- 5. Regole -->
-    <div id="modal-rules" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-rules')">&times;</button>
-            <div class="modal-header"><h2>Regole / Rules</h2></div>
-            <div class="modal-body">
-                <ul>
-                    <li class="lang-it">🚭 Vietato fumare all'interno.</li>
-                    <li class="lang-en">🚭 No smoking inside.</li>
-                    <li class="lang-it">🔇 Rispettare il silenzio dalle 22:00 alle 08:00.</li>
-                    <li class="lang-en">🔇 Quiet hours from 10:00 PM to 08:00 AM.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- 6. Escursioni -->
-    <div id="modal-excursions" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-excursions')">&times;</button>
-            <div class="modal-header"><h2>Escursioni / Tours</h2></div>
-            <div class="modal-body">
-                <p class="lang-it">Sentiero del Belvedere: passeggiata panoramica di 1 ora.</p>
-                <p class="lang-en">Belvedere Trail: scenic 1-hour walk.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 7. Consigli Locali -->
-    <div id="modal-tips" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-tips')">&times;</button>
-            <div class="modal-header"><h2>Consigli / Local Tips</h2></div>
-            <div class="modal-body">
-                <h3>Trattoria da Gino</h3>
-                <p class="lang-it">Cucina tipica locale a 2 minuti a piedi.</p>
-                <p class="lang-en">Traditional local food, 2 min walk.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 8. Recensione -->
-    <div id="modal-review" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-review')">&times;</button>
-            <div class="modal-header"><h2>Recensione / Review</h2></div>
-            <div class="modal-body">
-                <p class="lang-it">Speriamo che il tuo soggiorno sia stato fantastico! Lasciaci una recensione su Airbnb o Booking.</p>
-                <p class="lang-en">We hope you had a fantastic stay! Please leave us a review on Airbnb or Booking.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 9. Istruzioni -->
-    <div id="modal-appliances" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-appliances')">&times;</button>
-            <div class="modal-header"><h2>Istruzioni / Appliances</h2></div>
-            <div class="modal-body">
-                <h3>Lavatrice / Washing Machine</h3>
-                <p class="lang-it">Manuale d'uso rapido disponibile nel cassetto.</p>
-                <p class="lang-en">Quick user manual available in the drawer.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 10. Cose da Visitare -->
-    <div id="modal-places" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-places')">&times;</button>
-            <div class="modal-header"><h2>Visitare / Places</h2></div>
-            <div class="modal-body">
-                <h3>Museo Civico</h3>
-                <p class="lang-it">Aperto Mar-Dom 09:00-19:00.</p>
-                <p class="lang-en">Open Tue-Sun 09:00 AM - 07:00 PM.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 11. Wi-Fi -->
-    <div id="modal-wifi" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-wifi')">&times;</button>
-            <div class="modal-header"><h2>Wi-Fi</h2></div>
-            <div class="modal-body">
-                <p><strong>Rete / Network:</strong> Sunshine_Guest</p>
-                <p><strong>Password:</strong> Welcome2026!</p>
-                <button class="btn-modal-action" onclick="copyText('Welcome2026!')"><i class="far fa-copy"></i> Copia Password / Copy Password</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- 12. Trasporti -->
-    <div id="modal-transport" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-transport')">&times;</button>
-            <div class="modal-header"><h2>Trasporti / Transport</h2></div>
-            <div class="modal-body">
-                <h3>Taxi</h3>
-                <p>+39 06 6645</p>
-                <h3>Bus</h3>
-                <p class="lang-it">Linea 120 per il centro (fermata a 100m).</p>
-                <p class="lang-en">Line 120 to city center (stop at 100m).</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modale Contattaci -->
-    <div id="modal-contact" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('modal-contact')">&times;</button>
-            <div class="modal-header"><h2>Contattaci / Contact Us</h2></div>
-            <div class="modal-body">
-                <h3>Host (Mario)</h3>
-                <p>+39 333 1234567</p>
-                <h3>Emergenze / Emergencies</h3>
-                <p>Polizia/Ambulanza: 112</p>
-                <p>Guardia Medica: +39 06 123456</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Notifica Copia -->
-    <div id="toast" class="toast">Copiato negli appunti!</div>
-
-    <script>
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden'; 
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.remove('open');
-            document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('open');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast('Copiato negli appunti! / Copied!');
-            }).catch(err => {
-                console.error('Errore durante la copia: ', err);
-            });
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 2000);
-        }
-    </script>
+  <script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // Aggiorna stato attivo dei pulsanti
+      const buttons = document.querySelectorAll('.nav-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
