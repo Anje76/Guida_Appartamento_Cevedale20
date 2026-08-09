@@ -3,381 +3,609 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guida Casa Vacanze - Sunshine Apartment</title>
+    <title>Dashboard Casa Vacanze - Sunshine Apartment</title>
+    <!-- FontAwesome per le icone a linea -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* CSS RESET & VARIABLES */
         :root {
-            --primary-color: #1a5f7a;
-            --secondary-color: #159897;
-            --accent-color: #f2a154;
-            --bg-color: #f7f9fa;
-            --card-bg: #ffffff;
-            --text-color: #2c3e50;
-            --text-muted: #7f8c8d;
-            --radius: 12px;
-            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --bg-color: #f7e9da; /* Beige chiaro di sfondo dell'immagine */
+            --header-bg: #e5d1bc; /* Beige più scuro per il banner */
+            --icon-color: #5d4037; /* Marrone scuro per le icone e il testo */
+            --label-color: #3e2723; /* Marrone scurissimo/nero per le etichette bilingue */
+            --btn-footer-bg: #e5d1bc; /* Stesso beige più scuro per il footer */
+            --modal-bg: #ffffff; /* Bianco per il contenuto delle modali */
+            --accent-color: #a1887f; /* Marrone medio per accenti e bordi */
+            
+            --text-serif: 'Playfair Display', serif; /* Font con serifa per i titoli */
+            --text-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font pulito per il resto */
+            --radius-circle: 50%;
+            --radius-round: 20px;
+            --shadow: 0 4px 10px rgba(0,0,0,0.08);
+            
+            /* Asset per l'effetto timbro/cerchio irregolare. */
+            --irregular-circle-bg: url("data:image/png;base64,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");
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding-bottom: 40px;
-        }
-
-        /* HEADER & LANG SWITCHER */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 20px 15px;
-            text-align: center;
-            position: relative;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+            color: var(--label-color);
+            font-family: var(--text-sans);
+            line-height: 1.4;
+            padding-bottom: 60px; /* Spazio per il footer fisso */
             display: flex;
-            gap: 8px;
-        }
-
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid white;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-
-        .lang-btn.active {
-            background: white;
-            color: var(--primary-color);
-        }
-
-        /* CONTAINER & CARDS */
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        .card h2 {
-            color: var(--primary-color);
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 8px;
-        }
-
-        /* ACCESS HIGHLIGHTS (WIFI & CODE) */
-        .highlight-box {
-            background-color: #eef8f8;
-            border-left: 4px solid var(--secondary-color);
-            padding: 12px 15px;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
         }
 
-        .highlight-title {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .highlight-value {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .btn-copy {
-            background: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85rem;
-        }
-
-        /* BUTTONS & LINKS */
-        .btn-action {
-            display: block;
+        /* CONTAINER SIMULAZIONE SMARTPHONE (Opzionale, per demo) */
+        /* Rimuovi questo container se vuoi che l'app sia full-screen su mobile */
+        .phone-container {
             width: 100%;
-            background-color: var(--primary-color);
-            color: white;
+            max-width: 420px; /* Larghezza tipica smartphone */
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Ombra per simulare il telefono */
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--header-bg);
+            padding: 30px 20px;
             text-align: center;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
+            border-bottom-left-radius: var(--radius-round);
+            border-bottom-right-radius: var(--radius-round);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: var(--text-serif);
+            font-size: 1.8rem;
+            color: var(--icon-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: var(--label-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-weight: bold;
-            margin-top: 10px;
-            transition: background 0.2s;
         }
 
-        .btn-action:hover {
-            background-color: #13485d;
+        /* GRID MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 10px 20px;
         }
 
-        /* LISTS & GRID */
-        .info-list {
-            list-style: none;
-        }
-
-        .info-list li {
-            padding: 8px 0;
-            border-bottom: 1px dashed #eee;
-        }
-
-        .info-list li:last-child {
-            border-bottom: none;
-        }
-
-        .grid-2 {
+        .icon-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr); /* 3 colonne come immagine */
+            gap: 20px;
+            justify-items: center;
+            align-items: start;
         }
 
         .grid-item {
-            background: var(--bg-color);
-            padding: 10px;
-            border-radius: 8px;
             text-align: center;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
         }
 
-        .grid-item h3 {
-            font-size: 0.95rem;
-            color: var(--primary-color);
+        .grid-item:active {
+            transform: scale(0.95); /* Effetto clic */
         }
 
-        .grid-item p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+        /* EFFETTO CERCHIO IMPRESSO/TIMBRO */
+        .icon-circle {
+            width: 80px; /* Dimensione cerchio */
+            height: 80px;
+            background-color: transparent;
+            background-image: var(--irregular-circle-bg); /* Immagine cerchio irregolare */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
         }
 
+        /* Icona all'interno */
+        .icon-circle i {
+            font-size: 2.2rem; /* Dimensione icona */
+            color: var(--icon-color);
+        }
+
+        /* Etichetta bilingue scura */
+        .icon-label {
+            font-size: 0.75rem;
+            color: var(--label-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1.2;
+            max-width: 90px;
+            word-wrap: break-word;
+        }
+
+        /* FOOTER FISSO */
         footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 380px;
             text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 20px;
+            z-index: 10;
+        }
+
+        .btn-contact {
+            display: block;
+            width: 100%;
+            background-color: var(--btn-footer-bg);
+            color: var(--label-color);
+            font-family: var(--text-sans);
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px;
+            border: none;
+            border-radius: 30px; /* Molto arrotondato come nell'immagine */
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: background 0.2s;
+        }
+
+        .btn-contact:active {
+            background-color: #d8c3ae;
+        }
+
+        /* MODALI (POPUP) */
+        .modal {
+            display: none; /* Nascosta di default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5); /* Sfondo scuro semitrasparente */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.open {
+            display: flex; /* Mostra quando aperta */
+        }
+
+        .modal-content {
+            background-color: var(--modal-bg);
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--radius-round);
+            padding: 25px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-height: 90vh;
+            overflow-y: auto; /* Scrollbar interna se contenuto lungo */
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            font-family: var(--text-serif);
+            color: var(--icon-color);
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        .modal-body h3 {
+            color: var(--icon-color);
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .modal-body p, .modal-body li {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .modal-body ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* Stile bilingue all'interno delle modali */
+        .lang-it { font-weight: bold; color: var(--label-color); }
+        .lang-en { font-style: italic; color: #777; }
+
+        /* PULSANTI DI AZIONE NELLE MODALI (es. Mappe, Copia) */
+        .btn-modal-action {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-modal-action:active { background-color: #8d6e63; }
+
+        .btn-copy {
+            background-color: #e0e0e0;
+            color: #333;
+            margin-left: 10px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+
+        /* RESPONSIVE: GRIGLIA A 2 COLONNE SU SCHERMI MOLTO STRETTI */
+        @media (max-width: 360px) {
+            .icon-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .icon-circle {
+                width: 70px;
+                height: 70px;
+            }
+            .icon-circle i {
+                font-size: 1.9rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="lang-switcher">
-            <button class="lang-btn active" onclick="setLanguage('it')">IT</button>
-            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-        </div>
-        <h1 id="app-title">Sunshine Apartment</h1>
-        <p id="app-subtitle">Benvenuto a bordo! La tua guida di soggiorno.</p>
-    </header>
+    <!-- Container simulazione smartphone (rimuovi per full-screen su mobile) -->
+    <div class="phone-container">
 
-    <div class="container">
+        <header>
+            <h1>Benvenuti!/Welcome!</h1>
+            <p>Tocca le icone / Tap on the icons</p>
+        </header>
 
-        <!-- ACCESSO E WI-FI -->
-        <div class="card">
-            <h2 id="sec-access-title">🔑 Accesso e Wi-Fi</h2>
-            
-            <div class="highlight-box">
-                <div>
-                    <div class="highlight-title" id="lbl-door-code">Codice Porta</div>
-                    <div class="highlight-value" id="door-code">1234#</div>
+        <main>
+            <div class="icon-grid">
+                
+                <!-- 1. Benvenuto -->
+                <div class="grid-item" onclick="openModal('modal-welcome')">
+                    <div class="icon-circle"><i class="far fa-building"></i></div>
+                    <p class="icon-label">Benvenuto/ Welcome</p>
                 </div>
-                <button class="btn-copy" onclick="copyToClipboard('1234#')" id="btn-copy-door">Copia</button>
+
+                <!-- 2. Posizione -->
+                <div class="grid-item" onclick="openModal('modal-location')">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <p class="icon-label">Posizione/ Location</p>
+                </div>
+
+                <!-- 3. Check-in & Out -->
+                <div class="grid-item" onclick="openModal('modal-checkinout')">
+                    <div class="icon-circle"><i class="fas fa-key"></i></div>
+                    <p class="icon-label">Check-in & Check-out</p>
+                </div>
+
+                <!-- 4. Info/FAQ -->
+                <div class="grid-item" onclick="openModal('modal-faq')">
+                    <div class="icon-circle"><i class="far fa-comment-dots"></i></div>
+                    <p class="icon-label">Info/ FAQ</p>
+                </div>
+
+                <!-- 5. Regole -->
+                <div class="grid-item" onclick="openModal('modal-rules')">
+                    <div class="icon-circle"><i class="fas fa-home"></i></div>
+                    <p class="icon-label">Regole/ Rules</p>
+                </div>
+
+                <!-- 6. Escursioni -->
+                <div class="grid-item" onclick="openModal('modal-excursions')">
+                    <div class="icon-circle"><i class="fas fa-mountain"></i></div>
+                    <p class="icon-label">Escursioni/ Excursions & Tours</p>
+                </div>
+
+                <!-- 7. Consigli Locali -->
+                <div class="grid-item" onclick="openModal('modal-tips')">
+                    <div class="icon-circle"><i class="far fa-heart"></i></div>
+                    <p class="icon-label">Consigli Locali/ Local Tips</p>
+                </div>
+
+                <!-- 8. Recensione -->
+                <div class="grid-item" onclick="openModal('modal-review')">
+                    <div class="icon-circle"><i class="fas fa-star-half-alt"></i></div>
+                    <p class="icon-label">Recensione/ Review</p>
+                </div>
+
+                <!-- 9. Istruzioni -->
+                <div class="grid-item" onclick="openModal('modal-appliances')">
+                    <div class="icon-circle"><i class="fas fa-cogs"></i></div>
+                    <p class="icon-label">Istruzioni/ Appliances</p>
+                </div>
+
+                <!-- 10. Cose da Visitare -->
+                <div class="grid-item" onclick="openModal('modal-places')">
+                    <div class="icon-circle"><i class="fas fa-camera"></i></div>
+                    <p class="icon-label">Cose da Visitare/ Places to Visit</p>
+                </div>
+
+                <!-- 11. Wi-Fi -->
+                <div class="grid-item" onclick="openModal('modal-wifi')">
+                    <div class="icon-circle"><i class="fas fa-wifi"></i></div>
+                    <p class="icon-label">Wi-Fi</p>
+                </div>
+
+                <!-- 12. Trasporti -->
+                <div class="grid-item" onclick="openModal('modal-transport')">
+                    <div class="icon-circle"><i class="fas fa-bus"></i></div>
+                    <p class="icon-label">Trasporti/ Transportation</p>
+                </div>
+
             </div>
-
-            <div class="highlight-box">
-                <div>
-                    <div class="highlight-title" id="lbl-wifi-name">Rete Wi-Fi</div>
-                    <div class="highlight-value">Sunshine_Guest</div>
-                </div>
-            </div>
-
-            <div class="highlight-box">
-                <div>
-                    <div class="highlight-title" id="lbl-wifi-pass">Password Wi-Fi</div>
-                    <div class="highlight-value" id="wifi-pass">Welcome2026!</div>
-                </div>
-                <button class="btn-copy" onclick="copyToClipboard('Welcome2026!')" id="btn-copy-wifi">Copia</button>
-            </div>
-        </div>
-
-        <!-- POSIZIONE E INDIRIZZO -->
-        <div class="card">
-            <h2 id="sec-location-title">📍 Indirizzo e Mappa</h2>
-            <p><strong>Casa Vacanze Sunshine</strong></p>
-            <p id="address-text">Via Roma 123, 00100 Roma (RM)</p>
-            <a href="https://maps.google.com" target="_blank" class="btn-action" id="btn-maps">Apri in Google Maps</a>
-        </div>
-
-        <!-- REGOLE DELLA CASA -->
-        <div class="card">
-            <h2 id="sec-rules-title">📋 Regole della Casa</h2>
-            <ul class="info-list">
-                <li id="rule-1">🚭 Vietato fumare all'interno dell'appartamento.</li>
-                <li id="rule-2">🔇 Rispettare il silenzio dalle 22:00 alle 08:00.</li>
-                <li id="rule-3">🔑 Check-out entro le ore 10:00.</li>
-            </ul>
-        </div>
-
-        <!-- SMALTIMENTO RIFIUTI -->
-        <div class="card">
-            <h2 id="sec-trash-title">♻️ Gestione Rifiuti</h2>
-            <p id="trash-desc" style="margin-bottom: 10px;">Segui la raccolta differenziata. I bidoni principali si trovano in strada a 50m a destra dell'ingresso.</p>
-            <div class="grid-2">
-                <div class="grid-item">
-                    <h3 id="trash-org">Organico</h3>
-                    <p id="trash-org-days">Contenitore Marrone</p>
-                </div>
-                <div class="grid-item">
-                    <h3 id="trash-paper">Carta/Plastica</h3>
-                    <p id="trash-paper-days">Contenitori Giallo e Blu</p>
-                </div>
-            </div>
-            <a href="https://maps.google.com" target="_blank" class="btn-action" style="background-color: var(--secondary-color);" id="btn-trash-map">Mappa Centro di Raccolta</a>
-        </div>
-
-        <!-- SERVIZI UTILI E EMERGENZE -->
-        <div class="card">
-            <h2 id="sec-contacts-title">📞 Contatti e Servizi Utili</h2>
-            <ul class="info-list">
-                <li><strong>Emergenze (Polizia/Ambulanza):</strong> 112</li>
-                <li><strong id="lbl-doctor">Guardia Medica:</strong> +39 06 123456</li>
-                <li><strong id="lbl-host">Host (Mario):</strong> +39 333 1234567</li>
-                <li><strong>Taxi:</strong> +39 06 6645</li>
-            </ul>
-        </div>
-
-        <!-- RISTORANTI E ATTRAZIONI -->
-        <div class="card">
-            <h2 id="sec-guide-title">🍽️ Consigli Locali</h2>
-            <ul class="info-list">
-                <li>
-                    <strong>Trattoria da Gino</strong><br>
-                    <small id="rest-1-desc">Cucina tipica locale a 2 minuti a piedi.</small>
-                </li>
-                <li>
-                    <strong>Museo Civico</strong><br>
-                    <small id="sight-1-desc">Aperto Mar-Dom 09:00-19:00.</small>
-                </li>
-            </ul>
-        </div>
+        </main>
 
         <footer>
-            <p id="footer-text">Buon soggiorno! Per qualsiasi necessità contattaci via WhatsApp.</p>
+            <button class="btn-contact" onclick="openModal('modal-contact')">Contattaci/Contact Us</button>
         </footer>
 
+    </div> <!-- Fine phone-container -->
+
+
+    <!-- ===========================
+         SEZIONE MODALI (POPUP)
+         =========================== -->
+
+    <!-- 1. Modale Benvenuto -->
+    <div id="modal-welcome" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-welcome')">&times;</button>
+            <div class="modal-header"><h2>Benvenuto / Welcome</h2></div>
+            <div class="modal-body">
+                <p class="lang-it">Ciao! Siamo felici di ospitarti nel Sunshine Apartment. Questa guida digitale contiene tutto ciò che devi sapere per un soggiorno perfetto.</p>
+                <p class="lang-en">Hi! We are happy to host you at Sunshine Apartment. This digital guide contains everything you need to know for a perfect stay.</p>
+            </div>
+        </div>
     </div>
 
+    <!-- 2. Modale Posizione -->
+    <div id="modal-location" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-location')">&times;</button>
+            <div class="modal-header"><h2>Posizione / Location</h2></div>
+            <div class="modal-body">
+                <p><strong>Sunshine Apartment</strong></p>
+                <p>Via Roma 123, 00100 Roma (RM)</p>
+                <a href="https://maps.google.com" target="_blank" class="btn-modal-action">Apri in Google Maps / Open Maps</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Modale Check-in & Out -->
+    <div id="modal-checkinout" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-checkinout')">&times;</button>
+            <div class="modal-header"><h2>Check-in & Check-out</h2></div>
+            <div class="modal-body">
+                <h3>Check-in</h3>
+                <p class="lang-it">Disponibile dalle ore 15:00. <br> Codice apertura porta principale:</p>
+                <p class="lang-en">Available from 3:00 PM. <br> Main door access code:</p>
+                <p><strong>1234#</strong> <button class="btn-modal-action btn-copy" onclick="copyText('1234#')">Copia/Copy</button></p>
+                
+                <h3>Check-out</h3>
+                <p class="lang-it">Entro le ore 10:00. Si prega di lasciare le chiavi sul tavolo.</p>
+                <p class="lang-en">By 10:00 AM. Please leave the keys on the table.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Modale Info/FAQ -->
+    <div id="modal-faq" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-faq')">&times;</button>
+            <div class="modal-header"><h2>Info / FAQ</h2></div>
+            <div class="modal-body">
+                <h3>Raccolta Rifiuti / Waste Disposal</h3>
+                <p class="lang-it">I bidoni si trovano in strada, 50m a destra. Seguire i colori:</p>
+                <p class="lang-en">Bins are on the street, 50m to the right. Follow the colors:</p>
+                <ul>
+                    <li>🟤 Organico / Organic</li>
+                    <li>🔵 Carta / Paper</li>
+                    <li>🟡 Plastica / Plastic</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Modale Regole -->
+    <div id="modal-rules" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-rules')">&times;</button>
+            <div class="modal-header"><h2>Regole / Rules</h2></div>
+            <div class="modal-body">
+                <ul>
+                    <li class="lang-it">🚭 Vietato fumare all'interno.</li>
+                    <li class="lang-en">🚭 No smoking inside.</li>
+                    <li class="lang-it">🔇 Rispettare il silenzio dalle 22:00 alle 08:00.</li>
+                    <li class="lang-en">🔇 Quiet hours from 10:00 PM to 08:00 AM.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Modale Escursioni -->
+    <div id="modal-excursions" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-excursions')">&times;</button>
+            <div class="modal-header"><h2>Escursioni / Tours</h2></div>
+            <div class="modal-body">
+                <p class="lang-it">Sentiero del Belvedere: passeggiata panoramica di 1 ora.</p>
+                <p class="lang-en">Belvedere Trail: scenic 1-hour walk.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Modale Consigli Locali -->
+    <div id="modal-tips" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-tips')">&times;</button>
+            <div class="modal-header"><h2>Consigli / Local Tips</h2></div>
+            <div class="modal-body">
+                <h3>Trattoria da Gino</h3>
+                <p class="lang-it">Cucina tipica locale a 2 minuti a piedi.</p>
+                <p class="lang-en">Traditional local food, 2 min walk.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Modale Recensione -->
+    <div id="modal-review" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-review')">&times;</button>
+            <div class="modal-header"><h2>Recensione / Review</h2></div>
+            <div class="modal-body">
+                <p class="lang-it">Speriamo che il tuo soggiorno sia stato fantastico! Lasciaci una recensione su Airbnb o Booking.</p>
+                <p class="lang-en">We hope you had a fantastic stay! Please leave us a review on Airbnb or Booking.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Modale Istruzioni -->
+    <div id="modal-appliances" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-appliances')">&times;</button>
+            <div class="modal-header"><h2>Istruzioni / Appliances</h2></div>
+            <div class="modal-body">
+                <h3>Lavatrice / Washing Machine</h3>
+                <p class="lang-it">Manuale d'uso rapido disponibile nel cassetto.</p>
+                <p class="lang-en">Quick user manual available in the drawer.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. Modale Cose da Visitare -->
+    <div id="modal-places" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-places')">&times;</button>
+            <div class="modal-header"><h2>Visitare / Places</h2></div>
+            <div class="modal-body">
+                <h3>Museo Civico</h3>
+                <p class="lang-it">Aperto Mar-Dom 09:00-19:00.</p>
+                <p class="lang-en">Open Tue-Sun 09:00 AM - 07:00 PM.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. Modale Wi-Fi -->
+    <div id="modal-wifi" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-wifi')">&times;</button>
+            <div class="modal-header"><h2>Wi-Fi</h2></div>
+            <div class="modal-body">
+                <p><strong>Rete / Network:</strong> Sunshine_Guest</p>
+                <p><strong>Password:</strong> Welcome2026!</p>
+                <button class="btn-modal-action" onclick="copyText('Welcome2026!')">Copia Password / Copy Password</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. Modale Trasporti -->
+    <div id="modal-transport" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-transport')">&times;</button>
+            <div class="modal-header"><h2>Trasporti / Transport</h2></div>
+            <div class="modal-body">
+                <h3>Taxi</h3>
+                <p>+39 06 6645</p>
+                <h3>Bus</h3>
+                <p class="lang-it">Linea 120 per il centro (fermata a 100m).</p>
+                <p class="lang-en">Line 120 to city center (stop at 100m).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale Contattaci (Footer) -->
+    <div id="modal-contact" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-contact')">&times;</button>
+            <div class="modal-header"><h2>Contattaci / Contact Us</h2></div>
+            <div class="modal-body">
+                <h3>Host (Mario)</h3>
+                <p>+39 333 1234567</p>
+                <h3>Emergenze / Emergencies</h3>
+                <p>Polizia/Ambulanza: 112</p>
+                <p>Guardia Medica: +39 06 123456</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===========================
+         SEZIONE JAVASCRIPT
+         =========================== -->
     <script>
-        /* DIZIONARIO TRADUZIONI */
-        const translations = {
-            it: {
-                "app-subtitle": "Benvenuto a bordo! La tua guida di soggiorno.",
-                "sec-access-title": "🔑 Accesso e Wi-Fi",
-                "lbl-door-code": "Codice Porta",
-                "lbl-wifi-name": "Rete Wi-Fi",
-                "lbl-wifi-pass": "Password Wi-Fi",
-                "btn-copy-door": "Copia",
-                "btn-copy-wifi": "Copia",
-                "sec-location-title": "📍 Indirizzo e Mappa",
-                "btn-maps": "Apri in Google Maps",
-                "sec-rules-title": "📋 Regole della Casa",
-                "rule-1": "🚭 Vietato fumare all'interno dell'appartamento.",
-                "rule-2": "🔇 Rispettare il silenzio dalle 22:00 alle 08:00.",
-                "rule-3": "🔑 Check-out entro le ore 10:00.",
-                "sec-trash-title": "♻️ Gestione Rifiuti",
-                "trash-desc": "Segui la raccolta differenziata. I bidoni principali si trovano in strada a 50m a destra dell'ingresso.",
-                "trash-org": "Organico",
-                "trash-org-days": "Contenitore Marrone",
-                "trash-paper": "Carta/Plastica",
-                "trash-paper-days": "Contenitori Giallo e Blu",
-                "btn-trash-map": "Mappa Centro di Raccolta",
-                "sec-contacts-title": "📞 Contatti e Servizi Utili",
-                "lbl-doctor": "Guardia Medica:",
-                "lbl-host": "Host (Mario):",
-                "sec-guide-title": "🍽️ Consigli Locali",
-                "rest-1-desc": "Cucina tipica locale a 2 minuti a piedi.",
-                "sight-1-desc": "Aperto Mar-Dom 09:00-19:00.",
-                "footer-text": "Buon soggiorno! Per qualsiasi necessità contattaci via WhatsApp."
-            },
-            en: {
-                "app-subtitle": "Welcome aboard! Your stay guide.",
-                "sec-access-title": "🔑 Access & Wi-Fi",
-                "lbl-door-code": "Door Code",
-                "lbl-wifi-name": "Wi-Fi Network",
-                "lbl-wifi-pass": "Wi-Fi Password",
-                "btn-copy-door": "Copy",
-                "btn-copy-wifi": "Copy",
-                "sec-location-title": "📍 Address & Map",
-                "btn-maps": "Open in Google Maps",
-                "sec-rules-title": "📋 House Rules",
-                "rule-1": "🚭 No smoking inside the apartment.",
-                "rule-2": "🔇 Quiet hours from 10:00 PM to 08:00 AM.",
-                "rule-3": "🔑 Check-out by 10:00 AM.",
-                "sec-trash-title": "♻️ Waste Disposal",
-                "trash-desc": "Please separate waste. Main bins are located outside, 50 meters to the right.",
-                "trash-org": "Organic",
-                "trash-org-days": "Brown Bin",
-                "trash-paper": "Paper/Plastic",
-                "trash-paper-days": "Yellow & Blue Bins",
-                "btn-trash-map": "Recycling Center Map",
-                "sec-contacts-title": "📞 Contacts & Useful Info",
-                "lbl-doctor": "Medical Guard:",
-                "lbl-host": "Host (Mario):",
-                "sec-guide-title": "🍽️ Local Tips",
-                "rest-1-desc": "Traditional local food, 2 min walk.",
-                "sight-1-desc": "Open Tue-Sun 09:00 AM - 07:00 PM.",
-                "footer-text": "Enjoy your stay! For any need, message us on WhatsApp."
-            }
-        };
+        /* FUNZIONI PER GESTIRE LE MODALI (POPUP) */
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('open');
+            // Blocca lo scroll della pagina di sfondo
+            document.body.style.overflow = 'hidden'; 
+        }
 
-        /* CAMBIO LINGUA */
-        function setLanguage(lang) {
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('open');
+            // Ripristina lo scroll della pagina di sfondo
+            document.body.style.overflow = 'auto';
+        }
 
-            const dictionary = translations[lang];
-            for (let id in dictionary) {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.textContent = dictionary[id];
-                }
+        /* Chiudi la modale cliccando sullo sfondo scuro */
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('open');
+                document.body.style.overflow = 'auto';
             }
         }
 
-        /* COPIA NEGLI APPUNTI */
-        function copyToClipboard(text) {
+        /* FUNZIONE PER COPIARE TESTO NEGLI APPUNTI */
+        function copyText(text) {
             navigator.clipboard.writeText(text).then(() => {
                 alert('Copiato negli appunti: ' + text);
             }).catch(err => {
