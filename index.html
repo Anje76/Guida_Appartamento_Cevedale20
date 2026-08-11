@@ -1,1035 +1,302 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cevedale 20 — Guida Ospiti / Guest Guide</title>
-<meta name="description" content="Guida digitale per gli ospiti di Cevedale 20, Malè, Val di Sole">
-<link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#F5EEDF;
-    --panel:#FCF8EF;
-    --forest:#33513A;
-    --forest-dk:#233A29;
-    --forest-lt:#4E6D53;
-    --gold:#E3A53A;
-    --gold-dk:#C7862A;
-    --clay:#A8633D;
-    --clay-dk:#8B4E2E;
-    --ink:#2A2420;
-    --ink-soft:#5B5346;
-    --line:#E1D5B8;
-    --line-soft:#EBE1CB;
-    --danger:#B4482F;
-    --radius-lg:26px;
-    --radius-md:16px;
-    --radius-sm:10px;
-    --shadow:0 10px 30px -12px rgba(43,36,25,.25);
-    --shadow-sm:0 4px 14px -6px rgba(43,36,25,.2);
-  }
-  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      radial-gradient(1200px 500px at 50% -10%, #FFFDF6 0%, var(--cream) 55%),
-      var(--cream);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    min-height:100vh;
-    -webkit-font-smoothing:antialiased;
-  }
-  .display{font-family:'Baloo 2',sans-serif;}
-  .mono{font-family:'JetBrains Mono',monospace;}
-  a{color:inherit;}
-  button{font-family:inherit;}
-
-  /* ---------- App shell ---------- */
-  .app{max-width:560px; margin:0 auto; min-height:100vh; position:relative; padding-bottom:40px;}
-
-  .topbar{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:14px 18px 6px;
-  }
-  .brand{display:flex; align-items:center; gap:9px;}
-  .brand-dot{
-    width:10px;height:10px;border-radius:50%;
-    background:var(--gold);
-    box-shadow:0 0 0 3px rgba(227,165,58,.25);
-  }
-  .brand-name{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:15px; letter-spacing:.02em; color:var(--forest-dk);}
-
-  .langbar{display:flex; gap:6px; background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:3px;}
-  .langbar button{
-    border:none; background:transparent; padding:6px 11px; border-radius:999px;
-    font-size:12.5px; font-weight:700; color:var(--ink-soft); cursor:pointer; letter-spacing:.03em;
-  }
-  .langbar button.active{background:var(--forest); color:#fff;}
-
-  /* ---------- Hero ---------- */
-  .hero{padding:10px 20px 6px; text-align:center;}
-  .hero-logo{width:112px; height:auto; margin:6px auto 2px; display:block; filter:drop-shadow(0 8px 16px rgba(43,36,25,.18));}
-  .ridge{
-    width:100%; height:34px; margin:6px 0 2px;
-  }
-  .hero h1{
-    font-family:'Baloo 2',sans-serif; font-weight:800; font-size:26px; margin:2px 0 4px; color:var(--forest-dk);
-    letter-spacing:.01em;
-  }
-  .hero p{margin:0; color:var(--ink-soft); font-size:14.5px; line-height:1.5; padding:0 6px;}
-
-  .tap-hint{
-    text-align:center; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--forest-lt); font-weight:700; margin:22px 0 12px;
-  }
-
-  /* ---------- Grid ---------- */
-  .grid{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
-    padding:0 16px 10px;
-  }
-  @media (min-width:460px){ .grid{grid-template-columns:repeat(3,1fr);} }
-  .tile{
-    background:var(--panel);
-    border:1px solid var(--line-soft);
-    border-radius:var(--radius-md);
-    padding:16px 8px 12px;
-    display:flex; flex-direction:column; align-items:center; gap:8px;
-    cursor:pointer; text-align:center;
-    box-shadow:var(--shadow-sm);
-    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-  }
-  .tile:active{transform:scale(.96);}
-  .tile:hover{border-color:var(--gold); box-shadow:0 10px 22px -10px rgba(227,165,58,.45);}
-  .tile-icon{
-    width:44px; height:44px; border-radius:14px;
-    display:flex; align-items:center; justify-content:center;
-    background:linear-gradient(160deg,#EFE3C6,#E7D6AE);
-    color:var(--forest-dk);
-  }
-  .tile-icon svg{width:23px; height:23px;}
-  .tile-label{font-size:11.5px; font-weight:700; color:var(--ink); line-height:1.25;}
-
-  /* ---------- Footer / contact CTA ---------- */
-  .cta-wrap{padding:8px 16px 0;}
-  .cta{
-    display:flex; align-items:center; justify-content:center; gap:8px;
-    background:var(--forest); color:#fff; border:none;
-    padding:15px; border-radius:999px; width:100%;
-    font-weight:700; font-size:14.5px; letter-spacing:.02em; cursor:pointer;
-    box-shadow:0 12px 24px -10px rgba(51,81,58,.55);
-  }
-  .cta svg{width:17px;height:17px;}
-
-  .hostline{text-align:center; font-size:12px; color:var(--ink-soft); margin-top:16px;}
-  .hostline b{color:var(--forest-dk);}
-
-  /* ---------- Detail sheet ---------- */
-  .sheet-overlay{
-    position:fixed; inset:0; background:rgba(35,29,22,.42);
-    opacity:0; pointer-events:none; transition:opacity .22s ease; z-index:40;
-  }
-  .sheet-overlay.open{opacity:1; pointer-events:auto;}
-  .sheet{
-    position:fixed; left:0; right:0; bottom:0; margin:0 auto; max-width:560px;
-    background:var(--cream);
-    border-radius:26px 26px 0 0;
-    max-height:92vh; overflow:hidden;
-    display:flex; flex-direction:column;
-    transform:translateY(100%); transition:transform .28s cubic-bezier(.2,.9,.25,1);
-    box-shadow:0 -20px 50px -10px rgba(20,16,10,.4);
-    z-index:41;
-  }
-  .sheet.open{transform:translateY(0);}
-  .sheet-grabber{width:38px; height:4px; background:var(--line); border-radius:99px; margin:10px auto 0;}
-  .sheet-head{
-    display:flex; align-items:center; gap:12px; padding:12px 18px 12px;
-    border-bottom:1px solid var(--line-soft);
-  }
-  .sheet-head .icon{
-    width:38px; height:38px; border-radius:12px; flex:none;
-    display:flex; align-items:center; justify-content:center;
-    background:linear-gradient(160deg,#EFE3C6,#E7D6AE); color:var(--forest-dk);
-  }
-  .sheet-head .icon svg{width:20px;height:20px;}
-  .sheet-head h2{font-family:'Baloo 2',sans-serif; font-size:18.5px; margin:0; color:var(--forest-dk);}
-  .sheet-close{
-    margin-left:auto; border:none; background:var(--panel); border:1px solid var(--line);
-    width:32px; height:32px; border-radius:50%; cursor:pointer; color:var(--ink-soft);
-    display:flex; align-items:center; justify-content:center; flex:none;
-  }
-  .sheet-body{padding:16px 18px 30px; overflow-y:auto;}
-
-  /* content blocks */
-  .b-p{font-size:14.5px; line-height:1.6; color:var(--ink); margin:0 0 12px;}
-  .b-h{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:15.5px; color:var(--forest-dk); margin:18px 0 8px; display:flex; align-items:center; gap:7px;}
-  .b-h:first-child{margin-top:2px;}
-  .b-h .mtick{width:14px;height:10px; flex:none;}
-  .b-list{margin:0 0 14px; padding:0; list-style:none;}
-  .b-list li{
-    font-size:14.5px; line-height:1.55; color:var(--ink); margin-bottom:8px; padding-left:20px; position:relative;
-  }
-  .b-list li:before{
-    content:""; position:absolute; left:0; top:8px; width:7px; height:7px; border-radius:2px;
-    background:var(--gold); transform:rotate(45deg);
-  }
-  .b-note{
-    background:#FBF1DA; border:1px solid #EBD6A0; border-left:4px solid var(--gold-dk);
-    border-radius:var(--radius-sm); padding:12px 14px; font-size:13.8px; line-height:1.55; margin:0 0 14px; color:var(--ink);
-  }
-  .b-warn{
-    background:#FCEBE4; border:1px solid #EFC1AE; border-left:4px solid var(--danger);
-    border-radius:var(--radius-sm); padding:12px 14px; font-size:13.8px; line-height:1.55; margin:0 0 14px; color:#6E2A16;
-  }
-  .b-ph{
-    border:1.5px dashed #C9BB98; border-radius:var(--radius-sm); padding:12px 14px; margin:0 0 14px;
-    font-size:13px; line-height:1.5; color:var(--ink-soft); background:rgba(255,255,255,.4);
-  }
-  .b-ph b{color:var(--clay-dk);}
-  .b-link{
-    display:flex; align-items:center; gap:10px; text-decoration:none;
-    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm);
-    padding:12px 14px; margin:0 0 10px; font-size:14px; font-weight:600; color:var(--forest-dk);
-  }
-  .b-link svg{width:17px;height:17px; flex:none; color:var(--gold-dk);}
-  .b-link .arrow{margin-left:auto; width:14px;height:14px; color:var(--ink-soft);}
-  .b-code{
-    display:flex; align-items:center; justify-content:space-between; gap:10px;
-    background:var(--forest-dk); color:#fff; border-radius:var(--radius-sm); padding:13px 14px; margin:0 0 14px;
-  }
-  .b-code .lbl{font-size:11.5px; opacity:.75; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px;}
-  .b-code .val{font-family:'JetBrains Mono',monospace; font-size:17px; font-weight:700; letter-spacing:.04em;}
-  .b-code button{
-    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); color:#fff;
-    border-radius:8px; padding:8px 10px; font-size:12px; font-weight:700; cursor:pointer; flex:none;
-  }
-  .b-contact{
-    display:flex; align-items:center; gap:12px; background:var(--panel); border:1px solid var(--line);
-    border-radius:var(--radius-sm); padding:12px 14px; margin:0 0 10px;
-  }
-  .b-contact .av{
-    width:38px;height:38px;border-radius:50%; background:linear-gradient(160deg,var(--forest-lt),var(--forest-dk));
-    color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'Baloo 2'; flex:none;
-  }
-  .b-contact .info{flex:1; min-width:0;}
-  .b-contact .name{font-weight:700; font-size:14px; color:var(--ink);}
-  .b-contact .sub{font-size:12.5px; color:var(--ink-soft);}
-  .b-contact .acts{display:flex; gap:6px; flex:none;}
-  .b-contact .acts a{
-    width:32px;height:32px; border-radius:50%; background:var(--forest); color:#fff;
-    display:flex; align-items:center; justify-content:center; text-decoration:none;
-  }
-  .b-contact .acts a svg{width:15px;height:15px;}
-  .b-hours{width:100%; border-collapse:collapse; margin:0 0 14px; font-size:13.5px;}
-  .b-hours td{padding:6px 4px; border-bottom:1px solid var(--line-soft);}
-  .b-hours td:first-child{font-weight:600; color:var(--forest-dk);}
-  .b-hours td:last-child{text-align:right; color:var(--ink-soft);}
-  .b-weather{
-    background:linear-gradient(160deg,var(--forest),var(--forest-dk)); color:#fff; border-radius:var(--radius-md);
-    padding:18px; margin:0 0 14px;
-  }
-  .b-weather .row{display:flex; align-items:center; justify-content:space-between;}
-  .b-weather .temp{font-family:'Baloo 2'; font-size:38px; font-weight:700;}
-  .b-weather .loc{font-size:13px; opacity:.85;}
-  .b-weather .days{display:flex; justify-content:space-between; margin-top:14px; gap:6px;}
-  .b-weather .day{text-align:center; font-size:11.5px; opacity:.9; flex:1;}
-  .b-weather .day b{display:block; font-size:14px; margin-top:2px;}
-
-  .b-form textarea, .b-form input{
-    width:100%; border:1px solid var(--line); border-radius:var(--radius-sm); padding:11px 12px;
-    font-family:inherit; font-size:14px; margin-bottom:10px; background:var(--panel); color:var(--ink);
-  }
-  .b-form label{font-size:12.5px; font-weight:700; color:var(--forest-dk); display:block; margin-bottom:5px;}
-  .b-form button{
-    width:100%; background:var(--clay); color:#fff; border:none; border-radius:999px; padding:13px;
-    font-weight:700; font-size:14px; cursor:pointer;
-  }
-
-  .divider{
-    height:1px; background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px); margin:18px 0;
-  }
-
-  ::-webkit-scrollbar{width:0;}
-  :focus-visible{outline:2.5px solid var(--gold-dk); outline-offset:2px;}
-  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cevedale20 - Benvenuti!</title>
+    
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="app" id="app">
-  <div class="topbar">
-    <div class="brand"><span class="brand-dot"></span><span class="brand-name">CEVEDALE 20</span></div>
-    <div class="langbar" id="langbar"></div>
-  </div>
-
-  <div class="hero">
-    <img class="hero-logo" src="logo.png" alt="Cevedale 20 logo">
-    <h1 id="t-title">Benvenuti!</h1>
-    <p id="t-subtitle"></p>
-  </div>
-
-  <div class="tap-hint" id="t-hint">Tocca un'icona</div>
-  <div class="grid" id="grid"></div>
-
-  <div class="cta-wrap">
-    <button class="cta" id="ctaContact">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      <span id="t-cta">Contattaci</span>
-    </button>
-    <div class="hostline" id="t-hostline"></div>
-  </div>
-</div>
-
-<div class="sheet-overlay" id="overlay"></div>
-<div class="sheet" id="sheet" role="dialog" aria-modal="true">
-  <div class="sheet-grabber"></div>
-  <div class="sheet-head">
-    <div class="icon" id="sheetIcon"></div>
-    <h2 id="sheetTitle"></h2>
-    <button class="sheet-close" id="sheetClose" aria-label="Chiudi">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
-  </div>
-  <div class="sheet-body" id="sheetBody"></div>
-</div>
-
-<script>
-/* =========================================================
-   ICONS (inline SVG, stroke-based, shared style)
-   ========================================================= */
-const ICONS = {
-  home:`<path d="M4 11 12 4l8 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-6h4v6"/>`,
-  pin:`<path d="M12 21s7-6.1 7-11.2A7 7 0 0 0 5 9.8C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/>`,
-  key:`<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M14 9l2.5 2.5"/>`,
-  rules:`<rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/>`,
-  wifi:`<path d="M3 8.5a15 15 0 0 1 18 0"/><path d="M6.3 12.2a10.5 10.5 0 0 1 11.4 0"/><path d="M9.5 15.8a6 6 0 0 1 5 0"/><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"/>`,
-  plug:`<path d="M9 3v5M15 3v5M6.5 8h11l-1 5.5a5 5 0 0 1-9 0Z"/><path d="M12 17.5V21"/>`,
-  bolt:`<path d="M12 3 5 13h6l-1 8 7-10h-6z"/>`,
-  trash:`<path d="M5 7h14M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M7 7l1 13a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2l1-13"/><path d="M10 11v6M14 11v6"/>`,
-  car:`<path d="M4 16V11l2-5h12l2 5v5"/><path d="M4 16h16M6.5 16v2M17.5 16v2"/><circle cx="7.5" cy="16" r="1.4" fill="currentColor" stroke="none"/><circle cx="16.5" cy="16" r="1.4" fill="currentColor" stroke="none"/>`,
-  info:`<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/>`,
-  mountain:`<path d="M3 19 9.5 8l3.2 5 2-3L21 19Z"/><circle cx="7" cy="7" r="1.3"/>`,
-  heart:`<path d="M12 20s-7-4.4-9.4-8.7A5 5 0 0 1 12 6a5 5 0 0 1 9.4 5.3C19 15.6 12 20 12 20Z"/>`,
-  camera:`<path d="M4 8h3l1.5-2h7L17 8h3v11H4Z"/><circle cx="12" cy="13.5" r="3.3"/>`,
-  bus:`<rect x="4" y="4" width="16" height="13" rx="2.5"/><path d="M4 11h16M8 17v2M16 17v2"/><circle cx="8" cy="8.3" r="0" /><circle cx="7.5" cy="14" r=".9" fill="currentColor" stroke="none"/><circle cx="16.5" cy="14" r=".9" fill="currentColor" stroke="none"/>`,
-  tag:`<path d="M12.5 4H5v7.5L14.5 21l7.5-7.5L12.5 4Z"/><circle cx="9" cy="8" r="1.3" fill="currentColor" stroke="none"/>`,
-  chat:`<path d="M4 5h16v11H9l-4 4V5Z"/><path d="M8 9.5h8M8 12.5h5"/>`,
-  gear:`<circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M4.9 12H3M21 12h-1.9M6 6l1.5 1.5M16.5 16.5 18 18M18 6l-1.5 1.5M7.5 16.5 6 18"/>`,
-  cloud:`<path d="M7.5 18a4 4 0 0 1-.6-7.95A5.5 5.5 0 0 1 17.4 9.6 3.8 3.8 0 0 1 17 17.9z"/>`,
-  mail:`<rect x="4" y="5.5" width="16" height="13" rx="2"/><path d="m5 7 7 5.5L19 7"/>`,
-  phone:`<path d="M6.6 4h3l1.4 4.2-2 1.6a12 12 0 0 0 5.2 5.2l1.6-2 4.2 1.4v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 6.2 2 2 0 0 1 6.6 4Z"/>`,
-  arrow:`<path d="M9 6l6 6-6 6"/>`,
-  copy:`<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>`,
-  check:`<path d="M20 6 9 17l-5-5"/>`,
-  suitcase:`<rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M4 13h16"/>`,
-};
-function icon(name){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.info}</svg>`; }
-
-/* mountain ridge tick used in section headings */
-const MTICK = `<svg class="mtick" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11 6 3l3 5 2-3 8 6"/></svg>`;
-
-/* =========================================================
-   CONTENT — one object per language. Add a language by
-   copying the "en" object, translating the strings, and
-   adding a button in LANGS below.
-   ========================================================= */
-const LANGS = [
-  {code:'it', label:'IT'},
-  {code:'en', label:'EN'},
-];
-
-const MAPS = {
-  address: 'https://goo.gl/maps/K9Th2YR95PNBmDfk8',
-  crm: 'https://goo.gl/maps/X9xyFnYqPgE7Awp18',
-};
-
-function T(it, en){ return {it, en}; }
-
-const DATA = {
-  it: {
-    title:'Benvenuti a Cevedale 20!',
-    subtitle:'Il vostro rifugio a Malè, nel cuore della Val di Sole. Tutte le informazioni per il soggiorno, in un unico posto.',
-    hint:'Tocca le icone / tap on the icons',
-    cta:'Contattaci',
-    hostline:'Un rifugio di <b>Angelo & Silvia</b> — Val di Sole, Trentino',
-    sheetContactTitle:'Contattaci',
-    closeLabel:'Chiudi',
-    nav:[
-      {id:'welcome', icon:'home', label:'Benvenuto'},
-      {id:'location', icon:'pin', label:'Posizione'},
-      {id:'checkin', icon:'key', label:'Check-in & Check-out'},
-      {id:'rules', icon:'rules', label:'Regole della casa'},
-      {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
-      {id:'appliances', icon:'plug', label:'Elettrodomestici'},
-      {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
-      {id:'waste', icon:'trash', label:'Rifiuti'},
-      {id:'parking', icon:'car', label:'Parcheggio & ZTL'},
-      {id:'faq', icon:'info', label:'Info / FAQ'},
-      {id:'excursions', icon:'mountain', label:'Escursioni & Tour'},
-      {id:'tips', icon:'heart', label:'Consigli locali'},
-      {id:'attractions', icon:'camera', label:'Cosa visitare'},
-      {id:'weather', icon:'cloud', label:'Meteo'},
-      {id:'transport', icon:'bus', label:'Trasporti'},
-      {id:'discounts', icon:'tag', label:'Sconti convenzionati'},
-      {id:'guestbook', icon:'chat', label:'Lascia un feedback'},
-      {id:'contacts', icon:'gear', label:'Contatti & aiuto'},
-    ],
-    sections:{
-      welcome:{
-        title:'Benvenuto',
-        blocks:[
-          {t:'p', text:'Gentili Ospiti, benvenuti in Val di Sole! Siamo Angelo e Silvia e siamo felici di ospitarvi a <b>Cevedale 20</b>, il vostro rifugio a Malè.'},
-          {t:'p', text:'In questa piccola guida digitale trovate tutto il necessario per il soggiorno: come raggiungere l’appartamento, come entrare, le regole della casa, la gestione dei rifiuti e tanti consigli per vivere al meglio la valle.'},
-          {t:'note', text:'Toccate un’icona nella schermata principale per aprire la sezione che vi interessa. Potete tornare alla home in qualsiasi momento con la freccia o chiudendo la scheda.'},
-          {t:'p', text:'Vi auguriamo un soggiorno pieno di aria buona, montagne e relax!'},
-        ]
-      },
-      location:{
-        title:'Posizione',
-        blocks:[
-          {t:'p', text:'L’appartamento si trova a Malè, in <b>via IV Novembre 16</b>, presso la “Galleria Cevedale”.'},
-          {t:'link', icon:'pin', label:'Apri l’indirizzo su Google Maps', url:MAPS.address},
-          {t:'h', text:'Parcheggio riservato'},
-          {t:'p', text:'Avete a disposizione un posto auto riservato, segnalato con righe gialle, adiacente allo spigolo posteriore destro dell’edificio, in corrispondenza di un cartello con indicato il numero “20”. Si raggiunge girando attorno all’edificio in senso orario.'},
-          {t:'p', text:'Davanti all’ingresso della galleria sono disponibili ulteriori posti auto gratuiti, segnalati con righe gialle, privi di numero identificativo.'},
-        ]
-      },
-      checkin:{
-        title:'Check-in & Check-out',
-        blocks:[
-          {t:'h', text:'Come entrare'},
-          {t:'p', text:'L’ingresso dell’appartamento è all’interno della Galleria Cevedale. Il portone rimane aperto solitamente dalle <b>8 alle 18</b>: basta spingere in avanti per accedere alle scale. Negli altri orari dovrete usare le chiavi per aprirlo.'},
-          {t:'p', text:'Salite al <b>1° piano</b> (disponibile anche l’ascensore), girate nel corridoio a destra e troverete l’ingresso alla seconda porta a destra — appartamento 20, campanello “FLAMINI-GIANGRANDI”.'},
-          {t:'h', text:'La cassetta di sicurezza'},
-          {t:'p', text:'A lato della porta trovate una piccola cassetta di sicurezza. Aprite il coperchio nero verso il basso, inserite la combinazione (che vi verrà comunicata il giorno del check-in) e ruotate il pomellino in alto in senso orario.'},
-          {t:'p', text:'Troverete 3 chiavi: la più lunga apre la porta dell’appartamento; le due corte aprono il portone della galleria e la porta di uscita al piano terra sul lato destro dell’edificio, verso il posto auto privato (comoda per portare le valigie).'},
-          {t:'code', label:'Codice cassetta di sicurezza', value:'fornito al check-in'},
-          {t:'warn', text:'Al termine, richiudete la cassetta di sicurezza, ruotate il pomellino in senso antiorario e riportate la combinazione a 0‑0‑0‑0. Vi preghiamo di non lasciare mai a vista la combinazione che vi viene fornita.'},
-          {t:'h', text:'Al check-out (entro le 10:00)'},
-          {t:'list', items:[
-            'Non lasciare rifiuti in casa',
-            'Riporre le tessere per la gestione rifiuti e il telecomando TV nell’espositore di legno',
-            'Chiudere le finestre',
-            'Spegnere il riscaldamento (interruttore “off”, termostato impostato a 5°C)',
-            'Liberare l’appartamento entro le 10:00',
-            'Riporre le chiavi dell’appartamento nella cassetta di sicurezza',
-            'Segnalarci qualsiasi disguido o problema riscontrato',
-          ]},
-          {t:'note', text:'Se siete rimasti soddisfatti, una recensione su Airbnb ci farebbe davvero piacere (facoltativo, naturalmente) 💛'},
-        ]
-      },
-      rules:{
-        title:'Regole della casa',
-        blocks:[
-          {t:'p', text:'Per garantire un soggiorno sereno a voi e ai prossimi ospiti, vi chiediamo di rispettare alcune semplici regole.'},
-          {t:'ph', text:'✏️ <b>Da completare a cura del proprietario:</b> numero massimo di ospiti, politica su animali domestici, divieto di fumo, orario di silenzio, divieto di feste/eventi, eventuale tassa di soggiorno.'},
-          {t:'h', text:'Uso della cucina'},
-          {t:'p', text:'Per evitare sovraccarichi e distacchi dell’impianto elettrico, vi preghiamo di <b>non utilizzare il piano cottura contemporaneamente</b> ad altri elettrodomestici di elevato consumo energetico (forno, lavatrice, asciugacapelli, aspirapolvere). Dettagli completi nella sezione “Elettrodomestici”.'},
-          {t:'h', text:'Rifiuti'},
-          {t:'p', text:'A Malè la raccolta differenziata è obbligatoria. Trovate tutte le indicazioni nella sezione “Rifiuti”.'},
-        ]
-      },
-      wifi:{
-        title:'Wi‑Fi',
-        blocks:[
-          {t:'p', text:'Ecco i dati per collegarvi alla rete Wi‑Fi dell’appartamento.'},
-          {t:'code', label:'Nome rete (SSID)', value:'✏️ da inserire'},
-          {t:'code', label:'Password', value:'✏️ da inserire'},
-          {t:'ph', text:'✏️ Suggerimento: potete generare un QR Code gratuito con i dati della vostra rete (es. su qr-code-generator.com) e sostituire questo testo con l’immagine, così gli ospiti si connettono con una foto.'},
-        ]
-      },
-      appliances:{
-        title:'Elettrodomestici',
-        blocks:[
-          {t:'h', text:'Piano cottura a induzione'},
-          {t:'p', text:'Nel mobile accanto al frigo trovate 2 pentole “Abert”, 1 casseruola “Ikea” e 3 padelle antiaderenti compatibili con l’induzione. Anche la caffettiera moka Barazzoni è compatibile, ma non va usata con potenza superiore a 5 (altrimenti va in errore).'},
-          {t:'warn', text:'Per evitare sovraccarichi e distacchi dell’impianto elettrico, non utilizzate il piano cottura contemporaneamente ad altri elettrodomestici di elevato consumo (forno, lavatrice, asciugacapelli, aspirapolvere).'},
-          {t:'p', text:'Vi consigliamo di usare al massimo due piastre, con potenza complessiva non superiore a 10‑12 (esempio: piastra con pentola dell’acqua a 6‑7, tegame col sugo a 5‑4).'},
-          {t:'note', text:'Se sul display compare la scritta “lo”, avete inavvertitamente inserito il blocco di sicurezza: tenete premuto qualche secondo il simbolo a forma di chiave per sbloccarlo. Le istruzioni complete si trovano nel cassetto centrale del mobile con TV in soggiorno.'},
-          {t:'h', text:'Altri elettrodomestici'},
-          {t:'ph', text:'✏️ Da completare: istruzioni per lavatrice, forno, condizionatore/riscaldamento, TV e Netflix, macchina del caffè. Potete aggiungere qui foto o brevi video-guida.'},
-        ]
-      },
-      emergency:{
-        title:'Emergenze in casa',
-        blocks:[
-          {t:'h', text:'Se salta la corrente'},
-          {t:'p', text:'È possibile riattivarla con gli interruttori vicini alla porta d’ingresso, oppure dall’interruttore del contatore generale, che si trova in una stanza al piano seminterrato: uscendo dall’ascensore al piano -1, è la porta subito a destra. Il contatore è in alto a destra, identificato dal numero “20” e dalla targhetta “FLAMINI-GIANGRANDI”.'},
-          {t:'h', text:'Kit di primo soccorso ed estintore'},
-          {t:'ph', text:'✏️ Da completare: dove si trovano il kit di primo soccorso e l’estintore in appartamento.'},
-          {t:'h', text:'Valvole di acqua e gas'},
-          {t:'ph', text:'✏️ Da completare: posizione della valvola generale dell’acqua e dell’eventuale rubinetto del gas, con istruzioni su come chiuderli in caso di emergenza.'},
-          {t:'h', text:'Numeri utili'},
-          {t:'p', text:'Per qualsiasi emergenza sanitaria, incendio o pubblica sicurezza chiamate il <b>112</b> (numero unico di emergenza). Trovate altri contatti utili nella sezione “Contatti & aiuto”.'},
-        ]
-      },
-      waste:{
-        title:'Rifiuti',
-        blocks:[
-          {t:'p', text:'A Malè vige un sistema di raccolta differenziata <b>obbligatorio</b>, con consegna diretta al Centro di Raccolta. Vi chiediamo di essere responsabili nella gestione dei rifiuti.'},
-          {t:'h', text:'Umido (organico)'},
-          {t:'p', text:'Potete svuotare liberamente il sacchetto dell’umido nei bidoni marroni all’ingresso del Poliambulatorio, a circa 20 metri dall’appartamento.'},
-          {t:'warn', text:'Attenzione: bisogna sollevare il coperchio piccolo e rotondo, non il coperchio grande e quadrato.'},
-          {t:'h', text:'Indifferenziato'},
-          {t:'p', text:'Nello stesso punto trovate una campana-collettore in muratura per l’indifferenziato, che si apre con la card che trovate nell’espositore di legno sul mobile della TV in soggiorno.'},
-          {t:'note', text:'Gli svuotamenti di indifferenziato sono contingentati dal Comune: effettuatene al massimo 2‑3 alla settimana (consigliamo di inserire nel collettore anche 2 sacchetti insieme).'},
-          {t:'h', text:'Plastica, carta e vetro'},
-          {t:'p', text:'Vanno separati adeguatamente e portati per lo smaltimento al Centro Recupero Materiali di Malè, usando la stessa tessera.'},
-          {t:'link', icon:'pin', label:'Centro Recupero Materiali — Google Maps', url:MAPS.crm},
-          {t:'hours', rows:[
-            ['Lunedì','chiuso (vedi Eco Isola)'],
-            ['Martedì','08:30–12:00 · 14:00–17:30'],
-            ['Mercoledì','08:30–12:00 · 14:00–17:30'],
-            ['Giovedì','08:30–12:00 · 14:00–17:30'],
-            ['Venerdì','chiuso (vedi Eco Isola)'],
-            ['Sabato','08:30–12:00 · 14:00–17:30'],
-            ['Domenica','chiuso (vedi Eco Isola)'],
-          ]},
-          {t:'p', text:'<b>Eco Isola</b> (esterna al Centro): permette di conferire carta e cartone, multimateriale leggero e imballaggi in vetro anche nei giorni di chiusura del centro. È attiva solo nei giorni di chiusura, con spegnimento alle 22:00, e si accede con la tessera del rifiuto secco.'},
-          {t:'note', text:'Non siete obbligati ad andare ogni giorno al centro di recupero: potete farlo anche l’ultimo (o penultimo) giorno del soggiorno, compatibilmente con gli orari — non occorrono più di 15 minuti.'},
-        ]
-      },
-      parking:{
-        title:'Parcheggio & ZTL',
-        blocks:[
-          {t:'p', text:'Il vostro posto auto riservato, segnalato con righe gialle, si trova adiacente allo spigolo posteriore destro dell’edificio, presso il cartello con il numero “20”. Si raggiunge girando attorno all’edificio in senso orario.'},
-          {t:'p', text:'Davanti alla galleria trovate ulteriori posti gratuiti, segnalati con righe gialle e senza numero identificativo.'},
-          {t:'link', icon:'pin', label:'Apri la posizione su Google Maps', url:MAPS.address},
-          {t:'ph', text:'✏️ Da verificare/completare: eventuali Zone a Traffico Limitato (ZTL) nel centro di Malè, orari di accesso e parcheggi a pagamento nelle vicinanze.'},
-        ]
-      },
-      faq:{
-        title:'Info / FAQ',
-        blocks:[
-          {t:'h', text:'A che ora posso entrare/uscire?'},
-          {t:'ph', text:'✏️ Da completare con gli orari di check-in e check-out concordati con l’ospite (il check-out è comunque richiesto entro le 10:00, vedi sezione “Check-in & Check-out”).'},
-          {t:'h', text:'Posso portare animali domestici?'},
-          {t:'ph', text:'✏️ Da completare con la vostra policy sugli animali.'},
-          {t:'h', text:'C’è un ascensore?'},
-          {t:'p', text:'Sì, oltre alle scale è disponibile un ascensore fino al 1° piano dell’appartamento.'},
-          {t:'h', text:'Dove butto i rifiuti?'},
-          {t:'p', text:'Trovate tutte le indicazioni nella sezione “Rifiuti”, con mappe e orari del Centro di Raccolta.'},
-          {t:'h', text:'C’è la lavatrice?'},
-          {t:'ph', text:'✏️ Da completare: disponibilità lavatrice/stendino, detersivo incluso o meno.'},
-        ]
-      },
-      excursions:{
-        title:'Escursioni & Tour',
-        blocks:[
-          {t:'p', text:'La Val di Sole è la porta d’accesso a due grandi parchi naturali: il <b>Parco Nazionale dello Stelvio</b> e il <b>Parco Naturale Adamello Brenta</b>. Un paradiso per chi ama camminare, pedalare e stare all’aria aperta.'},
-          {t:'h', text:'Idee per le vostre giornate'},
-          {t:'list', items:[
-            'Pista ciclopedonale della Val di Sole, lungo il fiume Noce, adatta a tutta la famiglia',
-            'Rafting e canyoning sul fiume Noce, tra i più amati delle Alpi',
-            'Passo del Tonale e ghiacciaio Presena, per escursioni in quota anche d’estate',
-            'Cascate di Saent, in Val di Rabbi, tra le più suggestive del Trentino',
-            'Passeggiate ai piedi del Gruppo del Cevedale e dell’Ortles-Cevedale',
-          ]},
-          {t:'ph', text:'✏️ Consiglio: aggiungete qui i vostri itinerari preferiti, con link a tracce GPS (es. Komoot o Outdooractive) e livello di difficoltà.'},
-          {t:'p', text:'Per informazioni aggiornate su sentieri, rifugi e condizioni meteo in quota, vi consigliamo di passare dall’Ufficio Informazioni dell’APT Val di Sole (vedi sezione “Contatti & aiuto”).'},
-        ]
-      },
-      tips:{
-        title:'Consigli locali',
-        blocks:[
-          {t:'p', text:'Alcuni piccoli consigli da chi vive in valle.'},
-          {t:'ph', text:'✏️ Da completare con i vostri ristoranti, malghe, bar e negozi del cuore — un tocco personale che gli ospiti apprezzano sempre.'},
-          {t:'note', text:'Suggerimento: per ogni consiglio potete aggiungere nome del locale, cosa ordinare e se conviene prenotare.'},
-        ]
-      },
-      attractions:{
-        title:'Cosa visitare',
-        blocks:[
-          {t:'p', text:'Alcuni spunti per le vostre giornate in Val di Sole (verificate sempre orari e aperture stagionali).'},
-          {t:'list', items:[
-            'Centro storico di Malè, con le sue case affrescate',
-            'Chiesa di San Vigilio, tra le più antiche della valle',
-            'Cascate di Saent, in Val di Rabbi',
-            'Il Parco Nazionale dello Stelvio, tra i più grandi d’Europa',
-            'Passo del Tonale e i suoi panorami sulle Alpi',
-          ]},
-          {t:'ph', text:'✏️ Da completare con musei, castelli e attrazioni specifiche della zona, con orari aggiornati.'},
-        ]
-      },
-      weather:{
-        title:'Meteo',
-        blocks:[
-          {t:'weather'},
-          {t:'h', text:'Giornata di pioggia? Ecco qualche idea'},
-          {t:'list', items:[
-            'Terme di Pejo o Rabbi, per un pomeriggio di relax',
-            'Musei e centri visitatori dei Parchi (Stelvio / Adamello Brenta)',
-            'Passeggiata nella Galleria Cevedale e nei negozi del centro di Malè',
-            'Una cioccolata calda in uno dei bar del paese',
-          ]},
-        ]
-      },
-      transport:{
-        title:'Trasporti',
-        blocks:[
-          {t:'h', text:'Autobus'},
-          {t:'p', text:'La Val di Sole è collegata dalla rete di Trentino Trasporti. La fermata più vicina è a pochi minuti a piedi dall’appartamento.'},
-          {t:'ph', text:'✏️ Da completare: nome della fermata più vicina e linee utili (es. per Trento, Dimaro, Passo Tonale).'},
-          {t:'h', text:'Taxi & noleggio'},
-          {t:'ph', text:'✏️ Da completare con i contatti di taxi o servizi navetta locali che consigliate.'},
-          {t:'h', text:'In treno'},
-          {t:'p', text:'La stazione ferroviaria più vicina è Trento, da cui proseguire in autobus verso la Val di Sole.'},
-        ]
-      },
-      discounts:{
-        title:'Sconti convenzionati',
-        blocks:[
-          {t:'p', text:'Se avete accordi con attività locali (colazione, noleggio bici, ristoranti…), potete elencarli qui con il relativo codice sconto riservato ai vostri ospiti.'},
-          {t:'ph', text:'✏️ Da completare: nome dell’attività, sconto riservato e codice da mostrare.'},
-        ]
-      },
-      guestbook:{
-        title:'Lascia un feedback',
-        blocks:[
-          {t:'p', text:'C’è qualcosa che non ha funzionato o un suggerimento per migliorare il soggiorno? Scriveteci: ci teniamo davvero.'},
-          {t:'form'},
-          {t:'note', text:'Se invece siete rimasti soddisfatti, una recensione su Airbnb ci farebbe molto piacere 💛'},
-        ]
-      },
-      contacts:{
-        title:'Contatti & aiuto',
-        blocks:[
-          {t:'h', text:'I vostri host'},
-          {t:'contact', name:'Angelo Giangrandi', sub:'+39 327 686 7296', phone:'+393276867296', email:'anje76@gmail.com'},
-          {t:'contact', name:'Silvia Flamini', sub:'+39 328 415 1764', phone:'+393284151764', email:'silviaflam76@gmail.com'},
-          {t:'h', text:'Numeri utili'},
-          {t:'list', items:[
-            'Emergenza unica europea: 112',
-            'Guardia medica (continuità assistenziale, per necessità non urgenti): 116 117',
-            'Ambulatorio stagionale di Malè attivo giugno–settembre e dicembre–aprile',
-          ]},
-          {t:'h', text:'Ufficio turistico APT Val di Sole'},
-          {t:'p', text:'Via Marconi 7, 38027 Malè (TN) — tel. 0463 901280 — info@visitvaldisole.it'},
-          {t:'p', text:'Aperto da lunedì a venerdì, 9:00–12:00 e 14:00–17:00.'},
-          {t:'h', text:'Farmacia, polizia, taxi'},
-          {t:'ph', text:'✏️ Da completare con i contatti locali di farmacia, stazione dei Carabinieri/Polizia locale e servizio taxi che consigliate.'},
-        ]
-      }
-    }
-  },
-
-  en: {
-    title:'Welcome to Cevedale 20!',
-    subtitle:'Your mountain retreat in Malè, in the heart of Val di Sole. Everything you need for your stay, in one place.',
-    hint:'Tocca le icone / tap on the icons',
-    cta:'Contact us',
-    hostline:'A retreat by <b>Angelo & Silvia</b> — Val di Sole, Trentino',
-    sheetContactTitle:'Contact us',
-    closeLabel:'Close',
-    nav:[
-      {id:'welcome', icon:'home', label:'Welcome'},
-      {id:'location', icon:'pin', label:'Location'},
-      {id:'checkin', icon:'key', label:'Check-in & Check-out'},
-      {id:'rules', icon:'rules', label:'House rules'},
-      {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
-      {id:'appliances', icon:'plug', label:'Appliances'},
-      {id:'emergency', icon:'bolt', label:'Home emergencies'},
-      {id:'waste', icon:'trash', label:'Waste disposal'},
-      {id:'parking', icon:'car', label:'Parking & LTZ'},
-      {id:'faq', icon:'info', label:'Info / FAQ'},
-      {id:'excursions', icon:'mountain', label:'Excursions & Tours'},
-      {id:'tips', icon:'heart', label:'Local tips'},
-      {id:'attractions', icon:'camera', label:'Things to see'},
-      {id:'weather', icon:'cloud', label:'Weather'},
-      {id:'transport', icon:'bus', label:'Transportation'},
-      {id:'discounts', icon:'tag', label:'Local discounts'},
-      {id:'guestbook', icon:'chat', label:'Leave feedback'},
-      {id:'contacts', icon:'gear', label:'Contacts & help'},
-    ],
-    sections:{
-      welcome:{
-        title:'Welcome',
-        blocks:[
-          {t:'p', text:'Dear guests, welcome to Val di Sole! We’re Angelo and Silvia, and we’re delighted to host you at <b>Cevedale 20</b>, your retreat in Malè.'},
-          {t:'p', text:'This little digital guide has everything you need for your stay: how to reach the apartment, how to get in, the house rules, waste disposal, and plenty of tips to make the most of the valley.'},
-          {t:'note', text:'Tap an icon on the home screen to open the section you need. You can go back home anytime using the back arrow or by closing the panel.'},
-          {t:'p', text:'We wish you a stay full of fresh air, mountains and relaxation!'},
-        ]
-      },
-      location:{
-        title:'Location',
-        blocks:[
-          {t:'p', text:'The apartment is located in Malè, at <b>Via IV Novembre 16</b>, inside the “Galleria Cevedale”.'},
-          {t:'link', icon:'pin', label:'Open the address on Google Maps', url:MAPS.address},
-          {t:'h', text:'Reserved parking'},
-          {t:'p', text:'You have a reserved parking spot, marked with yellow lines, next to the back-right corner of the building, by a sign showing the number “20”. Reach it by going around the building clockwise.'},
-          {t:'p', text:'In front of the gallery’s entrance there are further free parking spots, marked with yellow lines but without an identifying number.'},
-        ]
-      },
-      checkin:{
-        title:'Check-in & Check-out',
-        blocks:[
-          {t:'h', text:'Getting in'},
-          {t:'p', text:'The apartment entrance is inside the Galleria Cevedale. The main door is usually open from <b>8am to 6pm</b>: just push it forward to reach the stairs. Outside these hours you’ll need the keys to open it.'},
-          {t:'p', text:'Go up to the <b>1st floor</b> (a lift is also available), turn right down the corridor, and you’ll find the entrance at the second door on the right — apartment 20, doorbell “FLAMINI-GIANGRANDI”.'},
-          {t:'h', text:'The lock box'},
-          {t:'p', text:'Next to the door you’ll find a small lock box. Open the black cover downward, enter the combination (which you’ll receive on check-in day), and turn the top knob clockwise.'},
-          {t:'p', text:'You’ll find 3 keys: the longest opens the apartment door; the two shorter ones open the gallery’s main door and the ground-floor exit door on the right side of the building, toward the private parking spot (handy for luggage).'},
-          {t:'code', label:'Lock box code', value:'provided at check-in'},
-          {t:'warn', text:'When done, close the lock box, turn the knob counter-clockwise and reset the combination to 0‑0‑0‑0. Please never leave the combination you were given in view.'},
-          {t:'h', text:'At check-out (by 10:00am)'},
-          {t:'list', items:[
-            'Don’t leave any rubbish in the apartment',
-            'Put the waste-management cards and TV remote back in the wooden holder',
-            'Close the windows',
-            'Turn off the heating (switch to “off”, thermostat set to 5°C)',
-            'Vacate the apartment by 10:00am',
-            'Put the apartment keys back in the lock box',
-            'Let us know about any issue you ran into',
-          ]},
-          {t:'note', text:'If you enjoyed your stay, a review on Airbnb would truly mean a lot to us (of course, entirely optional) 💛'},
-        ]
-      },
-      rules:{
-        title:'House rules',
-        blocks:[
-          {t:'p', text:'To keep the stay pleasant for you and for future guests, we ask you to follow a few simple rules.'},
-          {t:'ph', text:'✏️ <b>To be completed by the owner:</b> maximum number of guests, pet policy, smoking policy, quiet hours, no parties/events, any local tourist tax.'},
-          {t:'h', text:'Using the kitchen'},
-          {t:'p', text:'To avoid overloading and tripping the electrical system, please <b>don’t use the cooktop at the same time</b> as other high-power appliances (oven, washing machine, hairdryer, vacuum cleaner). Full details in the “Appliances” section.'},
-          {t:'h', text:'Waste'},
-          {t:'p', text:'Sorted waste collection is mandatory in Malè. Full instructions are in the “Waste disposal” section.'},
-        ]
-      },
-      wifi:{
-        title:'Wi‑Fi',
-        blocks:[
-          {t:'p', text:'Here’s how to connect to the apartment’s Wi‑Fi network.'},
-          {t:'code', label:'Network name (SSID)', value:'✏️ to be added'},
-          {t:'code', label:'Password', value:'✏️ to be added'},
-          {t:'ph', text:'✏️ Tip: you can generate a free QR code for your network details (e.g. on qr-code-generator.com) and replace this text with the image, so guests can connect with a photo.'},
-        ]
-      },
-      appliances:{
-        title:'Appliances',
-        blocks:[
-          {t:'h', text:'Induction cooktop'},
-          {t:'p', text:'In the cabinet next to the fridge you’ll find 2 “Abert” pots, 1 “Ikea” saucepan and 3 non-stick pans compatible with induction. The Barazzoni moka pot is also compatible, but shouldn’t be used above power level 5 (it will error out).'},
-          {t:'warn', text:'To avoid overloading and tripping the electrical system, don’t use the cooktop at the same time as other high-power appliances (oven, washing machine, hairdryer, vacuum cleaner).'},
-          {t:'p', text:'We recommend using no more than two hotplates at once, with a combined power no higher than 10‑12 (e.g. a plate with a pot of water at 6‑7, a pan with sauce at 5‑4).'},
-          {t:'note', text:'If the display shows “lo”, you’ve accidentally engaged the safety lock: hold the key-shaped symbol for a few seconds to unlock it. Full instructions are in the central drawer of the TV cabinet in the living room.'},
-          {t:'h', text:'Other appliances'},
-          {t:'ph', text:'✏️ To be completed: instructions for the washing machine, oven, air conditioning/heating, TV and Netflix, coffee machine. You can add photos or short video guides here.'},
-        ]
-      },
-      emergency:{
-        title:'Home emergencies',
-        blocks:[
-          {t:'h', text:'If the power trips'},
-          {t:'p', text:'You can restore it using the switches near the entrance door, or from the main meter switch, located in a room on the basement floor: exiting the lift on floor -1, it’s the first door on the right. The meter is on the upper right, labelled “20” and “FLAMINI-GIANGRANDI”.'},
-          {t:'h', text:'First aid kit and fire extinguisher'},
-          {t:'ph', text:'✏️ To be completed: where the first aid kit and fire extinguisher are located in the apartment.'},
-          {t:'h', text:'Water and gas valves'},
-          {t:'ph', text:'✏️ To be completed: location of the main water shut-off valve and gas tap (if any), with instructions on closing them in an emergency.'},
-          {t:'h', text:'Useful numbers'},
-          {t:'p', text:'For any medical, fire or public-safety emergency, call <b>112</b> (the single European emergency number). More contacts are in the “Contacts & help” section.'},
-        ]
-      },
-      waste:{
-        title:'Waste disposal',
-        blocks:[
-          {t:'p', text:'Malè operates a <b>mandatory</b> sorted waste collection system, with drop-off directly at the collection centre. We ask you to be responsible with waste management.'},
-          {t:'h', text:'Organic waste'},
-          {t:'p', text:'You can freely empty your organic-waste bag into the brown bins at the entrance of the Poliambulatorio, about 20 metres from the apartment.'},
-          {t:'warn', text:'Note: lift the small round lid, not the large square one.'},
-          {t:'h', text:'Unsorted (residual) waste'},
-          {t:'p', text:'At the same spot there’s a masonry collection bell for unsorted waste, opened with the card you’ll find in the wooden holder on the TV cabinet in the living room.'},
-          {t:'note', text:'Unsorted-waste drop-offs are rationed by the municipality: please do no more than 2‑3 per week (we suggest inserting 2 bags together each time).'},
-          {t:'h', text:'Plastic, paper and glass'},
-          {t:'p', text:'These need to be properly sorted and taken to the Malè Materials Recovery Centre, using the same card.'},
-          {t:'link', icon:'pin', label:'Materials Recovery Centre — Google Maps', url:MAPS.crm},
-          {t:'hours', rows:[
-            ['Monday','closed (see Eco Isola)'],
-            ['Tuesday','8:30–12:00 · 14:00–17:30'],
-            ['Wednesday','8:30–12:00 · 14:00–17:30'],
-            ['Thursday','8:30–12:00 · 14:00–17:30'],
-            ['Friday','closed (see Eco Isola)'],
-            ['Saturday','8:30–12:00 · 14:00–17:30'],
-            ['Sunday','closed (see Eco Isola)'],
-          ]},
-          {t:'p', text:'The <b>Eco Isola</b> (just outside the Centre) accepts paper and cardboard, light packaging and glass even when the Centre is closed. It only operates on the Centre’s closed days, shuts off automatically at 10pm, and is accessed with the residual-waste card.'},
-          {t:'note', text:'You don’t need to visit the recovery centre every day — you can go on your last (or second-to-last) day, subject to opening hours. It won’t take more than 15 minutes.'},
-        ]
-      },
-      parking:{
-        title:'Parking & LTZ',
-        blocks:[
-          {t:'p', text:'Your reserved parking spot, marked with yellow lines, is next to the back-right corner of the building, by the sign showing “20”. Reach it by going around the building clockwise.'},
-          {t:'p', text:'In front of the gallery there are more free spots, marked with yellow lines and no identifying number.'},
-          {t:'link', icon:'pin', label:'Open the location on Google Maps', url:MAPS.address},
-          {t:'ph', text:'✏️ To verify/complete: any Limited Traffic Zones (LTZ/ZTL) in central Malè, access hours, and nearby paid parking.'},
-        ]
-      },
-      faq:{
-        title:'Info / FAQ',
-        blocks:[
-          {t:'h', text:'What time can I check in/out?'},
-          {t:'ph', text:'✏️ To be completed with the check-in/check-out times agreed with the guest (check-out is in any case required by 10:00am — see “Check-in & Check-out”).'},
-          {t:'h', text:'Can I bring pets?'},
-          {t:'ph', text:'✏️ To be completed with your pet policy.'},
-          {t:'h', text:'Is there a lift?'},
-          {t:'p', text:'Yes — besides the stairs, a lift is available up to the apartment’s 1st floor.'},
-          {t:'h', text:'Where do I dispose of waste?'},
-          {t:'p', text:'You’ll find all the details, maps and opening hours in the “Waste disposal” section.'},
-          {t:'h', text:'Is there a washing machine?'},
-          {t:'ph', text:'✏️ To be completed: washing machine/drying rack availability, whether detergent is included.'},
-        ]
-      },
-      excursions:{
-        title:'Excursions & Tours',
-        blocks:[
-          {t:'p', text:'Val di Sole is the gateway to two major nature parks: the <b>Stelvio National Park</b> and the <b>Adamello Brenta Nature Park</b> — a paradise for hiking, cycling and the outdoors.'},
-          {t:'h', text:'Ideas for your days here'},
-          {t:'list', items:[
-            'The Val di Sole cycle path along the Noce river, suitable for the whole family',
-            'Rafting and canyoning on the Noce river, among the most loved in the Alps',
-            'Passo del Tonale and the Presena glacier, for high-altitude walks even in summer',
-            'The Saent waterfalls in Val di Rabbi, among the most beautiful in Trentino',
-            'Walks at the foot of the Cevedale and Ortles-Cevedale mountain groups',
-          ]},
-          {t:'ph', text:'✏️ Tip: add your favourite routes here, with links to GPS tracks (e.g. Komoot or Outdooractive) and difficulty level.'},
-          {t:'p', text:'For up-to-date trail, hut and high-altitude weather conditions, we recommend stopping by the Val di Sole Tourist Office (see “Contacts & help”).'},
-        ]
-      },
-      tips:{
-        title:'Local tips',
-        blocks:[
-          {t:'p', text:'A few tips from people who live in the valley.'},
-          {t:'ph', text:'✏️ To be completed with your favourite restaurants, mountain huts, bars and shops — a personal touch guests always appreciate.'},
-          {t:'note', text:'Tip: for each recommendation, you can add the place’s name, what to order, and whether booking ahead is a good idea.'},
-        ]
-      },
-      attractions:{
-        title:'Things to see',
-        blocks:[
-          {t:'p', text:'A few ideas for your days in Val di Sole (always check seasonal opening times).'},
-          {t:'list', items:[
-            'Malè’s historic centre, with its frescoed houses',
-            'The Church of San Vigilio, among the oldest in the valley',
-            'The Saent waterfalls, in Val di Rabbi',
-            'The Stelvio National Park, one of the largest in Europe',
-            'Passo del Tonale and its views over the Alps',
-          ]},
-          {t:'ph', text:'✏️ To be completed with museums, castles and specific local attractions, with up-to-date opening hours.'},
-        ]
-      },
-      weather:{
-        title:'Weather',
-        blocks:[
-          {t:'weather'},
-          {t:'h', text:'Rainy day? A few ideas'},
-          {t:'list', items:[
-            'Pejo or Rabbi thermal spas, for a relaxing afternoon',
-            'Museums and visitor centres of the parks (Stelvio / Adamello Brenta)',
-            'A stroll through the Galleria Cevedale and Malè’s town-centre shops',
-            'A hot chocolate in one of the village’s cafés',
-          ]},
-        ]
-      },
-      transport:{
-        title:'Transportation',
-        blocks:[
-          {t:'h', text:'Bus'},
-          {t:'p', text:'Val di Sole is served by the Trentino Trasporti network. The nearest stop is a short walk from the apartment.'},
-          {t:'ph', text:'✏️ To be completed: name of the nearest stop and useful lines (e.g. to Trento, Dimaro, Passo Tonale).'},
-          {t:'h', text:'Taxi & rentals'},
-          {t:'ph', text:'✏️ To be completed with the contacts of local taxi or shuttle services you recommend.'},
-          {t:'h', text:'By train'},
-          {t:'p', text:'The nearest railway station is Trento, from where you continue by bus to Val di Sole.'},
-        ]
-      },
-      discounts:{
-        title:'Local discounts',
-        blocks:[
-          {t:'p', text:'If you have arrangements with local businesses (breakfast, bike rental, restaurants…), you can list them here along with a discount code reserved for your guests.'},
-          {t:'ph', text:'✏️ To be completed: business name, discount offered, and code to show.'},
-        ]
-      },
-      guestbook:{
-        title:'Leave feedback',
-        blocks:[
-          {t:'p', text:'Was something not quite right, or do you have a suggestion to improve the stay? Write to us — we really do take it to heart.'},
-          {t:'form'},
-          {t:'note', text:'If you enjoyed your stay, a review on Airbnb would mean a lot to us 💛'},
-        ]
-      },
-      contacts:{
-        title:'Contacts & help',
-        blocks:[
-          {t:'h', text:'Your hosts'},
-          {t:'contact', name:'Angelo Giangrandi', sub:'+39 327 686 7296', phone:'+393276867296', email:'anje76@gmail.com'},
-          {t:'contact', name:'Silvia Flamini', sub:'+39 328 415 1764', phone:'+393284151764', email:'silviaflam76@gmail.com'},
-          {t:'h', text:'Useful numbers'},
-          {t:'list', items:[
-            'Single European emergency number: 112',
-            'Out-of-hours medical service (non-urgent needs): 116 117',
-            'Malè’s seasonal clinic operates June–September and December–April',
-          ]},
-          {t:'h', text:'Val di Sole Tourist Office (APT)'},
-          {t:'p', text:'Via Marconi 7, 38027 Malè (TN) — tel. +39 0463 901280 — info@visitvaldisole.it'},
-          {t:'p', text:'Open Monday to Friday, 9:00am–12:00pm and 2:00pm–5:00pm.'},
-          {t:'h', text:'Pharmacy, police, taxi'},
-          {t:'ph', text:'✏️ To be completed with local pharmacy, police station and recommended taxi service contacts.'},
-        ]
-      }
-    }
-  }
-};
-
-/* =========================================================
-   RENDER
-   ========================================================= */
-let lang = (navigator.language||'it').slice(0,2)==='en' ? 'en' : 'it';
-
-function initLangBar(){
-  const bar=document.getElementById('langbar');
-  bar.innerHTML='';
-  LANGS.forEach(l=>{
-    const b=document.createElement('button');
-    b.textContent=l.label;
-    b.className = l.code===lang ? 'active':'';
-    b.onclick=()=>{ lang=l.code; renderAll(); };
-    bar.appendChild(b);
-  });
-}
-
-function renderHome(){
-  const d=DATA[lang];
-  document.documentElement.lang=lang;
-  document.getElementById('t-title').textContent=d.title;
-  document.getElementById('t-subtitle').textContent=d.subtitle;
-  document.getElementById('t-hint').textContent=d.hint;
-  document.getElementById('t-cta').textContent=d.cta;
-  document.getElementById('t-hostline').innerHTML=d.hostline;
-
-  const grid=document.getElementById('grid');
-  grid.innerHTML='';
-  d.nav.forEach(item=>{
-    const tile=document.createElement('button');
-    tile.className='tile';
-    tile.setAttribute('aria-label', item.label);
-    tile.innerHTML=`<span class="tile-icon">${icon(item.icon)}</span><span class="tile-label">${item.label}</span>`;
-    tile.onclick=()=>openSection(item.id);
-    grid.appendChild(tile);
-  });
-}
-
-function blockHTML(b){
-  switch(b.t){
-    case 'p': return `<p class="b-p">${b.text}</p>`;
-    case 'h': return `<div class="b-h">${MTICK}${b.text}</div>`;
-    case 'list': return `<ul class="b-list">${b.items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
-    case 'note': return `<div class="b-note">${b.text}</div>`;
-    case 'warn': return `<div class="b-warn">${b.text}</div>`;
-    case 'ph': return `<div class="b-ph">${b.text}</div>`;
-    case 'link': return `<a class="b-link" href="${b.url}" target="_blank" rel="noopener">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
-    case 'code': return `<div class="b-code"><div><div class="lbl">${b.label}</div><div class="val" id="code-${cid()}">${b.value}</div></div>${b.value.match(/^[A-Za-z0-9•\-]+$/)? '' : ''}</div>`;
-    case 'contact': return `<div class="b-contact">
-        <div class="av">${b.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
-        <div class="info"><div class="name">${b.name}</div><div class="sub">${b.sub}</div></div>
-        <div class="acts">
-          <a href="tel:${b.phone}" aria-label="call">${icon('phone')}</a>
-          <a href="mailto:${b.email}" aria-label="email">${icon('mail')}</a>
+    <!-- HEADER CON LOGO -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Cevedale20 Logo" class="logo">
+            <h1>Cevedale20</h1>
+            <p>Il tuo rifugio in Val di Sole</p>
         </div>
-      </div>`;
-    case 'hours': return `<table class="b-hours">${b.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>`;
-    case 'weather': return `<div class="b-weather" id="weatherBox">
-        <div class="row"><div><div class="loc">Malè, Val di Sole</div><div class="temp" id="wTemp">—</div></div><div id="wIcon" style="width:46px;height:46px;">${icon('cloud')}</div></div>
-        <div class="days" id="wDays"></div>
-      </div>`;
-    case 'form': return `<div class="b-form">
-        <label>${lang==='it'?'Il tuo nome':'Your name'}</label>
-        <input id="fbName" type="text" placeholder="${lang==='it'?'Nome':'Name'}">
-        <label>${lang==='it'?'Messaggio':'Message'}</label>
-        <textarea id="fbMsg" rows="4" placeholder="${lang==='it'?'Scrivici qui...':'Write to us here...'}"></textarea>
-        <button id="fbSend" type="button">${lang==='it'?'Invia via email':'Send via email'}</button>
-      </div>`;
-    default: return '';
-  }
-}
-let _cid=0; function cid(){ return ++_cid; }
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="it">🇮🇹 IT</button>
+            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+        </div>
+    </header>
 
-function openSection(id){
-  const d=DATA[lang];
-  const nav=d.nav.find(n=>n.id===id);
-  const sec=d.sections[id];
-  document.getElementById('sheetIcon').innerHTML=icon(nav.icon);
-  document.getElementById('sheetTitle').textContent=sec.title;
-  document.getElementById('sheetBody').innerHTML=sec.blocks.map(blockHTML).join('');
-  document.getElementById('overlay').classList.add('open');
-  document.getElementById('sheet').classList.add('open');
-  document.body.style.overflow='hidden';
-  location.hash = id;
+    <!-- MESSAGGIO DI BENVENUTO -->
+    <section class="welcome-section" id="welcome">
+        <h2 data-i18n="welcome_title">BENVENUTI!</h2>
+        <p data-i18n="welcome_text">Tocca le icone per scoprire tutte le informazioni utili per il tuo soggiorno.</p>
+    </section>
 
-  // wire dynamic bits
-  const sendBtn=document.getElementById('fbSend');
-  if(sendBtn){
-    sendBtn.onclick=()=>{
-      const name=document.getElementById('fbName').value||'';
-      const msg=document.getElementById('fbMsg').value||'';
-      const subject=encodeURIComponent('Cevedale 20 — feedback');
-      const body=encodeURIComponent(`${name}\n\n${msg}`);
-      window.location.href=`mailto:anje76@gmail.com?subject=${subject}&body=${body}`;
-    };
-  }
-  if(document.getElementById('weatherBox')) loadWeather();
-}
+    <!-- MENU GRIGLIA ICONE -->
+    <nav class="grid-menu">
+        <a href="#location" class="menu-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span data-i18n="location">Posizione</span>
+        </a>
+        <a href="#checkin" class="menu-item">
+            <i class="fas fa-key"></i>
+            <span data-i18n="checkin">Check-in & Check-out</span>
+        </a>
+        <a href="#rules" class="menu-item">
+            <i class="fas fa-house-user"></i>
+            <span data-i18n="rules">Regole</span>
+        </a>
+        <a href="#wifi" class="menu-item">
+            <i class="fas fa-wifi"></i>
+            <span data-i18n="wifi">Wi-Fi</span>
+        </a>
+        <a href="#appliances" class="menu-item">
+            <i class="fas fa-utensils"></i>
+            <span data-i18n="appliances">Istruzioni</span>
+        </a>
+        <a href="#waste" class="menu-item">
+            <i class="fas fa-trash-alt"></i>
+            <span data-i18n="waste">Rifiuti</span>
+        </a>
+        <a href="#places" class="menu-item">
+            <i class="fas fa-landmark"></i>
+            <span data-i18n="places">Cose da visitare</span>
+        </a>
+        <a href="#tours" class="menu-item">
+            <i class="fas fa-hiking"></i>
+            <span data-i18n="tours">Escursioni</span>
+        </a>
+        <a href="#tips" class="menu-item">
+            <i class="fas fa-lightbulb"></i>
+            <span data-i18n="tips">Consigli locali</span>
+        </a>
+        <a href="#transport" class="menu-item">
+            <i class="fas fa-bus"></i>
+            <span data-i18n="transport">Trasporti</span>
+        </a>
+        <a href="#emergencies" class="menu-item">
+            <i class="fas fa-ambulance"></i>
+            <span data-i18n="emergencies">Emergenze</span>
+        </a>
+        <a href="#contact" class="menu-item">
+            <i class="fas fa-envelope"></i>
+            <span data-i18n="contact">Contattaci</span>
+        </a>
+    </nav>
 
-function closeSection(){
-  document.getElementById('overlay').classList.remove('open');
-  document.getElementById('sheet').classList.remove('open');
-  document.body.style.overflow='';
-  history.replaceState(null,'',location.pathname+location.search);
-}
+    <!-- SEZIONI INFO -->
+    <main>
+        <!-- SEZIONE POSIZIONE -->
+        <section id="location" class="info-section">
+            <h3><i class="fas fa-map-marker-alt"></i> <span data-i18n="location">Posizione</span></h3>
+            <p><strong>Via IV Novembre 16, Malè - Galleria Cevedale</strong></p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.456!2d10.9134!3d46.3107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4783e8c4e5b6c4d3%3A0x8f7e6d5c4b3a2f1!2sVia%20IV%20Novembre%2C%2016%2C%2038027%20Mal%C3%A8%20TN!5e0!3m2!1sit!2sit!4v1234567890" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <a href="https://goo.gl/maps/K9Th2YR95PNBmDfk8" target="_blank" class="btn-primary">
+                <i class="fas fa-directions"></i> Apri in Google Maps
+            </a>
+            
+            <h4>🚗 Parcheggio</h4>
+            <p>Posto auto riservato (giallo, numero 20) adiacente allo spigolo posteriore destro dell'edificio.</p>
+            <p>Ulteriori posti gratuiti davanti all'ingresso della galleria.</p>
+        </section>
 
-function renderAll(){
-  initLangBar();
-  renderHome();
-}
+        <!-- SEZIONE CHECK-IN -->
+        <section id="checkin" class="info-section">
+            <h3><i class="fas fa-key"></i> <span data-i18n="checkin">Check-in & Check-out</span></h3>
+            <div class="checkin-grid">
+                <div>
+                    <h4>🔑 Come entrare</h4>
+                    <ol>
+                        <li>Salite al 1° piano (ascensore disponibile)</li>
+                        <li>Girate a destra, seconda porta a destra</li>
+                        <li>Campanello: <strong>FLAMINI-GIANGRANDI</strong></li>
+                    </ol>
+                </div>
+                <div>
+                    <h4>📦 Cassetta di sicurezza</h4>
+                    <p>Aprire il coperchio nero verso il basso.</p>
+                    <p>Inserire la combinazione: <strong id="doorCode">[CODICE]</strong></p>
+                    <button onclick="copyCode()" class="btn-secondary">
+                        <i class="fas fa-copy"></i> Copia codice
+                    </button>
+                </div>
+            </div>
+            <div class="checkin-times">
+                <p><strong>Check-in:</strong> Dalle 15:00</p>
+                <p><strong>Check-out:</strong> Entro le 10:00</p>
+            </div>
+        </section>
 
-document.getElementById('overlay').onclick=closeSection;
-document.getElementById('sheetClose').onclick=closeSection;
-document.getElementById('ctaContact').onclick=()=>openSection('contacts');
+        <!-- SEZIONE REGOLE -->
+        <section id="rules" class="info-section">
+            <h3><i class="fas fa-house-user"></i> <span data-i18n="rules">Regole della Casa</span></h3>
+            <ul class="rules-list">
+                <li><i class="fas fa-clock"></i> Orari di silenzio: 22:00 - 08:00</li>
+                <li><i class="fas fa-smoking-ban"></i> Vietato fumare in appartamento</li>
+                <li><i class="fas fa-paw"></i> Animali domestici: [specificare]</li>
+                <li><i class="fas fa-water"></i> Non lasciare rubinetti aperti</li>
+            </ul>
+            
+            <h4>🏢 Accesso</h4>
+            <p>Il portone rimane aperto dalle 8:00 alle 18:00. Negli altri orari usare le chiavi.</p>
+            <p>Le chiavi sono nella cassetta di sicurezza (2 chiavi corte per i portoni, 1 lunga per l'appartamento).</p>
+        </section>
 
-renderAll();
-if(location.hash){ const id=location.hash.slice(1); if(DATA[lang].sections[id]) setTimeout(()=>openSection(id),50); }
+        <!-- SEZIONE WI-FI -->
+        <section id="wifi" class="info-section">
+            <h3><i class="fas fa-wifi"></i> <span data-i18n="wifi">Wi-Fi</span></h3>
+            <div class="wifi-box">
+                <p><strong>Rete:</strong> <span id="wifiName">[NOME_WIFI]</span></p>
+                <p><strong>Password:</strong> <span id="wifiPass">[PASSWORD_WIFI]</span></p>
+                <button onclick="copyWifi()" class="btn-secondary">
+                    <i class="fas fa-copy"></i> Copia password
+                </button>
+            </div>
+        </section>
 
-/* =========================================================
-   WEATHER (Open-Meteo, no API key required)
-   ========================================================= */
-let weatherLoaded=false;
-async function loadWeather(){
-  const tEl=document.getElementById('wTemp');
-  const daysEl=document.getElementById('wDays');
-  try{
-    const res=await fetch('https://api.open-meteo.com/v1/forecast?latitude=46.357&longitude=10.918&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FRome&forecast_days=4');
-    const j=await res.json();
-    tEl.textContent = Math.round(j.current.temperature_2m)+'°C';
-    const names = lang==='it' ? ['Oggi','Dom1','Dom2','Dom3'] : ['Today','Day 2','Day 3','Day 4'];
-    const daysArr = j.daily.time.map((t,i)=>i);
-    const labels = j.daily.time.map((t,i)=> i===0 ? (lang==='it'?'Oggi':'Today') : new Date(t).toLocaleDateString(lang==='it'?'it-IT':'en-GB',{weekday:'short'}));
-    daysEl.innerHTML = daysArr.map(i=>`<div class="day">${labels[i]}<b>${Math.round(j.daily.temperature_2m_max[i])}°</b></div>`).join('');
-  }catch(e){
-    tEl.textContent='—';
-    daysEl.innerHTML=`<div class="day">${lang==='it'?'Meteo non disponibile':'Weather unavailable'}</div>`;
-  }
-}
+        <!-- SEZIONE ISTRUZIONI ELETTRODOMESTICI -->
+        <section id="appliances" class="info-section">
+            <h3><i class="fas fa-utensils"></i> <span data-i18n="appliances">Istruzioni</span></h3>
+            
+            <h4>🔥 Piano Cottura a Induzione</h4>
+            <div class="appliance-card">
+                <p><strong>⚠️ IMPORTANTE:</strong> Non usare il piano cottura con altri elettrodomestici ad alto consumo (forno, lavatrice, asciugacapelli, aspirapolvere).</p>
+                <p>Usare massimo 2 piastre con potenza totale <strong>non superiore a 10-12</strong> (es. acqua a 6-7, sugo a 5-4).</p>
+                <p>Pentole compatibili: 2 pentole "Abert", 1 casseruola "Ikea", 3 padelle antiaderenti.</p>
+                <p><strong>Blocco sicurezza:</strong> Se appare "L" o "🔒", tenere premuto il tasto chiave per sbloccare.</p>
+            </div>
+            
+            <h4>☕ Caffettiera Moka</h4>
+            <p>Compatibile con induzione (potenza massima 5, altrimenti dà errore).</p>
+            
+            <h4>⚡ Interruttori</h4>
+            <p>Se salta la corrente:</p>
+            <ul>
+                <li>Interruttori vicino alla porta di ingresso</li>
+                <li>Contatore generale al piano -1 (uscendo ascensore, porta subito a destra)</li>
+                <li>Identificato da numero "20" e targa "FLAMINI-GIANGRANDI"</li>
+            </ul>
+        </section>
 
-/* copy-to-clipboard for any future code chip with a value that's an actual code */
-document.addEventListener('click', (e)=>{
-  const btn=e.target.closest('[data-copy]');
-  if(!btn) return;
-  navigator.clipboard.writeText(btn.dataset.copy);
-});
-</script>
+        <!-- SEZIONE RIFIUTI -->
+        <section id="waste" class="info-section">
+            <h3><i class="fas fa-trash-alt"></i> <span data-i18n="waste">Rifiuti</span></h3>
+            <p>⚡ <strong>Raccolta differenziata OBBLIGATORIA</strong> - Consegna diretta al Centro di Raccolta.</p>
+            
+            <div class="waste-grid">
+                <div class="waste-item">
+                    <i class="fas fa-apple-alt"></i>
+                    <h4>Umido</h4>
+                    <p>Bidoni marroni all'ingresso del Poliambulatorio (20m)</p>
+                    <p><small>⚠️ Sollevare il coperchio piccolo rotondo</small></p>
+                    <a href="#" class="btn-secondary btn-small">
+                        <i class="fas fa-map-pin"></i> Vedi mappa
+                    </a>
+                </div>
+                <div class="waste-item">
+                    <i class="fas fa-trash"></i>
+                    <h4>Indifferenziato</h4>
+                    <p>Campana-collettore in muratura (stesso punto)</p>
+                    <p><small>🔑 Aprire con card nell'espositore di legno sul TV in soggiorno</small></p>
+                    <a href="#" class="btn-secondary btn-small">
+                        <i class="fas fa-map-pin"></i> Vedi mappa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE COSE DA VISITARE -->
+        <section id="places" class="info-section">
+            <h3><i class="fas fa-landmark"></i> <span data-i18n="places">Cose da Visitare</span></h3>
+            <div class="places-grid">
+                <div class="place-card">
+                    <i class="fas fa-mountain"></i>
+                    <h4>Val di Sole</h4>
+                    <p>Parco Naturale dello Stelvio, escursioni e paesaggi mozzafiato</p>
+                </div>
+                <div class="place-card">
+                    <i class="fas fa-church"></i>
+                    <h4>Chiesa di San Vigilio</h4>
+                    <p>Nel centro di Malè, architettura storica</p>
+                </div>
+                <div class="place-card">
+                    <i class="fas fa-tree"></i>
+                    <h4>Parco Fluviale</h4>
+                    <p>Passeggiate lungo il fiume Noce</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE ESCURSIONI -->
+        <section id="tours" class="info-section">
+            <h3><i class="fas fa-hiking"></i> <span data-i18n="tours">Escursioni</span></h3>
+            <div class="tour-card">
+                <h4>🥾 Percorso del Sole</h4>
+                <p>Facile, adatto a famiglie. Panorama sulla valle.</p>
+            </div>
+            <div class="tour-card">
+                <h4>🏔️ Lago dei Caprioli</h4>
+                <p>Escursione di media difficoltà, vista sul lago alpino.</p>
+            </div>
+            <div class="tour-card">
+                <h4>🚵 Percorsi MTB</h4>
+                <p>Noleggio bici disponibile in centro.</p>
+            </div>
+        </section>
+
+        <!-- SEZIONE CONSIGLI LOCALI -->
+        <section id="tips" class="info-section">
+            <h3><i class="fas fa-lightbulb"></i> <span data-i18n="tips">Consigli Locali</span></h3>
+            <ul>
+                <li>🍝 <strong>Ristorante Tipico:</strong> La Baita, specialità di carne e polenta</li>
+                <li>🍦 <strong>Gelateria:</strong> Il Gelato di Malè, artigianale e biologico</li>
+                <li>🛒 <strong>Supermercato:</strong> Despar, aperto tutti i giorni fino alle 20:00</li>
+                <li>🏥 <strong>Farmacia:</strong> Farmacia Centrale, in piazza</li>
+            </ul>
+        </section>
+
+        <!-- SEZIONE TRASPORTI -->
+        <section id="transport" class="info-section">
+            <h3><i class="fas fa-bus"></i> <span data-i18n="transport">Trasporti</span></h3>
+            <p>🚌 <strong>Autobus:</strong> Linea Trento-Malè, fermata a 200m</p>
+            <p>🚆 <strong>Treno:</strong> Stazione di Malè, collegamenti con Trento</p>
+            <p>🚗 <strong>Parcheggi:</strong> Gratuiti segnalati con righe gialle</p>
+        </section>
+
+        <!-- SEZIONE EMERGENZE -->
+        <section id="emergencies" class="info-section">
+            <h3><i class="fas fa-ambulance"></i> <span data-i18n="emergencies">Emergenze</span></h3>
+            <div class="emergency-grid">
+                <div><strong>🚑 Pronto Soccorso:</strong> 118</div>
+                <div><strong>👮 Polizia:</strong> 112</div>
+                <div><strong>🚒 Vigili del Fuoco:</strong> 115</div>
+                <div><strong>🏥 Guardia Medica:</strong> [NUMERO]</div>
+            </div>
+            <p><strong>📍 Ospedale più vicino:</strong> Ospedale di Cles (15km)</p>
+        </section>
+
+        <!-- SEZIONE CONTATTI -->
+        <section id="contact" class="info-section">
+            <h3><i class="fas fa-envelope"></i> <span data-i18n="contact">Contattaci</span></h3>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> <strong>Silvia Flamini:</strong> <a href="tel:+393283151764">+39 328 315 1764</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:silviaflam76@gmail.com">silviaflam76@gmail.com</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:anie76@gmail.com">anie76@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Cevedale20 - Il tuo rifugio in Val di Sole</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
