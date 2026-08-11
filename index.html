@@ -2,302 +2,55 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cevedale20 - Benvenuti!</title>
-    
-    <!-- Font Awesome per le icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Cevedale 20 — Guida Ospiti / Guest Guide</title>
+    <meta name="description" content="Guida digitale per gli ospiti di Cevedale 20, Malè, Val di Sole">
+    <!-- Sostituita la stringa base64 gigante con un percorso file pulito -->
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER CON LOGO COLLEGATO A FILE ESTERNO -->
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Cevedale20 Logo" class="logo">
-            <h1>Cevedale20</h1>
-            <p>Il tuo rifugio in Val di Sole</p>
-        </div>
-        <div class="language-selector">
-            <button class="lang-btn active" data-lang="it">🇮🇹 IT</button>
-            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
-        </div>
+
+    <header class="guide-header">
+        <h1>Cevedale 20</h1>
+        <p class="subtitle">Guida Ospiti / Guest Guide — Malè, Val di Sole</p>
     </header>
 
-    <!-- MESSAGGIO DI BENVENUTO -->
-    <section class="welcome-section" id="welcome">
-        <h2 data-i18n="welcome_title">BENVENUTI!</h2>
-        <p data-i18n="welcome_text">Tocca le icone per scoprire tutte le informazioni utili per il tuo soggiorno.</p>
-    </section>
-
-    <!-- MENU GRIGLIA ICONE -->
-    <nav class="grid-menu">
-        <a href="#location" class="menu-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span data-i18n="location">Posizione</span>
-        </a>
-        <a href="#checkin" class="menu-item">
-            <i class="fas fa-key"></i>
-            <span data-i18n="checkin">Check-in & Check-out</span>
-        </a>
-        <a href="#rules" class="menu-item">
-            <i class="fas fa-house-user"></i>
-            <span data-i18n="rules">Regole</span>
-        </a>
-        <a href="#wifi" class="menu-item">
-            <i class="fas fa-wifi"></i>
-            <span data-i18n="wifi">Wi-Fi</span>
-        </a>
-        <a href="#appliances" class="menu-item">
-            <i class="fas fa-utensils"></i>
-            <span data-i18n="appliances">Istruzioni</span>
-        </a>
-        <a href="#waste" class="menu-item">
-            <i class="fas fa-trash-alt"></i>
-            <span data-i18n="waste">Rifiuti</span>
-        </a>
-        <a href="#places" class="menu-item">
-            <i class="fas fa-landmark"></i>
-            <span data-i18n="places">Cose da visitare</span>
-        </a>
-        <a href="#tours" class="menu-item">
-            <i class="fas fa-hiking"></i>
-            <span data-i18n="tours">Escursioni</span>
-        </a>
-        <a href="#tips" class="menu-item">
-            <i class="fas fa-lightbulb"></i>
-            <span data-i18n="tips">Consigli locali</span>
-        </a>
-        <a href="#transport" class="menu-item">
-            <i class="fas fa-bus"></i>
-            <span data-i18n="transport">Trasporti</span>
-        </a>
-        <a href="#emergencies" class="menu-item">
-            <i class="fas fa-ambulance"></i>
-            <span data-i18n="emergencies">Emergenze</span>
-        </a>
-        <a href="#contact" class="menu-item">
-            <i class="fas fa-envelope"></i>
-            <span data-i18n="contact">Contattaci</span>
-        </a>
-    </nav>
-
-    <!-- SEZIONI INFO -->
-    <main>
-        <!-- SEZIONE POSIZIONE -->
-        <section id="location" class="info-section">
-            <h3><i class="fas fa-map-marker-alt"></i> <span data-i18n="location">Posizione</span></h3>
-            <p><strong>Via IV Novembre 16, Malè - Galleria Cevedale</strong></p>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.456!2d10.9134!3d46.3107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4783e8c4e5b6c4d3%3A0x8f7e6d5c4b3a2f1!2sVia%20IV%20Novembre%2C%2016%2C%2038027%20Mal%C3%A8%20TN!5e0!3m2!1sit!2sit!4v1234567890" 
-                    width="100%" 
-                    height="200" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-            <a href="https://goo.gl/maps/K9Th2YR95PNBmDfk8" target="_blank" class="btn-primary">
-                <i class="fas fa-directions"></i> Apri in Google Maps
-            </a>
-            
-            <h4>🚗 Parcheggio</h4>
-            <p>Posto auto riservato (giallo, numero 20) adiacente allo spigolo posteriore destro dell'edificio.</p>
-            <p>Ulteriori posti gratuiti davanti all'ingresso della galleria.</p>
+    <main class="guide-container">
+        <!-- Benvenuto -->
+        <section class="card welcome-card">
+            <h2>Benvenuti / Welcome</h2>
+            <p>Siamo felici di accogliervi a Cevedale 20. Di seguito trovate tutte le informazioni utili per il vostro soggiorno a Malè e in Val di Sole.</p>
         </section>
 
-        <!-- SEZIONE CHECK-IN -->
-        <section id="checkin" class="info-section">
-            <h3><i class="fas fa-key"></i> <span data-i18n="checkin">Check-in & Check-out</span></h3>
-            <div class="checkin-grid">
-                <div>
-                    <h4>🔑 Come entrare</h4>
-                    <ol>
-                        <li>Salite al 1° piano (ascensore disponibile)</li>
-                        <li>Girate a destra, seconda porta a destra</li>
-                        <li>Campanello: <strong>FLAMINI-GIANGRANDI</strong></li>
-                    </ol>
-                </div>
-                <div>
-                    <h4>📦 Cassetta di sicurezza</h4>
-                    <p>Aprire il coperchio nero verso il basso.</p>
-                    <p>Inserire la combinazione: <strong id="doorCode">[CODICE]</strong></p>
-                    <button onclick="copyCode()" class="btn-secondary">
-                        <i class="fas fa-copy"></i> Copia codice
-                    </button>
-                </div>
-            </div>
-            <div class="checkin-times">
-                <p><strong>Check-in:</strong> Dalle 15:00</p>
-                <p><strong>Check-out:</strong> Entro le 10:00</p>
-            </div>
+        <!-- Wi-Fi -->
+        <section class="card wifi-card">
+            <h2>📶 Wi-Fi</h2>
+            <p><strong>Rete / Network:</strong> Cevedale20_Guest</p>
+            <p><strong>Password:</strong> <code>[Inserisci Password Wi-Fi]</code></p>
         </section>
 
-        <!-- SEZIONE REGOLE -->
-        <section id="rules" class="info-section">
-            <h3><i class="fas fa-house-user"></i> <span data-i18n="rules">Regole della Casa</span></h3>
-            <ul class="rules-list">
-                <li><i class="fas fa-clock"></i> Orari di silenzio: 22:00 - 08:00</li>
-                <li><i class="fas fa-smoking-ban"></i> Vietato fumare in appartamento</li>
-                <li><i class="fas fa-paw"></i> Animali domestici: [specificare]</li>
-                <li><i class="fas fa-water"></i> Non lasciare rubinetti aperti</li>
-            </ul>
-            
-            <h4>🏢 Accesso</h4>
-            <p>Il portone rimane aperto dalle 8:00 alle 18:00. Negli altri orari usare le chiavi.</p>
-            <p>Le chiavi sono nella cassetta di sicurezza (2 chiavi corte per i portoni, 1 lunga per l'appartamento).</p>
-        </section>
-
-        <!-- SEZIONE WI-FI -->
-        <section id="wifi" class="info-section">
-            <h3><i class="fas fa-wifi"></i> <span data-i18n="wifi">Wi-Fi</span></h3>
-            <div class="wifi-box">
-                <p><strong>Rete:</strong> <span id="wifiName">[NOME_WIFI]</span></p>
-                <p><strong>Password:</strong> <span id="wifiPass">[PASSWORD_WIFI]</span></p>
-                <button onclick="copyWifi()" class="btn-secondary">
-                    <i class="fas fa-copy"></i> Copia password
-                </button>
-            </div>
-        </section>
-
-        <!-- SEZIONE ISTRUZIONI ELETTRODOMESTICI -->
-        <section id="appliances" class="info-section">
-            <h3><i class="fas fa-utensils"></i> <span data-i18n="appliances">Istruzioni</span></h3>
-            
-            <h4>🔥 Piano Cottura a Induzione</h4>
-            <div class="appliance-card">
-                <p><strong>⚠️ IMPORTANTE:</strong> Non usare il piano cottura con altri elettrodomestici ad alto consumo (forno, lavatrice, asciugacapelli, aspirapolvere).</p>
-                <p>Usare massimo 2 piastre con potenza totale <strong>non superiore a 10-12</strong> (es. acqua a 6-7, sugo a 5-4).</p>
-                <p>Pentole compatibili: 2 pentole "Abert", 1 casseruola "Ikea", 3 padelle antiaderenti.</p>
-                <p><strong>Blocco sicurezza:</strong> Se appare "L" o "🔒", tenere premuto il tasto chiave per sbloccare.</p>
-            </div>
-            
-            <h4>☕ Caffettiera Moka</h4>
-            <p>Compatibile con induzione (potenza massima 5, altrimenti dà errore).</p>
-            
-            <h4>⚡ Interruttori</h4>
-            <p>Se salta la corrente:</p>
+        <!-- Regole della Casa -->
+        <section class="card rules-card">
+            <h2>📋 Regole della Casa / House Rules</h2>
             <ul>
-                <li>Interruttori vicino alla porta di ingresso</li>
-                <li>Contatore generale al piano -1 (uscendo ascensore, porta subito a destra)</li>
-                <li>Identificato da numero "20" e targa "FLAMINI-GIANGRANDI"</li>
+                <li><strong>Check-out:</strong> Entro le ore 10:00</li>
+                <li><strong>Silenzio:</strong> Dalle 22:00 alle 08:00</li>
+                <li><strong>Raccolta Differenziata:</strong> Seguire le indicazioni riportate nell'area contenitori</li>
             </ul>
         </section>
 
-        <!-- SEZIONE RIFIUTI -->
-        <section id="waste" class="info-section">
-            <h3><i class="fas fa-trash-alt"></i> <span data-i18n="waste">Rifiuti</span></h3>
-            <p>⚡ <strong>Raccolta differenziata OBBLIGATORIA</strong> - Consegna diretta al Centro di Raccolta.</p>
-            
-            <div class="waste-grid">
-                <div class="waste-item">
-                    <i class="fas fa-apple-alt"></i>
-                    <h4>Umido</h4>
-                    <p>Bidoni marroni all'ingresso del Poliambulatorio (20m)</p>
-                    <p><small>⚠️ Sollevare il coperchio piccolo rotondo</small></p>
-                    <a href="#" class="btn-secondary btn-small">
-                        <i class="fas fa-map-pin"></i> Vedi mappa
-                    </a>
-                </div>
-                <div class="waste-item">
-                    <i class="fas fa-trash"></i>
-                    <h4>Indifferenziato</h4>
-                    <p>Campana-collettore in muratura (stesso punto)</p>
-                    <p><small>🔑 Aprire con card nell'espositore di legno sul TV in soggiorno</small></p>
-                    <a href="#" class="btn-secondary btn-small">
-                        <i class="fas fa-map-pin"></i> Vedi mappa
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEZIONE COSE DA VISITARE -->
-        <section id="places" class="info-section">
-            <h3><i class="fas fa-landmark"></i> <span data-i18n="places">Cose da Visitare</span></h3>
-            <div class="places-grid">
-                <div class="place-card">
-                    <i class="fas fa-mountain"></i>
-                    <h4>Val di Sole</h4>
-                    <p>Parco Naturale dello Stelvio, escursioni e paesaggi mozzafiato</p>
-                </div>
-                <div class="place-card">
-                    <i class="fas fa-church"></i>
-                    <h4>Chiesa di San Vigilio</h4>
-                    <p>Nel centro di Malè, architettura storica</p>
-                </div>
-                <div class="place-card">
-                    <i class="fas fa-tree"></i>
-                    <h4>Parco Fluviale</h4>
-                    <p>Passeggiate lungo il fiume Noce</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEZIONE ESCURSIONI -->
-        <section id="tours" class="info-section">
-            <h3><i class="fas fa-hiking"></i> <span data-i18n="tours">Escursioni</span></h3>
-            <div class="tour-card">
-                <h4>🥾 Percorso del Sole</h4>
-                <p>Facile, adatto a famiglie. Panorama sulla valle.</p>
-            </div>
-            <div class="tour-card">
-                <h4>🏔️ Lago dei Caprioli</h4>
-                <p>Escursione di media difficoltà, vista sul lago alpino.</p>
-            </div>
-            <div class="tour-card">
-                <h4>🚵 Percorsi MTB</h4>
-                <p>Noleggio bici disponibile in centro.</p>
-            </div>
-        </section>
-
-        <!-- SEZIONE CONSIGLI LOCALI -->
-        <section id="tips" class="info-section">
-            <h3><i class="fas fa-lightbulb"></i> <span data-i18n="tips">Consigli Locali</span></h3>
-            <ul>
-                <li>🍝 <strong>Ristorante Tipico:</strong> La Baita, specialità di carne e polenta</li>
-                <li>🍦 <strong>Gelateria:</strong> Il Gelato di Malè, artigianale e biologico</li>
-                <li>🛒 <strong>Supermercato:</strong> Despar, aperto tutti i giorni fino alle 20:00</li>
-                <li>🏥 <strong>Farmacia:</strong> Farmacia Centrale, in piazza</li>
-            </ul>
-        </section>
-
-        <!-- SEZIONE TRASPORTI -->
-        <section id="transport" class="info-section">
-            <h3><i class="fas fa-bus"></i> <span data-i18n="transport">Trasporti</span></h3>
-            <p>🚌 <strong>Autobus:</strong> Linea Trento-Malè, fermata a 200m</p>
-            <p>🚆 <strong>Treno:</strong> Stazione di Malè, collegamenti con Trento</p>
-            <p>🚗 <strong>Parcheggi:</strong> Gratuiti segnalati con righe gialle</p>
-        </section>
-
-        <!-- SEZIONE EMERGENZE -->
-        <section id="emergencies" class="info-section">
-            <h3><i class="fas fa-ambulance"></i> <span data-i18n="emergencies">Emergenze</span></h3>
-            <div class="emergency-grid">
-                <div><strong>🚑 Pronto Soccorso:</strong> 118</div>
-                <div><strong>👮 Polizia:</strong> 112</div>
-                <div><strong>🚒 Vigili del Fuoco:</strong> 115</div>
-                <div><strong>🏥 Guardia Medica:</strong> [NUMERO]</div>
-            </div>
-            <p><strong>📍 Ospedale più vicino:</strong> Ospedale di Cles (15km)</p>
-        </section>
-
-        <!-- SEZIONE CONTATTI -->
-        <section id="contact" class="info-section">
-            <h3><i class="fas fa-envelope"></i> <span data-i18n="contact">Contattaci</span></h3>
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> <strong>Silvia Flamini:</strong> <a href="tel:+393283151764">+39 328 315 1764</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:silviaflam76@gmail.com">silviaflam76@gmail.com</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:anie76@gmail.com">anie76@gmail.com</a></p>
-            </div>
+        <!-- Contatti -->
+        <section class="card contact-card">
+            <h2>📞 Contatti / Contacts</h2>
+            <p><strong>Assistenza Ospiti:</strong> <a href="tel:+390000000000">+39 000 000 0000</a></p>
+            <p><strong>Emergenze:</strong> 112</p>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Cevedale20 - Il tuo rifugio in Val di Sole</p>
+        <p>&copy; Cevedale 20 — Malè, Val di Sole</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
-```[cite: 1]
