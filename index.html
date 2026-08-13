@@ -53,10 +53,9 @@
 
   .topbar{
     display:flex; align-items:center; justify-content:flex-end;
-    padding:14px 18px 0; margin-top:-58px;
-    position:relative; z-index:2;
+    padding:12px 18px;
   }
-  .langbar{display:flex; gap:6px; background:rgba(252,248,239,.9); backdrop-filter:blur(4px); border:1px solid var(--line); border-radius:999px; padding:3px; box-shadow:var(--shadow-sm);}
+  .langbar{display:flex; gap:6px; background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:3px;}
   .langbar button{
     border:none; background:transparent; padding:6px 11px; border-radius:999px;
     font-size:12.5px; font-weight:700; color:var(--ink-soft); cursor:pointer; letter-spacing:.03em;
@@ -209,6 +208,22 @@
   .b-brand .row{display:flex; align-items:center; gap:10px; padding:12px 14px;}
   .b-brand .tag{flex:1; font-size:12.5px; color:var(--ink-soft); line-height:1.4;}
   .b-brand .arrow{width:14px;height:14px; color:var(--ink-soft); flex:none;}
+
+  .b-steps{margin:0 0 14px; padding:0; list-style:none;}
+  .b-step{display:flex; gap:12px; padding-bottom:16px; position:relative;}
+  .b-step:not(:last-child):before{
+    content:""; position:absolute; left:15px; top:32px; bottom:0; width:2px;
+    background:var(--line);
+  }
+  .b-step .num{
+    width:32px; height:32px; border-radius:50%; flex:none; background:var(--forest); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:13.5px;
+    z-index:1;
+  }
+  .b-step.alt .num{background:var(--clay);}
+  .b-step .body{flex:1; padding-top:3px;}
+  .b-step .st-title{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:14.5px; color:var(--forest-dk); margin-bottom:3px;}
+  .b-step .st-text{font-size:13.8px; line-height:1.55; color:var(--ink);}
   .b-code{
     display:flex; align-items:center; justify-content:space-between; gap:10px;
     background:var(--forest-dk); color:#fff; border-radius:var(--radius-sm); padding:13px 14px; margin:0 0 14px;
@@ -273,11 +288,11 @@
 <body>
 
 <div class="app" id="app">
-  <div class="hero-banner">
-    <img src="logo.png" alt="Cevedale 20 logo">
-  </div>
   <div class="topbar">
     <div class="langbar" id="langbar"></div>
+  </div>
+  <div class="hero-banner">
+    <img src="logo.png" alt="Cevedale 20 logo">
   </div>
 
   <div class="hero">
@@ -407,6 +422,14 @@ const DATA = {
           {t:'p', text:'L’appartamento si trova a Malè, in <b>via IV Novembre 16</b>, presso la “Galleria Cevedale”.'},
           {t:'mapembed', query:'Via IV Novembre 16, 38027 Malè TN'},
           {t:'link', icon:'pin', label:'Apri l’indirizzo su Google Maps', url:MAPS.address},
+          {t:'h', text:'Come arrivare in auto'},
+          {t:'steps', items:[
+            {num:'1', title:'Uscita autostradale', text:'Uscite al casello “Trento Nord – Interporto” oppure “S. Michele all’Adige / Mezzocorona”, sull’autostrada <b>A22 del Brennero</b>.'},
+            {num:'2', title:'Seguite le indicazioni', text:'Seguite le indicazioni per Mezzolombardo, Cles, Malè (SS.42), in direzione <b>Val di Non / Val di Sole</b>.'},
+            {num:'3', title:'Il condominio Cevedale', text:'Raggiungete il condominio “Cevedale”, in via IV Novembre 16 a Malè (TN) — vedi mappa qui sopra.'},
+            {num:'4', title:'Parcheggio riservato', text:'Parcheggiate nel posto riservato: piazzola n. 20, sul lato destro dell’edificio, in fondo (si raggiunge girando attorno all’edificio in senso orario) — dettagli e foto qui sotto.'},
+          ]},
+          {t:'note', text:'<b>Se arrivate da Milano</b>, potete valutare anche l’itinerario Bergamo → SS.42 → Passo del Tonale: stesso tempo di percorrenza, ma senza pedaggi autostradali.'},
           {t:'img', src:'images/edificio-parcheggio.jpg', alt:'Edificio con ingresso Galleria e posto auto n.20', caption:'L’edificio visto dalla strada: a sinistra l’ingresso della Galleria, a destra il posto auto n. 20'},
           {t:'h', text:'Parcheggio riservato'},
           {t:'p', text:'Avete a disposizione un posto auto riservato, segnalato con righe gialle, adiacente allo spigolo posteriore destro dell’edificio, in corrispondenza di un cartello con indicato il numero “20”. Si raggiunge girando attorno all’edificio in senso orario.'},
@@ -420,8 +443,10 @@ const DATA = {
       checkin:{
         title:'Check-in & Check-out',
         blocks:[
+          {t:'h', text:'Ingresso alla Galleria Cevedale'},
+          {t:'p', text:'L’ingresso dell’appartamento è all’interno della Galleria Cevedale, accanto al Bar Cevedale. Per l’indirizzo, la mappa e l’itinerario in auto, vedi la sezione “Posizione”.'},
+          {t:'img', src:'images/ingresso-galleria.jpg', alt:'Scalinata d’ingresso alla Galleria Cevedale', caption:'L’ingresso della Galleria Cevedale, accanto al Bar Cevedale'},
           {t:'h', text:'Come entrare'},
-          {t:'note', text:'Per l’indirizzo, il parcheggio e le foto dell’ingresso, vedi la sezione “Posizione”.'},
           {t:'p', text:'Il portone della Galleria rimane aperto solitamente dalle <b>8 alle 18</b>: basta spingere in avanti per accedere alle scale. Negli altri orari dovrete usare le chiavi per aprirlo.'},
           {t:'p', text:'Salite al <b>1° piano</b> (disponibile anche l’ascensore), girate nel corridoio a destra e troverete l’ingresso alla seconda porta a destra — appartamento 20, campanello “FLAMINI-GIANGRANDI”.'},
           {t:'img', src:'images/portone-condominio.jpg', alt:'Portone d’ingresso al condominio', caption:'Il portone d’ingresso al condominio, al 1° piano'},
@@ -692,6 +717,14 @@ const DATA = {
           {t:'p', text:'The apartment is located in Malè, at <b>Via IV Novembre 16</b>, inside the “Galleria Cevedale”.'},
           {t:'mapembed', query:'Via IV Novembre 16, 38027 Malè TN'},
           {t:'link', icon:'pin', label:'Open the address on Google Maps', url:MAPS.address},
+          {t:'h', text:'Getting here by car'},
+          {t:'steps', items:[
+            {num:'1', title:'Motorway exit', text:'Take the “Trento Nord – Interporto” or “S. Michele all’Adige / Mezzocorona” exit on the <b>A22 Brenner motorway</b>.'},
+            {num:'2', title:'Follow the signs', text:'Follow the signs for Mezzolombardo, Cles, Malè (SS.42), heading toward <b>Val di Non / Val di Sole</b>.'},
+            {num:'3', title:'The Cevedale building', text:'Reach the “Cevedale” building, at Via IV Novembre 16 in Malè (TN) — see the map above.'},
+            {num:'4', title:'Reserved parking', text:'Park in the reserved spot: bay no. 20, on the right side of the building, at the far end (reached by going around the building clockwise) — details and photos below.'},
+          ]},
+          {t:'note', text:'<b>If you’re coming from Milan</b>, you could also consider the Bergamo → SS.42 → Passo del Tonale route — same travel time, but no motorway tolls.'},
           {t:'img', src:'images/edificio-parcheggio.jpg', alt:'Building with the Galleria entrance and parking spot 20', caption:'The building seen from the street: the Galleria entrance on the left, parking spot n. 20 on the right'},
           {t:'h', text:'Reserved parking'},
           {t:'p', text:'You have a reserved parking spot, marked with yellow lines, next to the back-right corner of the building, by a sign showing the number “20”. Reach it by going around the building clockwise.'},
@@ -705,8 +738,10 @@ const DATA = {
       checkin:{
         title:'Check-in & Check-out',
         blocks:[
+          {t:'h', text:'Galleria Cevedale entrance'},
+          {t:'p', text:'The apartment entrance is inside the Galleria Cevedale, next to the Bar Cevedale. For the address, map and driving directions, see the “Location” section.'},
+          {t:'img', src:'images/ingresso-galleria.jpg', alt:'Steps up to the Galleria Cevedale entrance', caption:'The entrance to the Galleria Cevedale, next to the Bar Cevedale'},
           {t:'h', text:'Getting in'},
-          {t:'note', text:'For the address, parking and entrance photos, see the “Location” section.'},
           {t:'p', text:'The Galleria’s main door is usually open from <b>8am to 6pm</b>: just push it forward to reach the stairs. Outside these hours you’ll need the keys to open it.'},
           {t:'p', text:'Go up to the <b>1st floor</b> (a lift is also available), turn right down the corridor, and you’ll find the entrance at the second door on the right — apartment 20, doorbell “FLAMINI-GIANGRANDI”.'},
           {t:'img', src:'images/portone-condominio.jpg', alt:'Building entrance door', caption:'The building’s entrance door, on the 1st floor'},
@@ -984,6 +1019,7 @@ function blockHTML(b){
     case 'img': return `<div class="b-img"><img src="${b.src}" alt="${b.alt||''}" loading="lazy">${b.caption? `<div class="cap">${b.caption}</div>`:''}</div>`;
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
+    case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
     case 'code': return `<div class="b-code"><div><div class="lbl">${b.label}</div><div class="val" id="code-${cid()}">${b.value}</div></div>${b.value.match(/^[A-Za-z0-9•\-]+$/)? '' : ''}</div>`;
     case 'contact': return `<div class="b-contact">
         <div class="av">${b.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
