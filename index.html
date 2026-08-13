@@ -1066,11 +1066,14 @@ function openSection(id){
   const sec=d.sections[id];
   document.getElementById('sheetIcon').innerHTML=icon(nav.icon);
   document.getElementById('sheetTitle').textContent=sec.title;
-  document.getElementById('sheetBody').innerHTML=sec.blocks.map(blockHTML).join('');
+  const body=document.getElementById('sheetBody');
+  body.innerHTML=sec.blocks.map(blockHTML).join('');
+  body.scrollTop=0;
   document.getElementById('overlay').classList.add('open');
   document.getElementById('sheet').classList.add('open');
   document.body.style.overflow='hidden';
-  location.hash = id;
+  history.replaceState(null,'','#'+id);
+  body.scrollTop=0;
 
   // wire dynamic bits
   const sendBtn=document.getElementById('fbSend');
