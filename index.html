@@ -392,7 +392,7 @@ const DATA = {
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'Regole della casa'},
       {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
-      {id:'appliances', icon:'plug', label:'Elettrodomestici'},
+      {id:'appliances', icon:'plug', label:'Cucina'},
       {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
       {id:'waste', icon:'trash', label:'Rifiuti'},
       {id:'parking', icon:'car', label:'Parcheggio & ZTL'},
@@ -499,26 +499,29 @@ const DATA = {
         ]
       },
       appliances:{
-        title:'Elettrodomestici',
+        title:'Cucina',
         blocks:[
           {t:'h', text:'Piano cottura a induzione'},
-          {t:'p', text:'Nel mobile accanto al frigo trovate 2 pentole “Abert”, 1 casseruola “Ikea” e 3 padelle antiaderenti compatibili con l’induzione. Anche la caffettiera moka Barazzoni è compatibile, ma non va usata con potenza superiore a 5 (altrimenti va in errore).'},
-          {t:'warn', text:'Per evitare sovraccarichi e distacchi dell’impianto elettrico, non utilizzate il piano cottura contemporaneamente ad altri elettrodomestici di elevato consumo (forno, lavatrice, asciugacapelli, aspirapolvere).'},
-          {t:'p', text:'Vi consigliamo di usare al massimo due piastre, con potenza complessiva non superiore a 10‑12 (esempio: piastra con pentola dell’acqua a 6‑7, tegame col sugo a 5‑4).'},
-          {t:'note', text:'Se sul display compare la scritta “lo”, avete inavvertitamente inserito il blocco di sicurezza: tenete premuto qualche secondo il simbolo a forma di chiave per sbloccarlo. Le istruzioni complete si trovano nel cassetto centrale del mobile con TV in soggiorno.'},
-          {t:'h', text:'Altri elettrodomestici'},
-          {t:'ph', text:'✏️ Da completare: istruzioni per lavatrice, forno, condizionatore/riscaldamento, TV e Netflix, macchina del caffè. Potete aggiungere qui foto o brevi video-guida.'},
+          {t:'p', text:'Il piano cottura è ad induzione. Nel mobile accanto al frigo sono presenti pentole, casseruole e padelle antiaderenti compatibili. Anche la caffettiera moka Barazzoni è compatibile con il piano induzione (ma non va usata con potenza superiore a 5, o darà errore).'},
+          {t:'warn', text:'IMPORTANTE: al fine di evitare sovraccarichi e distacchi dell’impianto elettrico, vi preghiamo di non utilizzare il piano cottura contemporaneamente ad altri elettrodomestici di elevato consumo energetico (forno, lavatrice, asciugacapelli, aspirapolvere).'},
+          {t:'p', text:'Per la cottura dei cibi consigliamo di utilizzare al massimo due piastre, con una potenza complessiva indicata sui display non superiore a 10‑12 (ad esempio: piastra con pentola dell’acqua a 6‑7, tegame col sugo a 5‑4).'},
+          {t:'img', src:'images/cucina-induzione-it.jpg', alt:'Comandi del piano cottura a induzione', caption:'I principali comandi per gestire il piano cottura'},
+          {t:'p', text:'Qui sopra trovate i principali comandi per gestire il piano cottura. Le istruzioni complete si trovano nel cassetto centrale del mobile con TV in soggiorno.'},
+          {t:'note', text:'Se sul display viene visualizzata la voce “Lo”, significa che avete inavvertitamente inserito il blocco di sicurezza. Per sbloccarlo, basta tenere premuto per qualche secondo il simbolo CHIAVE.'},
+          {t:'img', src:'images/cucina-simbolo-chiave.jpg', alt:'Simbolo a forma di chiave sul piano cottura', caption:'Il simbolo CHIAVE da tenere premuto per sbloccare il piano cottura'},
+          {t:'jump', to:'emergency', icon:'bolt', label:'Se salta il contatore elettrico, vedi “Emergenze in casa”'},
         ]
       },
       emergency:{
         title:'Emergenze in casa',
         blocks:[
           {t:'h', text:'Se salta la corrente'},
-          {t:'p', text:'È possibile riattivarla con gli interruttori vicini alla porta d’ingresso, oppure dall’interruttore del contatore generale, che si trova in una stanza al piano seminterrato: uscendo dall’ascensore al piano -1, è la porta subito a destra. Il contatore è in alto a destra, identificato dal numero “20” e dalla targhetta “FLAMINI-GIANGRANDI”.'},
-          {t:'h', text:'Kit di primo soccorso ed estintore'},
-          {t:'ph', text:'✏️ Da completare: dove si trovano il kit di primo soccorso e l’estintore in appartamento.'},
-          {t:'h', text:'Valvole di acqua e gas'},
-          {t:'ph', text:'✏️ Da completare: posizione della valvola generale dell’acqua e dell’eventuale rubinetto del gas, con istruzioni su come chiuderli in caso di emergenza.'},
+          {t:'p', text:'È possibile riattivarla con gli interruttori vicini alla porta d’ingresso, oppure dall’interruttore del contatore generale, che si trova in una stanza al piano seminterrato: uscendo dall’ascensore al piano -1, è la porta subito a destra.'},
+          {t:'img', src:'images/emergenza-stanza-contatori.jpg', alt:'Corridoio al piano -1 con porta della stanza contatori', caption:'Usciti dall’ascensore al piano -1, la porta della stanza contatori è subito a destra'},
+          {t:'p', text:'Il contatore è in alto a destra, identificato dal numero “20” e dalla targhetta “FLAMINI-GIANGRANDI”.'},
+          {t:'img', src:'images/emergenza-contatore.jpg', alt:'Contatore elettrico n. 20 nella stanza contatori', caption:'Il contatore n. 20, in alto a destra nella fila'},
+          {t:'h', text:'Estintore'},
+          {t:'p', text:'Si trova nel cassetto di legno basso tra il camino e la poltrona singola. Basta sollevare il coperchio.'},
           {t:'h', text:'Numeri utili'},
           {t:'p', text:'Per qualsiasi emergenza sanitaria, incendio o pubblica sicurezza chiamate il <b>112</b> (numero unico di emergenza). Trovate altri contatti utili nella sezione “Contatti & aiuto”.'},
         ]
@@ -693,7 +696,7 @@ const DATA = {
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'House rules'},
       {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
-      {id:'appliances', icon:'plug', label:'Appliances'},
+      {id:'appliances', icon:'plug', label:'Kitchen'},
       {id:'emergency', icon:'bolt', label:'Home emergencies'},
       {id:'waste', icon:'trash', label:'Waste disposal'},
       {id:'parking', icon:'car', label:'Parking & LTZ'},
@@ -800,26 +803,29 @@ const DATA = {
         ]
       },
       appliances:{
-        title:'Appliances',
+        title:'Kitchen',
         blocks:[
           {t:'h', text:'Induction cooktop'},
-          {t:'p', text:'In the cabinet next to the fridge you’ll find 2 “Abert” pots, 1 “Ikea” saucepan and 3 non-stick pans compatible with induction. The Barazzoni moka pot is also compatible, but shouldn’t be used above power level 5 (it will error out).'},
-          {t:'warn', text:'To avoid overloading and tripping the electrical system, don’t use the cooktop at the same time as other high-power appliances (oven, washing machine, hairdryer, vacuum cleaner).'},
-          {t:'p', text:'We recommend using no more than two hotplates at once, with a combined power no higher than 10‑12 (e.g. a plate with a pot of water at 6‑7, a pan with sauce at 5‑4).'},
-          {t:'note', text:'If the display shows “lo”, you’ve accidentally engaged the safety lock: hold the key-shaped symbol for a few seconds to unlock it. Full instructions are in the central drawer of the TV cabinet in the living room.'},
-          {t:'h', text:'Other appliances'},
-          {t:'ph', text:'✏️ To be completed: instructions for the washing machine, oven, air conditioning/heating, TV and Netflix, coffee machine. You can add photos or short video guides here.'},
+          {t:'p', text:'The cooktop is induction. In the cabinet next to the fridge you’ll find pots, saucepans and non-stick pans compatible with it. The Barazzoni moka pot is also compatible with the induction cooktop (but shouldn’t be used above power level 5, or it will show an error).'},
+          {t:'warn', text:'IMPORTANT: to avoid overloading and tripping the electrical system, please don’t use the cooktop at the same time as other high-power appliances (oven, washing machine, hairdryer, vacuum cleaner).'},
+          {t:'p', text:'We recommend using no more than two hotplates at once, with a combined power shown on the display no higher than 10‑12 (e.g. a plate with a pot of water at 6‑7, a pan with sauce at 5‑4).'},
+          {t:'img', src:'images/cucina-induzione-en.jpg', alt:'Induction cooktop controls', caption:'The main controls for the induction cooktop'},
+          {t:'p', text:'Above you’ll find the main controls for the cooktop. Full instructions are in the central drawer of the TV cabinet in the living room.'},
+          {t:'note', text:'If the display shows “Lo”, you’ve accidentally engaged the safety lock. To unlock it, just hold down the KEY symbol for a few seconds.'},
+          {t:'img', src:'images/cucina-simbolo-chiave.jpg', alt:'Key-shaped symbol on the cooktop', caption:'The KEY symbol to hold down to unlock the cooktop'},
+          {t:'jump', to:'emergency', icon:'bolt', label:'If the power meter trips, see “Home emergencies”'},
         ]
       },
       emergency:{
         title:'Home emergencies',
         blocks:[
           {t:'h', text:'If the power trips'},
-          {t:'p', text:'You can restore it using the switches near the entrance door, or from the main meter switch, located in a room on the basement floor: exiting the lift on floor -1, it’s the first door on the right. The meter is on the upper right, labelled “20” and “FLAMINI-GIANGRANDI”.'},
-          {t:'h', text:'First aid kit and fire extinguisher'},
-          {t:'ph', text:'✏️ To be completed: where the first aid kit and fire extinguisher are located in the apartment.'},
-          {t:'h', text:'Water and gas valves'},
-          {t:'ph', text:'✏️ To be completed: location of the main water shut-off valve and gas tap (if any), with instructions on closing them in an emergency.'},
+          {t:'p', text:'You can restore it using the switches near the entrance door, or from the main meter switch, located in a room on the basement floor: exiting the lift on floor -1, it’s the first door on the right.'},
+          {t:'img', src:'images/emergenza-stanza-contatori.jpg', alt:'Basement corridor with the meter-room door on floor -1', caption:'Exiting the lift on floor -1, the meter-room door is right on your right'},
+          {t:'p', text:'The meter is on the upper right, labelled “20” and “FLAMINI-GIANGRANDI”.'},
+          {t:'img', src:'images/emergenza-contatore.jpg', alt:'Electricity meter no. 20 in the meter room', caption:'Meter no. 20, upper right in the row'},
+          {t:'h', text:'Fire extinguisher'},
+          {t:'p', text:'It’s in the low wooden drawer between the fireplace and the single armchair. Just lift the lid.'},
           {t:'h', text:'Useful numbers'},
           {t:'p', text:'For any medical, fire or public-safety emergency, call <b>112</b> (the single European emergency number). More contacts are in the “Contacts & help” section.'},
         ]
@@ -1028,6 +1034,7 @@ function blockHTML(b){
     case 'warn': return `<div class="b-warn">${b.text}</div>`;
     case 'ph': return `<div class="b-ph">${b.text}</div>`;
     case 'link': return `<a class="b-link" href="${b.url}" target="_blank" rel="noopener">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
+    case 'jump': return `<a class="b-link" href="#${b.to}" onclick="event.preventDefault(); openSection('${b.to}');">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
     case 'img': return `<div class="b-img"><img src="${b.src}" alt="${b.alt||''}" loading="lazy">${b.caption? `<div class="cap">${b.caption}</div>`:''}</div>`;
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
