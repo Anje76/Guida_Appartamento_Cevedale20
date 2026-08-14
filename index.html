@@ -224,6 +224,17 @@
   .b-step .body{flex:1; padding-top:3px;}
   .b-step .st-title{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:14.5px; color:var(--forest-dk); margin-bottom:3px;}
   .b-step .st-text{font-size:13.8px; line-height:1.55; color:var(--ink);}
+
+  .b-place{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px; margin:0 0 14px; box-shadow:var(--shadow-sm);}
+  .b-place .pl-name{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:15.5px; color:var(--forest-dk); margin-bottom:2px;}
+  .b-place .pl-addr{font-size:12px; color:var(--ink-soft); margin-bottom:8px;}
+  .b-place .pl-desc{font-size:13.8px; line-height:1.55; color:var(--ink); margin-bottom:10px;}
+  .b-place .pl-actions{display:flex; gap:8px; flex-wrap:wrap;}
+  .b-place .pl-actions a{
+    display:flex; align-items:center; gap:6px; background:var(--cream); border:1px solid var(--line);
+    border-radius:999px; padding:7px 12px; font-size:12.5px; font-weight:700; color:var(--forest-dk); text-decoration:none;
+  }
+  .b-place .pl-actions a svg{width:13px;height:13px; color:var(--gold-dk); flex:none;}
   .b-code{
     display:flex; align-items:center; justify-content:space-between; gap:10px;
     background:var(--forest-dk); color:#fff; border-radius:var(--radius-sm); padding:13px 14px; margin:0 0 14px;
@@ -354,6 +365,7 @@ const ICONS = {
   copy:`<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>`,
   check:`<path d="M20 6 9 17l-5-5"/>`,
   suitcase:`<rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M4 13h16"/>`,
+  museum:`<path d="M3 21h18"/><path d="M4 21V10M8 21V10M12 21V10M16 21V10M20 21V10"/><path d="M2.5 10 12 4l9.5 6Z"/>`,
 };
 function icon(name){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.info}</svg>`; }
 
@@ -400,6 +412,7 @@ const DATA = {
       {id:'excursions', icon:'mountain', label:'Escursioni & Tour'},
       {id:'tips', icon:'heart', label:'Consigli locali'},
       {id:'attractions', icon:'camera', label:'Cosa visitare'},
+      {id:'museums', icon:'museum', label:'Musei / Cultura'},
       {id:'weather', icon:'cloud', label:'Meteo'},
       {id:'transport', icon:'bus', label:'Trasporti'},
       {id:'discounts', icon:'tag', label:'Sconti convenzionati'},
@@ -617,7 +630,56 @@ const DATA = {
             'Il Parco Nazionale dello Stelvio, tra i più grandi d’Europa',
             'Passo del Tonale e i suoi panorami sulle Alpi',
           ]},
-          {t:'ph', text:'✏️ Da completare con musei, castelli e attrazioni specifiche della zona, con orari aggiornati.'},
+          {t:'jump', to:'museums', icon:'museum', label:'Scopri musei ed ecomusei della valle'},
+        ]
+      },
+      museums:{
+        title:'Musei / Cultura',
+        blocks:[
+          {t:'p', text:'La Val di Sole custodisce musei ed ecomusei che raccontano mestieri e tradizioni di un tempo: mulini, fucine, segherie e castelli, spesso ancora funzionanti. Vi consigliamo di verificare orari e aperture stagionali prima della visita, poiché possono variare di anno in anno.'},
+          {t:'note', text:'Se siete in possesso della Trentino Guest Card, mostratela all’ingresso: la maggior parte di questi musei offre sconti sul biglietto, e in alcuni casi l’ingresso gratuito.'},
+          {t:'place',
+            name:'Molino Ruatti',
+            address:'Pracorno di Rabbi, 3 — 38020 Rabbi (TN)',
+            desc:'Il Mulino custodisce gli apparati molitori funzionanti, offrendo al visitatore la comprensione delle tecniche di lavoro e uno sguardo sulla cultura alimentare del territorio. Integra è anche la casa ottocentesca della famiglia, con gli ambienti e gli oggetti di vita originali.',
+            mapsQuery:'Molino Ruatti, Pracorno, Rabbi TN', phone:'+390463903166', phoneDisplay:'0463 903166'
+          },
+          {t:'place',
+            name:'MMape — Museo dell’ape',
+            address:'Via al Molin, 3 — 38027 Croviana (TN)',
+            desc:'Un museo… dolce come il miele! Fatto di suoni, odori e sapori, come quello del miele locale da degustare, accompagnato da guide pronte a rispondere a tutte le curiosità sul mondo delle api.',
+            mapsQuery:'MMape Museo dell’ape, Via al Molin 3, Croviana', phone:'+393283285780', phoneDisplay:'328 328 5780'
+          },
+          {t:'place',
+            name:'Fucina Marinelli',
+            address:'Via Trento 80 (loc. Pondasio) — 38027 Malè (TN)',
+            desc:'Raro esempio di impianto pre-industriale, la fucina sorprende i visitatori per la sua incredibile capacità di sfidare il tempo e l’usura: un grande maglio del 1834 e una doppia forgia, ancora funzionanti.',
+            mapsQuery:'Fucina Marinelli, Via Trento 80, Malè', phone:'+390463900216', phoneDisplay:'0463 900216'
+          },
+          {t:'place',
+            name:'Museo della Cultura Solandra',
+            address:'Via Trento, Palazzo Ex Pretura — 38027 Malè (TN)',
+            desc:'Una ricca collezione di attrezzi d’epoca e fedeli ricostruzioni degli ambienti quotidiani, dalla cucina alla camera da letto, raccontano la vita in Val di Sole nel secolo scorso.',
+            mapsQuery:'Museo della Civiltà Solandra, Via Trento, Malè', phone:'+390463903166', phoneDisplay:'0463 903166'
+          },
+          {t:'place',
+            name:'Fattore Legno',
+            address:'Zona Industriale, 5 — 38027 Malè (TN)',
+            desc:'Un percorso didattico interattivo e multimediale dedicato al legno, materiale simbolo dei boschi trentini: qui potete anche osservare gli artigiani al lavoro.',
+            mapsQuery:'Fattore Legno, Zona Industriale 5, Malè', phone:'+393283285780', phoneDisplay:'328 328 5780'
+          },
+          {t:'place',
+            name:'Segheria Veneziana',
+            address:'SS.239, 103 (Dimaro) — 38025 Dimaro Folgarida (TN)',
+            desc:'Segheria ad acqua risalente almeno ai primi dell’800, rimasta operativa fino al 1960. Un percorso didattico-espositivo permette di ammirare i meccanismi interni, in legno e ferro, ancora funzionanti.',
+            mapsQuery:'Segheria Veneziana, SS239, Dimaro Folgarida', phone:'+390463986113', phoneDisplay:'0463 986113'
+          },
+          {t:'place',
+            name:'Castel Caldes',
+            address:'Via al Castello 12 (Via IV Novembre) — 38022 Caldes (TN)',
+            desc:'Maestoso maniero duecentesco che domina il paese di Caldes, frutto dell’incontro tra le culture veneta, tedesca e lombarda, tipico di questa zona di confine del Principato Vescovile di Trento.',
+            mapsQuery:'Castel Caldes, Via al Castello 12, Caldes', phone:'+390461233770', phoneDisplay:'0461 233770'
+          },
         ]
       },
       weather:{
@@ -704,6 +766,7 @@ const DATA = {
       {id:'excursions', icon:'mountain', label:'Excursions & Tours'},
       {id:'tips', icon:'heart', label:'Local tips'},
       {id:'attractions', icon:'camera', label:'Things to see'},
+      {id:'museums', icon:'museum', label:'Museums / Culture'},
       {id:'weather', icon:'cloud', label:'Weather'},
       {id:'transport', icon:'bus', label:'Transportation'},
       {id:'discounts', icon:'tag', label:'Local discounts'},
@@ -921,7 +984,56 @@ const DATA = {
             'The Stelvio National Park, one of the largest in Europe',
             'Passo del Tonale and its views over the Alps',
           ]},
-          {t:'ph', text:'✏️ To be completed with museums, castles and specific local attractions, with up-to-date opening hours.'},
+          {t:'jump', to:'museums', icon:'museum', label:'Discover the valley’s museums and eco-museums'},
+        ]
+      },
+      museums:{
+        title:'Museums / Culture',
+        blocks:[
+          {t:'p', text:'Val di Sole is home to museums and eco-museums that tell the story of old trades and traditions: mills, forges, sawmills and castles, often still working. We recommend checking seasonal opening times before visiting, as they can vary from year to year.'},
+          {t:'note', text:'If you have a Trentino Guest Card, show it at the entrance: most of these museums offer a discount on the ticket price, and in some cases free admission.'},
+          {t:'place',
+            name:'Molino Ruatti (Ruatti Mill)',
+            address:'Pracorno di Rabbi, 3 — 38020 Rabbi (TN)',
+            desc:'The Mill preserves the working milling machinery, offering visitors an understanding of the working techniques and a glimpse into the local food culture. The 19th-century family home is also intact, with its original rooms and objects.',
+            mapsQuery:'Molino Ruatti, Pracorno, Rabbi TN', mapsLabel:'Map', phone:'+390463903166', phoneDisplay:'0463 903166'
+          },
+          {t:'place',
+            name:'MMape — Bee Museum',
+            address:'Via al Molin, 3 — 38027 Croviana (TN)',
+            desc:'A museum… as sweet as honey! Made of sounds, smells and flavours, including that of local honey, accompanied by guides ready to answer all your questions about the world of bees.',
+            mapsQuery:'MMape Museo dell’ape, Via al Molin 3, Croviana', mapsLabel:'Map', phone:'+393283285780', phoneDisplay:'328 328 5780'
+          },
+          {t:'place',
+            name:'Fucina Marinelli (Marinelli Forge)',
+            address:'Via Trento 80 (loc. Pondasio) — 38027 Malè (TN)',
+            desc:'A rare example of a pre-industrial facility, the forge surprises visitors with its incredible ability to defy time and wear: a large 1834 hammer and a double forge, still working today.',
+            mapsQuery:'Fucina Marinelli, Via Trento 80, Malè', mapsLabel:'Map', phone:'+390463900216', phoneDisplay:'0463 900216'
+          },
+          {t:'place',
+            name:'Museo della Cultura Solandra (Museum of Solandra Culture)',
+            address:'Via Trento, Palazzo Ex Pretura — 38027 Malè (TN)',
+            desc:'A rich collection of period tools and faithful reconstructions of everyday environments, from the kitchen to the bedroom, telling the story of life in Val di Sole in the last century.',
+            mapsQuery:'Museo della Civiltà Solandra, Via Trento, Malè', mapsLabel:'Map', phone:'+390463903166', phoneDisplay:'0463 903166'
+          },
+          {t:'place',
+            name:'Fattore Legno (Wood Factor)',
+            address:'Zona Industriale, 5 — 38027 Malè (TN)',
+            desc:'An interactive, multimedia educational trail dedicated to wood, the iconic material of the Trentino forests — here you can also watch craftsmen at work.',
+            mapsQuery:'Fattore Legno, Zona Industriale 5, Malè', mapsLabel:'Map', phone:'+393283285780', phoneDisplay:'328 328 5780'
+          },
+          {t:'place',
+            name:'Venetian Sawmill (Segheria Veneziana)',
+            address:'SS.239, 103 (Dimaro) — 38025 Dimaro Folgarida (TN)',
+            desc:'A water-powered sawmill dating back to at least the early 19th century, operational until 1960. An educational exhibition trail lets you admire the internal wood-and-iron mechanisms, still working today.',
+            mapsQuery:'Segheria Veneziana, SS239, Dimaro Folgarida', mapsLabel:'Map', phone:'+390463986113', phoneDisplay:'0463 986113'
+          },
+          {t:'place',
+            name:'Castel Caldes (Castle Caldes)',
+            address:'Via al Castello 12 (Via IV Novembre) — 38022 Caldes (TN)',
+            desc:'A majestic 13th-century manor overlooking the village of Caldes, the result of a blend of Venetian, German and Lombard cultures typical of this border area of the Bishopric of Trento.',
+            mapsQuery:'Castel Caldes, Via al Castello 12, Caldes', mapsLabel:'Map', phone:'+390461233770', phoneDisplay:'0461 233770'
+          },
         ]
       },
       weather:{
@@ -1039,6 +1151,15 @@ function blockHTML(b){
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
+    case 'place': return `<div class="b-place">
+        <div class="pl-name">${b.name}</div>
+        <div class="pl-addr">${b.address}</div>
+        <div class="pl-desc">${b.desc}</div>
+        <div class="pl-actions">
+          ${b.mapsQuery?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.mapsQuery)}" target="_blank" rel="noopener">${icon('pin')}<span>${b.mapsLabel||'Mappa'}</span></a>`:''}
+          ${b.phone?`<a href="tel:${b.phone}">${icon('phone')}<span>${b.phoneDisplay||b.phone}</span></a>`:''}
+        </div>
+      </div>`;
     case 'code': return `<div class="b-code"><div><div class="lbl">${b.label}</div><div class="val" id="code-${cid()}">${b.value}</div></div>${b.value.match(/^[A-Za-z0-9•\-]+$/)? '' : ''}</div>`;
     case 'contact': return `<div class="b-contact">
         <div class="av">${b.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
