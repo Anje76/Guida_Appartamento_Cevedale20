@@ -225,7 +225,9 @@
   .b-step .st-title{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:14.5px; color:var(--forest-dk); margin-bottom:3px;}
   .b-step .st-text{font-size:13.8px; line-height:1.55; color:var(--ink);}
 
-  .b-place{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px; margin:0 0 14px; box-shadow:var(--shadow-sm);}
+  .b-place{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; margin:0 0 14px; box-shadow:var(--shadow-sm);}
+  .b-place .pl-photo{width:100%; height:150px; object-fit:cover; display:block;}
+  .b-place .pl-body{padding:14px;}
   .b-place .pl-top{display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-bottom:6px;}
   .b-place .pl-tag{
     display:inline-block; background:var(--clay); color:#fff; font-size:11px; font-weight:700;
@@ -359,6 +361,7 @@ const ICONS = {
   bolt:`<path d="M12 3 5 13h6l-1 8 7-10h-6z"/>`,
   trash:`<path d="M5 7h14M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M7 7l1 13a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2l1-13"/><path d="M10 11v6M14 11v6"/>`,
   car:`<path d="M4 16V11l2-5h12l2 5v5"/><path d="M4 16h16M6.5 16v2M17.5 16v2"/><circle cx="7.5" cy="16" r="1.4" fill="currentColor" stroke="none"/><circle cx="16.5" cy="16" r="1.4" fill="currentColor" stroke="none"/>`,
+  medical:`<circle cx="12" cy="12" r="9"/><path d="M12 7.5v9M7.5 12h9"/>`,
   info:`<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/>`,
   mountain:`<path d="M3 19 9.5 8l3.2 5 2-3L21 19Z"/><circle cx="7" cy="7" r="1.3"/>`,
   heart:`<path d="M12 20s-7-4.4-9.4-8.7A5 5 0 0 1 12 6a5 5 0 0 1 9.4 5.3C19 15.6 12 20 12 20Z"/>`,
@@ -375,6 +378,7 @@ const ICONS = {
   check:`<path d="M20 6 9 17l-5-5"/>`,
   suitcase:`<rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M4 13h16"/>`,
   cart:`<circle cx="9" cy="21" r="1.3" fill="currentColor" stroke="none"/><circle cx="18" cy="21" r="1.3" fill="currentColor" stroke="none"/><path d="M2 3h2.2l2.4 12.2a1.8 1.8 0 0 0 1.8 1.5h8.4a1.8 1.8 0 0 0 1.78-1.5L20.5 7H6"/>`,
+  utensils:`<path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M6 2v20"/><path d="M18 2c-2.2 0-4 2.5-4 5.5 0 2.5 1.3 4.2 3 4.8V22"/>`,
   museum:`<path d="M3 21h18"/><path d="M4 21V10M8 21V10M12 21V10M16 21V10M20 21V10"/><path d="M2.5 10 12 4l9.5 6Z"/>`,
 };
 function icon(name){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.info}</svg>`; }
@@ -416,12 +420,14 @@ const DATA = {
       {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
       {id:'appliances', icon:'plug', label:'Cucina'},
       {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
+      {id:'medical', icon:'medical', label:'Guardia Medica'},
       {id:'waste', icon:'trash', label:'Rifiuti'},
       {id:'parking', icon:'car', label:'Parcheggio & ZTL'},
       {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'excursions', icon:'mountain', label:'Escursioni & Tour'},
       {id:'tips', icon:'heart', label:'Consigli locali'},
       {id:'shopping', icon:'cart', label:'Supermercati / Prodotti Locali'},
+      {id:'restaurants', icon:'utensils', label:'Ristoranti'},
       {id:'attractions', icon:'camera', label:'Cosa visitare'},
       {id:'museums', icon:'museum', label:'Musei / Cultura'},
       {id:'weather', icon:'cloud', label:'Meteo'},
@@ -548,6 +554,40 @@ const DATA = {
           {t:'p', text:'Si trova nel cassetto di legno basso tra il camino e la poltrona singola. Basta sollevare il coperchio.'},
           {t:'h', text:'Numeri utili'},
           {t:'p', text:'Per qualsiasi emergenza sanitaria, incendio o pubblica sicurezza chiamate il <b>112</b> (numero unico di emergenza). Trovate altri contatti utili nella sezione “Contatti & aiuto”.'},
+          {t:'jump', to:'medical', icon:'medical', label:'Serve un medico? Vedi la scheda “Guardia Medica”'},
+        ]
+      },
+      medical:{
+        title:'Guardia Medica',
+        blocks:[
+          {t:'h', text:'Servizio medico per turisti — Val di Sole'},
+          {t:'note', text:'Attivo dal <b>1 luglio</b> al <b>31 agosto 2026</b>, dal lunedì al venerdì, dalle 8:00 alle 20:00. Al di fuori di questo periodo o di questi orari, fate riferimento alla Continuità Assistenziale (116117) più sotto.'},
+          {t:'p', text:'Costo: <b>30 €</b> per visita ambulatoriale, <b>40 €</b> per visita domiciliare. Sono esentati gli infortunati sul lavoro nel caso di primo intervento.'},
+          {t:'warn', text:'È obbligatorio l’appuntamento: telefonate al medico dalle 8:00 alle 9:00 oppure dalle 14:00 alle 15:00 (fatta eccezione per le urgenze). In presenza di sintomi respiratori, accedete all’ambulatorio indossando la mascherina chirurgica.'},
+          {t:'h', text:'Ambulatori (giorni feriali)'},
+          {t:'place',
+            name:'Malè — Poliambulatorio',
+            address:'Via IV Novembre, 8 — Malè (TN)',
+            desc:'Lunedì e Mercoledì: 09:00–11:00<br>Martedì e Giovedì: 15:00–17:00',
+            mapsQuery:'Poliambulatorio Malè APSS, Via IV Novembre 8, Malè', phone:'+393358240557', phoneDisplay:'335 824 0557'
+          },
+          {t:'place',
+            name:'Mezzana — Ambulatorio Comunale',
+            address:'Via IV Novembre, 75 — Mezzana (TN)',
+            desc:'Lunedì e Venerdì: 15:00–17:00<br>Martedì e Giovedì: 09:00–11:00',
+            mapsQuery:'Ambulatorio Comunale, Via IV Novembre 75, Mezzana TN', phone:'+393358240557', phoneDisplay:'335 824 0557'
+          },
+          {t:'place',
+            name:'Cogolo — Ambulatorio Comunale',
+            address:'Cogolo di Peio (TN)',
+            desc:'Mercoledì: 15:00–17:00<br>Venerdì: 09:00–11:00',
+            mapsQuery:'Ambulatorio Comunale Cogolo di Peio TN', phone:'+393358240557', phoneDisplay:'335 824 0557'
+          },
+          {t:'note', text:'Lo stesso numero (335 824 0557) vale per prenotare sia le visite ambulatoriali sia quelle a domicilio, in tutti e tre gli ambulatori.'},
+          {t:'h', text:'Notturno, weekend e 15 agosto'},
+          {t:'p', text:'Nelle ore notturne, di sabato, domenica e il 15 agosto, rivolgetevi <b>solo in caso di urgenza</b> al Servizio di Continuità Assistenziale.'},
+          {t:'contact', name:'Continuità Assistenziale', sub:'Centrale Operativa Unificata', phone:'116117', email:''},
+          {t:'ph', text:'✏️ Questo servizio estivo è attivo solo dal 1° luglio al 31 agosto 2026, secondo il volantino ASUIT più recente in vostro possesso. Se il soggiorno dell’ospite cade fuori da queste date, verificate se sia disponibile un servizio equivalente per il periodo invernale (indicativamente dicembre–aprile, con un numero di prenotazione diverso) e aggiornate questa scheda di conseguenza.'},
         ]
       },
       waste:{
@@ -662,6 +702,40 @@ const DATA = {
           },
         ]
       },
+      restaurants:{
+        title:'Ristoranti',
+        blocks:[
+          {t:'p', text:'I nostri consigli per mangiare bene in Val di Sole.'},
+          {t:'place',
+            name:'Vecchia Canonica', tag:'Migliore pizzeria di Malè',
+            address:'Piazza Cei, 4 — Malè',
+            desc:'Bel locale con vetrata panoramica, vicino all’appartamento. A nostro parere la miglior pizzeria di Malè.',
+            img:'images/ristorante-vecchia-canonica.jpg',
+            mapsQuery:'Ristorante Vecchia Canonica, Piazza Cei 4, Malè', phone:'+390463902064', phoneDisplay:'0463 902064'
+          },
+          {t:'place',
+            name:'Osteria del Bosco', tag:'Cucina tipica trentina',
+            address:'Loc. Regazzini, 3 — Malè',
+            desc:'Situato all’interno di un parco avventura, è il miglior locale dove gustare la cucina tipica trentina.',
+            img:'images/ristorante-osteria-bosco.jpg',
+            mapsQuery:'Osteria del Bosco, Località Regazzini 3, Malè', phone:'+393932237881', phoneDisplay:'393 223 7881'
+          },
+          {t:'place',
+            name:'La Locanda De Mauris', tag:'Pizza e cucina locale', distance:'1 km',
+            address:'Via Nazionale, 100 — Croviana',
+            desc:'A circa 1 km dall’appartamento: ottima pizza cotta nel forno a legna e cucina locale.',
+            img:'images/ristorante-locanda-demauris.jpg',
+            mapsQuery:'La Locanda De Mauris, Via Nazionale 100, Croviana', phone:'+390463903037', phoneDisplay:'0463 903037'
+          },
+          {t:'place',
+            name:'Al Molin', tag:'Cucina tipica in Val di Rabbi',
+            address:'Località Acidule, 167 — Rabbi',
+            desc:'Piccolo ristorante a conduzione familiare all’interno del Parco Nazionale dello Stelvio, 500 metri dopo le Terme di Rabbi, a 1260 m di quota. Piatti della tradizione trentina preparati dal proprietario, in un ambiente tranquillo immerso nel verde, accanto al torrente Rabbiés. Merita una gita fuori porta.',
+            mapsQuery:'Al Molin Ristorante, Località Acidule 167, Rabbi', phone:'+393288033042', phoneDisplay:'328 803 3042'
+          },
+          {t:'note', text:'Per “Al Molin” utilizzate solo il numero di cellulare indicato: il vecchio numero fisso non è più attivo.'},
+        ]
+      },
       attractions:{
         title:'Cosa visitare',
         blocks:[
@@ -774,9 +848,9 @@ const DATA = {
           {t:'h', text:'Numeri utili'},
           {t:'list', items:[
             'Emergenza unica europea: 112',
-            'Guardia medica (continuità assistenziale, per necessità non urgenti): 116 117',
-            'Ambulatorio stagionale di Malè attivo giugno–settembre e dicembre–aprile',
+            'Continuità Assistenziale (per necessità non urgenti, notturne o festive): 116 117',
           ]},
+          {t:'jump', to:'medical', icon:'medical', label:'Orari e contatti del servizio medico per turisti'},
           {t:'h', text:'Ufficio turistico APT Val di Sole'},
           {t:'p', text:'Via Marconi 7, 38027 Malè (TN) — tel. 0463 901280 — info@visitvaldisole.it'},
           {t:'p', text:'Aperto da lunedì a venerdì, 9:00–12:00 e 14:00–17:00.'},
@@ -803,12 +877,14 @@ const DATA = {
       {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
       {id:'appliances', icon:'plug', label:'Kitchen'},
       {id:'emergency', icon:'bolt', label:'Home emergencies'},
+      {id:'medical', icon:'medical', label:'Medical Service'},
       {id:'waste', icon:'trash', label:'Waste disposal'},
       {id:'parking', icon:'car', label:'Parking & LTZ'},
       {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'excursions', icon:'mountain', label:'Excursions & Tours'},
       {id:'tips', icon:'heart', label:'Local tips'},
       {id:'shopping', icon:'cart', label:'Supermarkets / Local Products'},
+      {id:'restaurants', icon:'utensils', label:'Restaurants'},
       {id:'attractions', icon:'camera', label:'Things to see'},
       {id:'museums', icon:'museum', label:'Museums / Culture'},
       {id:'weather', icon:'cloud', label:'Weather'},
@@ -935,6 +1011,40 @@ const DATA = {
           {t:'p', text:'It’s in the low wooden drawer between the fireplace and the single armchair. Just lift the lid.'},
           {t:'h', text:'Useful numbers'},
           {t:'p', text:'For any medical, fire or public-safety emergency, call <b>112</b> (the single European emergency number). More contacts are in the “Contacts & help” section.'},
+          {t:'jump', to:'medical', icon:'medical', label:'Need a doctor? See “Medical Service”'},
+        ]
+      },
+      medical:{
+        title:'Medical Service',
+        blocks:[
+          {t:'h', text:'Medical service for tourists — Val di Sole'},
+          {t:'note', text:'Active from <b>1 July</b> to <b>31 August 2026</b>, Monday to Friday, 8:00am–8:00pm. Outside this period or these hours, refer to the on-call service (116117) further below.'},
+          {t:'p', text:'Cost: <b>€30</b> for a clinic visit, <b>€40</b> for a home visit. Work-related injuries are exempt for first aid.'},
+          {t:'warn', text:'An appointment is required: call the doctor between 8:00–9:00am or 2:00–3:00pm (except for urgent cases). If you have respiratory symptoms, wear a surgical mask when entering the clinic.'},
+          {t:'h', text:'Clinics (weekdays)'},
+          {t:'place',
+            name:'Malè — Poliambulatorio',
+            address:'Via IV Novembre, 8 — Malè (TN)',
+            desc:'Monday and Wednesday: 9:00–11:00am<br>Tuesday and Thursday: 3:00–5:00pm',
+            mapsQuery:'Poliambulatorio Malè APSS, Via IV Novembre 8, Malè', mapsLabel:'Map', phone:'+393358240557', phoneDisplay:'335 824 0557'
+          },
+          {t:'place',
+            name:'Mezzana — Municipal Clinic',
+            address:'Via IV Novembre, 75 — Mezzana (TN)',
+            desc:'Monday and Friday: 3:00–5:00pm<br>Tuesday and Thursday: 9:00–11:00am',
+            mapsQuery:'Ambulatorio Comunale, Via IV Novembre 75, Mezzana TN', mapsLabel:'Map', phone:'+393358240557', phoneDisplay:'335 824 0557'
+          },
+          {t:'place',
+            name:'Cogolo — Municipal Clinic',
+            address:'Cogolo di Peio (TN)',
+            desc:'Wednesday: 3:00–5:00pm<br>Friday: 9:00–11:00am',
+            mapsQuery:'Ambulatorio Comunale Cogolo di Peio TN', mapsLabel:'Map', phone:'+393358240557', phoneDisplay:'335 824 0557'
+          },
+          {t:'note', text:'The same number (335 824 0557) is used to book both clinic and home visits, at all three locations.'},
+          {t:'h', text:'Nights, weekends and 15 August'},
+          {t:'p', text:'At night, on Saturdays, Sundays and on 15 August, contact the on-call medical service <b>only in urgent cases</b>.'},
+          {t:'contact', name:'On-call medical service', sub:'Centrale Operativa Unificata', phone:'116117', email:''},
+          {t:'ph', text:'✏️ This summer service only runs from 1 July to 31 August 2026, based on the latest ASUIT flyer you have. If a guest’s stay falls outside these dates, check whether an equivalent winter-season service is available (roughly December–April, with a different booking number) and update this section accordingly.'},
         ]
       },
       waste:{
@@ -1049,6 +1159,40 @@ const DATA = {
           },
         ]
       },
+      restaurants:{
+        title:'Restaurants',
+        blocks:[
+          {t:'p', text:'Our recommendations for eating well in Val di Sole.'},
+          {t:'place',
+            name:'Vecchia Canonica', tag:'Best pizzeria in Malè',
+            address:'Piazza Cei, 4 — Malè',
+            desc:'A lovely spot with panoramic windows, close to the apartment. In our opinion, the best pizzeria in Malè.',
+            img:'images/ristorante-vecchia-canonica.jpg',
+            mapsQuery:'Ristorante Vecchia Canonica, Piazza Cei 4, Malè', mapsLabel:'Map', phone:'+390463902064', phoneDisplay:'0463 902064'
+          },
+          {t:'place',
+            name:'Osteria del Bosco', tag:'Traditional Trentino cuisine',
+            address:'Loc. Regazzini, 3 — Malè',
+            desc:'Set inside an adventure park, this is the best place to enjoy traditional Trentino cuisine.',
+            img:'images/ristorante-osteria-bosco.jpg',
+            mapsQuery:'Osteria del Bosco, Località Regazzini 3, Malè', mapsLabel:'Map', phone:'+393932237881', phoneDisplay:'393 223 7881'
+          },
+          {t:'place',
+            name:'La Locanda De Mauris', tag:'Pizza & local cuisine', distance:'1 km',
+            address:'Via Nazionale, 100 — Croviana',
+            desc:'About 1 km from the apartment: great wood-fired pizza and local cuisine.',
+            img:'images/ristorante-locanda-demauris.jpg',
+            mapsQuery:'La Locanda De Mauris, Via Nazionale 100, Croviana', mapsLabel:'Map', phone:'+390463903037', phoneDisplay:'0463 903037'
+          },
+          {t:'place',
+            name:'Al Molin', tag:'Traditional cuisine in Val di Rabbi',
+            address:'Località Acidule, 167 — Rabbi',
+            desc:'A small family-run restaurant inside the Stelvio National Park, 500 metres past the Rabbi thermal spa, at 1260 m altitude. Traditional Trentino dishes prepared by the owner, in a quiet setting surrounded by greenery, next to the Rabbiés stream. Well worth the trip out.',
+            mapsQuery:'Al Molin Ristorante, Località Acidule 167, Rabbi', mapsLabel:'Map', phone:'+393288033042', phoneDisplay:'328 803 3042'
+          },
+          {t:'note', text:'For “Al Molin”, please use only the mobile number shown: the old landline is no longer active.'},
+        ]
+      },
       attractions:{
         title:'Things to see',
         blocks:[
@@ -1161,9 +1305,9 @@ const DATA = {
           {t:'h', text:'Useful numbers'},
           {t:'list', items:[
             'Single European emergency number: 112',
-            'Out-of-hours medical service (non-urgent needs): 116 117',
-            'Malè’s seasonal clinic operates June–September and December–April',
+            'On-call medical service (non-urgent, night-time or holiday needs): 116 117',
           ]},
+          {t:'jump', to:'medical', icon:'medical', label:'Hours and contacts for the tourist medical service'},
           {t:'h', text:'Val di Sole Tourist Office (APT)'},
           {t:'p', text:'Via Marconi 7, 38027 Malè (TN) — tel. +39 0463 901280 — info@visitvaldisole.it'},
           {t:'p', text:'Open Monday to Friday, 9:00am–12:00pm and 2:00pm–5:00pm.'},
@@ -1228,6 +1372,8 @@ function blockHTML(b){
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
     case 'place': return `<div class="b-place">
+        ${b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:''}
+        <div class="pl-body">
         ${(b.tag||b.distance)?`<div class="pl-top">${b.tag?`<span class="pl-tag">${b.tag}</span>`:'<span></span>'}${b.distance?`<span class="pl-dist">${b.distance}</span>`:''}</div>`:''}
         <div class="pl-name">${b.name}</div>
         <div class="pl-addr">${b.address}</div>
@@ -1236,14 +1382,15 @@ function blockHTML(b){
           ${b.mapsQuery?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.mapsQuery)}" target="_blank" rel="noopener">${icon('pin')}<span>${b.mapsLabel||'Mappa'}</span></a>`:''}
           ${b.phone?`<a href="tel:${b.phone}">${icon('phone')}<span>${b.phoneDisplay||b.phone}</span></a>`:''}
         </div>
+        </div>
       </div>`;
     case 'code': return `<div class="b-code"><div><div class="lbl">${b.label}</div><div class="val" id="code-${cid()}">${b.value}</div></div>${b.value.match(/^[A-Za-z0-9•\-]+$/)? '' : ''}</div>`;
     case 'contact': return `<div class="b-contact">
         <div class="av">${b.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
         <div class="info"><div class="name">${b.name}</div><div class="sub">${b.sub}</div></div>
         <div class="acts">
-          <a href="tel:${b.phone}" aria-label="call">${icon('phone')}</a>
-          <a href="mailto:${b.email}" aria-label="email">${icon('mail')}</a>
+          ${b.phone?`<a href="tel:${b.phone}" aria-label="call">${icon('phone')}</a>`:''}
+          ${b.email?`<a href="mailto:${b.email}" aria-label="email">${icon('mail')}</a>`:''}
         </div>
       </div>`;
     case 'hours': return `<table class="b-hours">${b.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>`;
