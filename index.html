@@ -464,6 +464,7 @@ const DATA = {
           {t:'h', text:'Parcheggio riservato'},
           {t:'p', text:'Avete a disposizione un posto auto riservato, segnalato con righe gialle, adiacente allo spigolo posteriore destro dell’edificio, in corrispondenza di un cartello con indicato il numero “20”. Si raggiunge girando attorno all’edificio in senso orario.'},
           {t:'img', src:'images/mappa-parcheggio.jpg', alt:'Mappa satellitare con percorso verso il posto auto riservato', caption:'Percorso (in rosso) verso il posto auto riservato n. 20; in verde i parcheggi gratuiti senza numero'},
+          {t:'img', src:'images/parcheggio-piazzola-20.jpg', alt:'Piazzola di parcheggio riservata numero 20', caption:'La piazzola riservata, contrassegnata dal numero “20” sul muro dell’edificio'},
           {t:'p', text:'Davanti all’ingresso della galleria sono disponibili ulteriori posti auto gratuiti, segnalati con righe gialle, privi di numero identificativo.'},
           {t:'h', text:'Ingresso alla Galleria Cevedale'},
           {t:'p', text:'L’ingresso dell’appartamento è all’interno della Galleria Cevedale, accanto al Bar Cevedale.'},
@@ -503,11 +504,17 @@ const DATA = {
         title:'Regole della casa',
         blocks:[
           {t:'p', text:'Per garantire un soggiorno sereno a voi e ai prossimi ospiti, vi chiediamo di rispettare alcune semplici regole.'},
-          {t:'ph', text:'✏️ <b>Da completare a cura del proprietario:</b> numero massimo di ospiti, politica su animali domestici, divieto di fumo, orario di silenzio, divieto di feste/eventi, eventuale tassa di soggiorno.'},
           {t:'h', text:'Uso della cucina'},
           {t:'p', text:'Per evitare sovraccarichi e distacchi dell’impianto elettrico, vi preghiamo di <b>non utilizzare il piano cottura contemporaneamente</b> ad altri elettrodomestici di elevato consumo energetico (forno, lavatrice, asciugacapelli, aspirapolvere). Dettagli completi nella sezione “Elettrodomestici”.'},
           {t:'h', text:'Rifiuti'},
           {t:'p', text:'A Malè la raccolta differenziata è obbligatoria. Trovate tutte le indicazioni nella sezione “Rifiuti”.'},
+          {t:'h', text:'Divieto di fumo'},
+          {t:'p', text:'Nell’appartamento è vietato fumare e accendere qualsiasi forma di fiamma (ad es. candele).'},
+          {t:'h', text:'Numero massimo di ospiti'},
+          {t:'p', text:'L’appartamento può ospitare un massimo di 4 ospiti.'},
+          {t:'h', text:'Tassa di soggiorno'},
+          {t:'p', text:'L’imposta provinciale di soggiorno è pari a 1€ a pernottamento per persona. È a carico di chi alloggia, fino a un massimo di 10 pernottamenti consecutivi. Sono esentati i minori di 14 anni e alcune categorie di persone. Qualora rientriate tra queste, vi invitiamo a segnalarcelo per ottenere l’esenzione.'},
+          {t:'jump', to:'taxExemptions', icon:'info', label:'Chi non deve pagare — leggi le esenzioni'},
         ]
       },
       wifi:{
@@ -626,9 +633,16 @@ const DATA = {
         title:'Parcheggio & ZTL',
         blocks:[
           {t:'p', text:'Il vostro posto auto riservato, segnalato con righe gialle, si trova adiacente allo spigolo posteriore destro dell’edificio, presso il cartello con il numero “20”. Si raggiunge girando attorno all’edificio in senso orario.'},
+          {t:'img', src:'images/parcheggio-piazzola-20.jpg', alt:'Piazzola di parcheggio riservata numero 20', caption:'La piazzola riservata, contrassegnata dal numero “20” sul muro dell’edificio'},
           {t:'p', text:'Davanti alla galleria trovate ulteriori posti gratuiti, segnalati con righe gialle e senza numero identificativo.'},
           {t:'link', icon:'pin', label:'Apri la posizione su Google Maps', url:MAPS.address},
-          {t:'ph', text:'✏️ Da verificare/completare: eventuali Zone a Traffico Limitato (ZTL) nel centro di Malè, orari di accesso e parcheggi a pagamento nelle vicinanze.'},
+          {t:'h', text:'Zone a Traffico Limitato'},
+          {t:'p', text:'A Malè (e in tutta la Val di Sole) non sono attive zone ZTL permanenti o con varchi elettronici. In ogni località esistono aree pedonali, ma sono solitamente transennate ed è pressoché impossibile accedervi per errore.'},
+          {t:'h', text:'Chiusura al traffico della Val di Rabbi'},
+          {t:'p', text:'Dal <b>27 giugno al 6 settembre</b>, dalle 9:45 alle 17:00, la provinciale viene chiusa all’altezza di Plazze dei Forni, dove è presente un ampio parcheggio a pagamento. Potete accedere alla parte alta della Val di Rabbi solamente a piedi, in bici o con le navette del Parco (Stelviobus).'},
+          {t:'warn', text:'Attenzione: alcune linee hanno posti limitati ed è necessaria la prenotazione telefonando entro il giorno precedente al 346 6726120, in orario 9:00–17:00.'},
+          {t:'p', text:'Passando prima delle 9:45 è possibile raggiungere il parcheggio AL PLAN (ideale per la visita al Ponte Tibetano) oppure il parcheggio COLER (per visitare le Cascate del Saent).'},
+          {t:'link', icon:'bus', label:'Linee e orari Stelviobus (PDF)', url:'https://www.visitvaldisole.it/website_files/trasporti/Stelviobus.pdf'},
         ]
       },
       faq:{
@@ -857,6 +871,23 @@ const DATA = {
           {t:'h', text:'Farmacia, polizia, taxi'},
           {t:'ph', text:'✏️ Da completare con i contatti locali di farmacia, stazione dei Carabinieri/Polizia locale e servizio taxi che consigliate.'},
         ]
+      },
+      taxExemptions:{
+        title:'Chi non deve pagare',
+        blocks:[
+          {t:'p', text:'Sono esentati dal pagamento dell’imposta provinciale di soggiorno:'},
+          {t:'list', items:[
+            'I familiari di pazienti ricoverati nelle strutture sanitarie e ospedaliere',
+            'Le forze dell’ordine e di protezione civile nell’esercizio delle loro funzioni',
+            'I minori fino al compimento del 14° anno di età',
+            'I soggetti che effettuano terapie presso strutture ospedaliere pubbliche e private accreditate, convenzionate con il servizio sanitario nazionale, ubicate in provincia di Trento',
+            'Gli accompagnatori di pazienti ricoverati nelle strutture ospedaliere pubbliche e private accreditate, convenzionate con il servizio sanitario nazionale, ubicate in provincia di Trento, nel limite di un accompagnatore per paziente',
+            'I soggetti aventi diritto ai sensi dell’art. 3 della Legge 5 febbraio 1992 n. 104, la cui condizione di disabilità sia certificata ai sensi della vigente normativa italiana e di analoghe disposizioni dei Paesi di provenienza per i cittadini stranieri, e il loro accompagnatore',
+            'I richiedenti protezione internazionale, i minori stranieri non accompagnati e le vittime di tratta temporaneamente accolte presso le strutture ricettive',
+            'I soggetti che alloggiano in strutture ricettive a seguito di provvedimenti adottati da autorità pubbliche per fronteggiare situazioni di emergenza',
+          ]},
+          {t:'note', text:'Se ritenete di rientrare in una di queste categorie, segnalatecelo al check-in: vi applicheremo l’esenzione sull’imposta di soggiorno.'},
+        ]
       }
     }
   },
@@ -921,6 +952,7 @@ const DATA = {
           {t:'h', text:'Reserved parking'},
           {t:'p', text:'You have a reserved parking spot, marked with yellow lines, next to the back-right corner of the building, by a sign showing the number “20”. Reach it by going around the building clockwise.'},
           {t:'img', src:'images/mappa-parcheggio.jpg', alt:'Satellite map with the route to the reserved parking spot', caption:'Route (in red) to the reserved parking spot n. 20; in green the free spots with no number'},
+          {t:'img', src:'images/parcheggio-piazzola-20.jpg', alt:'Reserved parking bay number 20', caption:'The reserved parking bay, marked with the number “20” on the building wall'},
           {t:'p', text:'In front of the gallery’s entrance there are further free parking spots, marked with yellow lines but without an identifying number.'},
           {t:'h', text:'Galleria Cevedale entrance'},
           {t:'p', text:'The apartment entrance is inside the Galleria Cevedale, next to the Bar Cevedale.'},
@@ -960,11 +992,17 @@ const DATA = {
         title:'House rules',
         blocks:[
           {t:'p', text:'To keep the stay pleasant for you and for future guests, we ask you to follow a few simple rules.'},
-          {t:'ph', text:'✏️ <b>To be completed by the owner:</b> maximum number of guests, pet policy, smoking policy, quiet hours, no parties/events, any local tourist tax.'},
           {t:'h', text:'Using the kitchen'},
           {t:'p', text:'To avoid overloading and tripping the electrical system, please <b>don’t use the cooktop at the same time</b> as other high-power appliances (oven, washing machine, hairdryer, vacuum cleaner). Full details in the “Appliances” section.'},
           {t:'h', text:'Waste'},
           {t:'p', text:'Sorted waste collection is mandatory in Malè. Full instructions are in the “Waste disposal” section.'},
+          {t:'h', text:'No smoking'},
+          {t:'p', text:'Smoking and lighting any kind of open flame (e.g. candles) is not allowed inside the apartment.'},
+          {t:'h', text:'Maximum number of guests'},
+          {t:'p', text:'The apartment can accommodate a maximum of 4 guests.'},
+          {t:'h', text:'Tourist tax'},
+          {t:'p', text:'The provincial tourist tax is €1 per person, per night. It is charged to guests staying at the property, up to a maximum of 10 consecutive nights. Children under 14 and some other categories are exempt. If you believe you qualify, please let us know so we can apply the exemption.'},
+          {t:'jump', to:'taxExemptions', icon:'info', label:'Who doesn’t have to pay — see the exemptions'},
         ]
       },
       wifi:{
@@ -1083,9 +1121,16 @@ const DATA = {
         title:'Parking & LTZ',
         blocks:[
           {t:'p', text:'Your reserved parking spot, marked with yellow lines, is next to the back-right corner of the building, by the sign showing “20”. Reach it by going around the building clockwise.'},
+          {t:'img', src:'images/parcheggio-piazzola-20.jpg', alt:'Reserved parking bay number 20', caption:'The reserved parking bay, marked with the number “20” on the building wall'},
           {t:'p', text:'In front of the gallery there are more free spots, marked with yellow lines and no identifying number.'},
           {t:'link', icon:'pin', label:'Open the location on Google Maps', url:MAPS.address},
-          {t:'ph', text:'✏️ To verify/complete: any Limited Traffic Zones (LTZ/ZTL) in central Malè, access hours, and nearby paid parking.'},
+          {t:'h', text:'Limited Traffic Zones'},
+          {t:'p', text:'In Malè (and across Val di Sole) there are no permanent Limited Traffic Zones (LTZ/ZTL) and no electronic access gates. Every village has pedestrian areas, but they are usually fenced off, so entering by mistake is practically impossible.'},
+          {t:'h', text:'Road closure in Val di Rabbi'},
+          {t:'p', text:'From <b>27 June to 6 September</b>, from 9:45am to 5:00pm, the provincial road is closed at Plazze dei Forni, where there is a large paid car park. You can only reach the upper part of Val di Rabbi on foot, by bike, or with the Park’s shuttle buses (Stelviobus).'},
+          {t:'warn', text:'Note: some lines have limited seats and require booking by phone by the day before, calling 346 6726120 between 9:00am and 5:00pm.'},
+          {t:'p', text:'If you pass through before 9:45am, you can reach the AL PLAN car park (ideal for visiting the Tibetan Bridge) or the COLER car park (for the Saent waterfalls).'},
+          {t:'link', icon:'bus', label:'Stelviobus routes and timetables (PDF)', url:'https://www.visitvaldisole.it/website_files/trasporti/Stelviobus.pdf'},
         ]
       },
       faq:{
@@ -1314,6 +1359,23 @@ const DATA = {
           {t:'h', text:'Pharmacy, police, taxi'},
           {t:'ph', text:'✏️ To be completed with local pharmacy, police station and recommended taxi service contacts.'},
         ]
+      },
+      taxExemptions:{
+        title:'Who doesn’t have to pay',
+        blocks:[
+          {t:'p', text:'The following are exempt from the provincial tourist tax:'},
+          {t:'list', items:[
+            'Family members of patients admitted to healthcare and hospital facilities',
+            'Law enforcement and civil protection personnel acting in their official capacity',
+            'Minors up to the age of 14',
+            'People undergoing treatment at public or accredited private hospitals, affiliated with the national health service, located in the Province of Trento',
+            'Companions of patients admitted to public or accredited private hospitals, affiliated with the national health service, located in the Province of Trento, limited to one companion per patient',
+            'Individuals entitled under Article 3 of Law no. 104 of 5 February 1992, whose disability status is certified under current Italian law or equivalent provisions of their home country for foreign nationals, and their companion',
+            'Asylum seekers, unaccompanied foreign minors, and trafficking victims temporarily hosted at accommodation facilities',
+            'People staying at accommodation facilities as a result of measures adopted by public authorities to deal with emergency situations',
+          ]},
+          {t:'note', text:'If you believe you fall into one of these categories, please let us know at check-in and we’ll apply the exemption to the tourist tax.'},
+        ]
       }
     }
   }
@@ -1414,7 +1476,7 @@ function openSection(id){
   const d=DATA[lang];
   const nav=d.nav.find(n=>n.id===id);
   const sec=d.sections[id];
-  document.getElementById('sheetIcon').innerHTML=icon(nav.icon);
+  document.getElementById('sheetIcon').innerHTML=icon(nav?nav.icon:'info');
   document.getElementById('sheetTitle').textContent=sec.title;
   const body=document.getElementById('sheetBody');
   body.innerHTML=sec.blocks.map(blockHTML).join('');
