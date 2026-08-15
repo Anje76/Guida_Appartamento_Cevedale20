@@ -226,6 +226,15 @@
   .b-step .st-text{font-size:13.8px; line-height:1.55; color:var(--ink);}
 
   .b-place{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px; margin:0 0 14px; box-shadow:var(--shadow-sm);}
+  .b-place .pl-top{display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-bottom:6px;}
+  .b-place .pl-tag{
+    display:inline-block; background:var(--clay); color:#fff; font-size:11px; font-weight:700;
+    padding:4px 10px; border-radius:999px; white-space:nowrap;
+  }
+  .b-place .pl-dist{
+    display:inline-block; background:var(--forest); color:#fff; font-size:11px; font-weight:700;
+    padding:4px 10px; border-radius:999px; white-space:nowrap; flex:none;
+  }
   .b-place .pl-name{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:15.5px; color:var(--forest-dk); margin-bottom:2px;}
   .b-place .pl-addr{font-size:12px; color:var(--ink-soft); margin-bottom:8px;}
   .b-place .pl-desc{font-size:13.8px; line-height:1.55; color:var(--ink); margin-bottom:10px;}
@@ -365,6 +374,7 @@ const ICONS = {
   copy:`<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>`,
   check:`<path d="M20 6 9 17l-5-5"/>`,
   suitcase:`<rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M4 13h16"/>`,
+  cart:`<circle cx="9" cy="21" r="1.3" fill="currentColor" stroke="none"/><circle cx="18" cy="21" r="1.3" fill="currentColor" stroke="none"/><path d="M2 3h2.2l2.4 12.2a1.8 1.8 0 0 0 1.8 1.5h8.4a1.8 1.8 0 0 0 1.78-1.5L20.5 7H6"/>`,
   museum:`<path d="M3 21h18"/><path d="M4 21V10M8 21V10M12 21V10M16 21V10M20 21V10"/><path d="M2.5 10 12 4l9.5 6Z"/>`,
 };
 function icon(name){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.info}</svg>`; }
@@ -411,6 +421,7 @@ const DATA = {
       {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'excursions', icon:'mountain', label:'Escursioni & Tour'},
       {id:'tips', icon:'heart', label:'Consigli locali'},
+      {id:'shopping', icon:'cart', label:'Supermercati / Prodotti Locali'},
       {id:'attractions', icon:'camera', label:'Cosa visitare'},
       {id:'museums', icon:'museum', label:'Musei / Cultura'},
       {id:'weather', icon:'cloud', label:'Meteo'},
@@ -619,6 +630,38 @@ const DATA = {
           {t:'note', text:'Suggerimento: per ogni consiglio potete aggiungere nome del locale, cosa ordinare e se conviene prenotare.'},
         ]
       },
+      shopping:{
+        title:'Supermercati / Prodotti Locali',
+        blocks:[
+          {t:'p', text:'Ecco i nostri consigli per fare la spesa e per assaggiare i prodotti tipici della zona.'},
+          {t:'h', text:'Supermercati'},
+          {t:'place',
+            name:'Coop', tag:'Ottimo banco gastronomico', distance:'50 metri',
+            address:'Via IV Novembre, 23 — Malè',
+            desc:'Pratico per la vicinanza all’appartamento, offre ottimi prodotti al banco (noi ci riforniamo qui di pane, affettati e formaggi prima delle passeggiate), ma sul resto è un po’ più caro dell’IperPoli.',
+            mapsQuery:'Coop, Via IV Novembre 23, Malè', phone:'+390463901325', phoneDisplay:'0463 901325'
+          },
+          {t:'place',
+            name:'IperPoli', tag:'Conveniente e super-rifornito', distance:'400 metri',
+            address:'Via Molini, 29 — Malè',
+            desc:'A nostro parere, il miglior supermercato di Malè, con ampia scelta di banchi gastronomici (forno, pasticceria, macelleria, pescheria) e prezzi adeguati alla qualità.',
+            mapsQuery:'IperPoli, Via Molini 29, Malè', phone:'+390463901046', phoneDisplay:'0463 901046'
+          },
+          {t:'h', text:'Prodotti locali'},
+          {t:'place',
+            name:'Caseificio Cercen', tag:'Filiera a Km zero', distance:'2 km',
+            address:'Via Nazionale, 52 — Loc. Terzolas',
+            desc:'Qui potete trovare formaggi di alta qualità a prezzi concorrenziali. Vi consigliamo il Casolét e il Nostrano, prodotto con il latte proveniente dai pascoli delle Malghe locali.',
+            mapsQuery:'Caseificio Cercen, Via Nazionale 52, Terzolas', phone:'+390463900029', phoneDisplay:'0463 900029'
+          },
+          {t:'place',
+            name:'Caffè Pasticceria Roma', tag:'Dolci tipici', distance:'400 metri',
+            address:'Piazza S. Maria Assunta, 3 — Malè',
+            desc:'C’è un dolce che profuma di Trentino più di tutti: lo Strudel alle Mele! Qui trovate il migliore di Malè. Non perdetevi le loro frittelle di mele.',
+            mapsQuery:'Caffè Pasticceria Roma, Piazza Santa Maria Assunta 3, Malè', phone:'+390463901149', phoneDisplay:'0463 901149'
+          },
+        ]
+      },
       attractions:{
         title:'Cosa visitare',
         blocks:[
@@ -765,6 +808,7 @@ const DATA = {
       {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'excursions', icon:'mountain', label:'Excursions & Tours'},
       {id:'tips', icon:'heart', label:'Local tips'},
+      {id:'shopping', icon:'cart', label:'Supermarkets / Local Products'},
       {id:'attractions', icon:'camera', label:'Things to see'},
       {id:'museums', icon:'museum', label:'Museums / Culture'},
       {id:'weather', icon:'cloud', label:'Weather'},
@@ -973,6 +1017,38 @@ const DATA = {
           {t:'note', text:'Tip: for each recommendation, you can add the place’s name, what to order, and whether booking ahead is a good idea.'},
         ]
       },
+      shopping:{
+        title:'Supermarkets / Local Products',
+        blocks:[
+          {t:'p', text:'Here are our tips for grocery shopping and for tasting the area’s local specialties.'},
+          {t:'h', text:'Supermarkets'},
+          {t:'place',
+            name:'Coop', tag:'Great deli counter', distance:'50 metres',
+            address:'Via IV Novembre, 23 — Malè',
+            desc:'Handy for its closeness to the apartment, with great counter products (we get our bread, cold cuts and cheese here before hikes), though it’s a bit pricier than IperPoli on everything else.',
+            mapsQuery:'Coop, Via IV Novembre 23, Malè', mapsLabel:'Map', phone:'+390463901325', phoneDisplay:'0463 901325'
+          },
+          {t:'place',
+            name:'IperPoli', tag:'Great value, well stocked', distance:'400 metres',
+            address:'Via Molini, 29 — Malè',
+            desc:'In our opinion, the best supermarket in Malè, with a wide choice of deli counters (bakery, pastry, butcher, fishmonger) and prices that match the quality.',
+            mapsQuery:'IperPoli, Via Molini 29, Malè', mapsLabel:'Map', phone:'+390463901046', phoneDisplay:'0463 901046'
+          },
+          {t:'h', text:'Local products'},
+          {t:'place',
+            name:'Caseificio Cercen (Cercen Dairy)', tag:'Zero-kilometre chain', distance:'2 km',
+            address:'Via Nazionale, 52 — Terzolas',
+            desc:'Here you’ll find high-quality cheese at competitive prices. We recommend the Casolét and the Nostrano, made with milk from the local mountain pastures.',
+            mapsQuery:'Caseificio Cercen, Via Nazionale 52, Terzolas', mapsLabel:'Map', phone:'+390463900029', phoneDisplay:'0463 900029'
+          },
+          {t:'place',
+            name:'Caffè Pasticceria Roma', tag:'Traditional sweets', distance:'400 metres',
+            address:'Piazza S. Maria Assunta, 3 — Malè',
+            desc:'There’s one dessert that smells of Trentino more than any other: apple strudel! This is the best one in Malè. Don’t miss their apple fritters either.',
+            mapsQuery:'Caffè Pasticceria Roma, Piazza Santa Maria Assunta 3, Malè', mapsLabel:'Map', phone:'+390463901149', phoneDisplay:'0463 901149'
+          },
+        ]
+      },
       attractions:{
         title:'Things to see',
         blocks:[
@@ -1152,6 +1228,7 @@ function blockHTML(b){
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
     case 'place': return `<div class="b-place">
+        ${(b.tag||b.distance)?`<div class="pl-top">${b.tag?`<span class="pl-tag">${b.tag}</span>`:'<span></span>'}${b.distance?`<span class="pl-dist">${b.distance}</span>`:''}</div>`:''}
         <div class="pl-name">${b.name}</div>
         <div class="pl-addr">${b.address}</div>
         <div class="pl-desc">${b.desc}</div>
