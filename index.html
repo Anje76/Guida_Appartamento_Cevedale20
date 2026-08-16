@@ -366,6 +366,8 @@ const ICONS = {
   medical:`<circle cx="12" cy="12" r="9"/><path d="M12 7.5v9M7.5 12h9"/>`,
   stove:`<rect x="3.5" y="3.5" width="17" height="17" rx="2"/><circle cx="8.5" cy="9" r="2.4"/><circle cx="15.5" cy="9" r="2.4"/><circle cx="8.5" cy="16" r="1.6"/><circle cx="15.5" cy="16" r="1.6"/>`,
   globe:`<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.4 2.4 3.7 5.6 3.7 9s-1.3 6.6-3.7 9c-2.4-2.4-3.7-5.6-3.7-9s1.3-6.6 3.7-9Z"/>`,
+  sun:`<circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M2.5 12h3M18.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/>`,
+  snow:`<path d="M12 2v20"/><path d="M4.5 6.5 19.5 17.5"/><path d="M19.5 6.5 4.5 17.5"/><path d="M12 6 9.8 4.3M12 6l2.2-1.7M12 18l-2.2 1.7M12 18l2.2 1.7"/>`,
   info:`<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/>`,
   mountain:`<path d="M3 19 9.5 8l3.2 5 2-3L21 19Z"/><circle cx="7" cy="7" r="1.3"/>`,
   heart:`<path d="M12 20s-7-4.4-9.4-8.7A5 5 0 0 1 12 6a5 5 0 0 1 9.4 5.3C19 15.6 12 20 12 20Z"/>`,
@@ -421,22 +423,22 @@ const DATA = {
       {id:'location', icon:'pin', label:'Posizione'},
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'Regole della casa'},
-      {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
       {id:'appliances', icon:'stove', label:'Cucina'},
-      {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
-      {id:'medical', icon:'medical', label:'Guardia Medica / Farmacia'},
       {id:'waste', icon:'trash', label:'Rifiuti'},
-      {id:'parking', icon:'car', label:'Parcheggio & ZTL'},
-      {id:'faq', icon:'info', label:'Info / FAQ'},
-      {id:'excursions', icon:'mountain', label:'Escursioni & Tour'},
-      {id:'tips', icon:'heart', label:'Consigli locali'},
+      {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
       {id:'shopping', icon:'cart', label:'Supermercati / Prodotti Locali'},
+      {id:'parking', icon:'car', label:'Parcheggio & ZTL'},
+      {id:'medical', icon:'medical', label:'Guardia Medica / Farmacia'},
       {id:'restaurants', icon:'utensils', label:'Ristoranti'},
-      {id:'attractions', icon:'camera', label:'Cosa visitare'},
       {id:'museums', icon:'museum', label:'Musei / Cultura'},
+      {id:'excursions', icon:'mountain', label:'Escursioni & Tour'},
       {id:'weather', icon:'cloud', label:'Meteo'},
+      {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'transport', icon:'bus', label:'Trasporti'},
+      {id:'summerActivities', icon:'sun', label:'Attività Estive'},
+      {id:'skiing', icon:'snow', label:'Sciare in Val di Sole'},
       {id:'discounts', icon:'tag', label:'Sconti convenzionati'},
+      {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
       {id:'guestbook', icon:'chat', label:'Lascia un feedback'},
       {id:'contacts', icon:'gear', label:'Contatti & aiuto'},
     ],
@@ -691,14 +693,6 @@ const DATA = {
           {t:'p', text:'Per informazioni aggiornate su sentieri, rifugi e condizioni meteo in quota, vi consigliamo di passare dall’Ufficio Informazioni dell’APT Val di Sole (vedi sezione “Contatti & aiuto”).'},
         ]
       },
-      tips:{
-        title:'Consigli locali',
-        blocks:[
-          {t:'p', text:'Alcuni piccoli consigli da chi vive in valle.'},
-          {t:'ph', text:'✏️ Da completare con i vostri ristoranti, malghe, bar e negozi del cuore — un tocco personale che gli ospiti apprezzano sempre.'},
-          {t:'note', text:'Suggerimento: per ogni consiglio potete aggiungere nome del locale, cosa ordinare e se conviene prenotare.'},
-        ]
-      },
       shopping:{
         title:'Supermercati / Prodotti Locali',
         blocks:[
@@ -769,20 +763,6 @@ const DATA = {
             mapsQuery:'Al Molin Ristorante, Località Acidule 167, Rabbi', phone:'+393288033042', phoneDisplay:'328 803 3042'
           },
           {t:'note', text:'Per “Al Molin” utilizzate solo il numero di cellulare indicato: il vecchio numero fisso non è più attivo.'},
-        ]
-      },
-      attractions:{
-        title:'Cosa visitare',
-        blocks:[
-          {t:'p', text:'Alcuni spunti per le vostre giornate in Val di Sole (verificate sempre orari e aperture stagionali).'},
-          {t:'list', items:[
-            'Centro storico di Malè, con le sue case affrescate',
-            'Chiesa di San Vigilio, tra le più antiche della valle',
-            'Cascate di Saent, in Val di Rabbi',
-            'Il Parco Nazionale dello Stelvio, tra i più grandi d’Europa',
-            'Passo del Tonale e i suoi panorami sulle Alpi',
-          ]},
-          {t:'jump', to:'museums', icon:'museum', label:'Scopri musei ed ecomusei della valle'},
         ]
       },
       museums:{
@@ -857,6 +837,35 @@ const DATA = {
           {t:'ph', text:'✏️ Da completare con i contatti di taxi o servizi navetta locali che consigliate.'},
           {t:'h', text:'In treno'},
           {t:'p', text:'La stazione ferroviaria più vicina è Trento, da cui proseguire in autobus verso la Val di Sole.'},
+        ]
+      },
+      summerActivities:{
+        title:'Attività Estive',
+        blocks:[
+          {t:'p', text:'La Val di Sole d’estate è un parco giochi a cielo aperto: piste ciclabili, torrenti per il rafting, sentieri per ogni livello e laghi alpini.'},
+          {t:'list', items:[
+            'Pista ciclopedonale della Val di Sole, lungo il fiume Noce, adatta a tutta la famiglia',
+            'Rafting, hydrospeed e canyoning sul fiume Noce',
+            'Bike park e sentieri per mountain bike, con noleggio e-bike in valle',
+            'Terme di Pejo e Terme di Rabbi, per un pomeriggio di relax',
+            'Parchi avventura con percorsi acrobatici tra gli alberi',
+            'Passeggiate ed escursioni: vedi anche la sezione “Escursioni & Tour”',
+          ]},
+          {t:'ph', text:'✏️ Da completare: i vostri consigli personali su attività, orari degli impianti estivi aperti, eventi e sagre del periodo, eventuali convenzioni per i vostri ospiti.'},
+        ]
+      },
+      skiing:{
+        title:'Sciare in Val di Sole',
+        blocks:[
+          {t:'p', text:'La Val di Sole d’inverno offre due comprensori sciistici principali, entrambi raggiungibili in auto dall’appartamento.'},
+          {t:'list', items:[
+            'Marilleva‑Folgarida‑Madonna di Campiglio, comprensorio Skirama Dolomiti',
+            'Pontedilegno‑Tonale, sul Passo del Tonale, comprensorio Adamello Ski',
+            'Scuole sci e noleggio attrezzatura disponibili in valle',
+            'Skipass giornalieri, plurigiornalieri e stagionali, acquistabili online o alle biglietterie',
+          ]},
+          {t:'ph', text:'✏️ Da completare: distanza precisa e tempo di percorrenza dagli impianti più vicini, eventuali navette sci-bus, il vostro negozio di noleggio sci di fiducia, e link agli skipass ufficiali.'},
+          {t:'note', text:'Consiglio: controllate sempre il bollettino neve e le condizioni meteo in quota prima di salire in pista.'},
         ]
       },
       discounts:{
@@ -952,22 +961,22 @@ const DATA = {
       {id:'location', icon:'pin', label:'Location'},
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'House rules'},
-      {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
       {id:'appliances', icon:'stove', label:'Kitchen'},
-      {id:'emergency', icon:'bolt', label:'Home emergencies'},
-      {id:'medical', icon:'medical', label:'Medical Service / Pharmacy'},
       {id:'waste', icon:'trash', label:'Waste disposal'},
-      {id:'parking', icon:'car', label:'Parking & LTZ'},
-      {id:'faq', icon:'info', label:'Info / FAQ'},
-      {id:'excursions', icon:'mountain', label:'Excursions & Tours'},
-      {id:'tips', icon:'heart', label:'Local tips'},
+      {id:'wifi', icon:'wifi', label:'Wi‑Fi'},
       {id:'shopping', icon:'cart', label:'Supermarkets / Local Products'},
+      {id:'parking', icon:'car', label:'Parking & LTZ'},
+      {id:'medical', icon:'medical', label:'Medical Service / Pharmacy'},
       {id:'restaurants', icon:'utensils', label:'Restaurants'},
-      {id:'attractions', icon:'camera', label:'Things to see'},
       {id:'museums', icon:'museum', label:'Museums / Culture'},
+      {id:'excursions', icon:'mountain', label:'Excursions & Tours'},
       {id:'weather', icon:'cloud', label:'Weather'},
+      {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'transport', icon:'bus', label:'Transportation'},
+      {id:'summerActivities', icon:'sun', label:'Summer Activities'},
+      {id:'skiing', icon:'snow', label:'Skiing in Val di Sole'},
       {id:'discounts', icon:'tag', label:'Local discounts'},
+      {id:'emergency', icon:'bolt', label:'Home emergencies'},
       {id:'guestbook', icon:'chat', label:'Leave feedback'},
       {id:'contacts', icon:'gear', label:'Contacts & help'},
     ],
@@ -1222,14 +1231,6 @@ const DATA = {
           {t:'p', text:'For up-to-date trail, hut and high-altitude weather conditions, we recommend stopping by the Val di Sole Tourist Office (see “Contacts & help”).'},
         ]
       },
-      tips:{
-        title:'Local tips',
-        blocks:[
-          {t:'p', text:'A few tips from people who live in the valley.'},
-          {t:'ph', text:'✏️ To be completed with your favourite restaurants, mountain huts, bars and shops — a personal touch guests always appreciate.'},
-          {t:'note', text:'Tip: for each recommendation, you can add the place’s name, what to order, and whether booking ahead is a good idea.'},
-        ]
-      },
       shopping:{
         title:'Supermarkets / Local Products',
         blocks:[
@@ -1300,20 +1301,6 @@ const DATA = {
             mapsQuery:'Al Molin Ristorante, Località Acidule 167, Rabbi', mapsLabel:'Map', phone:'+393288033042', phoneDisplay:'328 803 3042'
           },
           {t:'note', text:'For “Al Molin”, please use only the mobile number shown: the old landline is no longer active.'},
-        ]
-      },
-      attractions:{
-        title:'Things to see',
-        blocks:[
-          {t:'p', text:'A few ideas for your days in Val di Sole (always check seasonal opening times).'},
-          {t:'list', items:[
-            'Malè’s historic centre, with its frescoed houses',
-            'The Church of San Vigilio, among the oldest in the valley',
-            'The Saent waterfalls, in Val di Rabbi',
-            'The Stelvio National Park, one of the largest in Europe',
-            'Passo del Tonale and its views over the Alps',
-          ]},
-          {t:'jump', to:'museums', icon:'museum', label:'Discover the valley’s museums and eco-museums'},
         ]
       },
       museums:{
@@ -1388,6 +1375,35 @@ const DATA = {
           {t:'ph', text:'✏️ To be completed with the contacts of local taxi or shuttle services you recommend.'},
           {t:'h', text:'By train'},
           {t:'p', text:'The nearest railway station is Trento, from where you continue by bus to Val di Sole.'},
+        ]
+      },
+      summerActivities:{
+        title:'Summer Activities',
+        blocks:[
+          {t:'p', text:'Val di Sole in summer is an open-air playground: cycle paths, rivers for rafting, trails for every level, and alpine lakes.'},
+          {t:'list', items:[
+            'The Val di Sole cycle path along the Noce river, suitable for the whole family',
+            'Rafting, hydrospeed and canyoning on the Noce river',
+            'Bike park and mountain-bike trails, with e-bike rental available in the valley',
+            'Pejo and Rabbi thermal spas, for a relaxing afternoon',
+            'Adventure parks with rope courses among the trees',
+            'Walks and hikes: see also the “Excursions & Tours” section',
+          ]},
+          {t:'ph', text:'✏️ To be completed: your personal recommendations, opening hours of summer lifts, local events and festivals, and any partner discounts for your guests.'},
+        ]
+      },
+      skiing:{
+        title:'Skiing in Val di Sole',
+        blocks:[
+          {t:'p', text:'In winter, Val di Sole has two main ski areas, both reachable by car from the apartment.'},
+          {t:'list', items:[
+            'Marilleva‑Folgarida‑Madonna di Campiglio, part of the Skirama Dolomiti ski area',
+            'Pontedilegno‑Tonale, on Passo del Tonale, part of the Adamello Ski area',
+            'Ski schools and equipment rental available in the valley',
+            'Day, multi-day and season ski passes, available online or at the ticket offices',
+          ]},
+          {t:'ph', text:'✏️ To be completed: exact distance and travel time to the nearest lifts, any ski-bus shuttles, your trusted rental shop, and links to the official ski pass websites.'},
+          {t:'note', text:'Tip: always check the snow report and high-altitude weather conditions before heading up to the slopes.'},
         ]
       },
       discounts:{
