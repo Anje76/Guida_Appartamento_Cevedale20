@@ -227,6 +227,8 @@
 
   .b-place{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; margin:0 0 14px; box-shadow:var(--shadow-sm);}
   .b-place .pl-photo{width:100%; height:150px; object-fit:cover; display:block;}
+  .b-place .pl-logostrip{background:#fff; padding:16px 20px; text-align:center; border-bottom:1px solid var(--line);}
+  .b-place .pl-logostrip img{max-height:56px; max-width:70%; width:auto; height:auto; display:inline-block;}
   .b-place .pl-body{padding:14px;}
   .b-place .pl-top{display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-bottom:6px;}
   .b-place .pl-tag{
@@ -689,16 +691,19 @@ const DATA = {
         blocks:[
           {t:'p', text:'Ecco i nostri consigli per fare la spesa e per assaggiare i prodotti tipici della zona.'},
           {t:'h', text:'Supermercati'},
+          {t:'img', src:'images/shopping-mappa-percorso.png', alt:'Mappa del percorso a piedi verso Coop e IperPoli', caption:'Il percorso a piedi dall’appartamento verso Coop e IperPoli'},
           {t:'place',
             name:'Coop', tag:'Ottimo banco gastronomico', distance:'50 metri',
             address:'Via IV Novembre, 23 — Malè',
             desc:'Pratico per la vicinanza all’appartamento, offre ottimi prodotti al banco (noi ci riforniamo qui di pane, affettati e formaggi prima delle passeggiate), ma sul resto è un po’ più caro dell’IperPoli.',
+            logo:'images/logo-coop.png',
             mapsQuery:'Coop, Via IV Novembre 23, Malè', phone:'+390463901325', phoneDisplay:'0463 901325'
           },
           {t:'place',
             name:'IperPoli', tag:'Conveniente e super-rifornito', distance:'400 metri',
             address:'Via Molini, 29 — Malè',
             desc:'A nostro parere, il miglior supermercato di Malè, con ampia scelta di banchi gastronomici (forno, pasticceria, macelleria, pescheria) e prezzi adeguati alla qualità.',
+            logo:'images/logo-iperpoli.png',
             mapsQuery:'IperPoli, Via Molini 29, Malè', phone:'+390463901046', phoneDisplay:'0463 901046'
           },
           {t:'h', text:'Prodotti locali'},
@@ -706,12 +711,15 @@ const DATA = {
             name:'Caseificio Cercen', tag:'Filiera a Km zero', distance:'2 km',
             address:'Via Nazionale, 52 — Loc. Terzolas',
             desc:'Qui potete trovare formaggi di alta qualità a prezzi concorrenziali. Vi consigliamo il Casolét e il Nostrano, prodotto con il latte proveniente dai pascoli delle Malghe locali.',
+            logo:'images/logo-cercen.png',
             mapsQuery:'Caseificio Cercen, Via Nazionale 52, Terzolas', phone:'+390463900029', phoneDisplay:'0463 900029'
           },
+          {t:'img', src:'images/shopping-caseificio-interno.jpg', alt:'Interno del Caseificio Cercen con il banco dei formaggi', caption:'Il banco dei formaggi del Caseificio Cercen'},
           {t:'place',
             name:'Caffè Pasticceria Roma', tag:'Dolci tipici', distance:'400 metri',
             address:'Piazza S. Maria Assunta, 3 — Malè',
             desc:'C’è un dolce che profuma di Trentino più di tutti: lo Strudel alle Mele! Qui trovate il migliore di Malè. Non perdetevi le loro frittelle di mele.',
+            img:'images/ristorante-pasticceria-roma.jpg',
             mapsQuery:'Caffè Pasticceria Roma, Piazza Santa Maria Assunta 3, Malè', phone:'+390463901149', phoneDisplay:'0463 901149'
           },
         ]
@@ -1177,16 +1185,19 @@ const DATA = {
         blocks:[
           {t:'p', text:'Here are our tips for grocery shopping and for tasting the area’s local specialties.'},
           {t:'h', text:'Supermarkets'},
+          {t:'img', src:'images/shopping-mappa-percorso.png', alt:'Walking route map to Coop and IperPoli', caption:'The walking route from the apartment to Coop and IperPoli'},
           {t:'place',
             name:'Coop', tag:'Great deli counter', distance:'50 metres',
             address:'Via IV Novembre, 23 — Malè',
             desc:'Handy for its closeness to the apartment, with great counter products (we get our bread, cold cuts and cheese here before hikes), though it’s a bit pricier than IperPoli on everything else.',
+            logo:'images/logo-coop.png',
             mapsQuery:'Coop, Via IV Novembre 23, Malè', mapsLabel:'Map', phone:'+390463901325', phoneDisplay:'0463 901325'
           },
           {t:'place',
             name:'IperPoli', tag:'Great value, well stocked', distance:'400 metres',
             address:'Via Molini, 29 — Malè',
             desc:'In our opinion, the best supermarket in Malè, with a wide choice of deli counters (bakery, pastry, butcher, fishmonger) and prices that match the quality.',
+            logo:'images/logo-iperpoli.png',
             mapsQuery:'IperPoli, Via Molini 29, Malè', mapsLabel:'Map', phone:'+390463901046', phoneDisplay:'0463 901046'
           },
           {t:'h', text:'Local products'},
@@ -1194,12 +1205,15 @@ const DATA = {
             name:'Caseificio Cercen (Cercen Dairy)', tag:'Zero-kilometre chain', distance:'2 km',
             address:'Via Nazionale, 52 — Terzolas',
             desc:'Here you’ll find high-quality cheese at competitive prices. We recommend the Casolét and the Nostrano, made with milk from the local mountain pastures.',
+            logo:'images/logo-cercen.png',
             mapsQuery:'Caseificio Cercen, Via Nazionale 52, Terzolas', mapsLabel:'Map', phone:'+390463900029', phoneDisplay:'0463 900029'
           },
+          {t:'img', src:'images/shopping-caseificio-interno.jpg', alt:'Inside Caseificio Cercen, cheese counter', caption:'The cheese counter at Caseificio Cercen'},
           {t:'place',
             name:'Caffè Pasticceria Roma', tag:'Traditional sweets', distance:'400 metres',
             address:'Piazza S. Maria Assunta, 3 — Malè',
             desc:'There’s one dessert that smells of Trentino more than any other: apple strudel! This is the best one in Malè. Don’t miss their apple fritters either.',
+            img:'images/ristorante-pasticceria-roma.jpg',
             mapsQuery:'Caffè Pasticceria Roma, Piazza Santa Maria Assunta 3, Malè', mapsLabel:'Map', phone:'+390463901149', phoneDisplay:'0463 901149'
           },
         ]
@@ -1434,7 +1448,7 @@ function blockHTML(b){
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
     case 'place': return `<div class="b-place">
-        ${b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:''}
+        ${b.logo?`<div class="pl-logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div>`:(b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:'')}
         <div class="pl-body">
         ${(b.tag||b.distance)?`<div class="pl-top">${b.tag?`<span class="pl-tag">${b.tag}</span>`:'<span></span>'}${b.distance?`<span class="pl-dist">${b.distance}</span>`:''}</div>`:''}
         <div class="pl-name">${b.name}</div>
