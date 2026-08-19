@@ -1025,17 +1025,17 @@ const DATA = {
       activateGuestCard:{
         title:'Attivazione Trentino Guest Card',
         blocks:[
-          {t:'img', src:'images/mio-trentino-app-logo.png', alt:'App Mio Trentino', caption:'L’app Mio Trentino'},
+          {t:'img', src:'images/trentino-guestcard-banner.png', alt:'Trentino Guest Card'},
           {t:'p', text:'La <b>Trentino Guest Card</b> vi dà accesso gratuito o scontato a oltre 100 attività del territorio — musei, castelli, parchi — oltre alla possibilità di viaggiare liberamente su tutti i mezzi pubblici della provincia (vedi anche la sezione “Trasporti”). Per attivarla, usarla e portarla sempre con voi, vi basta scaricare l’app <b>Mio Trentino</b>.'},
-          {t:'h', text:'Come attivarla in 4 passi'},
+          {t:'h', text:'Come attivarla in 3 passi'},
           {t:'steps', items:[
-            {num:'1', title:'Prenotate il soggiorno', text:'Fatto! Avete già prenotato il vostro soggiorno da noi a Cevedale 20.'},
-            {num:'2', title:'Ricevete il codice Card', text:'Riceverete un codice Card via email o SMS. Se non vi fosse arrivato, chiedetecelo pure al check-in.'},
-            {num:'3', title:'Scaricate l’app e associate il codice', text:'Scaricate l’app Mio Trentino dal vostro store, registratevi (o accedete) e inserite il codice della Card. Se vi registrate con la stessa email a cui è stato inviato il codice, l’associazione sarà automatica.'},
-            {num:'4', title:'Iniziate a usarla', text:'La Card è utilizzabile dal giorno del vostro arrivo fino alla partenza, ed è valida per tutti gli ospiti che soggiornano con voi, minori compresi.'},
+            {num:'1', title:'Ottenete il codice Card', text:'Consultate la posta elettronica, avrete ricevuto un codice Card via email. Se non vi fosse arrivato, chiedetecelo pure al check-in.'},
+            {num:'2', title:'Scaricate l’app e associate il codice', text:'Scaricate l’app Mio Trentino dal vostro store, registratevi (o accedete) e inserite il codice della Card. Se vi registrate con la stessa email a cui è stato inviato il codice, l’associazione sarà automatica.'},
+            {num:'3', title:'Iniziate a usarla', text:'La Card è utilizzabile dal giorno del vostro arrivo fino alla partenza, ed è valida per tutti gli ospiti che soggiornano con voi, minori compresi.'},
           ]},
           {t:'link', icon:'key', label:'Scarica l’app Mio Trentino (Google Play)', url:'https://play.google.com/store/apps/details?id=it.visittrentino.app.miotrentino&pcampaignid=web_share'},
           {t:'link', icon:'info', label:'Video: come attivare e usare la Card', url:'https://www.visittrentino.info/video/guest-card/6140730/video-thumb__6140730__contentvideo/Animazione_16_9-IT.mp4'},
+          {t:'img', src:'images/mio-trentino-app-logo.png', alt:'App Mio Trentino', width:'88px', center:true},
           {t:'note', text:'Per qualsiasi dubbio potete scrivere direttamente all’assistenza in app, oppure a <a href="mailto:innovazione@trentinomarketing.org">innovazione@trentinomarketing.org</a>.'},
         ]
       },
@@ -1741,17 +1741,17 @@ const DATA = {
       activateGuestCard:{
         title:'Activating the Trentino Guest Card',
         blocks:[
-          {t:'img', src:'images/mio-trentino-app-logo.png', alt:'Mio Trentino App', caption:'The Mio Trentino app'},
+          {t:'img', src:'images/trentino-guestcard-banner.png', alt:'Trentino Guest Card'},
           {t:'p', text:'The <b>Trentino Guest Card</b> gives you free or discounted access to over 100 local activities — museums, castles, parks — plus free travel on all public transport in the province (see also the “Transportation” section). To activate it, use it and always have it with you, just download the <b>Mio Trentino</b> app.'},
-          {t:'h', text:'How to activate it in 4 steps'},
+          {t:'h', text:'How to activate it in 3 steps'},
           {t:'steps', items:[
-            {num:'1', title:'Book your stay', text:'Done! You’ve already booked your stay with us at Cevedale 20.'},
-            {num:'2', title:'Receive your Card code', text:'You’ll receive a Card code by email or SMS. If it hasn’t arrived, just ask us at check-in.'},
-            {num:'3', title:'Download the app and link the code', text:'Download the Mio Trentino app from your app store, sign up (or log in) and enter your Card code. If you sign up with the same email the code was sent to, it will be linked automatically.'},
-            {num:'4', title:'Start using it', text:'The Card can be used from the day you arrive until the day you leave, and is valid for everyone staying with you, children included.'},
+            {num:'1', title:'Get your Card code', text:'Check your email — you’ll have received a Card code by email. If it hasn’t arrived, just ask us at check-in.'},
+            {num:'2', title:'Download the app and link the code', text:'Download the Mio Trentino app from your app store, sign up (or log in) and enter your Card code. If you sign up with the same email the code was sent to, it will be linked automatically.'},
+            {num:'3', title:'Start using it', text:'The Card can be used from the day you arrive until the day you leave, and is valid for everyone staying with you, children included.'},
           ]},
           {t:'link', icon:'key', label:'Download the Mio Trentino app (Google Play)', url:'https://play.google.com/store/apps/details?id=it.visittrentino.app.miotrentino&pcampaignid=web_share'},
           {t:'link', icon:'info', label:'Video: how to activate and use the Card', url:'https://www.visittrentino.info/video/guest-card/6140730/video-thumb__6140730__contentvideo/Animazione_16_9-IT.mp4'},
+          {t:'img', src:'images/mio-trentino-app-logo.png', alt:'Mio Trentino App', width:'88px', center:true},
           {t:'note', text:'For any questions you can write directly to support in the app, or email <a href="mailto:innovazione@trentinomarketing.org">innovazione@trentinomarketing.org</a>.'},
         ]
       },
@@ -1891,7 +1891,7 @@ function blockHTML(b){
     case 'ph': return `<div class="b-ph">${b.text}</div>`;
     case 'link': return `<a class="b-link" href="${b.url}" target="_blank" rel="noopener">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
     case 'jump': return `<a class="b-link" href="#${b.to}" onclick="event.preventDefault(); openSection('${b.to}');">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
-    case 'img': return `<div class="b-img"><img src="${b.src}" alt="${b.alt||''}" loading="lazy">${b.caption? `<div class="cap">${b.caption}</div>`:''}</div>`;
+    case 'img': return `<div class="b-img"${b.center?' style="text-align:center"':''}><img src="${b.src}" alt="${b.alt||''}" loading="lazy"${b.width?` style="width:${b.width};display:inline-block;"`:''}>${b.caption? `<div class="cap">${b.caption}</div>`:''}</div>`;
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
