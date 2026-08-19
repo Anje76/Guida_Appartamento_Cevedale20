@@ -437,6 +437,7 @@ const DATA = {
       {id:'transport', icon:'bus', label:'Trasporti'},
       {id:'summerActivities', icon:'sun', label:'Attività Estive'},
       {id:'skiing', icon:'snow', label:'Sciare in Val di Sole'},
+      {id:'winterActivities', icon:'snow', label:'Attività Invernali'},
       {id:'activateGuestCard', icon:'key', label:'Attivazione Trentino Guest Card'},
       {id:'discounts', icon:'tag', label:'Convenzioni Guest Card'},
       {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
@@ -1045,6 +1046,36 @@ const DATA = {
           {t:'note', text:'Consiglio: controllate sempre il bollettino neve e le condizioni meteo in quota prima di salire in pista.'},
         ]
       },
+      winterActivities:{
+        title:'Attività Invernali',
+        blocks:[
+          {t:'p', text:'La Val di Sole d’inverno regala anche molto più dello sci: presepi diffusi, pattinaggio sul ghiaccio e mercatini di Natale animano la valle da fine novembre a gennaio. Ecco alcuni appuntamenti da non perdere.'},
+          {t:'place',
+            name:'Ossana — Il Borgo dei 1000 Presepi',
+            tag:'Presepi & mercatini di Natale',
+            address:'Ossana (TN)',
+            desc:'Lasciatevi guidare dal filo rosso, che come una stella cometa vi accompagnerà alla scoperta di oltre 1600 caratteristici presepi disseminati tra i vicoli del borgo e le mura del Castello San Michele. Il percorso è gratuito e visitabile ogni giorno dalle 10:00 alle 22:00, generalmente da fine novembre a inizio gennaio; nei weekend si aggiungono i mercatini di Natale con vin brulè e prodotti artigianali.',
+            mapsQuery:'Ossana borgo dei 1000 presepi, Ossana TN', phone:'+390463901280', phoneDisplay:'0463 901280'
+          },
+          {t:'note', text:'L’ingresso al Castello San Michele di Ossana (4 €), cuore del percorso dei presepi, è gratuito per chi possiede la Trentino Guest Card.'},
+          {t:'link', icon:'globe', label:'Date e programma aggiornati del Borgo dei 1000 Presepi', url:'https://www.visitvaldisole.it/it/eventi/ossana-il-borgo-dei-presepi'},
+          {t:'place',
+            name:'Stadio del Ghiaccio di Malè',
+            tag:'Pattinaggio su ghiaccio',
+            address:'Loc. Molin, 4 — 38027 Malè (TN)',
+            desc:'Piattaforma all’aperto da 30x60 metri, con copertura semovibile, tribuna, bar e spogliatoi. Potrete sfrecciare sui pattini, fare piroette oppure cimentarvi con il broomball o con l’hockey — sul posto trovate anche noleggio e affilatura pattini, oltre a corsi di avviamento al pattinaggio artistico e hockey. Aperto generalmente da dicembre a marzo.',
+            mapsQuery:'Stadio del Ghiaccio, Loc. Molin, Malè', phone:'+390463901905', phoneDisplay:'0463 901905'
+          },
+          {t:'place',
+            name:'La Valle dei Presepi',
+            tag:'San Bernardo — Val di Rabbi',
+            address:'Ufficio Informazioni Rabbi Vacanze, Fraz. San Bernardo — 38020 Rabbi (TN)',
+            desc:'Riuscirete a trovare tutti i 100 presepi sparsi nei borghi della Val di Rabbi? Ritirate la mappa presso l’Ufficio Informazioni di San Bernardo, cercate i presepi lungo il percorso e riempite la scheda con i bollini adesivi numerati: se li trovate tutti riceverete il vostro gadget firmato Val di Rabbi. Consigliamo la visita al calar del sole, quando le lucine dei presepi si accendono rendendo la passeggiata ancora più suggestiva.',
+            mapsQuery:'Ufficio Informazioni Rabbi Vacanze, San Bernardo, Rabbi', phone:'+390463985048', phoneDisplay:'0463 985048'
+          },
+          {t:'note', text:'Orari Ufficio Informazioni di San Bernardo: lunedì–venerdì 9:00–12:00, sabato 9:00–12:00 e 15:00–18:00, domenica chiuso.'},
+        ]
+      },
       activateGuestCard:{
         title:'Attivazione Trentino Guest Card',
         blocks:[
@@ -1245,6 +1276,7 @@ const DATA = {
       {id:'transport', icon:'bus', label:'Transportation'},
       {id:'summerActivities', icon:'sun', label:'Summer Activities'},
       {id:'skiing', icon:'snow', label:'Skiing in Val di Sole'},
+      {id:'winterActivities', icon:'snow', label:'Winter Activities'},
       {id:'activateGuestCard', icon:'key', label:'Activating the Trentino Guest Card'},
       {id:'discounts', icon:'tag', label:'Guest Card Discounts'},
       {id:'emergency', icon:'bolt', label:'Home emergencies'},
@@ -1851,6 +1883,36 @@ const DATA = {
           {t:'link', icon:'globe', label:'boarderking.it', url:'https://boarderking.it'},
           {t:'link', icon:'mail', label:'info@boarderking.it', url:'mailto:info@boarderking.it'},
           {t:'note', text:'Tip: always check the snow report and high-altitude weather conditions before heading up to the slopes.'},
+        ]
+      },
+      winterActivities:{
+        title:'Winter Activities',
+        blocks:[
+          {t:'p', text:'Val di Sole in winter offers much more than skiing: nativity scenes scattered across town, ice skating and Christmas markets bring the valley to life from late November through January. Here are a few events not to miss.'},
+          {t:'place',
+            name:'Ossana — The Village of 1000 Nativity Scenes',
+            tag:'Nativity scenes & Christmas markets',
+            address:'Ossana (TN)',
+            desc:'Let the red thread guide you — like a comet’s tail — through more than 1,600 handcrafted nativity scenes scattered along the village lanes and the walls of Castello San Michele. The trail is free and open every day from 10:00am to 10:00pm, generally from late November to early January; on weekends, Christmas markets add vin brulè and local crafts to the mix.',
+            mapsQuery:'Ossana borgo dei 1000 presepi, Ossana TN', mapsLabel:'Map', phone:'+390463901280', phoneDisplay:'0463 901280'
+          },
+          {t:'note', text:'Entry to Castello San Michele in Ossana (€4), the heart of the nativity trail, is free for Trentino Guest Card holders.'},
+          {t:'link', icon:'globe', label:'Updated dates and programme for the Village of 1000 Nativity Scenes', url:'https://www.visitvaldisole.it/it/eventi/ossana-il-borgo-dei-presepi'},
+          {t:'place',
+            name:'Malè Ice Stadium',
+            tag:'Ice skating',
+            address:'Loc. Molin, 4 — 38027 Malè (TN)',
+            desc:'An open-air rink measuring 30x60 metres, with a retractable roof, stands, a bar and changing rooms. Glide across the ice, try a few spins, or take on a game of broomball or hockey — skate rental and sharpening are available on site, along with beginner skating and hockey courses. Usually open from December to March.',
+            mapsQuery:'Stadio del Ghiaccio, Loc. Molin, Malè', mapsLabel:'Map', phone:'+390463901905', phoneDisplay:'0463 901905'
+          },
+          {t:'place',
+            name:'The Valley of Nativity Scenes',
+            tag:'San Bernardo — Val di Rabbi',
+            address:'Ufficio Informazioni Rabbi Vacanze, Fraz. San Bernardo — 38020 Rabbi (TN)',
+            desc:'Can you find all 100 nativity scenes scattered across the villages of Val di Rabbi? Pick up the map at the San Bernardo Information Office, hunt for the scenes along the trail, and fill in your card with the numbered stickers you find: collect them all and you’ll receive your own Val di Rabbi gadget. We recommend visiting at dusk, when the nativity lights come on and the walk becomes even more magical.',
+            mapsQuery:'Ufficio Informazioni Rabbi Vacanze, San Bernardo, Rabbi', mapsLabel:'Map', phone:'+390463985048', phoneDisplay:'0463 985048'
+          },
+          {t:'note', text:'San Bernardo Information Office hours: Monday–Friday 9:00am–12:00pm, Saturday 9:00am–12:00pm and 3:00–6:00pm, closed Sunday.'},
         ]
       },
       activateGuestCard:{
