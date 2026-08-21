@@ -1,0 +1,4512 @@
+{
+  "generato_il": "2026-08-21",
+  "eventi": [
+    {
+      "comune": null,
+      "titolo": "VAL DI SOLE",
+      "descrizione": "estate",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "sconosciuto"
+    },
+    {
+      "comune": null,
+      "titolo": "ATTIVITÀ, EVENTI, ESPERIENZE AGOSTO 2026",
+      "descrizione": "Dimaro Tel. 0463 986113 Mezzana Tel. 0463 757134 Passo Tonale Tel. 0364 903838 Peio Fonti Tel. 0463 753100",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "sconosciuto"
+    },
+    {
+      "comune": null,
+      "titolo": "IN FO",
+      "descrizione": "info@visitvaldisole.it - www.visitvaldisole.it Uffici Apt Val di Sole Tel. 0463 901280 info@visitvaldisole.it Folgarida Tel. 0463 986608 info@visitdimarofolgarida.it Commezzadura Tel. 0463 974840 prolococommezzadura@gmail.com Marilleva 1400 Tel. 0463 757588 info@marilleva.it Pellizzano Tel. 0463 751183 info@pellizzano.com Vermiglio Tel. 0463 758200 info@vermigliovacanze.it Ossana Tel. 0463 751301 ufficio.turismo@comune.ossana.tn.it Cogolo Tel. 0463 090518 info@visitvaldipejo.it Rabbi Tel. 0463 985048 info@valdirabbi.com I dati personali raccolti per l’adesione alle iniziative riportate nel presente opuscolo saranno trattati dagli organizzatori delle singole iniziative in qualità di titolari ai sensi del GDPR 2016/679 e secondo le informative da loro stessi rese note. Foto: C. Pizzini, G. Podetti e Ass. Micologica Bresadola Grafiche: A. Formilan e S. Ferriani",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "sconosciuto"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "MINI PERCORSO PRESEPI",
+      "descrizione": "Dimaro Val di Sole Bike",
+      "orario_inizio": "10:00",
+      "orario_fine": "22:00",
+      "luogo": "Borgo di Ossana",
+      "tipo": "ricorrente",
+      "ricorrenza": "TUTTI I GIORNI"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LA FORZA DELLA NATURA",
+      "descrizione": "Un itinerario guidato alla scoperta dei profumi balsamici e dell’antico uso delle resine. Gratuito. 0463 985048 Non si svolgerà il 3, il 4, il 24, il 25, il 27 e il 31 agosto",
+      "orario_inizio": "13:00",
+      "orario_fine": "16:00",
+      "luogo": "Rabbi Fonti - Segheria Veneziana dei Bègoi",
+      "tipo": "ricorrente",
+      "ricorrenza": "TUTTI I GIORNI"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LABORATORIO NATURALISTICO",
+      "descrizione": "",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "GIRO DELLE MALGHE",
+      "descrizione": "",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Malé Piazza Regina Elena, davanti al Municipio",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "Folgarida",
+      "titolo": "L’ARTE DEL BALOCCO",
+      "descrizione": "",
+      "orario_inizio": "09:30",
+      "orario_fine": "12:00",
+      "luogo": "Malé - Loc. Molini, Segheria Veneziana",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "Folgarida",
+      "titolo": "GIOCALABORATORIO",
+      "descrizione": "Relax assoluto pedalando lungo il Fiume Noce sulla pista ciclabile fra praterie e scorci di piccoli centri abitati. Arrivo a Caldes e rientro in direzione MMape. A pagamento. 0463 986608 - 0463 986113 A cura della naturopata Decarli Margherita. Percorrere la via del risveglio attraverso il bosco per stimolare il benessere. Gratuito. 0463 986608 - 0463 986113",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:00",
+      "luogo": "Malé Piazze centrali",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "Folgarida",
+      "titolo": "ESCURSIONE DI BENVENUTO",
+      "descrizione": "L’Om dele storie farà una dimostrazione dell’arte della tornitura manuale e a pedale. Come se fosse Geppetto in Pinocchio, trasformerà un pezzo di legno dei boschi della Val di Sole in un balocco attraverso la lavorazione tradizionale. Gratuito e al coperto, senza prenotazione.",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:30",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "Folgarida",
+      "titolo": "FAMILY BIKE AL MMAPE MULINO MUSEO DELL’APE",
+      "descrizione": "",
+      "orario_inizio": "15:00",
+      "orario_fine": "18:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "VISITA AL DOLOMITES MUSEUM OF CHOCOLATE",
+      "descrizione": "Un viaggio sensoriale alla scoperta del cioccolato artigianale: tradizione, innovazione e territorio si incontrano. www.marilleva.it 0463 757588",
+      "orario_inizio": "09:30",
+      "orario_fine": "12:00",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "KIDS SURVIVAL",
+      "descrizione": "Un laboratorio selvaggio per bambini dove imparare a sopravvivere nel bosco. A pagamento. www.marilleva.it - 0463 757588",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:30",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "RICORDI DAL PASSATO: ALLA SCOPERTA DEL MULINO DALLA TORRE",
+      "descrizione": "Una passeggiata nel centro storico di Mezzana per scoprire gli angoli più particolari sino ad arrivare al Mulino dalla Torre, un piccolo opificio nascosto tra le case. www.marilleva.it - 0463 757588 3",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:30",
+      "luogo": "Mezzana - Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "YOGA AL PARCO - RISVEGLIO MUSCOLARE",
+      "descrizione": "Inizia la giornata respirando l’aria fresca del mattino, tra il verde e la quiete del parco. Un dolce risveglio per corpo e mente, tra movimenti armoniosi e relax profondo. A pagamento. 0463 751183",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:30",
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "ALLA SCOPERTA DELLA FATTORIA",
+      "descrizione": "Un’avventura tra natura e divertimento: segui gli indizi, incontra gli animali e scopri i segreti della vita in fattoria. Un’esperienza coinvolgente per grandi e piccoli… con una dolce sorpresa finale! A pagamento. 0463 751183",
+      "orario_inizio": "10:00",
+      "orario_fine": "11:30",
+      "luogo": "Pellizzano - Fattoria di Valtresin",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "LUNEDÌ AL CASTELLO",
+      "descrizione": "Artigianato e Sapori al Castello di San Michele: mercato contadino e dell’artigianato locale con stand gastronomico, celebrando storia e autenticità del territorio; Ingresso al castello € 1,00 dalle 08:30 alle 10:00; alle ore 10:00 visita guidata gratuita a uno dei Borghi più belli d’Italia",
+      "orario_inizio": "08:30",
+      "orario_fine": "12:00",
+      "luogo": "Ossana Piazzetta del Castello di San Michele",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "QIGONG",
+      "descrizione": "Antica arte cinese che promuove il benessere e la salute. A pagamento. 320 7599015",
+      "orario_inizio": "17:30",
+      "orario_fine": "18:10",
+      "luogo": "Ossana - Sala J. Aconcio",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "CICLABILE IN E-BIKE",
+      "descrizione": "",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Loc. Castra - Fede Ranch",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "LO STREGONE DEL BOSCO",
+      "descrizione": "",
+      "orario_inizio": "10:00",
+      "orario_fine": "11:00",
+      "luogo": "Peio - Area Faunistica Runcal",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "Celledizzo",
+      "titolo": "CONOSCIAMO INSIEME GLI ANIMALI DI FEDERICA",
+      "descrizione": "Hai mai visto da vicino galline, conigli, capre, pony, asini? Federica li alleva proprio come una volta, seguendo i ritmi della natura, in completa libertà. I bambini sperimenteranno il mondo rurale e per concludere l’esperienza un giro in sella ai simpatici cavalli. A pagamento www.visitvaldipejo.it - 0463 090518 Intrattenimento per bambini con Axaloth animazioni Cogolo - Piazza Monari il 24 agosto Peio Fonti - Piazzale Terme il 3, 10, 17 e 31 agosto",
+      "orario_inizio": "14:00",
+      "orario_fine": "17:30",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LEZIONE DI GINNASTICA AL RISVEGLIO",
+      "descrizione": "Attività dolce all’aperto tra movimento, respirazione e benessere. A pagamento. 0463 983000",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "BAREFOOTING",
+      "descrizione": "Esercizi guidati da Federica, fisioterapista delle terme di Rabbi e percorso a piedi nudi nel bosco. Al rientro assaggio dell’acqua termale. A pagamento. 0463 983000",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:30",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "I MASI DI VALORZ",
+      "descrizione": "Passeggiata facile per conoscere l’architettura montana, scoprirne le funzioni e gli usi, attraversando paesaggi antropici incorniciati della rigogliosa valle di Valorz e delle omonime cascate. In collaborazione con Ass. promozione sociale Molino Ruatti. Gratuito su prenotazione entro le ore 16:30 del giorno stesso 0463 909774",
+      "orario_inizio": "14:15",
+      "orario_fine": "15:30",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "ESPERIENZA NOTTURNA AL PONTE SOSPESO",
+      "descrizione": "A passo lento, camminiamo ascoltando il bosco. A pagamento. 0463 983000",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:30",
+      "luogo": "San Bernardo Ufficio Info Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI LUNEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LʼAREA FAUNISTICA DEL PARCO",
+      "descrizione": "Incontra la fauna alpina in compagnia degli esperti del Parco per conoscere meglio biologia, etologia, evoluzione e scoprire tante curiosità su cervi, caprioli e altri animali. Visita gratuita, ingresso a pagamento La bellezza della ciclabile e il castello di Ossana tutto in una sola esperienza. Pedala allegramente lungo le rive del fiume Noce e visita uno dei castelli più belli in compagnia di una guida esperta. A pagamento. www.visitvaldipejo.it - 0463 090518",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:00",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "TERZOLAS",
+      "titolo": "VISITA AL CASEIFICIO CERCEN",
+      "descrizione": "con lavorazione lattiero casearia e piccola degustazione dei prodotti caseari. Gratuito. 0463 901280 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "09:30",
+      "orario_fine": "11:00",
+      "luogo": "Terzolas Caseificio Cercen",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LE STORIE DI LEGNO",
+      "descrizione": "Un viaggio nel tempo presso la Segheria Veneziana attraverso le narrazioni dell’Om dele Storie. A seguire, laboratorio: i bambini potranno costruire il protagonista del racconto utilizzando legno d’abete locale, martelletti e chiodi di faggio. Attività al coperto, senza prenotazione. Costruzione balocco a pagamento.",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Malè Segheria Veneziana",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "PROFUMO DI CIRMOLO",
+      "descrizione": "Scopri i segreti delle foreste trentine e l’arte del legno. Crea un oggetto che profuma di bosco, cucito a mano e imbottito di legno di cirmolo. A seguire, è possibile la visita guidata. A pagamento. www.apslalveare.it/ fattorelegno 328 3285780",
+      "orario_inizio": "15:00",
+      "orario_fine": "16:00",
+      "luogo": "Malè Fattore Legno",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "PILATES CON CATERINA",
+      "descrizione": "Lezione di Pilates Matwork di gruppo (55 minuti), metodo inventato da Joseph Pilates, per migliorare postura, controllo, flessibilità e respirazione. A pagamento, su prenotazione Pro Loco Malé, WhatsApp 339 5318578 (no ore notturne) Non si svolgerà il 18 e il 25 agosto",
+      "orario_inizio": "18:30",
+      "orario_fine": "19:30",
+      "luogo": "Malé Piazza Dante",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ARRAMPICATA IN PIAZZA",
+      "descrizione": "Parete di arrampicata artificiale nel centro di Malé, adatta a bambini e adulti, con assistenza delle Guide Alpine della Val di Sole. Annullata in caso di pioggia. Gratuito e senza prenotazione. Non si svolgerà il 18 e il 25 agosto",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "IL MARTEDÌ DELLA FISARMONICA",
+      "descrizione": "Serata di musica tradizionale trentina con fisarmonica, canti e balli in piazza. Annullata in caso di pioggia o pavimentazione bagnata. Ingresso libero Non si svolgerà il 18 e il 25 agosto",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Dante",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "CROVIANA",
+      "titolo": "INCONTRO CON L’APICOLTORE",
+      "descrizione": "Visita guidata con un apicoltore per scoprire il mondo delle api e la produzione del miele. *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "10:00",
+      "orario_fine": "11:30",
+      "luogo": "Croviana MMApe",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "E-BIKE TOUR IN ALTA VAL DI SOLE - LAGO DEI CAPRIOLI",
+      "descrizione": "Partenza da Dimaro per un’escursione mozzafiato tra i piccoli borghi dell’alta Val di Sole, natura, laghi alpini e pascoli di montagna in compagnia di esperte guide di Mtb. Durante l’attività ci si fermerà per fare una deliziosa merenda in una delle malghe della zona. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "08:10",
+      "orario_fine": "12:00",
+      "luogo": "Dimaro Val di Sole Bike",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "ECOMUSEO DELLA VAL MELEDRIO",
+      "descrizione": "Passeggiata attraverso l’ingegno che l’uomo ha sviluppato nel tempo per utilizzare le materie prime offerte dalla natura sfruttando l’energia dell’acqua. Scopriremo l’arte dell’estrazione della trementina, il taglio del legname all’interno dell’Antica Segheria Veneziana, la forgiatura dei metalli e la produzione di calce. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "14:30",
+      "orario_fine": "18:00",
+      "luogo": "Dimaro Segheria Veneziana",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "VISITA ALLA FATTORIA DI MENAS",
+      "descrizione": "Per scoprire il lavoro del contadino: dalla mungitura all’alpeggio. Le mucche e i verdi pascoli di Menas e Ortisè. A seguire, possibilità di pranzo presso ristorante in quota. A pagamento. www.marilleva.it 0463 757588",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "RICORDI DAL PASSATO: ALLA SCOPERTA DELLA SEGHERIA E DI GIOCHI DI UN TEMPO",
+      "descrizione": "Avrete la possibilità di conoscere i meccanismi di quest’importante struttura e soprattutto la vedrete in funzione! Accompagnati da un esperto falegname scoprirete i segreti 5",
+      "orario_inizio": "14:30",
+      "orario_fine": "16:30",
+      "luogo": "Mezzana - Chiesa di Ortisé",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "KIDS BIKE PARK",
+      "descrizione": "Tapis roulant, salite, discese e parabole… tutto in mountain bike! A pagamento. www.marilleva.it - 0463 757588",
+      "orario_inizio": "10:00",
+      "orario_fine": "11:00",
+      "luogo": "Pellizzano - Centro equitazione alpina",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "PONY CLUB IN FATTORIA",
+      "descrizione": "Un piccolo grande sogno per i più piccoli (2-5 anni): accarezzare, conoscere e salire in sella ai pony in un’esperienza sicura, dolce e indimenticabile. A pagamento. 348 4876411",
+      "orario_inizio": "10:30",
+      "orario_fine": "12:00",
+      "luogo": "Pellizzano - Santuario Santa Maria",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "VISITA GUIDATA AL SANTUARIO DI SANTA MARIA",
+      "descrizione": "Un viaggio tra storia, arte e spiritualità: lasciati guidare alla scoperta di un luogo ricco di fascino e significato con guida storica esperta. Gratuito. 0463 751183",
+      "orario_inizio": "15:30",
+      "orario_fine": "17:00",
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "LABORATORIO NATURA - HOTEL DEGLI IMPOLLINATORI (4+)",
+      "descrizione": "Scopri il meraviglioso mondo degli insetti! Con un entomologo esperto tra curiosità, creatività e natura, i bambini costruiranno una casetta per gli impollinatori, imparando giocando. A pagamento, su prenotazione 0463 751183. Non si svolgerà il 25 agosto",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Ossana - Bosco Derniga",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "BIODIVERSITÀ CROMATICA: I COLORI DELLA NATURA",
+      "descrizione": "Ti sei mai chiesto quanti colori si nascondono nella natura? Unisciti a noi per una caccia alle sfumature tra i sentieri di Bosco Derniga. Prenderemo ispirazione da foglie, fiori e terra per dare vita a un arcobaleno naturale. Armati di acquerelli, trasformeremo la magia della natura nella tua personale tavolozza d’artista. A pagamento. www.boscoderniga.it - 353 3305004",
+      "orario_inizio": "11:15",
+      "orario_fine": "12:00",
+      "luogo": "Fucine - Parco Giochi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "NATI PER LEGGERE",
+      "descrizione": "Letture per bambini e bambine 0-6 anni. Ingresso libero. Portarsi qualcosa per sedersi sul prato. In caso di pioggia la lettura sarà annullata!",
+      "orario_inizio": "15:30",
+      "orario_fine": "17:00",
+      "luogo": "Ossana - Castello San Michele",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "PICCOLI VASAI ALLA CORTE DI OSSANA",
+      "descrizione": "I piccoli artigiani del Castello avranno l’opportunità di riscoprire i mestieri di un tempo, realizzando con le proprie mani un piccolo vaso in stile medievale. A pagamento, su prenotazione - www.visitvaldisole.it",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Passo del Tonale - Ufficio Informazioni (via Nazionale, 12)",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "PASSO DEL TONALE CHE TORBA!",
+      "descrizione": "La utilizziamo per i fiori, ma sappiamo davvero di cosa si tratta? Un elemento prezioso, che conserva migliaia di anni di storia. Custode di ere passate, impareremo come nasce, come vive, come muore ma anche come riesce a dare vita a un ambiente unico nel suo genere. A pagamento. www.mmape.it - 328 3285780",
+      "orario_inizio": "09:00",
+      "orario_fine": "11:00",
+      "luogo": "Peio Paese - Mulino dei Turri (Via C. Turri 11)",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "PEIO A SPAS PER PÉJ",
+      "descrizione": "Passeggiata guidata nei luoghi più significativi del paese di Peio facendo visita al Molin dei Turi, mulino degli anni Trenta tuttora funzionante, al Casel de Péj, ultimo caseificio turnario, al museo Pejo 1914-1918 La Guerra sulla Porta e la mostra Còme èren. A pagamento. 0463 753100 - 0463 090518",
+      "orario_inizio": "10:00",
+      "orario_fine": "13:00",
+      "luogo": "Peio - Loc. Tarlenta",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SUI CLIVI DI MONTAGNA",
+      "descrizione": "Scendi dalla telecabina e scopri i segreti del Parco: un piccolo viaggio tra fauna e flora alpina. Tra curiosità su cervi, stambecchi e rapaci, un incontro per grandi e piccini per iniziare lʼavventura in quota con occhi nuovi. In collaborazione con Funivie Pejo 3000. Attività libera e gratuita *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LEZIONE DI YOGA",
+      "descrizione": "Lezione di yoga immersi nella natura. A pagamento. 0463 983000",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:20",
+      "luogo": "Rabbi Fonti - Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SEGHERIA VENEZIANA DEI BÈGOI",
+      "descrizione": "Settecentesca segheria che utilizza la forza dellʼacqua del vicino torrente Rabbiés, splendido esempio di antico macchinario ad acqua che valorizza il patrimonio culturale della Val di Rabbi. Attività libera e gratuita.",
+      "orario_inizio": "13:30",
+      "orario_fine": "14:30",
+      "luogo": "Rabbi Fonti Segheria Veneziana dei Bègoi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "PERCORSO KNEIPP: BENEFICI E BENESSERE",
+      "descrizione": "Scopri insieme a Margherita come fare il percorso Kneipp in modo corretto per trarne maggiori benefici e prova il massaggio plantare finale. 0463 985048",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:00",
+      "luogo": "San Bernardo - Percorso Kneipp",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "VISITA AL CASÈL DI SOMRABBI",
+      "descrizione": "Visita il caseificio turnario di Rabbi: un museo ristrutturato dal Parco dove gli antichi attrezzi raccontano la storia e la tradizione lattierocasearia. In collaborazione con Associazione di promozione sociale Molino Ruatti. Attività libera e gratuita",
+      "orario_inizio": "16:00",
+      "orario_fine": "19:00",
+      "luogo": "Somrabbi - Caseificio turnario di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "GITA SERALE IN E-BIKE CON CENA IN MALGA",
+      "descrizione": "Lasciati guidare da Gilberto in un’emozionante gita serale in E-Bike tra i paesaggi della Val di Rabbi. Pedalando al calar del sole raggiungerai Malga Fratte, dove ti attende una gustosa cena tipica. Vivi la magia del rientro in notturna, illuminato solo dal frontalino e dalle stelle. 348 6700814 - 335 6857295",
+      "orario_inizio": "18:30",
+      "orario_fine": null,
+      "luogo": "San Bernardo - Rabbi E-Bike",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MARTEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "PASSEGGIATA NATURALISTICA CON MARGHERITA",
+      "descrizione": "Immersione nei boschi e benessere naturalistico. Un’esperienza alla scoperta di piante spontanee (usi alimentari e benefici), *prenotazione obbligatoria entro le ore 18:00 del giorno precedente Dimaro Trentino Wild",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:00",
+      "luogo": "Malé Piazza Regina Elena, davanti al Municipio",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ZUMBA CON GABI",
+      "descrizione": "Una lezione di fitness musicale di gruppo che utilizza i ritmi e i movimenti della musica afro-caraibica, combinati con i movimenti tradizionali dell’aerobica. Gratuito Non si svolgerà il 5 e il 19 agosto",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:00",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "RACCONTI DELL’ANTICA CORTE",
+      "descrizione": "Un viaggio tra fiabe, leggende, musica tradizionale e strumenti d’epoca con l’Om dele Storie, per riscoprire le antiche tradizioni e l’arte dell’immaginazione. Attività al coperto, adatta a grandi e piccoli. Senza prenotazione. Non si svolgerà il 5 e il 19 agosto",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:00",
+      "luogo": "Malé Piazza Cesare Battisti",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "CROVIANA",
+      "titolo": "IL MONDO SOTTO I PIEDI",
+      "descrizione": "Un’investigazione guidata con microscopi portatili e lenti di ingrandimento per osservare da vicino gli abitanti del suolo. Alla scoperta di chi vive sotto i nostri piedi e delle relazioni che li collegano e rendono il suolo un ambiente vivo! A pagamento. www.mmape.it - 328 3285780",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Croviana MMApe",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "RAFTING PER FAMIGLIE",
+      "descrizione": "Divertimento formato famiglie tra le acque del Fiume Noce. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "11:00",
+      "orario_fine": "13:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "LABORATORIO CREATIVO",
+      "descrizione": "Argilla fra le mani e le forme della fantasia: sulle tracce di storie e leggende per immergersi nei segreti di una valle che racconta voci di avventure vicine al cuore di ognuno. A partire dai 6 anni. Gratuito. 0463 986608 - 0463 986113",
+      "orario_inizio": "16:30",
+      "orario_fine": "18:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "ESCURSIONE AL LAGO DELLE MALGHETTE",
+      "descrizione": "acile escursione guidata con Rino dalla Malga di Dimaro al Lago delle Malghette, passando per la Baita Ciocomiti. Un percorso tra boschi e panorami alpini fino al suggestivo lago, ideale per una pausa immersi nella natura. A pagamento. 0463 974840 – 379 2453074",
+      "orario_inizio": "08:45",
+      "orario_fine": "13:00",
+      "luogo": "Mestriago - Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "YOGA NEL BOSCO",
+      "descrizione": "Pratica lo yoga all’aria aperta con asana e pranayama (posture e respirazione) per sviluppare salute, gioia, armonia e positività. Non hai il tappetino? Non ti preoccupare! Ti viene fornito gratuitamente all’Ufficio turistico di Mestriago. A pagamento. 0463 974840 - 379 2453074 Non si svolgerà il 26 agosto",
+      "orario_inizio": "16:15",
+      "orario_fine": "17:30",
+      "luogo": "Almazzago - Piazza di San Rocco",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "ESCURSIONE LUNGO LA PISTA CICLABILE",
+      "descrizione": "Lungo la nostra straordinaria pista ciclopedonale, respirando l’aria del fiume Noce e ammirando i prati fioriti fino a raggiungere il favoloso MMape. Possibilità di noleggio bici. A pagamento. www.marilleva.it - 0463 757588",
+      "orario_inizio": "09:00",
+      "orario_fine": "13:00",
+      "luogo": "Marilleva 900 Piazzale Funivie",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "LABORATORIO DEL BOSCO",
+      "descrizione": "con l’aiuto di Lorenzo costruirete un piccolo lavoretto con materiali naturali. A pagamento. www.marilleva.it - 0463 757588",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Marilleva 1400 Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "Pellizzano",
+      "titolo": "YOGA SENSORIALE NEL BOSCO",
+      "descrizione": "Dopo una giornata lungo i sentieri ci si rilassa: mente e corpo non vedranno l’ora di farsi coinvolgere. A pagamento. www.marilleva.it 0463 757588",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:30",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "PONY CLUB IN FATTORIA",
+      "descrizione": "Un’esperienza autentica a contatto con la natura: cura degli animali, prime nozioni di equitazione e tanto divertimento in un ambiente sereno e protetto. (5+ anni). A pagamento",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Ossana - Piazza Venezia (alla fontana)",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "RACCONTI E LEGGENDE DEI BOSCHI DI UN TEMPO",
+      "descrizione": "Quando il sole tramonta, il bosco prende vita… tra racconti e leggende, creature magiche e atmosfere suggestive. Una camminata semplice ma unica, illuminata dalla luce delle torce. A pagamento. 0463 751183",
+      "orario_inizio": "14:30",
+      "orario_fine": "16:00",
+      "luogo": "Ossana Castello San Michele",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "FOGLIE: FORME, STORIE E MERAVIGLIE",
+      "descrizione": "Scopri il mondo delle piante osservando foglie, fiori e dettagli nascosti: ogni indizio ti guiderà passo dopo passo. Attraverso illustrazioni chiare e piccoli giochi di osservazione, impara a riconoscere le specie in modo semplice e divertente. A pagamento. www.boscoderniga.it - 353 3305004",
+      "orario_inizio": "10:00",
+      "orario_fine": "16:00",
+      "luogo": "Peio Fonti Parcheggio Malga Frattasecca",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "LA MALEDIZIONE DEL CASTELLO",
+      "descrizione": "Il castello dei bambini. Aiuta lo stregone del bosco a trovare tutti gli ingredienti per spezzare il maleficio che avvolge il castello! A pagamento. 349 7189621",
+      "orario_inizio": "09:45",
+      "orario_fine": "12:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SENTIERI NARRANTI",
+      "descrizione": "Un percorso lungo antichi sentieri che raccontano la storia del territorio, dalla vita quotidiana ai periodi di guerra e pace. Lungo il cammino, esperti accompagneranno i partecipanti alla scoperta del passato, del presente e del futuro del Parco, con approfondimenti sulla memoria e le tradizioni locali. In collaborazione con le associazioni di promozione sociale: “Pejo 1914-1918 La Guerra sulla Porta” e Molino Ruatti. Attività libera e gratuita.",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SALTA IN SELLA",
+      "descrizione": "Un’avventura in e-bike adatta a tutti, da Celledizzo fino a Peio Paese e al Centro Visitatori di Malga Talè. Durante questo percorso emozionante, sarai circondato da boschi, vette imponenti e panorami mozzafiato, regalandoti un’esperienza indimenticabile. A pagamento. 0463090518 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "14:00",
+      "orario_fine": "17:30",
+      "luogo": "Celledizzo - Pit Stop",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "Rabbi",
+      "titolo": "SUI SENTIERI DELLE STREGHE",
+      "descrizione": "Esplora l’affascinante mondo della magia e della stregoneria popolare. Scopri le intriganti storie e le credenze legate alle misteriose figure delle streghe scoprendo i segni che hanno lasciato sul territorio. A pagamento. 340 2311537",
+      "orario_inizio": "14:00",
+      "orario_fine": "17:00",
+      "luogo": "Peio Paese - Museo delle Streghe",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "Rabbi",
+      "titolo": "LEGNO, LANA E FANTASIA",
+      "descrizione": "Un’esperienza creativa e coinvolgente, progettata per stimolare la fantasia e le abilità manuali dei nostri giovani partecipanti. A pagamento. 339 6179380",
+      "orario_inizio": "15:00",
+      "orario_fine": "16:00",
+      "luogo": "Celledizzo - Museo Etnografico del legno",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LEZIONE DI PILATES",
+      "descrizione": "Movimento, postura e respirazione immersi nella natura. A pagamento. 0463 983000",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:20",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SAPORI D’ALPEGGIO: ALLA SCOPERTA DELLE ERBE SPONTANEE DI MONTAGNA",
+      "descrizione": "Escursione nei dintorni della malga in compagnia di Matteo, alla scoperta delle piante e dei fiori di montagna che caratterizzano l’estate in quota. Al termine dell’attività vi attenderà un gustoso aperitivo alle erbe spontanee. Possibilità di cenare in malga (cena esclusa dal prezzo dell’attività). Info e prenotazioni 345 1002503. *prenotazione obbligatoria entro le ore 18:00 del giorno precedente Lasciati guidare da Gilberto in un’emozionante gita serale in E-Bike tra i paesaggi della Val di Rabbi. Pedalando al calar del sole raggiungerai Malga Stablasolo, dove ti attende una gustosa cena tipica. Vivi la magia del rientro in notturna, illuminato solo dal frontalino e dalle stelle. 348 6700814 - 335 6857295",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:30",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SCOPRI I BENEFICI DELL’AROMATERAPIA SCIENTIFICA",
+      "descrizione": "Incontro dedicato alle proprietà delle tisane e degli oli essenziali prodotti alle Terme. A pagamento, prenotazione obbligatoria. 0463 983000. Non si svolgerà il 12 e il 26 agosto",
+      "orario_inizio": "15:00",
+      "orario_fine": "18:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI MERCOLEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SORGENTI DI FERRO, STORIE DI VALLE",
+      "descrizione": "Facile escursione guidata alla scoperta delle antiche sorgenti ferruginose della Val di Rabbi, tra natura, storia e leggende. Il percorso racconta il ruolo di queste acque nell’economia locale, dai mulini agli stabilimenti termali, e si conclude con una sosta all’Antica Fonte delle Terme di Rabbi per degustare la caratteristica acqua ricca di ferro, CO₂ e oligoelementi. Attività libera e gratuita",
+      "orario_inizio": "18:30",
+      "orario_fine": "20:30",
+      "luogo": "San Bernardo - Rabbi E-Bike",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "GITA SERALE IN E-BIKE CON CENA IN MALGA",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "PER FARE IL TAVOLO, CI VUOLE IL FIORE",
+      "descrizione": "Un laboratorio dove ogni bambino diventa un piccolo artigiano del legno. Partendo dai singoli pezzi assembleremo un vasetto, trasformando materiali semplici in qualcosa di unico. Infine, via libera alla fantasia: un simpatico animale del bosco in legno darà il tocco finale alla tua creazione. A pagamento. www.apslalveare.it/fattorelegno - 328 3285780",
+      "orario_inizio": "10:00",
+      "orario_fine": "11:30",
+      "luogo": "Malé Fattore Legno",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "UN GIORNO IN PANIFICIO",
+      "descrizione": "Mani in pasta per un pomeriggio da piccoli (e grandi) fornai! Fatti conquistare dal fascino dell’arte bianca: dalla ricetta alla preparazione artigianale, fino alla degustazione finale dei biscotti appena sfornati... fatti proprio da te! Laboratorio NON adatto a celiaci o intolleranti al glutine e frutta a guscio. A pagamento, a numero chiuso e con prenotazione entro le ore 10:00 del giorno stesso. 338 2798227",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:00",
+      "luogo": "Malé Panificio Paternoster, Via Trento, 9",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "DALLA TERRA ALLE ERBE SELVATICHE. BIODIVERSITÀ E CULTURA ALPINA",
+      "descrizione": "Un’esplorazione guidata per scoprire come il suolo, con la sua complessità eco-culturale, dà vita alla biodiversità vegetale. Scopriremo usi tradizionali e leggende legati ad erbe e alberi della cultura alpina. A pagamento. www.mmape.it - 328 3285780",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Arnago Chiesa",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "STORYLAB: IN VIAGGIO CON MALVINA DELLA TORRE",
+      "descrizione": "Illustriamo con il teatrino e l’argilla le più belle scene sulle tracce dei Grimm. Età consigliata dai 6 ai 99 anni. Il laboratorio si terrà anche in caso di maltempo. Attività a numero chiuso, prenotazioni al 349 6369843 Naturale Adamello Brenta. A pagamento. 0463 986608 - 0463 986113 ore 10:00 - 12:00 Dimaro Segheria Veneziana",
+      "orario_inizio": "16:30",
+      "orario_fine": "18:00",
+      "luogo": "Malé Piazza Cesare Battisti",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ARRAMPICATA IN PIAZZA",
+      "descrizione": "L’emozione della scalata nel cuore di Malé! Mettiti alla prova e sfida la gravità su una parete artificiale professionale. Un’attività divertente e sicura, adatta a bambini e adulti, sotto lo sguardo esperto delle Guide Alpine della Val di Sole. Attività all’aperto, in caso di pioggia l’attività non sarà svolta. Gratuito e senza prenotazione. Non si svolgerà il 13 agosto. Il 20 agosto sarà anticipata alle ore 17:00",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "CROVIANA",
+      "titolo": "SI FA PRESTO A DIRE APE",
+      "descrizione": "Oltre il miele c’è un mondo! Fra fiori, pozze d’acqua e nel terreno, cercheremo e conosceremo le api più note e le cugine sconosciute: solitarie, colorate e dalle abitudini sorprendenti, per imparare a proteggere questi piccoli giganti della biodiversità. In caso di pioggia si svolge in luogo coperto. A pagamento. www.mmape.it - 328 3285780",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Croviana Mmape",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "E-BIKE TOUR A MADONNA DI CAMPIGLIO",
+      "descrizione": "Escursione in E-bike su sterrato destinazione Madonna di Campiglio all’interno del Parco",
+      "orario_inizio": "08:15",
+      "orario_fine": "12:00",
+      "luogo": "Folgarida - Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "LE STORIE DI LEGNO",
+      "descrizione": "Ci sono vari modi per lavorare il legno, uno dei più belli è quello di sapersi costruire un balocco. Costruisci, insieme all’Om de le Storie, il protagonista di uno dei suoi racconti di montagna. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "16:00",
+      "orario_fine": "22:00",
+      "luogo": "Mestriago - Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "UN TRAMONTO DOLOMITICO",
+      "descrizione": "Vuoi vivere lo spettacolo più bello della natura al cospetto delle Dolomiti di Brenta? I protagonisti sono 3: il sole, le montagne e le tue emozioni… Sali in quota con Roberto, il nostro accompagnatore e osserva i colori del tramonto. Al Rifugio Orso Bruno ti aspetta una gustosa apericena con i tradizionali tortei de patate. A pagamento. 0463 974840 - 379 2453074 Non si svolgerà il 27 agosto",
+      "orario_inizio": "09:00",
+      "orario_fine": "11:30",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "LA FATTORIA DI ANNA: PROFUMI CROCCANTI",
+      "descrizione": "Preparerete dei cracker gustosi e croccanti, resi più gustosi dalle erbette aromatiche e preparerete il burro impreziosito da fiori edibili. A pagamento. www.marilleva.it 0463 757588",
+      "orario_inizio": "14:15",
+      "orario_fine": "17:00",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "MINIGOLF E TIRO CON L’ARCO",
+      "descrizione": "Siete pronti a una sfida fino all’ultima buca? E a fare centro nei bersagli con l’arco? Famiglie, grandi e piccini, tutti avranno la possibilità di divertirsi! A pagamento. www.marilleva.it - 0463 757588",
+      "orario_inizio": "16:00",
+      "orario_fine": "17:00",
+      "luogo": "Mezzana - Caseificio Sociale Presanella",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "VISITA AL CASEIFICIO SOCIALE PRESANELLA",
+      "descrizione": "Per conoscere la tipica lavorazione casearia: dal latte al formaggio. Gratuito. www.marilleva.it - 0463 757588 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "INCONTRO DI MICOLOGIA",
+      "descrizione": "Un esperto del Gruppo Micologico Bresadola vi aiuterà a esaminare i funghi raccolti e conoscerne tutte le caratteristiche.",
+      "orario_inizio": "17:00",
+      "orario_fine": "19:00",
+      "luogo": "Mezzana Sala Rombal, sotto ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "YOGA SENSORIALE NEL BOSCO",
+      "descrizione": "Dopo una giornata lungo i sentieri ci si rilassa: mente e corpo non vedranno l’ora di farsi coinvolgere. A pagamento. www.marilleva.it 0463 757588",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:30",
+      "luogo": "Marilleva 1400 Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "NEGOZI IN FESTA",
+      "descrizione": "Il consorzio turistico e i negozi di Mezzana vogliono rallegrare il dopocena con musica, spettacoli e divertimento",
+      "orario_inizio": "20:30",
+      "orario_fine": "23:00",
+      "luogo": "Mezzana - Lungo la strada principale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "YOGA AL PARCO - RISVEGLIO MUSCOLARE",
+      "descrizione": "Inizia la giornata respirando l’aria fresca del mattino, tra il verde e la quiete del parco. Un dolce risveglio per corpo e mente, tra movimenti armoniosi e relax profondo. A pagamento. 0463 751183",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:30",
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "IL POPOLO DELL’ERBA",
+      "descrizione": "Tra i fili d’erba e il fitto del bosco si nasconde una metropoli pulsante di vita. Andremo alla scoperta di un ecosistema in miniatura dove ogni creatura ha un ruolo vitale, a guidarci saranno solo la curiosità e il nostro retino! A pagamento. www.boscoderniga.it 353 3305004",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Ossana - Piazza Venezia (alla fontana)",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "RISVEGLIO ALPINO E MOVIMENTO CONSAPEVOLE",
+      "descrizione": "Una pratica mattutina di movimento e respiro per risvegliare il corpo, ritrovare energia e benessere attraverso fluidità, mobilità e ascolto corporeo. Attività libera e gratuita. 0463 090518. Peio Fonti - Piazzale Terme il 13 e il 20 agosto Cogolo - Piazza Monari il 6 e il 27 agosto *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:30",
+      "luogo": "Val di Peio",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "MAGIE DI LANA",
+      "descrizione": "Laboratorio didattico per adulti che offre l’opportunità di imparare l’infeltrimento della lana con ago e creare originali decorazioni. A pagamento. 339 6179380",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Celentino - Casa dell’Ecomuseo",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "EN GIRO AL CASEL DE PÉJ",
+      "descrizione": "Visita guidata all’ultimo caseificio turnario del Trentino per capirne il funzionamento e assaporare i suoi genuini prodotti caseari. Visitare il caseificio significa immergersi in una tradizione antica che caratterizzava tutte le comunità montane e valorizza il principale prodotto legato alla zootecnia, il latte. A pagamento. 0463 090518 - 0463 753100",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:00",
+      "luogo": "Peio Paese - Caseificio Turnario",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "LA NOTTE DELLE STREGHE",
+      "descrizione": "Un’esperienza a carattere etnografico immersi nelle leggende popolari di un luogo magico immerso nella natura. Un ritorno alle antiche origini della magia nell’ora delle streghe. Iniziativa comprensiva dell’ingresso al museo delle streghe. A pagamento. 340 2311537",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Peio Paese - Museo delle Streghe",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LEZIONE DI YOGA",
+      "descrizione": "Lezione di yoga immersi nella natura. A pagamento. 0463 983000",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:20",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "PERCORSO KNEIPP: BENEFICI E BENESSERE",
+      "descrizione": "Scopri insieme a Margherita come fare il percorso Kneipp in modo corretto per trarne maggiori benefici e prova il massaggio plantare finale. 0463 985048",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "San Bernardo - Percorso Kneipp",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "BENESSERE E NATURA: IL CONNUBIO PERFETTO!",
+      "descrizione": "Con una piccola SPA a cielo aperto potrai prenderti cura del tuo benessere circondato dalla natura: proverai l’esperienza del barefooting, il pediluvio floreale e alla fine un meraviglioso massaggio plantare. A pagamento. 0463 985048",
+      "orario_inizio": "13:00",
+      "orario_fine": "16:00",
+      "luogo": "Rabbi Fonti Segheria Veneziana dei Bégoi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "MOLINO RUATTI TRA STORIA E NATURA",
+      "descrizione": "Visita il Molino Ruatti alla scoperta della tradizione alimentare del territorio, con laboratorio di autoproduzione con le piante del nostro orto. Prenotazione entro le 12:00 del giorno stesso 353 4264921 - 0463 903166",
+      "orario_inizio": "17:00",
+      "orario_fine": null,
+      "luogo": "Loc. Pracorno - Molino Ruatti",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "OCCHIO ALLA FAUNA",
+      "descrizione": "Alla ricerca degli animali del Parco. A volte non ce ne accorgiamo nemmeno: gli animali si confondono, mutano in simbiosi con il bosco. Con lʼaiuto degli esperti del Parco, binocolo e cannocchiale cercheremo di scovarli assieme. Gratuito. 0463 909774",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:00",
+      "luogo": "Rabbi Fonti - Centro Visita Stablét",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "MINDFULNESS E ASTRONOMIA",
+      "descrizione": "Respira sotto le stelle. Esperienza serale tra respirazione, rilassamento e osservazione del cielo stellato. 0463 983000",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:00",
+      "luogo": "Rabbi Fonti Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI GIOVEDÌ"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "VISITA GUIDATA AL CASTELLO",
+      "descrizione": "comprensiva della mostra “Da Warhol a Bansky”. A pagamento, su prenotazione www.visitvaldisole.it",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "Pellizzano",
+      "titolo": "SULLE VIE DELL’ACQUA",
+      "descrizione": "",
+      "orario_inizio": "14:00",
+      "orario_fine": "17:00",
+      "luogo": "Magras - Piazza centrale davanti al bar",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "YOGA NEL VERDE",
+      "descrizione": "Risveglio muscolare nel bosco con lezione di yoga per principianti, immersi nella natura. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Monclassico - Stazione Ferroviaria",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "SKATE ART",
+      "descrizione": "Un laboratorio creativo di pittura su skateboard. Potrete personalizzare la vostra tavola con i colori acrilici, trasformandola in un’opera d’arte e creare un ricordo indimenticabile! www.marilleva.it 0463 757588",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Mezzana Biblioteca Comunale",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "KIDS BIKE PARK",
+      "descrizione": "Tapis roulant, salite, discese e parabole… tutto in mountain bike! A pagamento. www.marilleva.it - 0463 757588",
+      "orario_inizio": "15:00",
+      "orario_fine": "18:00",
+      "luogo": "Marilleva 1400 Campo Scuola",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "PASTICCIANDO IN FATTORIA",
+      "descrizione": "Mani in pasta e tanta allegria! Scopri i sapori e i prodotti autentici della fattoria preparando deliziosi dolcetti in compagnia. Dai 3 anni in su. A pagamento. 0463 751183",
+      "orario_inizio": "17:00",
+      "orario_fine": "19:00",
+      "luogo": "Pellizzano - Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "PELLIZZANO SI RACCONTA: TRA PASSI LENTI STORIE ANTICHE E SAPORI LOCALI",
+      "descrizione": "Passeggia tra le vie del borgo e lasciati affascinare da storia, tradizione e curiosità. Un’esperienza autentica che si conclude con un piacevole momento dedicato ai sapori del territorio. A pagamento. 0463 751183",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "VISITA GUIDATA AL COLLE TOMINO E AL PARCO DELLA PACE",
+      "descrizione": "Scopri alcuni dei luoghi culturali di Ossana con Lorenzo. Gratuito. 346 3257113",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Ossana - Bosco Derniga",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "I GIARDINI DEL CASTELLO",
+      "descrizione": "Come nasce un fiore? Vieni a sporcarti le mani con la terra e portati a casa una piantina in un vaso creato da te. A pagamento www.boscoderniga.it - 353 3305004 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente La tua avventura inizia qui Your adventure begins here Ideazione grafica Nitida Immagine - Impaginazione STUG - Illustrazioni Simone Ferriani",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "PARCO SOSPESO SUGLI ALBERI",
+      "descrizione": "Un percorso ad anello di mezza giornata tra larici e panorami alpini, con casette magiche sospese tra gli alberi, piste di biglie e quattro personaggi da scoprire tappa dopo tappa. Per bambini dai 5 anni, nel cuore del Parco Nazionale dello Stelvio a Peio. A half-day loop trail through larch forests and alpine scenery, with magical treehouses, marble runs and four different friendly characters to discover. For children from age 5 and up, in the heart of the Stelvio National Park in Peio. lecasevolanti.com",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "IL GUSTO DELLA STORIA: MERENDA AL CASTELLO DI SAN MICHELE",
+      "descrizione": "Visita guidata al castello seguita da un momento di relax con una gustosa merenda a km 0. A pagamento, su prenotazione www.visitvaldisole.it Non si svolgerà il 7 e il 28 agosto",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:30",
+      "luogo": "Ossana - Castello di San Michele",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "VERMIGLIO UN PAESE DA FILM",
+      "descrizione": "Visita guidata tra le frazioni di Vermiglio, il borgo trentino che ha ispirato e ospitato le riprese dell’omonimo film, vincitore del Leone d’Argento di Venezia e ben 7 David di Donatello: un viaggio tra natura, memoria e cinema. A pagamento. Prenotazione obbligatoria al numero 0463 758200",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Vermiglio - Ufficio Informazioni",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SCHEGGE DI PIETRA, CORNA DI CAMOSCIO",
+      "descrizione": "Laboratorio per bambini dai 5 ai 12 anni con un archeologo, alla scoperta della preistoria nelle valli del Parco. I partecipanti conosceranno la vita degli antichi abitanti e realizzeranno un piccolo manufatto con tecniche preistoriche da portare a casa. A pagamento, senza prenotazione. 0463 970773 Esperienza guidata nella natura della Val di Rabbi con una naturopata, tra respirazione consapevole, camminata a piedi nudi, momenti di silenzio e pratiche ispirate al Metodo Kneipp. Un percorso dedicato al benessere e alla riconnessione con la natura, ideale per iniziare la giornata con energia e relax. A pagamento. 349 4364043 – 0463 985048",
+      "orario_inizio": "16:00",
+      "orario_fine": "17:30",
+      "luogo": "Cogolo - Centro Visitatori Parco",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ESPLORATORI DELLA NATURA",
+      "descrizione": "Un’avventura scientifica per viaggiatori curiosi. A pagamento. 0463 909774 Non si svolgerà il 7 e il 21 agosto",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:00",
+      "luogo": "Peio Azienda Agricola Lualdi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ACTIVATION BODY WALKING",
+      "descrizione": "Passeggiata attiva nel bosco con esercizi guidati da Federica, fisioterapista e assaggio di acqua termale. A pagamento. 0463 983000",
+      "orario_inizio": "08:30",
+      "orario_fine": "09:20",
+      "luogo": "Rabbi Fonti - Hall Hotel Terme di Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "PICCOLI MONTANARI",
+      "descrizione": "Laboratorio per bambini, dedicato ai più piccoli per vivere e riscoprire la montagna autentica, attraverso natura, creatività e tradizioni. Attività ad offerta, senza prenotazione.",
+      "orario_inizio": "09:00",
+      "orario_fine": "10:00",
+      "luogo": "Rabbi Fonti Parcheggio Coler",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI VENERDÌ"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "LA VITA DEL CONTADINO DI MONTAGNA",
+      "descrizione": "",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Rabbi Fonti Punto Info Parco",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI SABATO"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LEZIONE DI PILATES",
+      "descrizione": "",
+      "orario_inizio": "14:15",
+      "orario_fine": "15:15",
+      "luogo": "Rabbi Bagni Hall Hotel Rabbi",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI SABATO"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "IL RISVEGLIO NEL BOSCO",
+      "descrizione": "",
+      "orario_inizio": "15:00",
+      "orario_fine": "18:00",
+      "luogo": "Rabbi Fonti Mercatino",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI SABATO"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "WALK EXPERIENCE",
+      "descrizione": "Facile escursione adatta alle famiglie alla scoperta dell’incontaminata Val Meledrio. Tra boschi, ruscelli ed aria pulita si passerà dai masi di Ronzola con la loro vista mozzafiato. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "15:30",
+      "orario_fine": "18:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI SABATO"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "VISITA GUIDATA ALLA CHIESA DI SANTA MARIA MADDALENA",
+      "descrizione": "Scopri la chiesa affrescata dai Baschenis con Lorenzo. Gratuito. 346 3257113 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI SABATO"
+    },
+    {
+      "comune": "Dimaro",
+      "titolo": "E-BIKE TOUR ALTA VAL DI SOLE",
+      "descrizione": "",
+      "orario_inizio": "08:15",
+      "orario_fine": "12:15",
+      "luogo": "Dimaro Val di Sole Bike Tour",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "Pellizzano",
+      "titolo": "ESCURSIONE DI BENVENUTO",
+      "descrizione": "In Val Meledrio tra i suoni del bosco e il gorgoglio del torrente in compagnia delle Guide del territorio che vi introdurranno il ricco programma settimanale di località. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "17:00",
+      "orario_fine": "19:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "BABY DANCE CON LORENZO",
+      "descrizione": "Musica, balli e sorrisi per una serata di pura allegria dedicata ai più piccoli! Attività libera e gratuita *prenotazione obbligatoria entro le ore 18:00 del giorno precedente *prenotazione obbligatoria entro le ore 18:00 del giorno precedente un viaggio nel cuore della mela Scopri lo spazio pensato per regalarti una vera Melinda experience. MondoMelinda è il centro visitatori del Consorzio Melinda nato per farti conoscere i segreti della mela dal gusto inconfondibile. Potrai acquistare le tue mele preferite, gli snack naturali Melinda, tante altre bontà tipiche del Trentino e scoprire la nuova Melinda Collection. Un’opportunità unica per soddisfare tutte le curiosità sulla coltivazione, selezione e conservazione della mela, l’unica al mondo che viaggia in Funivia.",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:00",
+      "luogo": "",
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "MONDOMELINDA",
+      "descrizione": "Segno di Predaia (TN) Via della Cooperazione, 21",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "NEGOZIO",
+      "descrizione": "Tel. +39 0463.671101 mondomelinda@melinda.it",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "VISITE GUIDATE",
+      "descrizione": "Tel. + 39 0463 830133 prenota.melinda@visitvaldinon.it",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "SCOPRI DI PIÙ",
+      "descrizione": "melinda.it",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "COSA METTIAMO NEL CESTINO… ESCURSIONI MICOLOGICHE",
+      "descrizione": "Partecipa alle escursioni nei boschi della Val di Sole alla ricerca dei funghi. Ogni specie ha caratteristiche legate al proprio habitat e, grazie all’aiuto del micologo, avrai la possibilità di conoscere meglio il magico mondo dei funghi. Obbligatorio cestino o apposito zaino e coltellino. A pagamento. Prenotazione obbligatoria al sito www.visitvaldisole.it/it/esperienze/ cosa-mettiamo-nel-cestino o presso gli Uffici Informazioni di valle.",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "MOSTRE MICOLOGICHE",
+      "descrizione": "8 - 9 agosto COGOLO, Sede Parco dello Stelvio 10:00-12:30 / 14:00-19:00 22 - 23 agosto RABBI, Canonica San Bernardo 10:00-12:30 / 14:00-19:00 5 - 6 settembre OSSANA, Scuola Media 09:30-12:30 / 14:00-18:30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "ricorrente",
+      "ricorrenza": "OGNI DOMENICA"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SAGRA DI ARNAGO",
+      "descrizione": "Ore 21.00 Serata danzante con i RockJāger a seguire musica con Dj Cristopher Preti",
+      "orario_inizio": "21:00",
+      "orario_fine": "00:00",
+      "luogo": "Arnago",
+      "tipo": "data_specifica",
+      "data": "2026-08-01"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "CONCERTO COVER BAND DEI QUEEN - A NIGHT AT THE OPERA",
+      "descrizione": "In caso di maltempo il concerto si terrà c/o teatro comunale di Dimaro fino a esaurimento posti",
+      "orario_inizio": "21:15",
+      "orario_fine": "23:00",
+      "luogo": "Piazza Madonna della Pace",
+      "tipo": "data_specifica",
+      "data": "2026-08-01"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "L’ALLEGRA FATTORIA",
+      "descrizione": "Una giornata speciale tra animali e natura per grandi e piccini. Animazione, giochi e piatti tipici della tradizione locale. In programma anche le sfide del Triathlon del Boscaiolo. www.marilleva.it - 0463 757588",
+      "orario_inizio": "10:00",
+      "orario_fine": "00:00",
+      "luogo": "Mezzana - Strada Fiume Noce",
+      "tipo": "data_specifica",
+      "data": "2026-08-01"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "FESTA DELL’ARTE",
+      "descrizione": "Ore 15:00 Esibizione della Nuova Era Film Academy; a seguire, alle ore 17:00, Enrico Lo Verso porta in scena “Uno Nessuno Centomila” dal capolavoro di Pirandello. Servizio navetta disponibile c/o parcheggio Ufficio Info Pellizzano.",
+      "orario_inizio": "15:00",
+      "orario_fine": "18:00",
+      "luogo": "Pellizzano - Anfiteatro Vegetale Termenago",
+      "tipo": "data_specifica",
+      "data": "2026-08-01"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI CELLEDIZZO",
+      "descrizione": "Festeggiamenti patronali tra tradizione e convivialità.",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Celledizzo - Campo sportivo",
+      "tipo": "data_specifica",
+      "data": "2026-08-01"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SAGRA DI ARNAGO",
+      "descrizione": "Il pomeriggio si apre alle ore 14:30 con la S. Messa e la solenne processione. Alle ore",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malè Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ALPEN CLASSICA FESTIVAL",
+      "descrizione": "New Project Orchestra con Fabrizio Bosso, celebrano il mito di Miles Davis. Un concerto potente e dinamico che fonde l’energia delle marching band di New Orleans con il funk, dove la tromba guida un universo sonoro in continua trasformazione",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Monclassico",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "FESTA DELLE MERIDIANE",
+      "descrizione": "con concerto di Alpen Classica Festival con Italian Tuba Quartet. 0463 986608 - 0463 986113",
+      "orario_inizio": "05:30",
+      "orario_fine": "07:00",
+      "luogo": "Alpe Daolasa",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "CONCERTO ALL’ALBA IN QUOTA",
+      "descrizione": "Le melodie del Gruppo GNUQuartet accolgono il nuovo giorno. Per l’occasione, risalite in telecabina con tariffa speciale disponibili dalle 04:30 alle 05:00 e dalle 07:00 alle 12:45. Prenotazione obbligatoria entro le 12:00 del giorno precedente. 0463 974840",
+      "orario_inizio": "10:00",
+      "orario_fine": "00:00",
+      "luogo": "Mezzana - lungo la strada del Fiume Noce",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "L’ALLEGRA FATTORIA",
+      "descrizione": "Una giornata speciale tra animali e natura, per grandi e piccini. Spettacoli, animazione, giochi e piatti della tradizione locale. www.marilleva.it - 0463 757588",
+      "orario_inizio": "14:30",
+      "orario_fine": "21:00",
+      "luogo": "Arnago",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "FESTA ALPINA FAZZON",
+      "descrizione": "Celebrazione della S. Messa seguita dal tradizionale rancio in compagnia del Gruppo Alpini. *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "11:30",
+      "orario_fine": "16:00",
+      "luogo": "Loc. Fazzon Chiesetta",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "PIAZZA IN MUSICA",
+      "descrizione": "Serata di note live con l’energia dei Rusty Bucks nel cuore del paese.",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:00",
+      "luogo": "Pellizzano Piazza Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "CARROZZONE IN PIAZZA",
+      "descrizione": "Risate e magia per bambini e genitori con l’esilarante spettacolo PATATRAC del Clown Cotoletta.",
+      "orario_inizio": "17:00",
+      "orario_fine": "00:00",
+      "luogo": "Ossana - Piazza Venezia",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "WATER MUSIC PARTY",
+      "descrizione": "Il festival celebra la birra agricola e il rock. Un intero pomeriggio di balli e canti con l’esibizione di tre formazioni musicali d’eccezione. Info: www.pontedilegnotonale.com",
+      "orario_inizio": "12:00",
+      "orario_fine": "17:00",
+      "luogo": "Passo Tonale Laghetto Valbiolo",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "LEGGENDE E FIABE TRENTINE",
+      "descrizione": "Un incantevole viaggio teatrale dedicato ai più piccoli alla scoperta del folklore locale. Ingresso libero.",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Passo Tonale - Sala Presanella",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI CELLEDIZZO",
+      "descrizione": "Solenne processione patronale accompagnata dalle note del Corpo Bandistico Val di Pejo. La formazione torna a far vibrare il cuore del Trentino con un raffinato itinerario sonoro che spazia dalle colonne sonore ai capolavori classici, regalando un’esperienza densa di pathos ai piedi dell’Ortles-Cevedale.",
+      "orario_inizio": "19:00",
+      "orario_fine": "23:00",
+      "luogo": "Celledizzo - Campo sportivo",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DEL FITNESS: NORDIC WALKING CON NICOLA",
+      "descrizione": "Un itinerario guidato per apprendere le tecniche di base di questa disciplina rigenerante. Attrezzatura specifica fornita dall’organizzazione. Abbigliamento comodo consigliato. Posti limitati, a pagamento, su prenotazione al 328 4564183 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:00",
+      "luogo": "Dimaro - Teatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TEATRO BAMBINI - IL LUPO",
+      "descrizione": "Ingresso Libero. 0463 986608 - 0463 986113",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:00",
+      "luogo": "Mestriago - piazzetta adiacente al municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "TRAMONDI: CLOWN E GIOCOLERIA",
+      "descrizione": "Un coinvolgente spettacolo di arte circense dedicato al divertimento di grandi e piccini nel cuore del paese.",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Marilleva 1400 Chiesa della Trasfigurazione",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "CONCERTO DI CANTI DELLA MONTAGNA",
+      "descrizione": "con il Coro Rondinella di Mezzana",
+      "orario_inizio": "16:30",
+      "orario_fine": "17:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "PATATRAC CON IL CLOWN COTOLETTA",
+      "descrizione": "Un pomeriggio di risate e magia pensato per l’intrattenimento dei più piccoli. Ingresso gratuito.",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Cogolo Sala del Parco Nazionale dello Stelvio",
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "Festival internazionale: proiezione film “Romanzo d’amore” Regia di Duilio Coletti. Sulla vita del pianista e compositore Enrico Toselli. Gratuito fino a esaurimento posti",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-02"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "MUSICA IN CHIESA",
+      "descrizione": "Attività Gratuita. 0463 986608 - 0463 986113",
+      "orario_inizio": "14:00",
+      "orario_fine": "16:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-03"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "CONCERTO FOR PEACE A LUME DI CANDELA",
+      "descrizione": "con Cast Internazionale",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Dimaro Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-03"
+    },
+    {
+      "comune": "Mestriago",
+      "titolo": "LE VOCI DELL’ORGANO",
+      "descrizione": "",
+      "orario_inizio": "10:30",
+      "orario_fine": "12:00",
+      "luogo": "Pellizzano - Chiesa Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-03"
+    },
+    {
+      "comune": "Mestriago",
+      "titolo": "DALLO SPAZIO AL CUORE DELLA MATERIA",
+      "descrizione": "Conferenza inaugurale con il Prof. Stefano Spagocci: “La Fisica di Star Trek”. Un’occasione di approfondimento tra scienza e immaginario",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Pellizzano Auditorium comunale 3° piano",
+      "tipo": "data_specifica",
+      "data": "2026-08-03"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SPETTACOLO KANTICO",
+      "descrizione": "Una performance monumentale tra cielo e fuoco, che ripercorre la vita del Patrono d’Italia attraverso un linguaggio visivo potente con la partecipazione di nove acrobati",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo - Piazza Monari",
+      "tipo": "data_specifica",
+      "data": "2026-08-03"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "CONCERTO GRIGORY SOKOLOV",
+      "descrizione": "Prenotazione necessaria. 0463 985048. Ingresso ad offerta libera, min. 15,00€",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "San Bernardo Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-03"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LA LUCIOLADA",
+      "descrizione": "Marcia non competitiva di 4,5 km tra il centro di Malé e i boschi circostanti, aperta a tutti gli amanti dello sport e della natura. Ritrovo e iscrizioni alle ore 19:00 in Piazza Regina Elena (quota €10), partenza alle 20:00. Prevista anche una mini run gratuita per bambini. Evento organizzato dall’Atletica Valli di Non e Sole con il supporto delle associazioni locali",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:10",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "Concerto di pianoforte di Alexander Paley",
+      "orario_inizio": "19:00",
+      "orario_fine": "21:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "BABY DANCE E BOLLE DI SAPONE",
+      "descrizione": "",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Dimaro - Teatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "LILIAN MAGIC SHOW",
+      "descrizione": "Illusioni e magia con la fatina Lilly",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mezzana - Piazzetta Benvenuti",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "DA ANIMA AD ANIMA",
+      "descrizione": "Incontro esperienziale con l’autrice Giovanna Garbuio “Nuovo Ho’oponopono Occidentale, percependo la perfezione, miglioro la realtà”. Parcheggio gratuito dalle ore 17:00. Ingresso libero e gratuito. Gli incontro si terranno anche in caso di pioggia",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:30",
+      "luogo": "Lago dei Caprioli Ristorante Chalet Lago dei Caprioli",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "PROIEZIONE FILMATI DOCUMENTARI SULLA VAL DI SOLE",
+      "descrizione": "Un viaggio visivo attraverso i racconti del territorio a cura di Claudio Redolfi. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "MARCIA DELL’OSPITE",
+      "descrizione": "Un itinerario enogastronomico di 5 km pensato per tutta la famiglia alla scoperta delle tradizioni della Val di Pejo. Al termine della passeggiata, musica e sapori locali vi attendono nel Piazzale delle Terme. Intrattenimento musicale con Rustle Up e intrattenimento per bambini con Axaloth animazioni. A pagamento 0463 090518",
+      "orario_inizio": "09:30",
+      "orario_fine": "16:00",
+      "luogo": "Peio Fonti - Piazzale Terme",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SCOPRI I BENEFICI DELL’AROMATERAPIA SCIENTIFICA",
+      "descrizione": "Incontro dedicato alle proprietà delle tisane e degli oli essenziali prodotti alle Terme. A pagamento, prenotazione obbligatoria allo 0463 983000 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Rabbi Bagni Hall Hotel",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "RABBI IN MUSICA",
+      "descrizione": "Concerto con il gruppo Metalotzi",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "San Bernardo - piazzale scuole elementari",
+      "tipo": "data_specifica",
+      "data": "2026-08-05"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "I CONCERTI DEL MATTINO",
+      "descrizione": "Un raffinato appuntamento che coniuga spiritualità e arte attraverso le note dell’organetto di Tiziano Rossi. Mentre la musica avvolge le navate, Fabiana vi accompagnerà alla scoperta dei tesori storico-artistici racchiusi nell’edificio sacro per un’esperienza intensa tra note d’autore e bellezza Marilleva 1400 Zona Bar International",
+      "orario_inizio": "10:30",
+      "orario_fine": "11:30",
+      "luogo": "Arnago Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "BAGNO SONORO",
+      "descrizione": "Un’esperienza rigenerante con Stefano Benchimol tra le vibrazioni ancestrali del gong e di altri strumenti. Una serata di benessere per ritrovare l’armonia tra corpo e spirito. A pagamento. Su prenotazione. 349 3854405",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:00",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CONCERTO CANDLE LIGHT SOTTO LE STELLE",
+      "descrizione": "L’incanto del cielo stellato incontra le melodie del pianista Tiziano Rossi e del sassofono, in una suggestiva atmosfera illuminata solo dalla luce delle candele. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:00",
+      "luogo": "Malé Palestra scuole medie",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "ESTATE DA RIDERE",
+      "descrizione": "Appuntamento con la comicità d’autore insieme a Chiara Lippi, protagonista del palco di Zelig, per una serata all’insegna del divertimento. A pagamento. 0463 986608 - 0463 986113 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "22:30",
+      "orario_fine": "23:30",
+      "luogo": "Malé Località Pineta",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "APERITIVO IN MUSICA CON IL DUO LINO E VALERIA",
+      "descrizione": "",
+      "orario_inizio": "21:15",
+      "orario_fine": "23:15",
+      "luogo": "Folgarida - Centro Congressi",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "CACCIA AL TESORO CON LORENZO (5+)",
+      "descrizione": "Indizi, enigmi e avventura: mettiti alla prova e parti alla ricerca del tesoro nascosto… il premio finale ti aspetta! A pagamento. 0463 751183",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "NADIA E LA SUA FISARMONICA",
+      "descrizione": "Serata di note live e ballo liscio nel cuore del centro storico",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Pellizzano Parco giochi",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "OSSANA MEDIEVALE",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Pellizzano Piazza Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "SETTIMANA DEL FITNESS: TOTAL BODY CON GABY",
+      "descrizione": "Un appuntamento dedicato all’energia e al movimento nel cuore del paese. La sessione, guidata dall’istruttrice Gaby, propone un allenamento completo a ritmo di musica per tonificare il corpo in modo coinvolgente. Attività aperta a tutti.",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "NOTE TRA I PORTICI",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:00",
+      "luogo": "Piazza Venezia",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "Peio Fonti",
+      "titolo": "PRESENTAZIONE LIBRO PINO DELLASEGA",
+      "descrizione": "",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "Rabbi Fonti",
+      "titolo": "AQUAVOCE: ARMONICI CANTORI SOLANDRI",
+      "descrizione": "",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-06"
+    },
+    {
+      "comune": "Rabbi Fonti",
+      "titolo": "AGOSTO",
+      "descrizione": "",
+      "orario_inizio": "10:30",
+      "orario_fine": "12:00",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "OSSANA ∙ VAL DI SOLE",
+      "descrizione": "ore 18:00 - 00:00 Dimaro",
+      "orario_inizio": "18:30",
+      "orario_fine": "19:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "LA LEGGENDA DI OLINDA",
+      "descrizione": "Una leggenda narra che il Castello di Caldes fece da sfondo al contrastato amore tra la giovane Olinda, figlia del signore del castello, e il menestrello di corte Arunte. Durante l’attività la loro storia viene raccontata attraverso la tecnica del kamishibai e la scoperta degli ambienti del castello legati alla leggenda. A pagamento, su prenotazione www.visitvaldisole.it",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DEL FITNESS: ACQUAFITNESS IN PISCINA",
+      "descrizione": "Sessione di ginnastica in acqua guidata dall’energia di Gabi. A pagamento. Prenotazione obbligatoria presso l’ufficio info in Piazza Regina Elena. 333 8328216",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DEL FITNESS: SERATA “IO RISPETTO IL CICLISTA”",
+      "descrizione": "Incontro con ospiti speciali quali Martino Fruet, Eva Lechner e Maurizio Fondriest per sensibilizzare il rapporto tra ciclisti, automobilisti e pedoni sia in strada che sui sentieri: Bike Lane, segnaletiche e cartelli per migliorare la sicurezza sulle strade e sui percorsi off-road.",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "SAGRA DI SAN LORENZO",
+      "descrizione": "0463 986608 - 0463 986113",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "PROGRAMMA COMUNE DI",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "VISITA GUIDATA ALLA CHIESA DELLA SANTISSIMA TRINITÀ",
+      "descrizione": "Un itinerario accompagnato dai volontari dell’Associazione Anastasia per ammirare i tesori dell’edificio sacro. Partecipazione gratuita; prenotazione consigliata ai numeri 0463 974840 o 379 2453074",
+      "orario_inizio": "10:30",
+      "orario_fine": "11:30",
+      "luogo": "Deggiano - Chiesa Santissima Trinità",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "CONCERTO EIGHTH PYRAMID",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mestriago - Piazzetta adiacente al municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "FESTA POPOLARE E SANTA MESSA CON IL VESCOVO TISI",
+      "descrizione": "",
+      "orario_inizio": "10:00",
+      "orario_fine": null,
+      "luogo": "Mezzana - Piazzetta Benvenuti",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "MICHELE ARMADORI LIVE MUSIC",
+      "descrizione": "Un coinvolgente appuntamento musicale nel cuore della piazza",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Pellizzano - Ufficio Informazioni",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "OSSANA MEDIEVALE",
+      "descrizione": "Castello San Michele La Bottega del Ramaio Un laboratorio creativo per tutte le età dedicato alle tecniche dell’incisione e dello sbalzo. I partecipanti realizzeranno un segnalibro in rame decorato. Gratuito, ingresso al castello a pagamento. A cura del METS",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Pellizzano Piazza Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "ARMONIE DI MONTAGNA",
+      "descrizione": "Il Corpo Bandistico Val di Pejo torna a far vibrare il cuore del Trentino. Un raffinato itinerario sonoro che spazia con eleganza dalle colonne sonore ai capolavori classici, regalando un’esperienza densa di pathos ai piedi dell’Ortles-Cevedale",
+      "orario_inizio": "18:00",
+      "orario_fine": "00:00",
+      "luogo": "Fraz. Fraviano",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "VENERDÌ DEL PARCO",
+      "descrizione": "Le voci del Parco. Anteprima delle video interviste con i protagonisti della Val di Peio",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo - Piazza Monari",
+      "tipo": "data_specifica",
+      "data": "2026-08-07"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "FOREST BATHING: IMMERSIONI DI FORESTA",
+      "descrizione": "Rigenera i tuoi sensi nel cuore del bosco con una passeggiata lenta guidata da esperti di benessere naturale. A pagamento. 0463 751183",
+      "orario_inizio": "16:00",
+      "orario_fine": "18:00",
+      "luogo": "Castello San Michele",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "I VOLTI DI SOMACORT",
+      "descrizione": "",
+      "orario_inizio": "09:00",
+      "orario_fine": "18:00",
+      "luogo": "Malé Piazza Dante",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "TROFEO LORENZA BONETTI",
+      "descrizione": "Torneo Basket 3x3 inserito nel circuito regionale “Euregio B3”. Per info Enrico 3479798860 o Alessio 349 416 7665",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Malé - Sala conferenze Municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "SERATA AUDIOVISIVA: GERSHWIN, RHAPSODY IN BLUE",
+      "descrizione": "Un incontro culturale e musicale interamente dedicato alla scoperta di George Gershwin. L’esperto Arrigo Telò accompagnerà il pubblico in un itinerario tra filmati storici e analisi guidata dei celebri capolavori per pianoforte e orchestra",
+      "orario_inizio": "21:30",
+      "orario_fine": "23:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "SAGRA DI SAN LORENZO",
+      "descrizione": "0463 986608 - 0463 986113 Danticadanza Suggestiva performance di danze storiche accompagnata da melodie medievali. Gratuito, ingresso al maniero a pagamento *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "10:00",
+      "orario_fine": "00:00",
+      "luogo": "Dimaro",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "",
+      "orario_inizio": "20:30",
+      "orario_fine": "00:00",
+      "luogo": "DimaroTeatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "CENA AL PAESE DI CASTELLO",
+      "descrizione": "Una serata conviviale alla scoperta dei sapori tipici locali in compagnia del Gruppo Alpini e dell’Associazione “Gati de Castel”",
+      "orario_inizio": "20:30",
+      "orario_fine": "23:00",
+      "luogo": "Pellizzano - Fraz. Castello",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "OSSANA MEDIEVALE",
+      "descrizione": "Un tuffo nella storia tra rievocazioni e fascino antico nel cuore del borgo. ore 10:00 - 18:00 Itinerante nel borgo Convivio dei Giullari Performance e spettacoli itineranti tra le mura del Castello di San Michele e le caratteristiche vie del borgo I Falconieri del Re Suggestivi spettacoli di falconeria. Ingresso al castello a pagamento. La Bottega del Ramaio Laboratorio creativo aperto a tutte le età dedicato alle tecniche dell’incisione e dello sbalzo. I partecipanti realizzeranno un segnalibro in rame decorato. A cura del METS. Attività gratuita, ingresso al maniero a pagamento Sfilata Medievale Un tuffo nel passato tra il suono dei tamburini di San Marino, cavalli e sfarzosi abiti d’epoca. Partenza dal centro storico con arrivo al castello e sfilata di ritorno in via Venezia alle ore 19:30.",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "WATER MUSIC FESTIVAL: JOAN THIELE",
+      "descrizione": "La poliedrica cantautrice si esibirà nella cornice del laghetto per la tappa più suggestiva del suo tour. A pagamento. Info: www.pontedilegnotonale.com",
+      "orario_inizio": "10:00",
+      "orario_fine": "18:00",
+      "luogo": "Castello San Michele e borgo",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "TRAME ALPINE: IL GHIACCIAIO",
+      "descrizione": "Escursione guidata al Centro Glaciologico Careser con la Commissione SAT. Un itinerario suggestivo tra le vedrette della Val de la Mare per scoprire l’evoluzione dei ghiacciai. Spostamento con mezzi propri, pranzo al sacco. A pagamento. 0463 909773",
+      "orario_inizio": "14:00",
+      "orario_fine": "18:00",
+      "luogo": "Castello San Michele",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ALPEN CLASSICA FESTIVAL",
+      "descrizione": "Rassegna di note d’autore con il Trio Chimera nel cuore del Parco Nazionale",
+      "orario_inizio": "17:00",
+      "orario_fine": "17:30",
+      "luogo": "Itinerante nel borgo",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI COMASINE",
+      "descrizione": "Festeggiamenti patronali tra tradizione e convivialità",
+      "orario_inizio": "17:30",
+      "orario_fine": "19:00",
+      "luogo": "Castello San Michele",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "UN GIORNO DA SOMMELIER",
+      "descrizione": "Un raffinato appuntamento dedicato all’arte dell’accostamento tra le eccellenze vinicole e i sapori autentici del Trentino. La degustazione guidata, curata dagli esperti della Fondazione E. Mach, vi condurrà in un itinerario sensoriale tra aromi e gusto. A pagamento, su prenotazione - 0463 983000",
+      "orario_inizio": "19:30",
+      "orario_fine": "00:00",
+      "luogo": "Piazza Venezia",
+      "tipo": "data_specifica",
+      "data": "2026-08-08"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TROFEO LORENZA BONETTI",
+      "descrizione": "Torneo basket amatoriale. Per info Enrico 3479798860 o Alessio 349 416 7665 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "15:00",
+      "orario_fine": "16:00",
+      "luogo": "Passo Tonale Laghetto Valbiolo",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "SAGRA DI SAN LORENZO",
+      "descrizione": "0463 986608 - 0463 986113",
+      "orario_inizio": "10:00",
+      "orario_fine": "24:00",
+      "luogo": "Dimaro",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "Deggiano",
+      "titolo": "OSSANA MEDIEVALE",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "Deggiano",
+      "titolo": "LA GUSTA E VAI",
+      "descrizione": "Una raffinata camminata enogastronomica tra le frazioni, promossa dalle associazioni locali. Dall’Ufficio informazioni di Mestriago partirà una navetta dalle ore 09:00 verso Deggiano. Il convivio prosegue a Mestriago tra note musicali e un fornito servizio bar",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "Pellizzano - Campo Volo - Zona Sportiva",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "MEMORIAL DANILO BONTEMPELLI",
+      "descrizione": "Emozionanti esibizioni di volo libero a cura del Gruppo Aeromodellismo Valli del Noce *prenotazione obbligatoria entro le ore 18:00 del giorno precedente Uno spettacolo d’arte circense e teatro di strada capace di incantare grandi e piccini",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "IL CARROZZONE DEGLI ARTISTI: TRA CIELO E TERRA",
+      "descrizione": "Un tuffo nella storia tra rievocazioni e fascino antico nel cuore del borgo. ore 10:00 - 18:00 Castello San Michele e borgo I Falconieri del Re Suggestivi spettacoli di falconeria. Ingresso al castello a pagamento. I Tamburini di S. Marino L’energia ritmica attraversa le vie del centro in un coinvolgente spettacolo itinerante Musiche Medievali Suggestivo itinerario sonoro in compagnia del raffinato duo arpa e flauto Itinerante nel borgo Piazza Venezia e piazzetta del castello Convivio dei Giullari Performance e spettacoli itineranti tra le mura del Castello di San Michele e le caratteristiche vie del borgo La Bottega del Ramaio Laboratorio creativo aperto a tutte le età dedicato alle tecniche dell’incisione e dello sbalzo. I partecipanti realizzeranno un segnalibro in rame decorato. A cura del METS. Attività gratuita, ingresso al maniero a pagamento Palio delle casate - Sfida con l’arco Le quattro nobili casate della valle si contendono la vittoria in un’avvincente competizione storica La Bottega del Ramaio Laboratorio creativo aperto a tutte le età dedicato alla tecnica della cesellatura. I partecipanti realizzeranno un segnalibro in rame decorato. A cura del METS. Attività gratuita, ingresso al maniero a pagamento Fraviano",
+      "orario_inizio": "09:00",
+      "orario_fine": null,
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "Cogolo",
+      "titolo": "DOI NOTE ALA FONTANA",
+      "descrizione": "Serata di note live in compagnia del Corpo Bandistico Vermiglio-Ossana. Ingresso libero.",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Itinerante nel borgo",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "Cogolo",
+      "titolo": "IL TEMPO RITROVATO: ALLA SCOPERTA DEL MUSEO CONTADINO",
+      "descrizione": "Un affascinante viaggio nel tempo alla scoperta della vita alpina di un tempo, tra masi storici, natura incontaminata e i sapori autentici di una volta. Merenda inclusa. E’ necessario munirsi di auto propria. La partenza della passeggiata è da località Spini. A pagamento, su prenotazione 0463 753100",
+      "orario_inizio": "14:00",
+      "orario_fine": "18:00",
+      "luogo": "Castello San Michele",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "Cogolo",
+      "titolo": "SUONI TRA I PASCOLI",
+      "descrizione": "Il laghetto ai Piani del Vioz diverrà il palcoscenico naturale del Coro Sasso Rosso, coro polifonico di impostazione musicale di ascendenza popolare nato oltre 50 anni fa.",
+      "orario_inizio": "16:00",
+      "orario_fine": "17:00",
+      "luogo": "Castello San Michele",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "Cogolo",
+      "titolo": "SAGRA DI COMASINE",
+      "descrizione": "Festeggiamenti patronali tra tradizione e convivialità",
+      "orario_inizio": "14:00",
+      "orario_fine": "18:00",
+      "luogo": "Castello San Michele",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "TRAME ALPINE: GLI INSETTI DELLE CIME",
+      "descrizione": "Un itinerario guidato con l’entomologo Nicola Orempuller per approfondire l’evoluzione delle specie d’alta quota. Un percorso dai prati di valle alle rupi sommitali per osservare come cicli vitali e adattamenti cromatici rispondano alle sfide climatiche attuali. Spostamento con mezzi propri, pranzo al sacco. A pagamento, su prenotazione 0463 977074",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Chiesa di Ossana",
+      "tipo": "data_specifica",
+      "data": "2026-08-09"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ALPEN CLASSICA FESTIVAL: CONCERTO MEDIEVALE",
+      "descrizione": "",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Comasine - Piazzetta Circolo Matteotti",
+      "tipo": "data_specifica",
+      "data": "2026-08-10"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "SERATA LIVE CON GLI OSTELLO CALIFORNIA",
+      "descrizione": "",
+      "orario_inizio": "09:00",
+      "orario_fine": "16:00",
+      "luogo": "Rabbi Fonti Punto Info Parco",
+      "tipo": "data_specifica",
+      "data": "2026-08-10"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "L’ECO DEL LAGO: LE STAGIONI DI VIVALDI",
+      "descrizione": "L’incanto delle celebri note vivaldiane interpretate dalla violinista Annastella Gibboni insieme alla Camerata Musicale di Arco. Un’atmosfera di intensa magia nella cornice del lago. Partecipazione gratuita senza prenotazione. Si terrà anche in caso di pioggia nell’Auditorium comunale *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "10:00",
+      "orario_fine": "11:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-10"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "VIAGGIO, CAPELLI E TANTI GUAI",
+      "descrizione": "Un coinvolgente appuntamento teatrale dedicato all’intrattenimento dei più piccoli. Ingresso libero.",
+      "orario_inizio": "16:30",
+      "orario_fine": "17:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-10"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "Festival Internazionale: proiezione film “Sulle ali della musica” Regia di Maria Peters. Opera biografica dedicata alla celebre direttrice d’orchestra Antonia Brico. Gratuito fino a esaurimento posti.",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo - Sala Congressi Parco Nazionale Stelvio",
+      "tipo": "data_specifica",
+      "data": "2026-08-10"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "TEATRO BAMBINI - AVVENTURE IN CITTA",
+      "descrizione": "",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Dimaro - Teatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "PROIEZIONE DOCUMENTARIO: GARIMA – PER IL NEPAL",
+      "descrizione": "Un viaggio visivo attraverso la sua gente e le sue affascinanti (con)tradizioni Serata con cena tipica locale, musica per bambini e spettacolo tradizionale",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mestriago - Piazzetta municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "DALLO SPAZIO AL CUORE DELLA MATERIA",
+      "descrizione": "Seconda conferenza con il Prof. Stefano Spagocci: “Un piede sulla Luna: Apollo e *prenotazione obbligatoria entro le ore 18:00 del giorno precedente Un pomeriggio di puro intrattenimento per i bambini con l’animazione di Axaloth",
+      "orario_inizio": "19:30",
+      "orario_fine": "23:00",
+      "luogo": "Marilleva 900 Piazzale Funivie",
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "CONCERTO",
+      "descrizione": "Presso la Chiesa di Peio Paese la serata verrà allietata da Tiziano Rossi e Sebastiano Caserotti",
+      "orario_inizio": "17:00",
+      "orario_fine": "18:30",
+      "luogo": "Cogolo - Piazza Monari",
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "Stefan Arnold al pianoforte Programma con musiche di Debussy, Beethoven e Schubert. Accesso libero fino a esaurimento dei posti disponibili.",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Peio Paese - Chiesa Parrocchiale",
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "AGOSTFEST",
+      "descrizione": "",
+      "orario_inizio": "20:30",
+      "orario_fine": null,
+      "luogo": "Ortisé Segheria Veneziana",
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "BABY DANCE",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-11"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "LA SEGHERIA DI NOTTE",
+      "descrizione": "Un appuntamento serale dedicato alla scoperta dell’antica Segheria Veneziana, avvolta dall’incanto di luci soffuse, note musicali e momenti di intrattenimento in un’atmosfera densa di magia",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "MUSICA IN CHIESA",
+      "descrizione": "Gratuito. 0463 986608 - 0463 986113",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ARMONIE DI MONTAGNA",
+      "descrizione": "Un raffinato itinerario sonoro itinerante in compagnia di Nicola Ravelli tra le suggestive atmosfere della valle",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Presson Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SPAGNA IN MUSICA - UN VIAGGIO TRA NOTE, RITMO E PASSIONE",
+      "descrizione": "Arrigo Telò guiderà il pubblico alla scoperta dei segreti, degli aneddoti e del fascino che si celano dietro i brani in programma. Ingresso libero e gratuito fino a esaurimento posti",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo - Sala Congressi Parco Nazionale dello Stelvio",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "RABBI IN MUSICA",
+      "descrizione": "Concerto con il gruppo Bob & the traffic Jam",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "San Bernardo - Piazzale scuole elementari",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "I CONCERTI DEL MATTINO",
+      "descrizione": "Un raffinato appuntamento che coniuga arte e spiritualità attraverso le note suggestive dell’organetto di Tiziano Rossi. Mentre la musica avvolge le navate, la guida esperta di Fabiana Cappello vi accompagnerà alla scoperta dei tesori storico-artistici racchiusi nell’edificio sacro per un’esperienza intensa tra armonia e bellezza",
+      "orario_inizio": "21:15",
+      "orario_fine": "23:15",
+      "luogo": "Dimaro - Teatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CONCERTO BOB & THE TRAFFIC JAM",
+      "descrizione": "Una serata all’insegna del ritmo e dell’energia con il concerto dal vivo dedicato alla musica Pop e Rock, ideale per trascorrere una serata estiva all’aperto a ritmo di grandi classici e hit intramontabili. Gratuito. Croviana Anfiteatro scuola primaria “B. Pezzen”",
+      "orario_inizio": "20:30",
+      "orario_fine": "23:00",
+      "luogo": "Malé piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ALPEN CLASSICA FESTIVAL",
+      "descrizione": "Prestigioso evento sinfonico che celebra la grande musica d’autore nell’ambito della rassegna euroregionale con il Low Vibes Quartet",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LABORATORIO BOLLE DI SAPONE (5+)",
+      "descrizione": "Un’esplosione di magia e creatività: realizza bolle leggere e colorate, costruendo con le tue mani strumenti unici da portare a casa. A pagamento. 0463 751183.",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "CONCERTO BANDA OSSANAVERMIGLIO",
+      "descrizione": "Dalla musica bandistica tradizionale ad un repertorio contaminato da vari generi musicali a spasso nel tempo fra diversi popoli ed altre culture",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:30",
+      "luogo": "Ossana - piazza Venezia c/o teatro",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "CONCERTO D’ORGANO",
+      "descrizione": "Un raffinato itinerario sonoro a cura del Maestro Tiziano Rossi tra le suggestive atmosfere dell’edificio sacro. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:00",
+      "luogo": "Vermiglio Chiesa Santo Stefano",
+      "tipo": "data_specifica",
+      "data": "2026-08-12"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "ESTATE DA RIDERE",
+      "descrizione": "",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Peio Fonti - Portici",
+      "tipo": "data_specifica",
+      "data": "2026-08-13"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "NOTE TRA I PORTICI",
+      "descrizione": "Un suggestivo appuntamento sonoro itinerante tra le architetture del borgo, accompagnato dalle note folk e acustiche dei Mystic Owls per un’esperienza densa di pathos.",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-13"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "CULTURA - SPETTACOLO DISNEY",
+      "descrizione": "Il repertorio del Classical Mood Quartet allieterà la serata con le più belle melodie Walt Disney accompagnate dalle scene dei film. Ingresso libero *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-13"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "IN VIAGGIO CON L’ARCIDUCHESSA",
+      "descrizione": "Tra atmosfere imperiali e storia locale, la Valle accoglie Sua Altezza Imperiale, l’Arciduchessa Maria Elisabetta D’Austria all’Antica Fonte di Rabbi. Ore 17:00-21:00 Mercatino della Val di Rabbi, con possibilità di cena. Ore 17:00 Inizio Sfilata, con l’arrivo in carrozza dell’Arciduchessa all’Antica Fonte. A seguire, Sparo a Salve del gruppo Schützen Val di Sole Ore 17:40 Monologo sulla vita della donna nel Settecento: un confronto tra nobiltà e popolo. A seguire balli popolari del 1700. Ore 20:30 Gran Ballo presso l’Hotel Terme di Rabbi",
+      "orario_inizio": "17:00",
+      "orario_fine": null,
+      "luogo": "Rabbi Fonti",
+      "tipo": "data_specifica",
+      "data": "2026-08-13"
+    },
+    {
+      "comune": "Mestriago",
+      "titolo": "TOMBOLA IN PIAZZA",
+      "descrizione": "Il brivido della fortuna anima il cuore del borgo! Un appuntamento imperdibile che unisce ospiti e residenti in una serata di divertimento collettivo. Il ricavato della vendita delle cartelle sosterrà i progetti del Circolo San Luigi Termenago",
+      "orario_inizio": "10:30",
+      "orario_fine": "12:00",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "Mestriago",
+      "titolo": "VISITA GUIDATA ALLA CHIESA DI SANT’AGATA",
+      "descrizione": "Un itinerario accompagnato dai volontari dell’Associazione Anastasia alla scoperta dei tesori dell’edificio sacro. Gratuito con prenotazione gradita ai numeri 0463 974840 o 379 2453074 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente Dalle 19:00 cena tipica con i tradizionali tortei di patate. La serata sarà animata dalle ore 20:00 dalle note di Bonny e Marcel, seguite alle ore 22:00 dal tributo a Vasco dei Rewind Band. Chiusura in musica con DJ Set fino alle 02:00. A cura dell’Associazione San Rocco",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mezzana - Piazza Trento",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "LA SCENETTA BATOCLA",
+      "descrizione": "Un suggestivo viaggio tra le narrazioni in dialetto locale per scoprire i personaggi e le leggende che animano la memoria di Mezzana",
+      "orario_inizio": "19:00",
+      "orario_fine": null,
+      "luogo": "Vermiglio Laghetti S. Leonardo",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "L’ILLUMINAZION: FALÒ DEDICATO ALLA MADONNA",
+      "descrizione": "Ore 19:00 cena tipica su prenotazione organizzata da Termenago Innova; a seguire, alle ore 21:00, accensione del suggestivo falò votivo. 0463 751183.",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "TRA LE ANDRONE DE VERMEI",
+      "descrizione": "Corsa podistica di 6 km tra gli scorci del paese con ritrovo presso il Centro Fondo",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "FESTIVALBIER",
+      "descrizione": "",
+      "orario_inizio": "04:30",
+      "orario_fine": null,
+      "luogo": "Passo Tonale Ghiacciaio Presena",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "ESPLORAZIONI IN CASTELLO",
+      "descrizione": "",
+      "orario_inizio": "10:30",
+      "orario_fine": "11:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ALBA IN QUOTA",
+      "descrizione": "L’emozione dei primi bagliori solari che illuminano le vette perenni. Impianti aperti dalle ore 04:30; dalle ore 05:00 l’atmosfera sarà impreziosita dalle note di Echi di Musica con un tributo alla canzone d’autore italiana. www.pontedilegnotonale.com",
+      "orario_inizio": "19:00",
+      "orario_fine": "22:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SPETTACOLO DI GIOCOLERIA",
+      "descrizione": "Pomeriggio di divertimento e meraviglia per le famiglie. In caso di pioggia l’evento si terrà presso la Sala Carosello. Ingresso libero",
+      "orario_inizio": "20:00",
+      "orario_fine": "22:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "TRAME ALPINE: LA GUERRA SULLA PORTA",
+      "descrizione": "Un itinerario tra trincee e memoria guidato dagli esperti dell’associazione locale. I resti delle fortificazioni narrano i tragici eventi della Grande Guerra che hanno segnato il paesaggio d’alta quota. Spostamento con mezzi propri, pranzo al sacco. A pagamento. 0463 970773",
+      "orario_inizio": "09:00",
+      "orario_fine": "17:00",
+      "luogo": "Cogolo - Centro Visitatori",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ECOMUSEO IN PIAZZA",
+      "descrizione": "Un pomeriggio dedicato alla scoperta delle radici e dell’identità locale nel cuore del paese. Dimostrazione della lavorazione del lino a cura delle donne dell’associazione Linum, laboratori per grandi e piccini (a pagamento) ed esposizione di artigiani, associazioni e produttori locali. Attività libera e gratuita. 339 6179380",
+      "orario_inizio": "15:00",
+      "orario_fine": "18:00",
+      "luogo": "Celentino lungo le vie del paese",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI CELENTINO",
+      "descrizione": "Festeggiamenti patronali tra tradizione e convivialità collettiva.",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Celentino - Piazza “Plazol”",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "AQUAVOCE: CORO ALPINO PAGANELLA DI TERLAGO",
+      "descrizione": "Un raffinato appuntamento sonoro che vede protagonista la compagine corale di Terlago. Un itinerario tra le armonie della tradizione alpina per una serata densa di pathos e cultura locale",
+      "orario_inizio": "20:45",
+      "orario_fine": null,
+      "luogo": "Rabbi Fonti Chiesa di Sant’Anna",
+      "tipo": "data_specifica",
+      "data": "2026-08-14"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CONCERTO GRUPPO STRUMENTALE MALÉ: SUONI FUORI ROTTA",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "FESTIVALBIER",
+      "descrizione": "Apertura cucina alle ore 19:00; la serata prosegue con il DJ Set di Angelica fino alle 23:00 e si conclude con l’energia di Sputnik. Organizzazione a cura dell’Associazione San Rocco.",
+      "orario_inizio": "19:00",
+      "orario_fine": "02:00",
+      "luogo": "Mestriago - Piazzale scuole",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "A SPASSO NEL TEMPO",
+      "descrizione": "Un incantevole viaggio tra epoche diverse: spettacoli, intrattenimento musicale, degustazioni e sapori antichi trasformeranno le vie del borgo in un’esperienza unica per grandi e piccini. Programma completo sui canali social di ViviPellizzano.",
+      "orario_inizio": "16:00",
+      "orario_fine": null,
+      "luogo": "Pellizzano - Piazze del Paese",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "FESTA IN VALPIANA",
+      "descrizione": "Una giornata all’insegna della convivialità montana con il tradizionale pranzo alpino immersi nella natura.",
+      "orario_inizio": "09:00",
+      "orario_fine": "18:00",
+      "luogo": "Loc. Valpiana",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "FESTA DI SAN ROCCO",
+      "descrizione": "",
+      "orario_inizio": "11:00",
+      "orario_fine": "16:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "Peio Paese",
+      "titolo": "MUSICA CON LOS LOCOS ARMANDO’S",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "Peio Fonti",
+      "titolo": "SAGRA DI CELENTINO",
+      "descrizione": "Festeggiamenti patronali tra antiche usanze e momenti di convivialità. Un raffinato itinerario sonoro che spazia con eleganza tra l’energia del rock, le melodie Disney e i grandi capolavori senza tempo, regalando un’esperienza densa di pathos nel cuore del borgo. Ingresso libero. *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Celentino - Piazza “Plazol”",
+      "tipo": "data_specifica",
+      "data": "2026-08-15"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "UN GIORNO DA POMPIERE",
+      "descrizione": "Una giornata dedicata al lavoro dei volontari con simulazioni operative e servizio bar.",
+      "orario_inizio": "10:00",
+      "orario_fine": "19:00",
+      "luogo": "Malé Caserma Vigili del Fuoco",
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "Ortisé",
+      "titolo": "ALPEN CLASSICA FESTIVAL",
+      "descrizione": "con il Cinquino Brass. Gratuito. 0463 986608 - 0463 986113",
+      "orario_inizio": "20:30",
+      "orario_fine": "21:30",
+      "luogo": "Malé Chiesa Parrocchiale",
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "FESTIVALBIER",
+      "descrizione": "Il pranzo tipico a base di polenta e spezzatino apre la giornata alle ore 12:00. Segue alle 19:00 la cena con polenta carbonera e l’intrattenimento tirolese dei Tiroler Stolz.",
+      "orario_inizio": "09:30",
+      "orario_fine": "12:00",
+      "luogo": "Mestriago - Piazzale municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "‘NA TONDA E ‘NA MAGNADA SU PER ORTISÉ E MENAS",
+      "descrizione": "Percorso enogastronomico tra i due borghi in quota che conservano il fascino del tempo. Possibilità di raggiungere questi paesini di alta montagna con un’escursione di media difficoltà oppure tramite navetta. 0463 757588 - www.marilleva.it *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "12:00",
+      "orario_fine": "00:00",
+      "luogo": "Mestriago - Piazzale scuole",
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "A SPASSO NEL TEMPO",
+      "descrizione": "Un incantevole viaggio tra epoche diverse: spettacoli, intrattenimento musicale, degustazioni e sapori antichi trasformeranno le vie del borgo in un’esperienza unica per grandi e piccini. Programma completo sui canali social di ViviPellizzano e c/o Ufficio Info Pellizzano",
+      "orario_inizio": "10:00",
+      "orario_fine": null,
+      "luogo": "Peio Paese - San Rocco",
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "FESTA DI SAN ROCCO",
+      "descrizione": "Ore 10:00 processione con partenza dalla chiesa di Pejo Paese; ore 10:30 S. Messa con il Coro Genzianella nella chiesetta di S. Rocco; ore 12:00 pranzo tipico presso il campo sportivo seguito da intrattenimento musicale",
+      "orario_inizio": "11:00",
+      "orario_fine": "00:00",
+      "luogo": "Celentino Plazol",
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI CELENTINO",
+      "descrizione": "Festeggiamenti patronali tra antiche usanze e momenti di convivialità",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-16"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "LA 5 CAMPANILI",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "Pellizzano",
+      "titolo": "CONCERTO DEDICATO ALLA MADONNA",
+      "descrizione": "",
+      "orario_inizio": "08:00",
+      "orario_fine": null,
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DELLA MONTAGNA",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MUSICA E APERITIVO",
+      "descrizione": "Un vivace brindisi inaugurale per dare ufficialmente inizio alla rassegna dedicata alle terre alte nel cuore del borgo",
+      "orario_inizio": "16:00",
+      "orario_fine": null,
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MONTAGNA ACCESSIBILE",
+      "descrizione": "Un’opportunità per scoprire le vette da una prospettiva inedita. Grazie ai visori di realtà virtuale, la tecnologia diventa un ponte suggestivo per esplorare scenari naturali mozzafiato con il massimo realismo. Partecipazione a pagamento",
+      "orario_inizio": "18:15",
+      "orario_fine": "19:30",
+      "luogo": "Malé Piazza Dante",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "IL MIO VIAGGIO IN KYRGYZSTAN",
+      "descrizione": "Un coinvolgente itinerario tra immagini e racconti d’alta quota a cura di Claudio Ruatti. Proiezione cinematografica all’aperto nel cuore della piazza. Esperienza gratuita 37",
+      "orario_inizio": "18:30",
+      "orario_fine": "19:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CONCERTO CORPO BANDISTICO SASSO ROSSO",
+      "descrizione": "Un raffinato itinerario sonoro tra le tradizioni locali e i grandi classici, capace di regalare un’esperienza densa di pathos nel cuore del borgo",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Dimaro - Teatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "SERATA D’AUTORE",
+      "descrizione": "Un coinvolgente viaggio visivo lungo i sentieri della memoria attraverso la proiezione di filmati d’epoca curati da Claudio Redolfi. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mestriago - Piazzetta adiacente al municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "CONCERTO DI MUSICA CLASSICA",
+      "descrizione": "Un raffinato appuntamento sonoro in compagnia di Nicola Dalla Valle e del suo Trio",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Mezzana Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-17"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "A SPASSO NEL TEMPO",
+      "descrizione": "Un incantevole viaggio tra epoche diverse: spettacoli, intrattenimento musicale, degustazioni e sapori antichi trasformeranno le vie del borgo in un’esperienza unica per grandi e piccini. Programma completo sui canali social di ViviPellizzano e c/o Ufficio Info Pellizzano",
+      "orario_inizio": "16:30",
+      "orario_fine": "17:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "Dimaro",
+      "titolo": "LABORATORIO DI MAGIA",
+      "descrizione": "Un pomeriggio di stupore e creatività pensato per l’intrattenimento dei più piccoli nel cuore del borgo. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Fraz. Fraviano - Chiesa di Santo Stefano",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "Dimaro",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:30",
+      "luogo": "San Giacomo Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "CONCERTO “LODI A MARIA”",
+      "descrizione": "con M. Letizia Grosselli soprano, A.Andreetti contralto e T. Rossi organo",
+      "orario_inizio": "16:00",
+      "orario_fine": null,
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DELLA MONTAGNA",
+      "descrizione": "",
+      "orario_inizio": "18:15",
+      "orario_fine": "19:30",
+      "luogo": "Malé Piazza Dante",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LIMITE SPORT",
+      "descrizione": "Un momento di narrazione e condivisione dedicato alle grandi sfide in quota",
+      "orario_inizio": "18:30",
+      "orario_fine": "19:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MONTAGNA ACCESSIBILE",
+      "descrizione": "Un’opportunità per scoprire le vette da una prospettiva inedita. Grazie ai visori di realtà virtuale, la tecnologia diventa un ponte suggestivo per esplorare scenari naturali mozzafiato con il massimo realismo. A pagamento",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ESPERIENZE AL LIMITE",
+      "descrizione": "Un coinvolgente incontro con Franco Nicolini alla scoperta dei quattromila delle Alpi, tra racconti d’autore e passione per la quota",
+      "orario_inizio": "20:30",
+      "orario_fine": "23:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "TEATRO BAMBINI - LA LUNA SULL’UOMO",
+      "descrizione": "Un appuntamento dedicato al divertimento dei più piccoli. Ingresso libero. 0463 986608 - 0463 986113",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mestriago - Piazzetta adiacente al municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "CINEMA ALL’APERTO",
+      "descrizione": "Una serata sotto le stelle dedicata alla settima arte, promossa dallo Spazio Giovani Commezzadura Festival Internazionale Sasha Grynyuk pianoforte Repertorio con brani di Akimenko, Ravel, Chopin, Liszt e Beethoven. Gratuito *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "DALLO SPAZIO AL CUORE DELLA MATERIA",
+      "descrizione": "Terzo incontro della rassegna scientifica con il Prof. Stefano Spagocci: “L’estinzione dei Dinosauri”. Un approfondimento tra storia e mistero - 19.00 Dimaro Ecomuseo Val Meledrio - Antico Maglio",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Pellizzano Auditorium comunale 3° piano",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "TRENTO FILM FESTIVAL: PROIEZIONI D’AUTORE",
+      "descrizione": "Una serata dedicata al cinema di montagna con la visione di una selezione di filmati tratti dalla celebre rassegna. Ingresso libero",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": "ore 17.00",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "MISS ITALIA",
+      "descrizione": "L’eleganza e la bellezza tornano a splendere nel cuore del paese per la tappa locale del concorso nazionale",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-18"
+    },
+    {
+      "comune": "Mezzana",
+      "titolo": "CINEMA",
+      "descrizione": "Una serata dedicata al fascino del sottosuolo con i racconti e le esplorazioni del gruppo speleologico LA VENTA. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": "00:00",
+      "luogo": "Cogolo - Piazza Monari",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "MUSICA IN CHIESA",
+      "descrizione": "Gratuito. 0463 986608 - 0463 986113 *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:10",
+      "luogo": "Mestriago - Piazzetta adiacente al municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "BABY DANCE E BOLLE DI SAPONE",
+      "descrizione": "Divertimento assicurato per i più piccoli con la musica e le spettacolari bolle giganti dell’animazione Axaloth",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "EN GIRO EN TRA LE CORT",
+      "descrizione": "Percorso enogastronomico per le vie del paese: assaporerete i gusti della tradizione, piatti tipici e vini trentini, musica e spettacoli faranno da cornice ad una serata davvero indimenticabile. www.marilleva.it 0463 757588",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Carciato Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "SETTIMANA DELLA MONTAGNA",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "MONTAGNA ACCESSIBILE",
+      "descrizione": "Incontro culturale dedicato alla storia, alle antiche usanze e alla gestione del patrimonio naturalistico, selvicolturale e storico della Val Meledrio, condotto dalla dott.ssa Marta Villa e dallo storico locale Udalrico Fantelli. A conclusione del seminario è prevista una cena a base di prodotti tipici e naturali del territorio a cura di Slow Truck. È obbligatoria la prenotazione solo per la cena al numero 333 4528787",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "VAL MELEDRIO: STORIA, NATURA E TRADIZIONI",
+      "descrizione": "",
+      "orario_inizio": "18:00",
+      "orario_fine": "00:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "VERMIGLIO IERI E OGGI",
+      "descrizione": "Un viaggio guidato da Marcello Serra lungo i sentieri della memoria, tra storia locale e preziose tradizioni popolari. Ingresso libero",
+      "orario_inizio": "18:30",
+      "orario_fine": "19:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "CONCERTO A LUME DI CANDELA",
+      "descrizione": "Suggestivo appuntamento musicale live dove la luce soffusa crea un’atmosfera di rara e intensa magia",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "LE STORIE DI LEGNO",
+      "descrizione": "Un coinvolgente laboratorio creativo per i più piccoli in compagnia de l’Om dele storie. Un viaggio tra fantasia e manualità dedicato all’intrattenimento dei bambini. A pagamento. 340 0567236 39",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo Planet",
+      "tipo": "data_specifica",
+      "data": "2026-08-19"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "CONCERTO DI NICOLA PONTARA AL PIANOFORTE",
+      "descrizione": "",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:30",
+      "luogo": "Bozzana Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "MALÈ",
+      "titolo": "I CONCERTI DEL MATTINO",
+      "descrizione": "Un connubio tra musica e spiritualità con le note dell’organetto di Tiziano Rossi. Fabiana Cappello vi guiderà alla scoperta dei tesori storico-artistici racchiusi nell’edificio sacro per un’esperienza intensa tra arte e armonia",
+      "orario_inizio": "10:30",
+      "orario_fine": "11:30",
+      "luogo": "Malè Chiesa Parrocchiale",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "MALÈ",
+      "titolo": "FILATURA E TESSITURA",
+      "descrizione": "Un affascinante viaggio nel tempo attraverso la visita guidata alla sezione dedicata all’antica arte della filatura e della tessitura",
+      "orario_inizio": "17:00",
+      "orario_fine": "19:00",
+      "luogo": "Malè Museo della Civiltà Solandra",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DELLA MONTAGNA",
+      "descrizione": "ore 17:00 - 19:00 Malé Piazze Centrali",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LABORATORI E ATTIVITÀ",
+      "descrizione": "Un pomeriggio dedicato ai più piccoli tra laboratori creativi, prove di arrampicata con le Guide Alpine e coinvolgenti attività in compagnia del Soccorso Alpino e dei Vigili del Fuoco. Gratuito",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:15",
+      "luogo": "Malé Piazza Dante",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "Folgarida",
+      "titolo": "MONTAGNA TRA LE RIGHE MONTAGNA ACCESSIBILE",
+      "descrizione": "Con i visori di realtà virtuale, potrai vivere un’immersione tecnologica tra scenari naturali e panorami mozzafiato. A pagamento",
+      "orario_inizio": "18:30",
+      "orario_fine": "19:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "Folgarida",
+      "titolo": "TRIAL BIKE SHOW",
+      "descrizione": "con Daniele Fantelli in un’esibizione acrobatica mozzafiato. Serata di condivisione delle sue imprese e della sua passione per la quota",
+      "orario_inizio": "19:30",
+      "orario_fine": "20:30",
+      "luogo": "Malé Piazze centrali",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "ESTATE DA RIDERE",
+      "descrizione": "Appuntamento con la comicità d’autore insieme ai celebri Pino e gli Anticorpi con i protagonisti del palco di Zelig. A pagamento. 0463 986608 - 0463 986113",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "INCONTRO CON L’ALPINISTA MATTEO DELLA BORDELLA",
+      "descrizione": "",
+      "orario_inizio": "21:15",
+      "orario_fine": "23:15",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "CACCIA AL TESORO CON LORENZO (5+)",
+      "descrizione": "Indizi, enigmi e avventura: mettiti alla prova e parti alla ricerca del tesoro nascosto… il premio finale ti aspetta! A pagamento. 0463 751183",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "DA ANIMA AD ANIMA",
+      "descrizione": "Incontro esperienziale con l’autrice Paola Cimarosti “La fortuna ti vede benissimo - 15 storie personali per ritrovare fiducia nella vita”. Parcheggio gratuito dalle ore 17:00. Ingresso libero e gratuito. Gli incontri si terranno anche in caso di pioggia.",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "NADIA E LA SUA FISARMONICA",
+      "descrizione": "Una serata dedicata all’intrattenimento musicale e al ballo liscio tra le atmosfere del centro",
+      "orario_inizio": "17:30",
+      "orario_fine": "18:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "Peio Fonti",
+      "titolo": "BABY DANCE",
+      "descrizione": "Un pomeriggio di puro divertimento per i più piccoli con la musica e l’animazione di Axaloth Animazioni",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "Peio Fonti",
+      "titolo": "MUSICA DAL VIVO",
+      "descrizione": "Una serata di musica e intrattenimento con Bruno Paganini *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Cogolo - Piazza Monari",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "Peio Fonti",
+      "titolo": "SCORRI ACQUA SCORRI",
+      "descrizione": "Spettacolo teatrale con la compagnia Fil de Fer che propone una serata dedicata alla narrazione e alla cultura locale tra le suggestive atmosfere della valle.",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Peio Fonti Auditorium Terme",
+      "tipo": "data_specifica",
+      "data": "2026-08-20"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "GIOCASTELLO",
+      "descrizione": "Una scorribanda artistica per esplorare il castello, rielaborarne la storia con tecniche artistiche differenti e creare insieme un libro gioco in ricordo della visita. A pagamento, su prenotazione www.visitvaldisole.it",
+      "orario_inizio": "10:30",
+      "orario_fine": "12:00",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DELLA MONTAGNA: SERATA OLIMPICA",
+      "descrizione": "Un incontro d’eccezione con i protagonisti delle sfide a cinque cerchi. Gli atleti olimpici e paralimpici condivideranno le loro storie di sport e determinazione in una serata dedicata ai valori della montagna e dell’eccellenza atletica",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Caldes - Loc. Le Contre",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "COMMEZZADURA",
+      "titolo": "SCOPRIAMO LA CHIESA DI S. ANTONIO ABATE",
+      "descrizione": "Un itinerario accompagnato dai volontari dell’Associazione Anastasia per ammirare i tesori dell’edificio sacro. Gratuito, prenotazione consigliata ai numeri 0463 974840 o 379 2453074",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malè piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "I LOS LOCOS ARMANDO’S IN CONCERTO",
+      "descrizione": "",
+      "orario_inizio": "10:30",
+      "orario_fine": "11:30",
+      "luogo": "Mastellina - Chiesa S. Antonio Abate",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "SAGRA DEI PERI",
+      "descrizione": "Dj Sputnik e seguire la musica dei MATRIOSKA’. Chiusura con Dj Sputnik",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:15",
+      "luogo": "Mestriago - Piazzetta adiacente al municipio",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "HOPLÀ",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Mezzana - piazzetta Benvenuti",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "FOREST BATHING - IMMERSIONI DI FORESTA",
+      "descrizione": "Immergiti nella natura, nel bosco, per rigenerare corpo e mente attraverso una passeggiata lenta. Con guida specializzata ed esperta. A pagamento, su prenotazione 0463 751183",
+      "orario_inizio": "20:30",
+      "orario_fine": null,
+      "luogo": "Pellizzano Piazza Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "PIAZZA IN MUSICA",
+      "descrizione": "con Dj Anto Live",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Vermiglio Teatro Polo Culturale",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "CONCERTO DEL CORO MONTE PELLER",
+      "descrizione": "Una serata dedicata ai canti della montagna e alla tradizione popolare. Ingresso libero",
+      "orario_inizio": "04:30",
+      "orario_fine": null,
+      "luogo": "Ghiacciaio Presena",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "ALBA IN QUOTA",
+      "descrizione": "L’emozione unica dei primi bagliori solari che illuminano le vette in un silenzio magico. L’atmosfera sarà resa speciale dalle note del duo acustico RE-COVER. Apertura impianti di risalita ore 04:30 e inizio concerto ore 5:00 Info: www.pontedilegnotonale.com",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Passo Tonale - Sala Presanella",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "LE STIE",
+      "descrizione": "Un incantato viaggio teatrale alla scoperta di leggende, incantesimi e creature mitiche del folklore locale, impreziosito da esecuzioni musicali dal vivo. Ingresso libero 41",
+      "orario_inizio": "09:00",
+      "orario_fine": "12:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SUONI TRA I PASCOLI",
+      "descrizione": "Un appuntamento all’insegna delle note d’alta quota con l’intrattenimento del Rustle Up Acoustic Duo",
+      "orario_inizio": "12:00",
+      "orario_fine": "14:00",
+      "luogo": "Comasine - Malga Comasine",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "PAN DE NA VOLTA",
+      "descrizione": "L’antico forno di Casa Grazioli a Strombiano torna ad accendersi per la cottura dei tradizionali “paneti de segala”. Dalle ore 16:00 in poi visite guidate. Ore 17:30 degustazione. A pagamento",
+      "orario_inizio": "16:00",
+      "orario_fine": null,
+      "luogo": "Strombiano - Casa Grazioli",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "Caldes",
+      "titolo": "CONCERTO “VAIA”",
+      "descrizione": "Il Corpo Bandistico Val di Pejo torna a far vibrare il cuore del Trentino. Un raffinato itinerario musicale che spazia con eleganza dalle colonne sonore ai capolavori classici, regalando un’esperienza sonora densa di emozioni",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Peio Fonti Auditorium Terme",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "Caldes",
+      "titolo": "SAGRA DI SAN BERNARDO",
+      "descrizione": "ore 18:00 - 19:00 Malé Piazze centrali",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo - Sala congressi del Parco",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "CASTELLI AL CHIARO DI LUNA",
+      "descrizione": "Osservazione delle stelle a cura dell’associazione Phoenix e visita guidata al Castello. Verrà proposta un’esperienza unica: unitamente alla visita serale dell’affascinante maniero, ci sarà una guida al cielo, in cui verranno spiegate le costellazioni estive e la Dj Gian e seguire la musica di Dj Anni 90. Chiusura con Dj Gian",
+      "orario_inizio": "21:00",
+      "orario_fine": "00:00",
+      "luogo": "San Bernardo - Piazzale scuole elementari",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "SETTIMANA DELLA MONTAGNA",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Caldes - Loc. Le Contre",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SAGRA DEI PERI",
+      "descrizione": "",
+      "orario_inizio": "07:00",
+      "orario_fine": "08:00",
+      "luogo": "Malé - Loc Bersaglio (sopra pattinaggio)",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SCORRI ACQUA SCORRI",
+      "descrizione": "",
+      "orario_inizio": "17:00",
+      "orario_fine": "19:00",
+      "luogo": "Malé Piazza Regina Elena",
+      "tipo": "data_specifica",
+      "data": "2026-08-21"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CONCERTO ALL’ALBA",
+      "descrizione": "L’incanto del nuovo giorno celebrato dalle voci del Coro Sasso Rosso",
+      "orario_inizio": "20:00",
+      "orario_fine": "21:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-22"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MUSICA E ARRAMPICATA",
+      "descrizione": "Un pomeriggio dinamico tra note, animazione e prove di arrampicata su una parete artificiale. Un’attività divertente e sicura, adatta a bambini e adulti, sotto lo sguardo esperto delle Guide Alpine della Val di Sole. Attività all’aperto, in caso di pioggia l’attività non sarà svolta. Gratuito e senza prenotazione.",
+      "orario_inizio": "18:30",
+      "orario_fine": "22:30",
+      "luogo": "Malé Piazze centrali",
+      "tipo": "data_specifica",
+      "data": "2026-08-22"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "HIGHLINE, DANZA NEL VUOTO",
+      "descrizione": "Spettacolare esibizione acrobatica su slackline sopra le piazze di Malé",
+      "orario_inizio": "20:30",
+      "orario_fine": null,
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "data_specifica",
+      "data": "2026-08-22"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MUSIC, FOOD AND FUN",
+      "descrizione": "Serata conviviale con i tradizionali panini del Gruppo Alpini di Malé e concerto live dei Rusty Bucks",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-22"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "DISNEY MEDLEY",
+      "descrizione": "Un’esplosione di ritmo e magia: i ragazzi accompagnano il pubblico in un emozionante viaggio nel mondo Disney attraverso la danza moderna con NTA DANCE SCHOOL di Trento. *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-22"
+    },
+    {
+      "comune": "CROVIANA",
+      "titolo": "CENA IN PIAZZA",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "WATER MUSIC FESTIVAL: ROCK AND PEACE",
+      "descrizione": "Un’esperienza che fonde l’energia sonora con riflessioni profonde, offrendo un messaggio corale di fratellanza universale. I Los Locos Armando’s eseguiranno celebri inni alla libertà e rivisitazioni musicali inedite. Ingresso libero. Info: www.pontedilegnotonale.com",
+      "orario_inizio": "12:00",
+      "orario_fine": null,
+      "luogo": "Caldes - Loc. Le Contre",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "CONCERTO CORO DEL NOCE",
+      "descrizione": "Il corpo di voci del Coro del Noce custodisce e rinnova la tradizione del canto popolare e della montagna. Un appuntamento unico a ingresso libero",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:00",
+      "luogo": "Vermiglio - Laghetti San Leonardo",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "OMAGGIO ALL’ ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "Chloe Jiyeong Mun al pianoforte Esecuzioni di musiche firmate da Debussy, Mendelssohn e Schumann. Ingresso libero fino a esaurimento posti.",
+      "orario_inizio": "18:00",
+      "orario_fine": "20:00",
+      "luogo": "Cogolo - Palazzo Migazzi",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "FESTA DEGLI ALPINI",
+      "descrizione": "Una serata all’insegna della convivialità e delle tradizioni locali in compagnia del Gruppo Alpini",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Peio Fonti Auditorium Centro Termale",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "SAGRA DI SAN BERNARDO",
+      "descrizione": "Cena tipica e a seguire musica con Ralph Cieli e Regi dj *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Cogolo Località Plaze",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "SAGRA DEI PERI",
+      "descrizione": "Pranzo tipico a seguito della Santa Messa. Nel pomeriggio giochi con i pompieri di Caldes. Dalle 17:00 musica con i Love Noise Market per festeggiare i 10 anni del Gruppo Giovani Contre. Dalle 20:00 Turbo Folk & Roll - El Fiamaz e soci",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "San Bernardo - Piazzale scuole elementari",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SETTIMANA DELLA MONTAGNA: FALÒ DI CHIUSURA",
+      "descrizione": "Una suggestiva camminata notturna collettiva per celebrare la fine della rassegna intorno al fuoco. Ingresso libero.",
+      "orario_inizio": "18:00",
+      "orario_fine": "00:00",
+      "luogo": "Cimon di Bolentina",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "CONCERTO DI CANTI DELLA MONTAGNA",
+      "descrizione": "Una serata dedicata alle melodie della tradizione alpina con le voci del Coro Rondinella di Mezzana",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Ortisé Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "CACCIA AL TESORO CON LORENZO (5+)",
+      "descrizione": "Tra enigmi e prove d’avventura, mettiti in gioco per scovare il bottino segreto... un premio finale ti attende! A pagamento. Info: 0463 751183",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "NADIA E LA SUA FISARMONICA",
+      "descrizione": "Una serata dedicata all’intrattenimento musicale e al ballo liscio tra le atmosfere del centro",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Pellizzano Piazza Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "49° FESTA DELLA FRATELLANZA",
+      "descrizione": "La mattinata ha inizio alle ore 10:00 con la sfilata solenne da Capanna Presena fino al Monumento della Fratellanza. Segue alle ore 10:30 celebrazione della S. Messa in onore e memoria dei caduti 43",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Passo Paradiso",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "IL TEMPO RITROVATO: ALLA SCOPERTA DEL MUSEO CONTADINO",
+      "descrizione": "Un affascinante viaggio nel tempo alla scoperta della vita alpina di un tempo, tra masi storici, natura incontaminata e i sapori autentici di una volta. Merenda inclusa. E’ necessario munirsi di auto propria. La partenza della passeggiata è da località Spini. A pagamento, su prenotazione 0463 753100",
+      "orario_inizio": "09:00",
+      "orario_fine": null,
+      "luogo": "Cogolo - Ufficio Informazioni",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "FESTA DEGLI ALPINI",
+      "descrizione": "Una giornata all’insegna della convivialità e delle tradizioni locali in compagnia del Gruppo Alpini Malé Piazze centrali Ore 10:30 Santa Messa con processione accompagnata dalla banda. Ore 12:30 pranzo organizzato dagli “Alpini di San Bernardo” Nel pomeriggio spettacolo di magia con “detective magico Camillo”, laboratori con animali per bambini, degustazione dolci con il “gruppo solidarietà Rabbi” accompagnati dalla musica dei “Flanellas”. Serata danzante con Nadia e la sua fisarmonica",
+      "orario_inizio": "11:00",
+      "orario_fine": "00:00",
+      "luogo": "Cogolo Loc. Plaze",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "APERIBANDA",
+      "descrizione": "Un vivace itinerario sonoro che animerà il cuore del borgo con ritmi trascinanti e un’atmosfera di festa collettiva",
+      "orario_inizio": "10:30",
+      "orario_fine": null,
+      "luogo": "San Bernardo - Piazzale scuole elementari",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "DIETER OTTO HORN ENSAMBLE",
+      "descrizione": "I Corni delle Alpi in concerto. Parcheggio Fazzon gratuito dalle 17:00. Si terrà anche in caso di pioggia nell’Auditorium comunale",
+      "orario_inizio": "18:00",
+      "orario_fine": "20:30",
+      "luogo": "Malé Piazze centrali",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "MAGIC SHOW",
+      "descrizione": "Un pomeriggio di illusionismo e stupore pensato per il divertimento dei più piccoli. Ingresso libero",
+      "orario_inizio": "20:30",
+      "orario_fine": "22:30",
+      "luogo": "Dimaro - Teatro Comunale",
+      "tipo": "data_specifica",
+      "data": "2026-08-23"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "SAGRA DI SAN BERNARDO",
+      "descrizione": "",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Mezzana - Piazzetta Benvenuti",
+      "tipo": "data_specifica",
+      "data": "2026-08-25"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CERIMONIA DI APERTURA 2026 UCI MTB WORLD CHAMPIONSHIPS",
+      "descrizione": "Un momento solenne che apre ufficialmente i mondiali con la sfilata delle Nazionali fino al cuore del borgo. Dopo i saluti istituzionali, l’energia rock dei The Bastard Sons of Dioniso animerà la serata in concerto",
+      "orario_inizio": "18:30",
+      "orario_fine": "20:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-24"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "TEATRO BAMBINI - FAMIGLIA DON CHISCIOTTE",
+      "descrizione": "Un appuntamento dedicato al divertimento dei più piccoli. Ingresso libero. 0463 986608 - 0463 986113",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:00",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-24"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "COMUNQUE LUCIO",
+      "descrizione": "Un coinvolgente omaggio musicale dedicato ai capolavori di Lucio Battisti, interpretati dalla voce di Sandro Corda per una serata di grandi successi intramontabili.",
+      "orario_inizio": "16:30",
+      "orario_fine": "17:30",
+      "luogo": "",
+      "tipo": "data_specifica",
+      "data": "2026-08-24"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "CONFERENZA “DALLO SPAZIO AL CUORE DELLA MATERIA”",
+      "descrizione": "4° Serata: Il Cern, avanguardia mondiale della scienza con il Prof. Stefano Spagocci",
+      "orario_inizio": "21:00",
+      "orario_fine": null,
+      "luogo": "Pellizzano Auditorium Comunale 3° piano",
+      "tipo": "data_specifica",
+      "data": "2026-08-24"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "LIVE MUSIC",
+      "descrizione": "Intrattenimento musicale con Rustle Up *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "Cogolo Piazza Monari",
+      "tipo": "data_specifica",
+      "data": "2026-08-24"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "MUSICA IN CHIESA",
+      "descrizione": "Gratuito. 0463 986608 - 0463 986113",
+      "orario_inizio": "10:00",
+      "orario_fine": "12:00",
+      "luogo": "Monclassico - Chiesa",
+      "tipo": "data_specifica",
+      "data": "2026-08-26"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "DA ANIMA AD ANIMA",
+      "descrizione": "Incontro esperienziale con l’autrice Cristina Vignato “Akasha: la via all’indipendenza spirituale - Riconnettersi al proposito dell’anima per vivere la prosperità”. Parcheggio gratuito dalle ore 17:00. Ingresso libero e gratuito. Gli incontro si terranno anche in caso di pioggia.",
+      "orario_inizio": "20:45",
+      "orario_fine": "22:30",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "ALBA IN QUOTA",
+      "descrizione": "L’incanto dei primi bagliori solari sulle vette perenni. Risalite attive dalle ore 05:00; dalle ore 05:30 l’atmosfera sarà impreziosita dal concerto tributo alla canzone italiana con Ottavio Zani and Friends. Info: www.pontedilegnotonale.com",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:30",
+      "luogo": "Lago dei Caprioli Ristorante Chalet Lago dei Caprioli",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "ARMONIE DI MONTAGNA",
+      "descrizione": "Suggestivo itinerario sonoro in compagnia dei Cantori di Vermiglio",
+      "orario_inizio": "05:00",
+      "orario_fine": null,
+      "luogo": "Ghiacciaio Presena",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "OMAGGIO ALL’ARTE PIANISTICA DI ARTURO BENEDETTI MICHELANGELI",
+      "descrizione": "Polina Osetinskaya al pianoforte Musiche di Bach, Vivaldi, Franck, Glinka e Beethoven. Gratuito",
+      "orario_inizio": "21:00",
+      "orario_fine": "00:00",
+      "luogo": "Celentino - Chiesa Parrocchiale",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "RABBI",
+      "titolo": "CONFERENZA CON UGO MORELLI, L’ATTESA",
+      "descrizione": "Per creare il futuro bisogna saperlo attendere",
+      "orario_inizio": "21:00",
+      "orario_fine": "23:00",
+      "luogo": "San Bernardo - Chiesa Parrocchiale",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "DIMARO FOLGARIDA",
+      "titolo": "ESTATE DA RIDERE",
+      "descrizione": "Serata di puro cabaret con la comicità di Andrea Di Marco, volto noto del palcoscenico di Zelig. Un appuntamento all’insegna del buonumore. A pagamento. 0463 986608 0463 986113",
+      "orario_inizio": "21:15",
+      "orario_fine": "23:15",
+      "luogo": "Folgarida - Centro Congressi alla Sosta dell’Imperatore",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "LABORATORIO BOLLE DI SAPONE (5+)",
+      "descrizione": "Un’esplosione di magia e creatività: realizza bolle leggere e colorate, costruendo con le tue mani strumenti unici da portare a casa. A pagamento. 0463 751183",
+      "orario_inizio": "15:00",
+      "orario_fine": "17:00",
+      "luogo": "Pellizzano - Parco Sama",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "EVOLUZIONE DEI CENTRI STORICI",
+      "descrizione": "Un approfondimento culturale dedicato alle trasformazioni urbanistiche del borgo a cura di Salvatore Ferrari. Iniziativa promossa in sinergia con il Centro Studi per la Val di Sole. Ingresso libero",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Cogolo Sede Parco Nazionale Stelvio",
+      "tipo": "data_specifica",
+      "data": "2026-08-27"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "BABY DISCO SHOW",
+      "descrizione": "Serata di puro intrattenimento musicale e divertimento per i più piccoli in compagnia di Dj Silvio e Giorgi",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Mezzana - Piazzetta Benvenuti",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "INFO E TICKET",
+      "descrizione": "valdisolebikeland.com MUOVERSI NON È MAI STATO COSÌ SEMPLICE! Il servizio treno continuativo ti porta direttamente nel cuore dell’evento! MAIN PARTNERS",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "OFFICIAL PARTNERS",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "OFFICIAL SUPPLIERS",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "INSTITUTIONAL PARTNERS",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "VEN. 28 AGO DAOLASA",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "MAR. 25 AGO",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "PIAZZA REGINA ELENA, MALÉ",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "10.30 - 17.30 | QUALIFICHE DH",
+      "descrizione": "18.00 - 19.00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "DAOLASA",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "MER. 26 AGO",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "10.00 - 12.00 | E-MOUNTAIN BIKE CROSS-COUNTRY 17.00 - 19.00 | CROSS-COUNTRY TEAM RELAY",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "DAOLASA",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "GIO. 27 AGO",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "09.30 - 12.30 | JUNIOR CROSS-COUNTRY OLYMPIC 15.30 - 17.15 | UNDER 23 CROSS-COUNTRY SHORT TRACK 17.45 - 19.30 | ELITE CROSS-COUNTRY SHORT TRACK",
+      "descrizione": "19.00 - 20.30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "APERITIVO & RED BULL DJ SET",
+      "descrizione": "21.00 - 22.30 | QUALIFICHE 4X",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "2026 UCI MOUNTAIN BIKE",
+      "descrizione": "19.00 - 20.30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "THE BASTARD SONS OF DIONISO",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "25-30 WORLD CHAMPIONSHIPS",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "OPENING CEREMONY",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "18.00 - 19.00 | SCOTT CROSS-COUNTRY KIDS 20.00 - 22.30 | 4X PRO TOUR",
+      "descrizione": "22.00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "I PATAGARRI",
+      "descrizione": "24.00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "BANDAKADABRA",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "SAB. 29 AGO DAOLASA 09.00 - 12.00 | JUNIOR DOWNHILL 13.00 - 18.00 | ELITE DOWNHILL",
+      "descrizione": "20.30 - 22.00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "TWO SPANS ABOVE",
+      "descrizione": "22.00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "VAL DI SOLE BIKELAND RAINBOW NIGHT",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "DOM. 30 AGO DAOLASA 09.00 - 12.30 | UNDER 23 CROSS-COUNTRY OLYMPIC 13.00 - 16.30 | ELITE CROSS-COUNTRY OLYMPIC",
+      "descrizione": "18.00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "PARTY RIDERS & VOLUNTEERS",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "MEZZANA",
+      "titolo": "SEI RESIDENTE IN VAL DI SOLE? L’INGRESSO È GRATUITO!",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "PIAZZA IN MUSICA",
+      "descrizione": "Rustle Up Band - Live music",
+      "orario_inizio": "20:30",
+      "orario_fine": null,
+      "luogo": "Pellizzano - Piazza Santa Maria",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "PASSO TONALE",
+      "titolo": "TRENTO FILM FESTIVAL: PROIEZIONI D’AUTORE",
+      "descrizione": "Una serata dedicata al cinema di montagna con la visione di una selezione di filmati tratti dall’ultima edizione della prestigiosa rassegna tridentina. Ingresso libero fino a esaurimento posti",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Passo Tonale - Sala Presanella",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SUONI TRA I PASCOLI",
+      "descrizione": "Un suggestivo appuntamento in quota accompagnato dalle note folk e acustiche dei Mystic Owls, per vivere la malga tra musica e natura",
+      "orario_inizio": "12:00",
+      "orario_fine": "14:00",
+      "luogo": "Celentino - Malga Campo",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI COGOLO",
+      "descrizione": "Festeggiamenti patronali nel cuore del paese tra tradizioni locali, sapori tipici e momenti di convivialità",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Cogolo Piazzale ex scuole",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "PELLIZZANO",
+      "titolo": "LA LUNA SUI NOSSI MONTI",
+      "descrizione": "Spettacolo di danza tra canti dolci di montagna a cura del Centro Santa Chiara - Ariateatro TWAIN Danza. Servizio navetta dall’Ufficio Informazioni di Pellizzano",
+      "orario_inizio": "18:00",
+      "orario_fine": "19:30",
+      "luogo": "Termenago - Anfiteatro vegetale",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "VERMIGLIO",
+      "titolo": "MULINO IN FESTA",
+      "descrizione": "Un coinvolgente appuntamento enogastronomico che anima le vie del borgo di Cortina tra sapori e tradizioni locali",
+      "orario_inizio": "18:00",
+      "orario_fine": "00:00",
+      "luogo": "Cortina",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI COGOLO",
+      "descrizione": "I festeggiamenti per il Santo Patrono tra momenti di convivialità e antiche usanze nel cuore della comunità",
+      "orario_inizio": "19:00",
+      "orario_fine": "00:00",
+      "luogo": "Cogolo Piazzale ex scuole",
+      "tipo": "data_specifica",
+      "data": "2026-08-28"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "POP! IN CASTELLO",
+      "descrizione": "Laboratorio creativo per famiglie: ispirandosi alle opere di pop e street art esposte a Castel Caldes in occasione della mostra “Da Wahrol a Banksy”, bambine e bambini danno vita a una personale e coloratissima creazione artistica. A pagamento, su prenotazione www.visitvaldisole.it",
+      "orario_inizio": "10:30",
+      "orario_fine": "12:00",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "data_specifica",
+      "data": "2026-08-29"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "LE FIABE DEI CAVALIERI ERRANTI",
+      "descrizione": "In questo spettacolo vengono rappresentate in musica e con immagini, tra le più famose e conosciute leggende della nostra regione. Ogni canzone e quindi ogni fiaba e leggenda, verrà accompagnata da",
+      "orario_inizio": "16:00",
+      "orario_fine": "17:30",
+      "luogo": "Caldes - Castel Caldes",
+      "tipo": "data_specifica",
+      "data": "2026-08-29"
+    },
+    {
+      "comune": "CALDES",
+      "titolo": "AQUAVOCE: LE VOCI DI ENROSADIRA",
+      "descrizione": "",
+      "orario_inizio": "20:45",
+      "orario_fine": null,
+      "luogo": "Rabbi Fonti - Terme di Rabbi",
+      "tipo": "data_specifica",
+      "data": "2026-08-29"
+    },
+    {
+      "comune": "OSSANA",
+      "titolo": "COMPETIZIONE CICLISTICA “TROFEO ANDREA ROSETTI”",
+      "descrizione": "da Ossana a Malga Stabli",
+      "orario_inizio": "10:00",
+      "orario_fine": "00:00",
+      "luogo": "Cogolo Piazzale ex scuole",
+      "tipo": "data_specifica",
+      "data": "2026-08-30"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "SAGRA DI COGOLO",
+      "descrizione": "Solenne processione patronale accompagnata dal Corpo Bandistico Val *prenotazione obbligatoria entro le ore 18:00 del giorno precedente di Pejo. Il gruppo torna a far risuonare le valli con un repertorio elegante che spazia dalle colonne sonore ai capolavori classici, regalando un’esperienza sonora densa di pathos ai piedi dell’Ortles-Cevedale dalle ore 16:00 Cogolo Piazzale ex scuole",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-30"
+    },
+    {
+      "comune": "PEIO",
+      "titolo": "COLOR FUN RUN",
+      "descrizione": "Una corsa di colori, un mare di sorrisi. La Cogolo Color Fun è la passeggiata pazza più allegra dell’estate. Una giornata di festa per celebrare il ricordo del colorato sorriso di Tommaso Delpero. Il ricavato dell’evento sarà interamente devoluto in beneficenza",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-30"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CHEYENNE, TRENT’ANNI",
+      "descrizione": "Serata Culturale SAT Malé con la proiezione del documentario di Michele Trentini. Un ritratto intenso di Maria “Cheyenne” Daprà e della sua dedizione alla vita di montagna tra pascoli e transumanza. Un’occasione di riflessione nell’Anno Internazionale dei Pastori. Ingresso libero *prenotazione obbligatoria entro le ore 18:00 del giorno precedente",
+      "orario_inizio": "21:00",
+      "orario_fine": "22:30",
+      "luogo": "Malé Cinema Teatro",
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "INFO",
+      "descrizione": "Consorzio Pontedilegno-Tonale tel. +39 0364 92097/92066 www.pontedilegnotonale.com",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "AGOSTO 2026",
+      "descrizione": "Sabato 8 AGOSTO ore 15.00 Passo Tonale | Lago Valbiolo fino al 6 SETTEMBRE Passo Tonale | Lago Valbiolo",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "JOAN THIELE",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "A FIOR D’ACQUA CAMMINARE SUL LAGO",
+      "descrizione": "Domenica 2 AGOSTO dalle ore 12.00 alle ore 17.00 Passo Tonale | Lago Valbiolo",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "WATER MUSIC PARTY ROCK MUSIC & BEER",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "EVENTO A PAGAMENTO",
+      "descrizione": "Sabato 22 AGOSTO ore 20.30 Vermiglio | Laghetti di S. Leonardo",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "WATER MUSIC PARTY ROCK & PEACE",
+      "descrizione": "Media Partner",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MOSTRE IN VAL DI SOLE",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "DA WARHOL A BANSKY",
+      "descrizione": "Pop e street icons in Val di Sole CALDES, Castel Caldes fino al 20 settembre dalle 10:00 alle 18:00 MASI e MASI Masetti in miniatura e disegni a matita di Emilio Pedrotti e Sandra Paglicci TERZOLAS, Androne Palazzo Torraccia dal 10 al 20 agosto dalle ore 17:00 alle ore 19:00 (per info 338 3597450)",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LA LUCE NEL TEMPO",
+      "descrizione": "di Selene Angeli e Linda Vincenzi MALÉ, Sala mostre Piazza Regina Elena fino al 2 Agosto dalle 10:30 alle 12:00 e dalle 20:00 alle 22:30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LA MAGIA DEI PASTELLI",
+      "descrizione": "di Manuela Emanuelli MALÉ, Sala mostre Piazza Regina Elena dal 17 al 23 Agosto dalle 16:00 alle 22:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SINFONIE D’ACQUA E COLORE",
+      "descrizione": "acquerelli di Franco Pretti MALÉ, Sala mostre Piazza Regina Elena dal 24 al 30 Agosto dalle 19:00 alle 22:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TRA ARTE E ARTIGIANATO",
+      "descrizione": "di Selene Angeli e Maurizio Angeli CROVIANA, Sala Busetti dall’8 al 16 agosto dalle 17:30 alle 22:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LIBERE E SOVRANE",
+      "descrizione": "per l’80° anniversario del voto alle donne in Italia. A cura di ANPI con l’illustratrice Michela Nanut CROVIANA, Ex Scuola Materna - Municipio dal 18 al 30 agosto dalle 10:00 alle 17:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "COMMEZZADURA:",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "UNA COMUNITÀ, MILLE STORIE",
+      "descrizione": "Esposizione artistica: firme del territorio MALÉ, Sala mostre Piazza Regina Elena dal 3 al 9 Agosto dalle 17:30 alle 20:00 e dalle 21.00 alle 22:00 MESTRIAGO, Sala polifunzionale del Municipio dal 4 al 16 agosto dalle 18:00 alle 19:00 e il 16 mattina dalle 09:00 alle 12:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "EMOZIONI - ARTE TESSILE",
+      "descrizione": "l 16 agosto dalle 16:00 alle 19:00 di Silvia Muller MALÉ, Sala mostre Piazza Regina Elena dal 10 al 16 Agosto dalle 17:00 alle 19:30 e dalle 20:30 alle 22:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LA MONTAGNA NEL LEGNO",
+      "descrizione": "di Livio Lorenzoni insieme a “La Libreria dietro l’Angolo” di Cles",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "LIBERE E SOVRANE",
+      "descrizione": "per l’80° anniversario del voto alle donne in Italia. A cura di ANPI con l’illustratrice Michela Nanut PELLIZZANO, Sala mostre piano terra del Municipio dall’1 al 16 agosto dalle 10:00 alle 18:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "CINEMA IN VAL DI SOLE",
+      "descrizione": "",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MINIMALIA",
+      "descrizione": "Piccola flora alpina al margine del sentiero di Guido Moretti PELLIZZANO, Sala mostre piano terra del Municipio Dal 18 agosto all’8 settembre dalle 10:00 alle 18:00",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MOSTRA D’ARTE PITTORICA",
+      "descrizione": "di Mauro Pancheri VERMIGLIO, Forte Strino fino a metà settembre dalle 10:00 alle 12:30 e dalle 14:00 alle 18:30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "DOPPIO SGUARDO",
+      "descrizione": "Il Parco dello Stelvio nelle fotografie di Flavio Faganello di Claudia Marini COGOLO, Palazzo Migazzi fino a fine settembre martedì e venerdì dalle 9:30 alle 12:30 e dalle 16:00 alle 19:00, mercoledì, giovedì e sabato dalle 16:00 alle 19:00 (tutti i giovedì di agosto apertura serale dalle 20:30 alle 22.30), domenica e lunedì chiuso",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "UTENSILI OBLIATI",
+      "descrizione": "di Alessio Ramundo COGOLO, Palazzo Migazzi fino a fine settembre martedì e venerdì dalle 9:30 alle 12:30 e dalle 16:00 alle 19:00, mercoledì, giovedì e sabato dalle 16:00 alle 19:00 (tutti i giovedì di agosto apertura serale dalle 20:30 alle 22.30), domenica e lunedì chiuso CINEMA MALÉ - Cinema Teatro di Malè Per la programmazione consultare: Facebook : Cinema Malé -SGS Instagram: cinema.male CINEMA PEJO - Auditorium Centro Termale Martedì 04 agosto - ore 21:15",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "SUPERGIRL",
+      "descrizione": "Sabato 08 agosto - ore 17:30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "MINIONS & MONSTERS",
+      "descrizione": "Film d’animazione e avventura diretto da P. Coffin Martedì 11 agosto e venerdì 14 agosto - ore 21:15",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "ODISSEA",
+      "descrizione": "Giovedì 13 agosto - ore 17:30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TOY STORY 5",
+      "descrizione": "Commedia/ Avventura diretto da A. Stanton Lunedì 17 agosto - ore 17:30",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TITOLO DA DEFINIRE",
+      "descrizione": "Lunedì 24 agosto - ore 21:15",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TITOLO DA DEFINIRE",
+      "descrizione": "Giovedì 27 agosto - ore 21:15",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    },
+    {
+      "comune": "MALÉ",
+      "titolo": "TITOLO DA DEFINIRE",
+      "descrizione": "CINEMA OSSANA - Fucine di Ossana Per la programmazione consultare il sito www.visitvaldisole.it visitvaldisole.it",
+      "orario_inizio": null,
+      "orario_fine": null,
+      "luogo": null,
+      "tipo": "data_specifica",
+      "data": "2026-08-31"
+    }
+  ]
+}

@@ -306,6 +306,25 @@
   .b-weather .day{text-align:center; font-size:11.5px; opacity:.9; flex:1;}
   .b-weather .day b{display:block; font-size:14px; margin-top:2px;}
 
+  .b-events{margin:0 0 14px;}
+  .events-loading, .events-empty{
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px;
+    color:var(--ink-soft); padding:28px 10px; background:var(--panel); border:1px solid var(--line-soft);
+    border-radius:var(--radius-md); font-size:13.5px;
+  }
+  .events-loading svg, .events-empty svg{width:26px; height:26px; opacity:.6;}
+  .event-card{
+    display:flex; gap:12px; align-items:flex-start; background:var(--panel);
+    border:1px solid var(--line-soft); border-radius:var(--radius-md); padding:13px 14px; margin-bottom:10px;
+  }
+  .event-time{
+    flex:none; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:#fff;
+    background:var(--forest); border-radius:8px; padding:6px 8px; text-align:center; line-height:1.3; min-width:58px;
+  }
+  .event-title{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:15px; color:var(--forest-dk); line-height:1.3;}
+  .event-place{font-size:12px; font-weight:600; color:var(--gold-dk); margin-top:2px;}
+  .event-desc{font-size:13px; line-height:1.5; color:var(--ink-soft); margin-top:5px;}
+
   .b-form textarea, .b-form input{
     width:100%; border:1px solid var(--line); border-radius:var(--radius-sm); padding:11px 12px;
     font-family:inherit; font-size:14px; margin-bottom:10px; background:var(--panel); color:var(--ink);
@@ -402,6 +421,7 @@ const ICONS = {
   cart:`<circle cx="9" cy="21" r="1.3" fill="currentColor" stroke="none"/><circle cx="18" cy="21" r="1.3" fill="currentColor" stroke="none"/><path d="M2 3h2.2l2.4 12.2a1.8 1.8 0 0 0 1.8 1.5h8.4a1.8 1.8 0 0 0 1.78-1.5L20.5 7H6"/>`,
   utensils:`<path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M6 2v20"/><path d="M18 2c-2.2 0-4 2.5-4 5.5 0 2.5 1.3 4.2 3 4.8V22"/>`,
   museum:`<path d="M3 21h18"/><path d="M4 21V10M8 21V10M12 21V10M16 21V10M20 21V10"/><path d="M2.5 10 12 4l9.5 6Z"/>`,
+  calendar:`<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><circle cx="8" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="14" r="1" fill="currentColor" stroke="none"/>`,
 };
 function icon(name){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.info}</svg>`; }
 
@@ -436,6 +456,7 @@ const DATA = {
     closeLabel:'Chiudi',
     nav:[
       {id:'welcome', icon:'home', label:'Benvenuto'},
+      {id:'eventsToday', icon:'calendar', label:'Eventi Oggi'},
       {id:'location', icon:'pin', label:'Posizione'},
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'Regole della casa'},
@@ -468,6 +489,14 @@ const DATA = {
           {t:'p', text:'In questa piccola guida digitale trovate tutto il necessario per il soggiorno: come raggiungere l’appartamento, come entrare, le regole della casa, la gestione dei rifiuti e tanti consigli per vivere al meglio la valle.'},
           {t:'note', text:'Toccate un’icona nella schermata principale per aprire la sezione che vi interessa. Potete tornare alla home in qualsiasi momento con la freccia o chiudendo la scheda.'},
           {t:'p', text:'Vi auguriamo un soggiorno pieno di aria buona, montagne e relax!'},
+        ]
+      },
+      eventsToday:{
+        title:'Eventi Oggi',
+        blocks:[
+          {t:'p', text:'Gli eventi organizzati in Val di Sole per <b>oggi</b>, aggiornati automaticamente dall’opuscolo dell’APT.'},
+          {t:'events_today'},
+          {t:'note', text:'Fonte: opuscolo APT Val di Sole. Programma soggetto a variazioni meteo — verificate gli orari con gli Uffici Informazioni prima di partecipare.'},
         ]
       },
       location:{
@@ -1369,6 +1398,7 @@ const DATA = {
     closeLabel:'Close',
     nav:[
       {id:'welcome', icon:'home', label:'Welcome'},
+      {id:'eventsToday', icon:'calendar', label:'Events Today'},
       {id:'location', icon:'pin', label:'Location'},
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'House rules'},
@@ -1401,6 +1431,14 @@ const DATA = {
           {t:'p', text:'This little digital guide has everything you need for your stay: how to reach the apartment, how to get in, the house rules, waste disposal, and plenty of tips to make the most of the valley.'},
           {t:'note', text:'Tap an icon on the home screen to open the section you need. You can go back home anytime using the back arrow or by closing the panel.'},
           {t:'p', text:'We wish you a stay full of fresh air, mountains and relaxation!'},
+        ]
+      },
+      eventsToday:{
+        title:'Events Today',
+        blocks:[
+          {t:'p', text:'Events happening in Val di Sole <b>today</b>, automatically updated from the local tourist office’s brochure.'},
+          {t:'events_today'},
+          {t:'note', text:'Source: Val di Sole tourist office (APT) brochure. Listings are in Italian and may change due to weather — please check times with the local Info Offices before attending.'},
         ]
       },
       location:{
@@ -2374,6 +2412,9 @@ function blockHTML(b){
         <div class="wslots" id="wSlots"></div>
         <div class="days" id="wDays"></div>
       </div>`;
+    case 'events_today': return `<div class="b-events" id="eventsTodayBox">
+        <div class="events-loading">${icon('calendar')}<span>${lang==='it'?'Carico gli eventi di oggi…':'Loading today’s events…'}</span></div>
+      </div>`;
     case 'form': return `<div class="b-form">
         <label>${lang==='it'?'Il tuo nome':'Your name'}</label>
         <input id="fbName" type="text" placeholder="${lang==='it'?'Nome':'Name'}">
@@ -2419,6 +2460,7 @@ function openSection(id){
     });
   }
   if(document.getElementById('weatherBox')) loadWeather();
+  if(document.getElementById('eventsTodayBox')) loadEventsToday();
 }
 
 function closeSection(){
@@ -2496,6 +2538,49 @@ async function loadWeather(idx){
   }catch(e){
     tEl.textContent='—';
     daysEl.innerHTML=`<div class="day">${lang==='it'?'Meteo non disponibile':'Weather unavailable'}</div>`;
+  }
+}
+
+/* =========================================================
+   EVENTI OGGI — legge eventi.json (generato dal PDF APT)
+   e mostra solo gli eventi di oggi (data specifica o ricorrenti)
+   ========================================================= */
+async function loadEventsToday(){
+  const box = document.getElementById('eventsTodayBox');
+  if(!box) return;
+  const oggi = new Date();
+  const iso = oggi.getFullYear()+'-'+String(oggi.getMonth()+1).padStart(2,'0')+'-'+String(oggi.getDate()).padStart(2,'0');
+  const giorniIt = ['DOMENICA','LUNEDÌ','MARTEDÌ','MERCOLEDÌ','GIOVEDÌ','VENERDÌ','SABATO'];
+  const giornoOggi = giorniIt[oggi.getDay()];
+  try{
+    const res = await fetch('./eventi.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('eventi.json non trovato');
+    const data = await res.json();
+    const eventi = (data.eventi||[]).filter(e=>{
+      if(e.tipo==='data_specifica') return e.data===iso;
+      if(e.tipo==='ricorrente') return e.ricorrenza==='TUTTI I GIORNI' || e.ricorrenza==='OGNI '+giornoOggi;
+      return false;
+    }).sort((a,b)=>(a.orario_inizio||'99:99').localeCompare(b.orario_inizio||'99:99'));
+
+    if(eventi.length===0){
+      box.innerHTML = `<div class="events-empty">${icon('calendar')}<p>${lang==='it'
+        ? 'Nessun evento in programma per oggi (o l’elenco non è ancora stato aggiornato).'
+        : 'No events scheduled for today (or the list hasn’t been updated yet).'}</p></div>`;
+      return;
+    }
+    box.innerHTML = eventi.map(e=>`
+      <div class="event-card">
+        <div class="event-time">${e.orario_inizio ? e.orario_inizio + (e.orario_fine?(' – '+e.orario_fine):'') : (lang==='it'?'Tutto il giorno':'All day')}</div>
+        <div class="event-body">
+          <div class="event-title">${e.titolo||''}</div>
+          <div class="event-place">${[e.comune, e.luogo].filter(Boolean).join(' · ')}</div>
+          ${e.descrizione ? `<div class="event-desc">${e.descrizione}</div>` : ''}
+        </div>
+      </div>`).join('');
+  }catch(err){
+    box.innerHTML = `<div class="events-empty">${icon('calendar')}<p>${lang==='it'
+      ? 'Elenco eventi non disponibile al momento. Riprova più tardi.'
+      : 'Events list not available right now. Please try again later.'}</p></div>`;
   }
 }
 
