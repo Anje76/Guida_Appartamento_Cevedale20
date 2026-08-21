@@ -283,10 +283,26 @@
     background:linear-gradient(160deg,var(--forest),var(--forest-dk)); color:#fff; border-radius:var(--radius-md);
     padding:18px; margin:0 0 14px;
   }
+  .b-weather .wloc-tabs{display:flex; gap:6px; overflow-x:auto; margin:0 0 16px; padding-bottom:2px; -ms-overflow-style:none; scrollbar-width:none;}
+  .b-weather .wloc-tabs::-webkit-scrollbar{display:none;}
+  .b-weather .wloc-tab{
+    flex:none; border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.1); color:#fff;
+    font-size:11.5px; font-weight:700; padding:6px 12px; border-radius:999px; cursor:pointer; white-space:nowrap;
+  }
+  .b-weather .wloc-tab.active{background:#fff; color:var(--forest-dk); border-color:#fff;}
   .b-weather .row{display:flex; align-items:center; justify-content:space-between;}
   .b-weather .temp{font-family:'Baloo 2'; font-size:38px; font-weight:700;}
   .b-weather .loc{font-size:13px; opacity:.85;}
-  .b-weather .days{display:flex; justify-content:space-between; margin-top:14px; gap:6px;}
+  .b-weather #wIcon svg{width:100%; height:100%;}
+  .b-weather .wslots{
+    display:flex; justify-content:space-between; gap:4px; margin-top:16px; padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.22);
+  }
+  .b-weather .wslot{text-align:center; font-size:10.5px; opacity:.92; flex:1;}
+  .b-weather .wslot .t{opacity:.7; margin-bottom:5px;}
+  .b-weather .wslot svg{width:16px; height:16px; margin:0 auto; display:block;}
+  .b-weather .wslot b{display:block; font-size:12.5px; margin-top:4px;}
+  .b-weather .days{display:flex; justify-content:space-between; margin-top:14px; padding-top:14px; gap:6px; border-top:1px solid rgba(255,255,255,.22);}
   .b-weather .day{text-align:center; font-size:11.5px; opacity:.9; flex:1;}
   .b-weather .day b{display:block; font-size:14px; margin-top:2px;}
 
@@ -477,6 +493,7 @@ const DATA = {
           {t:'h', text:'Ingresso alla Galleria Cevedale'},
           {t:'p', text:'L’ingresso dell’appartamento è all’interno della Galleria Cevedale, accanto al Bar Cevedale.'},
           {t:'img', src:'images/ingresso-galleria.jpg', alt:'Scalinata d’ingresso alla Galleria Cevedale', caption:'L’ingresso della Galleria Cevedale, accanto al Bar Cevedale'},
+          {t:'jump', to:'checkin', icon:'key', label:'Per entrare nell’appartamento'},
         ]
       },
       checkin:{
@@ -660,7 +677,7 @@ const DATA = {
           {t:'p', text:'A Malè (e in tutta la Val di Sole) non sono attive zone ZTL permanenti o con varchi elettronici. In ogni località esistono aree pedonali, ma sono solitamente transennate ed è pressoché impossibile accedervi per errore.'},
           {t:'h', text:'Chiusura al traffico della Val di Rabbi'},
           {t:'p', text:'Dal <b>27 giugno al 6 settembre</b>, dalle 9:45 alle 17:00, la provinciale viene chiusa all’altezza di Plazze dei Forni, dove è presente un ampio parcheggio a pagamento. Potete accedere alla parte alta della Val di Rabbi solamente a piedi, in bici o con le navette del Parco (Stelviobus).'},
-          {t:'warn', text:'Attenzione: alcune linee hanno posti limitati ed è necessaria la prenotazione telefonando entro il giorno precedente al 346 6726120, in orario 9:00–17:00.'},
+          {t:'warn', text:'Attenzione: alcune linee (2‑3‑4) hanno posti limitati ed è necessaria la prenotazione telefonando entro il giorno precedente al <a href="tel:+393466726120">346 672 6120</a>, in orario 9:00–17:00.'},
           {t:'p', text:'Passando prima delle 9:45 è possibile raggiungere il parcheggio AL PLAN (ideale per la visita al Ponte Tibetano) oppure il parcheggio COLER (per visitare le Cascate del Saent).'},
           {t:'link', icon:'bus', label:'Linee e orari Stelviobus (PDF)', url:'https://www.visitvaldisole.it/website_files/trasporti/Stelviobus.pdf'},
         ]
@@ -823,6 +840,7 @@ const DATA = {
             name:'Al Molin', tag:'Cucina tipica in Val di Rabbi',
             address:'Località Acidule, 167 — Rabbi',
             desc:'Piccolo ristorante a conduzione familiare all’interno del Parco Nazionale dello Stelvio, 500 metri dopo le Terme di Rabbi, a 1260 m di quota. Piatti della tradizione trentina preparati dal proprietario, in un ambiente tranquillo immerso nel verde, accanto al torrente Rabbiés. Merita una gita fuori porta.',
+            img:'images/ristorante-al-molin.jpg',
             mapsQuery:'Al Molin Ristorante, Località Acidule 167, Rabbi', phone:'+393288033042', phoneDisplay:'328 803 3042'
           },
           {t:'note', text:'Per “Al Molin” utilizzate solo il numero di cellulare indicato: il vecchio numero fisso non è più attivo.'},
@@ -1129,7 +1147,6 @@ const DATA = {
           {t:'link', icon:'key', label:'Scarica l’app Mio Trentino (Google Play)', url:'https://play.google.com/store/apps/details?id=it.visittrentino.app.miotrentino&pcampaignid=web_share'},
           {t:'link', icon:'info', label:'Video: come attivare e usare la Card', url:'https://www.visittrentino.info/video/guest-card/6140730/video-thumb__6140730__contentvideo/Animazione_16_9-IT.mp4'},
           {t:'img', src:'images/mio-trentino-app-logo.png', alt:'App Mio Trentino', width:'88px', center:true},
-          {t:'note', text:'Per qualsiasi dubbio potete scrivere direttamente all’assistenza in app, oppure a <a href="mailto:innovazione@trentinomarketing.org">innovazione@trentinomarketing.org</a>.'},
         ]
       },
       discounts:{
@@ -1409,6 +1426,7 @@ const DATA = {
           {t:'h', text:'Galleria Cevedale entrance'},
           {t:'p', text:'The apartment entrance is inside the Galleria Cevedale, next to the Bar Cevedale.'},
           {t:'img', src:'images/ingresso-galleria.jpg', alt:'Steps up to the Galleria Cevedale entrance', caption:'The entrance to the Galleria Cevedale, next to the Bar Cevedale'},
+          {t:'jump', to:'checkin', icon:'key', label:'To get into the apartment'},
         ]
       },
       checkin:{
@@ -1592,7 +1610,7 @@ const DATA = {
           {t:'p', text:'In Malè (and across Val di Sole) there are no permanent Limited Traffic Zones (LTZ/ZTL) and no electronic access gates. Every village has pedestrian areas, but they are usually fenced off, so entering by mistake is practically impossible.'},
           {t:'h', text:'Road closure in Val di Rabbi'},
           {t:'p', text:'From <b>27 June to 6 September</b>, from 9:45am to 5:00pm, the provincial road is closed at Plazze dei Forni, where there is a large paid car park. You can only reach the upper part of Val di Rabbi on foot, by bike, or with the Park’s shuttle buses (Stelviobus).'},
-          {t:'warn', text:'Note: some lines have limited seats and require booking by phone by the day before, calling 346 6726120 between 9:00am and 5:00pm.'},
+          {t:'warn', text:'Note: some lines (2‑3‑4) have limited seats and require booking by phone by the day before, calling <a href="tel:+393466726120">346 672 6120</a>, between 9:00am and 5:00pm.'},
           {t:'p', text:'If you pass through before 9:45am, you can reach the AL PLAN car park (ideal for visiting the Tibetan Bridge) or the COLER car park (for the Saent waterfalls).'},
           {t:'link', icon:'bus', label:'Stelviobus routes and timetables (PDF)', url:'https://www.visitvaldisole.it/website_files/trasporti/Stelviobus.pdf'},
         ]
@@ -1755,6 +1773,7 @@ const DATA = {
             name:'Al Molin', tag:'Traditional cuisine in Val di Rabbi',
             address:'Località Acidule, 167 — Rabbi',
             desc:'A small family-run restaurant inside the Stelvio National Park, 500 metres past the Rabbi thermal spa, at 1260 m altitude. Traditional Trentino dishes prepared by the owner, in a quiet setting surrounded by greenery, next to the Rabbiés stream. Well worth the trip out.',
+            img:'images/ristorante-al-molin.jpg',
             mapsQuery:'Al Molin Ristorante, Località Acidule 167, Rabbi', mapsLabel:'Map', phone:'+393288033042', phoneDisplay:'328 803 3042'
           },
           {t:'note', text:'For “Al Molin”, please use only the mobile number shown: the old landline is no longer active.'},
@@ -2061,7 +2080,6 @@ const DATA = {
           {t:'link', icon:'key', label:'Download the Mio Trentino app (Google Play)', url:'https://play.google.com/store/apps/details?id=it.visittrentino.app.miotrentino&pcampaignid=web_share'},
           {t:'link', icon:'info', label:'Video: how to activate and use the Card', url:'https://www.visittrentino.info/video/guest-card/6140730/video-thumb__6140730__contentvideo/Animazione_16_9-IT.mp4'},
           {t:'img', src:'images/mio-trentino-app-logo.png', alt:'Mio Trentino App', width:'88px', center:true},
-          {t:'note', text:'For any questions you can write directly to support in the app, or email <a href="mailto:innovazione@trentinomarketing.org">innovazione@trentinomarketing.org</a>.'},
         ]
       },
       discounts:{
@@ -2351,7 +2369,9 @@ function blockHTML(b){
       </div>`;
     case 'hours': return `<table class="b-hours">${b.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>`;
     case 'weather': return `<div class="b-weather" id="weatherBox">
-        <div class="row"><div><div class="loc">Malè, Val di Sole</div><div class="temp" id="wTemp">—</div></div><div id="wIcon" style="width:46px;height:46px;">${icon('cloud')}</div></div>
+        <div class="wloc-tabs" id="wLocTabs">${WEATHER_LOCATIONS.map((loc,i)=>`<button class="wloc-tab${i===weatherLocIndex?' active':''}" data-idx="${i}" type="button">${loc.tabLabel[lang]}</button>`).join('')}</div>
+        <div class="row"><div><div class="loc" id="wLocName">${WEATHER_LOCATIONS[weatherLocIndex].name[lang]}</div><div class="temp" id="wTemp">—</div></div><div id="wIcon" style="width:46px;height:46px;">${icon('cloud')}</div></div>
+        <div class="wslots" id="wSlots"></div>
         <div class="days" id="wDays"></div>
       </div>`;
     case 'form': return `<div class="b-form">
@@ -2392,6 +2412,12 @@ function openSection(id){
       window.location.href=`mailto:anje76@gmail.com?subject=${subject}&body=${body}`;
     };
   }
+  const wTabs=document.getElementById('wLocTabs');
+  if(wTabs){
+    wTabs.querySelectorAll('.wloc-tab').forEach(btn=>{
+      btn.onclick=()=>loadWeather(parseInt(btn.dataset.idx,10));
+    });
+  }
   if(document.getElementById('weatherBox')) loadWeather();
 }
 
@@ -2417,18 +2443,56 @@ if(location.hash){ const id=location.hash.slice(1); if(DATA[lang].sections[id]) 
 /* =========================================================
    WEATHER (Open-Meteo, no API key required)
    ========================================================= */
-let weatherLoaded=false;
-async function loadWeather(){
+const WEATHER_LOCATIONS = [
+  {key:'male', tabLabel:{it:'Malè', en:'Malè'}, name:{it:'Malè, Val di Sole', en:'Malè, Val di Sole'}, lat:46.357, lon:10.918},
+  {key:'peio', tabLabel:{it:'Peio', en:'Peio'}, name:{it:'Peio, Val di Peio', en:'Peio, Val di Peio'}, lat:46.3606, lon:10.6837},
+  {key:'tonale', tabLabel:{it:'Tonale', en:'Tonale'}, name:{it:'Passo del Tonale', en:'Passo del Tonale'}, lat:46.2578, lon:10.5975},
+  {key:'rabbi', tabLabel:{it:'Rabbi', en:'Rabbi'}, name:{it:'Rabbi Fonti, Val di Rabbi', en:'Rabbi Fonti, Val di Rabbi'}, lat:46.4459, lon:10.8409},
+  {key:'campiglio', tabLabel:{it:'Campiglio', en:'Campiglio'}, name:{it:'Madonna di Campiglio', en:'Madonna di Campiglio'}, lat:46.2273, lon:10.8260},
+];
+let weatherLocIndex = 0;
+
+function wIconFor(code){
+  if(code===0) return 'sun';
+  if(code>=1 && code<=3) return 'cloud';
+  if(code===45 || code===48) return 'cloud';
+  if((code>=51 && code<=67) || (code>=80 && code<=82)) return 'cloud';
+  if((code>=71 && code<=77) || code===85 || code===86) return 'snow';
+  if(code>=95) return 'bolt';
+  return 'cloud';
+}
+
+async function loadWeather(idx){
+  if(typeof idx==='number') weatherLocIndex=idx;
+  const loc=WEATHER_LOCATIONS[weatherLocIndex];
   const tEl=document.getElementById('wTemp');
   const daysEl=document.getElementById('wDays');
+  const slotsEl=document.getElementById('wSlots');
+  const nameEl=document.getElementById('wLocName');
+  const iconEl=document.getElementById('wIcon');
+  if(!tEl) return;
+  if(nameEl) nameEl.textContent=loc.name[lang];
+  document.querySelectorAll('#wLocTabs .wloc-tab').forEach((btn,i)=>btn.classList.toggle('active', i===weatherLocIndex));
+  tEl.textContent='—';
+  slotsEl.innerHTML='';
+  daysEl.innerHTML='';
   try{
-    const res=await fetch('https://api.open-meteo.com/v1/forecast?latitude=46.357&longitude=10.918&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FRome&forecast_days=4');
+    const res=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,weather_code&hourly=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FRome&forecast_days=4`);
     const j=await res.json();
     tEl.textContent = Math.round(j.current.temperature_2m)+'°C';
-    const names = lang==='it' ? ['Oggi','Dom1','Dom2','Dom3'] : ['Today','Day 2','Day 3','Day 4'];
-    const daysArr = j.daily.time.map((t,i)=>i);
+    if(iconEl) iconEl.innerHTML = icon(wIconFor(j.current.weather_code));
+
+    // 6 forecast readings for today, every 4 hours
+    const slotHours=[0,4,8,12,16,20];
+    slotsEl.innerHTML = slotHours.map(h=>{
+      const temp=j.hourly.temperature_2m[h];
+      const code=j.hourly.weather_code[h];
+      const label=(h<10?'0':'')+h+':00';
+      return `<div class="wslot"><div class="t">${label}</div>${icon(wIconFor(code))}<b>${Math.round(temp)}°</b></div>`;
+    }).join('');
+
     const labels = j.daily.time.map((t,i)=> i===0 ? (lang==='it'?'Oggi':'Today') : new Date(t).toLocaleDateString(lang==='it'?'it-IT':'en-GB',{weekday:'short'}));
-    daysEl.innerHTML = daysArr.map(i=>`<div class="day">${labels[i]}<b>${Math.round(j.daily.temperature_2m_max[i])}°</b></div>`).join('');
+    daysEl.innerHTML = j.daily.time.map((t,i)=>`<div class="day">${labels[i]}<b>${Math.round(j.daily.temperature_2m_max[i])}°</b></div>`).join('');
   }catch(e){
     tEl.textContent='—';
     daysEl.innerHTML=`<div class="day">${lang==='it'?'Meteo non disponibile':'Weather unavailable'}</div>`;
