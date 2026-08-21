@@ -1,0 +1,51 @@
+name: Aggiorna eventi da PDF
+
+# Si attiva automaticamente ogni volta che il file eventi.pdf viene
+# caricato/sostituito nel repository, oppure una volta al giorno di notte
+# (utile se in futuro il PDF verrà pubblicato a un URL fisso invece che
+# caricato a mano), oppure manualmente dal tab "Actions" su GitHub.
+on:
+  push:
+    paths:
+      - 'eventi.pdf'
+  schedule:
+    - cron: '0 3 * * *'   # ogni notte alle 03:00 UTC (05:00 ora italiana estiva)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna-eventi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repository
+        uses: actions/checkout@v4
+
+      - name: Installa poppler-utils (serve per leggere il testo del PDF)
+        run: sudo apt-get update -y && sudo apt-get install -y poppler-utils
+
+      - name: Imposta Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Estrai gli eventi dal PDF
+        run: |
+          if [ ! -f eventi.pdf ]; then
+            echo "Nessun file eventi.pdf trovato nel repository: niente da fare."
+            exit 0
+          fi
+          python3 parse_eventi.py eventi.pdf eventi.json
+
+      - name: Salva eventi.json nel repository (se cambiato)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add eventi.json
+          if git diff --staged --quiet; then
+            echo "eventi.json non è cambiato, nessun commit necessario."
+          else
+            git commit -m "Aggiorna eventi.json da eventi.pdf [automatico]"
+            git push
+          fi
