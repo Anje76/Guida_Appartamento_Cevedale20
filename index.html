@@ -181,6 +181,7 @@
     content:""; position:absolute; left:0; top:8px; width:7px; height:7px; border-radius:2px;
     background:var(--gold); transform:rotate(45deg);
   }
+  .b-p a, .b-list a, .b-note a{color:var(--gold-dk); font-weight:700; text-decoration:underline; text-underline-offset:2px;}
   .b-note{
     background:#FBF1DA; border:1px solid #EBD6A0; border-left:4px solid var(--gold-dk);
     border-radius:var(--radius-sm); padding:12px 14px; font-size:13.8px; line-height:1.55; margin:0 0 14px; color:var(--ink);
@@ -954,9 +955,9 @@ const DATA = {
           {t:'h', text:'Giornata di pioggia? Ecco qualche idea'},
           {t:'list', items:[
             'Terme di Pejo o Rabbi, per un pomeriggio di relax',
-            'Musei e centri visitatori dei Parchi (Stelvio / Adamello Brenta)',
-            'Passeggiata nella Galleria Cevedale e nei negozi del centro di Malè',
-            'Una cioccolata calda in uno dei bar del paese',
+            "Musei e attrazioni: <a href=\"#\" onclick=\"event.preventDefault(); openSection('museums')\">scopri la scheda Musei</a>",
+            'Cinema di <a href="https://www.visitvaldisole.it/it/eventi/cinema-male" target="_blank" rel="noopener">Malè</a> o <a href="https://www.visitvaldisole.it/it/eventi/cinema-ossana" target="_blank" rel="noopener">Ossana</a>',
+            'Una cioccolata calda con fetta di torta, Strudel o frittelle di mele al Bar Roma in centro',
           ]},
         ]
       },
@@ -1900,9 +1901,9 @@ const DATA = {
           {t:'h', text:'Rainy day? A few ideas'},
           {t:'list', items:[
             'Pejo or Rabbi thermal spas, for a relaxing afternoon',
-            'Museums and visitor centres of the parks (Stelvio / Adamello Brenta)',
-            'A stroll through the Galleria Cevedale and Malè’s town-centre shops',
-            'A hot chocolate in one of the village’s cafés',
+            "Museums and attractions: <a href=\"#\" onclick=\"event.preventDefault(); openSection('museums')\">see the Museums section</a>",
+            'Cinema in <a href="https://www.visitvaldisole.it/it/eventi/cinema-male" target="_blank" rel="noopener">Malè</a> or <a href="https://www.visitvaldisole.it/it/eventi/cinema-ossana" target="_blank" rel="noopener">Ossana</a>',
+            'A hot chocolate with a slice of cake, strudel or apple fritters at Bar Roma in the town centre',
           ]},
         ]
       },
