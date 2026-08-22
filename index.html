@@ -415,6 +415,7 @@ const ICONS = {
   globe:`<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.4 2.4 3.7 5.6 3.7 9s-1.3 6.6-3.7 9c-2.4-2.4-3.7-5.6-3.7-9s1.3-6.6 3.7-9Z"/>`,
   sun:`<circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M2.5 12h3M18.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/>`,
   snow:`<path d="M12 2v20"/><path d="M4.5 6.5 19.5 17.5"/><path d="M19.5 6.5 4.5 17.5"/><path d="M12 6 9.8 4.3M12 6l2.2-1.7M12 18l-2.2 1.7M12 18l2.2 1.7"/>`,
+  skis:`<path d="M4.5 19.5 17 6.5"/><path d="M17 6.5c1.3-1.3 2-1 2.6-.4"/><path d="M19.5 19.5 7 6.5"/><path d="M7 6.5C5.7 5.2 5 5.5 4.4 6.1"/>`,
   info:`<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/>`,
   mountain:`<path d="M3 19 9.5 8l3.2 5 2-3L21 19Z"/><circle cx="7" cy="7" r="1.3"/>`,
   heart:`<path d="M12 20s-7-4.4-9.4-8.7A5 5 0 0 1 12 6a5 5 0 0 1 9.4 5.3C19 15.6 12 20 12 20Z"/>`,
@@ -484,7 +485,7 @@ const DATA = {
       {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'transport', icon:'bus', label:'Trasporti'},
       {id:'summerActivities', icon:'sun', label:'Attività Estive'},
-      {id:'skiing', icon:'snow', label:'Sciare in Val di Sole'},
+      {id:'skiing', icon:'skis', label:'Sciare in Val di Sole'},
       {id:'winterActivities', icon:'snow', label:'Attività Invernali'},
       {id:'activateGuestCard', icon:'key', label:'Attivazione<br>Trentino Guest Card'},
       {id:'discounts', icon:'tag', label:'Convenzioni<br>Trentino Guest Card'},
@@ -848,6 +849,7 @@ const DATA = {
           },
           {t:'img', src:'images/shopping-caseificio-interno.jpg', alt:'Interno del Caseificio Cercen con il banco dei formaggi', caption:'Il banco dei formaggi del Caseificio Cercen'},
           {t:'place',
+            id:'barRoma',
             name:'Caffè Pasticceria Roma', tag:'Dolci tipici', distance:'400 metri',
             address:'Piazza S. Maria Assunta, 3 — Malè',
             desc:'C’è un dolce che profuma di Trentino più di tutti: lo Strudel alle Mele! Qui trovate il migliore di Malè. Non perdetevi le loro frittelle di mele.',
@@ -953,12 +955,48 @@ const DATA = {
         blocks:[
           {t:'weather'},
           {t:'h', text:'Giornata di pioggia? Ecco qualche idea'},
-          {t:'list', items:[
-            'Terme di Pejo o Rabbi, per un pomeriggio di relax',
-            "Musei e attrazioni: <a href=\"#\" onclick=\"event.preventDefault(); openSection('museums')\">scopri la scheda Musei</a>",
-            'Cinema di <a href="https://www.visitvaldisole.it/it/eventi/cinema-male" target="_blank" rel="noopener">Malè</a> o <a href="https://www.visitvaldisole.it/it/eventi/cinema-ossana" target="_blank" rel="noopener">Ossana</a>',
-            'Una cioccolata calda con fetta di torta, Strudel o frittelle di mele al Bar Roma in centro',
-          ]},
+          {t:'h', text:'Terme'},
+          {t:'place',
+            name:'Terme di Pejo',
+            address:'Via delle Acque Acidule, 3 — 38024 Peio Fonti (TN)',
+            desc:'Un pomeriggio di relax tra piscine termali e trattamenti benessere, all’interno del Parco Nazionale dello Stelvio.',
+            img:'images/meteo-terme-pejo.jpg',
+            mapsQuery:'Terme di Pejo, Via delle Acque Acidule 3, Peio Fonti', phone:'+390463753226', phoneDisplay:'0463 753226'
+          },
+          {t:'place',
+            name:'Terme di Rabbi',
+            address:'Loc. Fonti di Rabbi, 162 — 38020 Rabbi (TN)',
+            desc:'Immerse nel verde della Val di Rabbi, ideali per una giornata di puro relax.',
+            img:'images/meteo-terme-rabbi.jpg',
+            mapsQuery:'Terme di Rabbi, Loc. Fonti di Rabbi 162, Rabbi', phone:'+390463983000', phoneDisplay:'0463 983000'
+          },
+          {t:'h', text:'Cultura'},
+          {t:'jump', to:'museums', icon:'museum', label:'Musei e attrazioni della valle'},
+          {t:'h', text:'Cinema'},
+          {t:'place',
+            name:'Cinema di Malè', tag:'Teatro Comunale',
+            address:'Piazza Garibaldi, 6 — 38027 Malè (TN)',
+            desc:'Il cinema comunale di Malè, con proiezioni durante tutto l’anno.',
+            img:'images/meteo-cinema-male.jpg',
+            url:'https://www.visitvaldisole.it/it/eventi/cinema-male', urlLabel:'Vai alla programmazione',
+            mapsQuery:'Teatro Comunale, Piazza Garibaldi 6, Malè', phone:'+390463900069', phoneDisplay:'0463 900069'
+          },
+          {t:'place',
+            name:'Cinema di Ossana', tag:'Teatro Comunale di Fucine',
+            address:'Via Bartolomeo Bezzi, 12 — 38026 Fucine di Ossana (TN)',
+            desc:'Il cinema comunale di Fucine, frazione di Ossana, con rassegne stagionali di film.',
+            img:'images/meteo-cinema-ossana.jpg',
+            url:'https://www.visitvaldisole.it/it/eventi/cinema-ossana', urlLabel:'Vai alla programmazione',
+            mapsQuery:'Teatro Comunale di Fucine, Via Bartolomeo Bezzi 12, Ossana', phone:'+390463751363', phoneDisplay:'0463 751363'
+          },
+          {t:'h', text:'Una pausa dolce'},
+          {t:'place',
+            name:'Caffè Pasticceria Roma', tag:'Dolci tipici', distance:'400 metri',
+            address:'Piazza S. Maria Assunta, 3 — Malè',
+            desc:'C’è un dolce che profuma di Trentino più di tutti: lo Strudel alle Mele! Qui trovate il migliore di Malè. Non perdetevi le loro frittelle di mele.',
+            img:'images/ristorante-pasticceria-roma.jpg',
+            mapsQuery:'Caffè Pasticceria Roma, Piazza Santa Maria Assunta 3, Malè', phone:'+390463901149', phoneDisplay:'0463 901149'
+          },
         ]
       },
       transport:{
@@ -1430,7 +1468,7 @@ const DATA = {
       {id:'faq', icon:'info', label:'Info / FAQ'},
       {id:'transport', icon:'bus', label:'Transportation'},
       {id:'summerActivities', icon:'sun', label:'Summer Activities'},
-      {id:'skiing', icon:'snow', label:'Skiing in Val di Sole'},
+      {id:'skiing', icon:'skis', label:'Skiing in Val di Sole'},
       {id:'winterActivities', icon:'snow', label:'Winter Activities'},
       {id:'activateGuestCard', icon:'key', label:'Activate the<br>Trentino Guest Card'},
       {id:'discounts', icon:'tag', label:'Discounts<br>Trentino Guest Card'},
@@ -1794,6 +1832,7 @@ const DATA = {
           },
           {t:'img', src:'images/shopping-caseificio-interno.jpg', alt:'Inside Caseificio Cercen, cheese counter', caption:'The cheese counter at Caseificio Cercen'},
           {t:'place',
+            id:'barRoma',
             name:'Caffè Pasticceria Roma', tag:'Traditional sweets', distance:'400 metres',
             address:'Piazza S. Maria Assunta, 3 — Malè',
             desc:'There’s one dessert that smells of Trentino more than any other: apple strudel! This is the best one in Malè. Don’t miss their apple fritters either.',
@@ -1899,12 +1938,48 @@ const DATA = {
         blocks:[
           {t:'weather'},
           {t:'h', text:'Rainy day? A few ideas'},
-          {t:'list', items:[
-            'Pejo or Rabbi thermal spas, for a relaxing afternoon',
-            "Museums and attractions: <a href=\"#\" onclick=\"event.preventDefault(); openSection('museums')\">see the Museums section</a>",
-            'Cinema in <a href="https://www.visitvaldisole.it/it/eventi/cinema-male" target="_blank" rel="noopener">Malè</a> or <a href="https://www.visitvaldisole.it/it/eventi/cinema-ossana" target="_blank" rel="noopener">Ossana</a>',
-            'A hot chocolate with a slice of cake, strudel or apple fritters at Bar Roma in the town centre',
-          ]},
+          {t:'h', text:'Thermal spas'},
+          {t:'place',
+            name:'Terme di Pejo (Pejo Spa)',
+            address:'Via delle Acque Acidule, 3 — 38024 Peio Fonti (TN)',
+            desc:'A relaxing afternoon among thermal pools and wellness treatments, inside the Stelvio National Park.',
+            img:'images/meteo-terme-pejo.jpg',
+            mapsQuery:'Terme di Pejo, Via delle Acque Acidule 3, Peio Fonti', mapsLabel:'Map', phone:'+390463753226', phoneDisplay:'0463 753226'
+          },
+          {t:'place',
+            name:'Terme di Rabbi (Rabbi Spa)',
+            address:'Loc. Fonti di Rabbi, 162 — 38020 Rabbi (TN)',
+            desc:'Surrounded by the greenery of Val di Rabbi, perfect for a day of pure relaxation.',
+            img:'images/meteo-terme-rabbi.jpg',
+            mapsQuery:'Terme di Rabbi, Loc. Fonti di Rabbi 162, Rabbi', mapsLabel:'Map', phone:'+390463983000', phoneDisplay:'0463 983000'
+          },
+          {t:'h', text:'Culture'},
+          {t:'jump', to:'museums', icon:'museum', label:'Museums and attractions in the valley'},
+          {t:'h', text:'Cinema'},
+          {t:'place',
+            name:'Cinema di Malè', tag:'Teatro Comunale',
+            address:'Piazza Garibaldi, 6 — 38027 Malè (TN)',
+            desc:'The municipal cinema of Malè, with screenings throughout the year.',
+            img:'images/meteo-cinema-male.jpg',
+            url:'https://www.visitvaldisole.it/it/eventi/cinema-male', urlLabel:'View the screening programme',
+            mapsQuery:'Teatro Comunale, Piazza Garibaldi 6, Malè', mapsLabel:'Map', phone:'+390463900069', phoneDisplay:'0463 900069'
+          },
+          {t:'place',
+            name:'Cinema di Ossana', tag:'Teatro Comunale di Fucine',
+            address:'Via Bartolomeo Bezzi, 12 — 38026 Fucine di Ossana (TN)',
+            desc:'The municipal cinema of Fucine, a hamlet of Ossana, with seasonal film series.',
+            img:'images/meteo-cinema-ossana.jpg',
+            url:'https://www.visitvaldisole.it/it/eventi/cinema-ossana', urlLabel:'View the screening programme',
+            mapsQuery:'Teatro Comunale di Fucine, Via Bartolomeo Bezzi 12, Ossana', mapsLabel:'Map', phone:'+390463751363', phoneDisplay:'0463 751363'
+          },
+          {t:'h', text:'A sweet break'},
+          {t:'place',
+            name:'Caffè Pasticceria Roma', tag:'Traditional sweets', distance:'400 metres',
+            address:'Piazza S. Maria Assunta, 3 — Malè',
+            desc:'There’s one dessert that smells of Trentino more than any other: apple strudel! This is the best one in Malè. Don’t miss their apple fritters either.',
+            img:'images/ristorante-pasticceria-roma.jpg',
+            mapsQuery:'Caffè Pasticceria Roma, Piazza Santa Maria Assunta 3, Malè', mapsLabel:'Map', phone:'+390463901149', phoneDisplay:'0463 901149'
+          },
         ]
       },
       transport:{
@@ -2403,7 +2478,7 @@ function blockHTML(b){
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
-    case 'place': return `<div class="b-place">
+    case 'place': return `<div class="b-place"${b.id?` id="${b.id}"`:''}>
         ${b.logo?`<div class="pl-logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div>`:(b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:'')}
         <div class="pl-body">
         ${(b.tag||b.distance)?`<div class="pl-top">${b.tag?`<span class="pl-tag">${b.tag}</span>`:'<span></span>'}${b.distance?`<span class="pl-dist">${b.distance}</span>`:''}</div>`:''}
@@ -2411,6 +2486,7 @@ function blockHTML(b){
         <div class="pl-addr">${b.address}</div>
         <div class="pl-desc">${b.desc}</div>
         <div class="pl-actions">
+          ${b.url?`<a href="${b.url}" target="_blank" rel="noopener">${icon('globe')}<span>${b.urlLabel||'Sito'}</span></a>`:''}
           ${b.mapsQuery?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.mapsQuery)}" target="_blank" rel="noopener">${icon('pin')}<span>${b.mapsLabel||'Mappa'}</span></a>`:''}
           ${b.phone?`<a href="tel:${b.phone}">${icon('phone')}<span>${b.phoneDisplay||b.phone}</span></a>`:''}
         </div>
@@ -2447,7 +2523,7 @@ function blockHTML(b){
 }
 let _cid=0; function cid(){ return ++_cid; }
 
-function openSection(id){
+function openSection(id, anchor){
   const d=DATA[lang];
   const nav=d.nav.find(n=>n.id===id);
   const sec=d.sections[id];
@@ -2461,6 +2537,12 @@ function openSection(id){
   document.body.style.overflow='hidden';
   history.replaceState(null,'','#'+id);
   body.scrollTop=0;
+  if(anchor){
+    setTimeout(()=>{
+      const target=document.getElementById(anchor);
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 60);
+  }
 
   // wire dynamic bits
   const sendBtn=document.getElementById('fbSend');
