@@ -106,6 +106,17 @@
   }
   .tile-icon svg{width:23px; height:23px;}
   .tile-label{font-size:11.5px; font-weight:700; color:var(--ink); line-height:1.25;}
+  .tile{position:relative;}
+  .tile-beta{
+    position:absolute; top:7px; right:7px;
+    background:var(--clay); color:#fff; font-size:8.5px; font-weight:800;
+    letter-spacing:.04em; padding:2px 5px; border-radius:6px; line-height:1;
+    box-shadow:0 2px 6px -2px rgba(139,78,46,.6);
+  }
+  .sheet-head .beta-badge{
+    background:var(--clay); color:#fff; font-size:10px; font-weight:800;
+    letter-spacing:.04em; padding:3px 7px; border-radius:999px; margin-left:8px; flex:none;
+  }
 
   /* ---------- Footer / contact CTA ---------- */
   .cta-wrap{padding:8px 16px 0;}
@@ -456,7 +467,6 @@ const DATA = {
     closeLabel:'Chiudi',
     nav:[
       {id:'welcome', icon:'home', label:'Benvenuto'},
-      {id:'eventsToday', icon:'calendar', label:'Eventi Oggi'},
       {id:'location', icon:'pin', label:'Posizione'},
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'Regole della casa'},
@@ -478,6 +488,7 @@ const DATA = {
       {id:'activateGuestCard', icon:'key', label:'Attivazione<br>Trentino Guest Card'},
       {id:'discounts', icon:'tag', label:'Convenzioni<br>Trentino Guest Card'},
       {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
+      {id:'eventsToday', icon:'calendar', label:'Eventi Oggi', beta:true},
       {id:'guestbook', icon:'chat', label:'Lascia un feedback'},
       {id:'contacts', icon:'gear', label:'Contatti & aiuto'},
     ],
@@ -494,6 +505,10 @@ const DATA = {
       eventsToday:{
         title:'Eventi Oggi',
         blocks:[
+          {t:'warn', text:'⚠️ <b>Scheda in fase di test (BETA)</b>: potrebbe contenere errori negli orari o nelle località. Vi invitiamo a verificare la correttezza delle informazioni sull’opuscolo ufficiale emesso dall’APT Val di Sole, disponibile presso l’Ufficio Informazioni Turistiche o scaricabile online.'},
+          {t:'link', icon:'pin', label:'Ufficio Informazioni APT — Via Marconi 7, Malè', url:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('Via Marconi 7, Malè')},
+          {t:'link', icon:'phone', label:'Chiama l’Ufficio Informazioni — 0463 901280', url:'tel:+390463901280'},
+          {t:'link', icon:'globe', label:'Scarica il programma eventi APT Val di Sole', url:'https://www.visitvaldisole.it/it/eventi'},
           {t:'p', text:'Gli eventi organizzati in Val di Sole per <b>oggi</b>, aggiornati automaticamente dall’opuscolo dell’APT.'},
           {t:'events_today'},
           {t:'note', text:'Fonte: opuscolo APT Val di Sole. Programma soggetto a variazioni meteo — verificate gli orari con gli Uffici Informazioni prima di partecipare.'},
@@ -1398,7 +1413,6 @@ const DATA = {
     closeLabel:'Close',
     nav:[
       {id:'welcome', icon:'home', label:'Welcome'},
-      {id:'eventsToday', icon:'calendar', label:'Events Today'},
       {id:'location', icon:'pin', label:'Location'},
       {id:'checkin', icon:'key', label:'Check-in & Check-out'},
       {id:'rules', icon:'rules', label:'House rules'},
@@ -1420,6 +1434,7 @@ const DATA = {
       {id:'activateGuestCard', icon:'key', label:'Activate the<br>Trentino Guest Card'},
       {id:'discounts', icon:'tag', label:'Discounts<br>Trentino Guest Card'},
       {id:'emergency', icon:'bolt', label:'Home emergencies'},
+      {id:'eventsToday', icon:'calendar', label:'Events Today', beta:true},
       {id:'guestbook', icon:'chat', label:'Leave feedback'},
       {id:'contacts', icon:'gear', label:'Contacts & help'},
     ],
@@ -1436,6 +1451,10 @@ const DATA = {
       eventsToday:{
         title:'Events Today',
         blocks:[
+          {t:'warn', text:'⚠️ <b>This section is in BETA testing</b>: it may contain errors in times or locations. Please double-check the information against the official brochure published by the Val di Sole tourist office (APT), available at the Tourist Information Office or downloadable online.'},
+          {t:'link', icon:'pin', label:'APT Tourist Office — Via Marconi 7, Malè', url:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('Via Marconi 7, Malè')},
+          {t:'link', icon:'phone', label:'Call the Tourist Office — +39 0463 901280', url:'tel:+390463901280'},
+          {t:'link', icon:'globe', label:'Download the APT Val di Sole events programme', url:'https://www.visitvaldisole.it/it/eventi'},
           {t:'p', text:'Events happening in Val di Sole <b>today</b>, automatically updated from the local tourist office’s brochure.'},
           {t:'events_today'},
           {t:'note', text:'Source: Val di Sole tourist office (APT) brochure. Listings are in Italian and may change due to weather — please check times with the local Info Offices before attending.'},
@@ -2363,7 +2382,7 @@ function renderHome(){
     const tile=document.createElement('button');
     tile.className='tile';
     tile.setAttribute('aria-label', item.label);
-    tile.innerHTML=`<span class="tile-icon">${icon(item.icon)}</span><span class="tile-label">${item.label}</span>`;
+    tile.innerHTML=`${item.beta?'<span class="tile-beta">BETA</span>':''}<span class="tile-icon">${icon(item.icon)}</span><span class="tile-label">${item.label}</span>`;
     tile.onclick=()=>openSection(item.id);
     grid.appendChild(tile);
   });
@@ -2432,7 +2451,7 @@ function openSection(id){
   const nav=d.nav.find(n=>n.id===id);
   const sec=d.sections[id];
   document.getElementById('sheetIcon').innerHTML=icon(nav?nav.icon:'info');
-  document.getElementById('sheetTitle').textContent=sec.title;
+  document.getElementById('sheetTitle').innerHTML=sec.title+((nav&&nav.beta)?'<span class="beta-badge">BETA</span>':'');
   const body=document.getElementById('sheetBody');
   body.innerHTML=sec.blocks.map(blockHTML).join('');
   body.scrollTop=0;
