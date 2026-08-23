@@ -733,16 +733,32 @@ const DATA = {
       faq:{
         title:'Info / FAQ',
         blocks:[
-          {t:'h', text:'A che ora posso entrare/uscire?'},
-          {t:'ph', text:'✏️ Da completare con gli orari di check-in e check-out concordati con l’ospite (il check-out è comunque richiesto entro le 10:00, vedi sezione “Check-in & Check-out”).'},
+          {t:'h', text:'A che ora posso accedere/lasciare l’appartamento?'},
+          {t:'p', text:'Salvo diverso accordo con i proprietari, il check-in è richiesto tra le 12 e le 18, poiché il portone in Galleria rimane aperto in quella fascia oraria. Qualora prevediate di giungere più tardi delle 18, mantenetici informati: provvederemo a farvi aprire da una persona presente in loco. Il check-out è richiesto entro le 10:00, ma se avete necessità di posticipare tale orario, comunicatecelo: cercheremo di venirvi incontro.'},
+          {t:'jump', to:'checkin', icon:'key', label:'Scheda “Check-in & Check-out”'},
           {t:'h', text:'Posso portare animali domestici?'},
-          {t:'ph', text:'✏️ Da completare con la vostra policy sugli animali.'},
+          {t:'p', text:'Sì, nel numero massimo di uno. Resta a carico dell’ospite l’onere di predisporre lettiere.'},
           {t:'h', text:'C’è un ascensore?'},
           {t:'p', text:'Sì, oltre alle scale è disponibile un ascensore fino al 1° piano dell’appartamento.'},
           {t:'h', text:'Dove butto i rifiuti?'},
           {t:'p', text:'Trovate tutte le indicazioni nella sezione “Rifiuti”, con mappe e orari del Centro di Raccolta.'},
+          {t:'jump', to:'waste', icon:'trash', label:'Scheda “Rifiuti”'},
           {t:'h', text:'C’è la lavatrice?'},
-          {t:'ph', text:'✏️ Da completare: disponibilità lavatrice/stendino, detersivo incluso o meno.'},
+          {t:'p', text:'Sì, ed è a vostra disposizione. Troverete nel bagno anche uno stendino da esterno e i detersivi.'},
+          {t:'h', text:'Dove trovo informazioni turistiche?'},
+          {t:'p', text:'Nell’Ufficio Informazioni Turistiche di Malè, in centro, al piano terra dell’ufficio del Comune, troverete tutte le informazioni e gli opuscoli per vivere al meglio la vostra vacanza.'},
+          {t:'place',
+            name:'Ufficio Informazioni Turistiche di Malè',
+            address:'Piazza Regina Elena, 75 — 38027 Malè (TN)',
+            desc:'Aperto tutti i giorni (chiuso il 25/12), 8:30–12:30 · 14:30–18:30. L’orario di apertura può variare per motivi organizzativi.',
+            mapsQuery:'Piazza Regina Elena 75, Malè', phone:'+390463901280', phoneDisplay:'0463 901280'
+          },
+          {t:'place',
+            name:'Azienda per il Turismo Val di Sole',
+            address:'Via Marconi, 7 — 38027 Malè (TN)',
+            desc:'Aperto al pubblico da lunedì a venerdì, 9:00–12:00 · 14:00–17:00.',
+            mapsQuery:'Via Marconi 7, Malè', phone:'+390463901280', phoneDisplay:'0463 901280'
+          },
         ]
       },
       excursions:{
@@ -1502,7 +1518,6 @@ const DATA = {
           },
           {t:'link', icon:'mail', label:'info@visitvaldisole.it', url:'mailto:info@visitvaldisole.it'},
           {t:'link', icon:'mail', label:'PEC — valdisole@pec.net', url:'mailto:valdisole@pec.net'},
-          {t:'p', text:'P.IVA 01850960228 · SDI M5UXCR1 · Fax 0463 901563'},
           {t:'h', text:'Taxi'},
           {t:'list', items:[
             '<b>Malè:</b> Florian Viaggi <a href="tel:+393294664632">329 466 4632</a> · Stablum Franco <a href="tel:+393398122893">339 812 2893</a>',
@@ -1832,16 +1847,32 @@ const DATA = {
       faq:{
         title:'Info / FAQ',
         blocks:[
-          {t:'h', text:'What time can I check in/out?'},
-          {t:'ph', text:'✏️ To be completed with the check-in/check-out times agreed with the guest (check-out is in any case required by 10:00am — see “Check-in & Check-out”).'},
+          {t:'h', text:'What time can I check in/out of the apartment?'},
+          {t:'p', text:'Unless otherwise agreed with the hosts, check-in is expected between 12:00pm and 6:00pm, as the door to the Galleria stays open during that window. If you expect to arrive later than 6:00pm, please keep us informed: we’ll arrange for someone on site to let you in. Check-out is required by 10:00am, but if you need to push that back, just let us know — we’ll do our best to accommodate you.'},
+          {t:'jump', to:'checkin', icon:'key', label:'“Check-in & Check-out” section'},
           {t:'h', text:'Can I bring pets?'},
-          {t:'ph', text:'✏️ To be completed with your pet policy.'},
+          {t:'p', text:'Yes, up to a maximum of one pet. Guests are responsible for providing their own litter box/tray.'},
           {t:'h', text:'Is there a lift?'},
           {t:'p', text:'Yes — besides the stairs, a lift is available up to the apartment’s 1st floor.'},
           {t:'h', text:'Where do I dispose of waste?'},
           {t:'p', text:'You’ll find all the details, maps and opening hours in the “Waste disposal” section.'},
+          {t:'jump', to:'waste', icon:'trash', label:'“Waste disposal” section'},
           {t:'h', text:'Is there a washing machine?'},
-          {t:'ph', text:'✏️ To be completed: washing machine/drying rack availability, whether detergent is included.'},
+          {t:'p', text:'Yes, it’s available for your use. You’ll also find an outdoor drying rack and detergent in the bathroom.'},
+          {t:'h', text:'Where can I find tourist information?'},
+          {t:'p', text:'At the Malè Tourist Information Office, in the town centre, on the ground floor of the municipal building, you’ll find all the information and brochures you need to make the most of your holiday.'},
+          {t:'place',
+            name:'Malè Tourist Information Office',
+            address:'Piazza Regina Elena, 75 — 38027 Malè (TN)',
+            desc:'Open every day (closed 25 Dec), 8:30am–12:30pm · 2:30–6:30pm. Opening hours may vary for organisational reasons.',
+            mapsQuery:'Piazza Regina Elena 75, Malè', mapsLabel:'Map', phone:'+390463901280', phoneDisplay:'0463 901280'
+          },
+          {t:'place',
+            name:'Azienda per il Turismo Val di Sole',
+            address:'Via Marconi, 7 — 38027 Malè (TN)',
+            desc:'Open to the public Monday to Friday, 9:00am–12:00pm · 2:00–5:00pm.',
+            mapsQuery:'Via Marconi 7, Malè', mapsLabel:'Map', phone:'+390463901280', phoneDisplay:'0463 901280'
+          },
         ]
       },
       excursions:{
@@ -2601,7 +2632,6 @@ const DATA = {
           },
           {t:'link', icon:'mail', label:'info@visitvaldisole.it', url:'mailto:info@visitvaldisole.it'},
           {t:'link', icon:'mail', label:'PEC — valdisole@pec.net', url:'mailto:valdisole@pec.net'},
-          {t:'p', text:'VAT 01850960228 · SDI M5UXCR1 · Fax +39 0463 901563'},
           {t:'h', text:'Taxi'},
           {t:'list', items:[
             '<b>Malè:</b> Florian Viaggi <a href="tel:+393294664632">329 466 4632</a> · Stablum Franco <a href="tel:+393398122893">339 812 2893</a>',
