@@ -1132,6 +1132,7 @@ const DATA = {
         title:'Sciare in Val di Sole',
         blocks:[
           {t:'p', text:'La Val di Sole offre tutte le opportunità per chi ama sciare. La ski area Folgarida‑Marilleva, grazie al collegamento con Madonna di Campiglio e Pinzolo, forma un comprensorio immenso, per oltre 150 km di piste.'},
+          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK per bambini e ragazzi'},
           {t:'h', text:'L’impianto più vicino'},
           {t:'place',
             name:'Telecabina Daolasa',
@@ -1210,6 +1211,7 @@ const DATA = {
           {t:'place',
             name:'Ossana — Il Borgo dei 1000 Presepi',
             tag:'Presepi & mercatini di Natale',
+            img:'images/invernali-borgo-presepi-ossana.jpg',
             address:'Ossana (TN)',
             desc:'Lasciatevi guidare dal filo rosso, che come una stella cometa vi accompagnerà alla scoperta di oltre 1600 caratteristici presepi disseminati tra i vicoli del borgo e le mura del Castello San Michele. Il percorso è gratuito e visitabile ogni giorno dalle 10:00 alle 22:00, generalmente da fine novembre a inizio gennaio; nei weekend si aggiungono i mercatini di Natale con vin brulè e prodotti artigianali.',
             mapsQuery:'Ossana borgo dei 1000 presepi, Ossana TN', phone:'+390463901280', phoneDisplay:'0463 901280'
@@ -1219,6 +1221,7 @@ const DATA = {
           {t:'place',
             name:'Stadio del Ghiaccio di Malè',
             tag:'Pattinaggio su ghiaccio',
+            img:'images/invernali-stadio-ghiaccio-male.jpg',
             address:'Loc. Molin, 4 — 38027 Malè (TN)',
             desc:'Piattaforma all’aperto da 30x60 metri, con copertura semovibile, tribuna, bar e spogliatoi. Potrete sfrecciare sui pattini, fare piroette oppure cimentarvi con il broomball o con l’hockey — sul posto trovate anche noleggio e affilatura pattini, oltre a corsi di avviamento al pattinaggio artistico e hockey. Aperto generalmente da dicembre a marzo.',
             mapsQuery:'Stadio del Ghiaccio, Loc. Molin, Malè', phone:'+390463901905', phoneDisplay:'0463 901905'
@@ -1226,12 +1229,13 @@ const DATA = {
           {t:'place',
             name:'La Valle dei Presepi',
             tag:'San Bernardo — Val di Rabbi',
+            img:'images/invernali-valle-presepi-rabbi.jpg',
             address:'Ufficio Informazioni Rabbi Vacanze, Fraz. San Bernardo — 38020 Rabbi (TN)',
             desc:'Riuscirete a trovare tutti i 100 presepi sparsi nei borghi della Val di Rabbi? Ritirate la mappa presso l’Ufficio Informazioni di San Bernardo, cercate i presepi lungo il percorso e riempite la scheda con i bollini adesivi numerati: se li trovate tutti riceverete il vostro gadget firmato Val di Rabbi. Consigliamo la visita al calar del sole, quando le lucine dei presepi si accendono rendendo la passeggiata ancora più suggestiva.',
             mapsQuery:'Ufficio Informazioni Rabbi Vacanze, San Bernardo, Rabbi', phone:'+390463985048', phoneDisplay:'0463 985048'
           },
           {t:'note', text:'Orari Ufficio Informazioni di San Bernardo: lunedì–venerdì 9:00–12:00, sabato 9:00–12:00 e 15:00–18:00, domenica chiuso.'},
-          {t:'h', text:'Snowpark per bambini'},
+          {t:'h', text:'Snowpark per bambini', id:'snowparkKids'},
           {t:'p', text:'In Val di Sole non mancano parchi giochi sulla neve pensati apposta per i più piccoli, tra tubing, slittini, gonfiabili e piste per i primi passi sugli sci.'},
           {t:'place',
             name:'Bruscadela', tag:'Raggiungibile in auto',
@@ -2226,6 +2230,7 @@ const DATA = {
         title:'Skiing in Val di Sole',
         blocks:[
           {t:'p', text:'Val di Sole offers every opportunity for those who love skiing. The Folgarida‑Marilleva ski area, thanks to its connection with Madonna di Campiglio and Pinzolo, forms an immense ski area of over 150 km of slopes.'},
+          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK for kids and teens'},
           {t:'h', text:'The closest lift'},
           {t:'place',
             name:'Telecabina Daolasa (Daolasa cable car)',
@@ -2304,6 +2309,7 @@ const DATA = {
           {t:'place',
             name:'Ossana — The Village of 1000 Nativity Scenes',
             tag:'Nativity scenes & Christmas markets',
+            img:'images/invernali-borgo-presepi-ossana.jpg',
             address:'Ossana (TN)',
             desc:'Let the red thread guide you — like a comet’s tail — through more than 1,600 handcrafted nativity scenes scattered along the village lanes and the walls of Castello San Michele. The trail is free and open every day from 10:00am to 10:00pm, generally from late November to early January; on weekends, Christmas markets add vin brulè and local crafts to the mix.',
             mapsQuery:'Ossana borgo dei 1000 presepi, Ossana TN', mapsLabel:'Map', phone:'+390463901280', phoneDisplay:'0463 901280'
@@ -2313,6 +2319,7 @@ const DATA = {
           {t:'place',
             name:'Malè Ice Stadium',
             tag:'Ice skating',
+            img:'images/invernali-stadio-ghiaccio-male.jpg',
             address:'Loc. Molin, 4 — 38027 Malè (TN)',
             desc:'An open-air rink measuring 30x60 metres, with a retractable roof, stands, a bar and changing rooms. Glide across the ice, try a few spins, or take on a game of broomball or hockey — skate rental and sharpening are available on site, along with beginner skating and hockey courses. Usually open from December to March.',
             mapsQuery:'Stadio del Ghiaccio, Loc. Molin, Malè', mapsLabel:'Map', phone:'+390463901905', phoneDisplay:'0463 901905'
@@ -2320,12 +2327,13 @@ const DATA = {
           {t:'place',
             name:'The Valley of Nativity Scenes',
             tag:'San Bernardo — Val di Rabbi',
+            img:'images/invernali-valle-presepi-rabbi.jpg',
             address:'Ufficio Informazioni Rabbi Vacanze, Fraz. San Bernardo — 38020 Rabbi (TN)',
             desc:'Can you find all 100 nativity scenes scattered across the villages of Val di Rabbi? Pick up the map at the San Bernardo Information Office, hunt for the scenes along the trail, and fill in your card with the numbered stickers you find: collect them all and you’ll receive your own Val di Rabbi gadget. We recommend visiting at dusk, when the nativity lights come on and the walk becomes even more magical.',
             mapsQuery:'Ufficio Informazioni Rabbi Vacanze, San Bernardo, Rabbi', mapsLabel:'Map', phone:'+390463985048', phoneDisplay:'0463 985048'
           },
           {t:'note', text:'San Bernardo Information Office hours: Monday–Friday 9:00am–12:00pm, Saturday 9:00am–12:00pm and 3:00–6:00pm, closed Sunday.'},
-          {t:'h', text:'Snowpark for kids'},
+          {t:'h', text:'Snowpark for kids', id:'snowparkKids'},
           {t:'p', text:'Val di Sole has no shortage of snow playgrounds designed just for children, with tubing, sledging, inflatables and slopes for first-time skiers.'},
           {t:'place',
             name:'Bruscadela', tag:'Reachable by car',
@@ -2689,13 +2697,13 @@ function renderHome(){
 function blockHTML(b){
   switch(b.t){
     case 'p': return `<p class="b-p">${b.text}</p>`;
-    case 'h': return `<div class="b-h">${MTICK}${b.text}</div>`;
+    case 'h': return `<div class="b-h"${b.id?` id="${b.id}"`:''}>${MTICK}${b.text}</div>`;
     case 'list': return `<ul class="b-list">${b.items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
     case 'note': return `<div class="b-note">${b.text}</div>`;
     case 'warn': return `<div class="b-warn">${b.text}</div>`;
     case 'ph': return `<div class="b-ph">${b.text}</div>`;
     case 'link': return `<a class="b-link" href="${b.url}" target="_blank" rel="noopener">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
-    case 'jump': return `<a class="b-link" href="#${b.to}" onclick="event.preventDefault(); openSection('${b.to}');">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
+    case 'jump': return `<a class="b-link" href="#${b.to}" onclick="event.preventDefault(); openSection('${b.to}'${b.anchor?`,'${b.anchor}'`:''});">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
     case 'img': return `<div class="b-img"${b.center?' style="text-align:center"':''}><img src="${b.src}" alt="${b.alt||''}" loading="lazy"${b.width?` style="width:${b.width};display:inline-block;"`:''}>${b.caption? `<div class="cap">${b.caption}</div>`:''}</div>`;
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
