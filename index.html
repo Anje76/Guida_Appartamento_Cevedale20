@@ -241,6 +241,8 @@
   .b-place .pl-photo{width:100%; height:150px; object-fit:cover; display:block;}
   .b-place .pl-logostrip{background:#fff; padding:16px 20px; text-align:center; border-bottom:1px solid var(--line);}
   .b-place .pl-logostrip img{max-height:56px; max-width:70%; width:auto; height:auto; display:inline-block;}
+  .b-place .pl-logofull{width:100%; height:150px; background:#fff; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid var(--line);}
+  .b-place .pl-logofull img{max-width:88%; max-height:82%; width:auto; height:auto; object-fit:contain; display:block;}
   .b-place .pl-body{padding:14px;}
   .b-place .pl-top{display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-bottom:6px;}
   .b-place .pl-tag{
@@ -1132,7 +1134,6 @@ const DATA = {
         title:'Sciare in Val di Sole',
         blocks:[
           {t:'p', text:'La Val di Sole offre tutte le opportunità per chi ama sciare. La ski area Folgarida‑Marilleva, grazie al collegamento con Madonna di Campiglio e Pinzolo, forma un comprensorio immenso, per oltre 150 km di piste.'},
-          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK per bambini e ragazzi'},
           {t:'h', text:'L’impianto più vicino'},
           {t:'place',
             name:'Telecabina Daolasa',
@@ -1173,7 +1174,7 @@ const DATA = {
           {t:'link', icon:'mail', label:'vdssport@alice.it', url:'mailto:vdssport@alice.it'},
           {t:'place',
             name:'Promescaiol — direttamente sulle piste',
-            logo:'images/ski-logo-promescaiol.png',
+            logoFull:'images/ski-logo-promescaiol.png',
             address:'Piazzale Telecabina Daolasa e Alpe Daolasa – Val Mastellina (in quota)',
             desc:'Due sedi: una alla base della cabinovia e una al punto di arrivo delle piste da sci. Offre anche un comodo servizio di deposito attrezzatura in quota, in armadietti riscaldati — non dovrete portare gli sci fino alle piste.',
             phone:'+393280253924', phoneDisplay:'328 025 3924'
@@ -1194,7 +1195,7 @@ const DATA = {
           {t:'link', icon:'mail', label:'info@skiart.it', url:'mailto:info@skiart.it'},
           {t:'place',
             name:'Boarder King Shop',
-            logo:'images/ski-logo-boarderking.png',
+            logoFull:'images/ski-logo-boarderking.png',
             address:'Piazzale Telecabina Daolasa (galleria alla base della funivia)',
             desc:'Punto di riferimento da oltre 10 anni per il noleggio di snowboard, per ogni livello: dal principiante al rider più esigente. Disponibili anche snowboard freeride, splitboard e kit ARTVA.',
             phone:'+393493054673', phoneDisplay:'349 305 4673'
@@ -1202,6 +1203,8 @@ const DATA = {
           {t:'link', icon:'globe', label:'boarderking.it', url:'https://boarderking.it'},
           {t:'link', icon:'mail', label:'info@boarderking.it', url:'mailto:info@boarderking.it'},
           {t:'note', text:'Consiglio: controllate sempre il bollettino neve e le condizioni meteo in quota prima di salire in pista.'},
+          {t:'h', text:'Non solo sci'},
+          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK per bambini e ragazzi'},
         ]
       },
       winterActivities:{
@@ -2230,7 +2233,6 @@ const DATA = {
         title:'Skiing in Val di Sole',
         blocks:[
           {t:'p', text:'Val di Sole offers every opportunity for those who love skiing. The Folgarida‑Marilleva ski area, thanks to its connection with Madonna di Campiglio and Pinzolo, forms an immense ski area of over 150 km of slopes.'},
-          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK for kids and teens'},
           {t:'h', text:'The closest lift'},
           {t:'place',
             name:'Telecabina Daolasa (Daolasa cable car)',
@@ -2271,7 +2273,7 @@ const DATA = {
           {t:'link', icon:'mail', label:'vdssport@alice.it', url:'mailto:vdssport@alice.it'},
           {t:'place',
             name:'Promescaiol — directly on the slopes',
-            logo:'images/ski-logo-promescaiol.png',
+            logoFull:'images/ski-logo-promescaiol.png',
             address:'Piazzale Telecabina Daolasa and Alpe Daolasa – Val Mastellina (on the slopes)',
             desc:'Two locations: one at the base of the cable car and one at the arrival point of the ski slopes. It also offers a convenient equipment storage service at altitude, in heated lockers — no need to carry your skis all the way up.',
             phone:'+393280253924', phoneDisplay:'328 025 3924'
@@ -2292,7 +2294,7 @@ const DATA = {
           {t:'link', icon:'mail', label:'info@skiart.it', url:'mailto:info@skiart.it'},
           {t:'place',
             name:'Boarder King Shop',
-            logo:'images/ski-logo-boarderking.png',
+            logoFull:'images/ski-logo-boarderking.png',
             address:'Piazzale Telecabina Daolasa (tunnel at the base of the cable car)',
             desc:'A point of reference for over 10 years for snowboard rental, for every level, from beginners to the most demanding riders. Freeride snowboards, splitboards and ARTVA kits are also available.',
             phone:'+393493054673', phoneDisplay:'349 305 4673'
@@ -2300,6 +2302,8 @@ const DATA = {
           {t:'link', icon:'globe', label:'boarderking.it', url:'https://boarderking.it'},
           {t:'link', icon:'mail', label:'info@boarderking.it', url:'mailto:info@boarderking.it'},
           {t:'note', text:'Tip: always check the snow report and high-altitude weather conditions before heading up to the slopes.'},
+          {t:'h', text:'More than just skiing'},
+          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK for kids and teens'},
         ]
       },
       winterActivities:{
@@ -2709,7 +2713,7 @@ function blockHTML(b){
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
     case 'steps': return `<div class="b-steps">${b.items.map(s=>`<div class="b-step${s.alt?' alt':''}"><div class="num">${s.num}</div><div class="body">${s.title?`<div class="st-title">${s.title}</div>`:''}<div class="st-text">${s.text}</div></div></div>`).join('')}</div>`;
     case 'place': return `<div class="b-place"${b.id?` id="${b.id}"`:''}>
-        ${b.logo?`<div class="pl-logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div>`:(b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:'')}
+        ${b.logoFull?`<div class="pl-logofull"><img src="${b.logoFull}" alt="${b.name}" loading="lazy"></div>`:(b.logo?`<div class="pl-logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div>`:(b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:''))}
         <div class="pl-body">
         ${(b.tag||b.distance)?`<div class="pl-top">${b.tag?`<span class="pl-tag">${b.tag}</span>`:'<span></span>'}${b.distance?`<span class="pl-dist">${b.distance}</span>`:''}</div>`:''}
         <div class="pl-name">${b.name}</div>
