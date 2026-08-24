@@ -442,6 +442,7 @@ const ICONS = {
   cart:`<circle cx="9" cy="21" r="1.3" fill="currentColor" stroke="none"/><circle cx="18" cy="21" r="1.3" fill="currentColor" stroke="none"/><path d="M2 3h2.2l2.4 12.2a1.8 1.8 0 0 0 1.8 1.5h8.4a1.8 1.8 0 0 0 1.78-1.5L20.5 7H6"/>`,
   utensils:`<path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M6 2v20"/><path d="M18 2c-2.2 0-4 2.5-4 5.5 0 2.5 1.3 4.2 3 4.8V22"/>`,
   museum:`<path d="M3 21h18"/><path d="M4 21V10M8 21V10M12 21V10M16 21V10M20 21V10"/><path d="M2.5 10 12 4l9.5 6Z"/>`,
+  appsGrid:`<rect x="3" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8"/>`,
   calendar:`<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><circle cx="8" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="14" r="1" fill="currentColor" stroke="none"/>`,
 };
 function icon(name){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.info}</svg>`; }
@@ -500,6 +501,7 @@ const DATA = {
       {id:'emergency', icon:'bolt', label:'Emergenze in casa'},
       {id:'eventsToday', icon:'calendar', label:'Eventi Oggi', beta:true},
       {id:'guestbook', icon:'chat', label:'Lascia un feedback'},
+      {id:'usefulApps', icon:'appsGrid', label:'Applicazioni utili'},
       {id:'contacts', icon:'gear', label:'Contatti & aiuto'},
     ],
     sections:{
@@ -1518,6 +1520,31 @@ const DATA = {
           {t:'note', text:'Se invece siete rimasti soddisfatti, una recensione su Airbnb ci farebbe molto piacere 💛'},
         ]
       },
+      usefulApps:{
+        title:'Applicazioni utili',
+        blocks:[
+          {t:'p', text:'Alcune app che possono esservi utili durante il soggiorno in Val di Sole e in Trentino.'},
+          {t:'h', text:'Trentino Outdoor'},
+          {t:'place',
+            name:'App Trentino Outdoor',
+            logoFull:'images/app-trentino-outdoor-icon.png',
+            desc:'Scarica percorsi e itinerari per scoprire il territorio: organizza al meglio le tue attività outdoor in Trentino, per provare esperienze vere.',
+            url:'https://play.google.com/store/apps/details?id=de.alpstein.alpregio.Trentino', urlLabel:'Scarica su Google Play'
+          },
+          {t:'p', text:'Camminare, sentieri sulle Dolomiti. Pedalare, percorsi in mountain bike. Vivere la montagna in estate, tra trekking e arrampicate. Vivere la montagna in inverno, tra sci, sci alpinismo, ciaspole e ice climbing. E molti altri sport all’aria aperta.'},
+          {t:'p', text:'L’app propone descrizioni dettagliate, dati tecnici, mappe e percorsi GPX da scaricare, sia per gli sport estivi che per quelli invernali.'},
+          {t:'p', text:'Troverete inoltre informazioni sulle attrazioni naturali che meritano una visita, i castelli e i monumenti più ricchi di storia, le strutture dove sciare o fare attività sportive, i posti dove noleggiare l’attrezzatura, i parchi giochi per i bambini, i parchi avventura per divertirsi con gli amici, i locali dove mangiare e le strutture dove pernottare.'},
+          {t:'p', text:'Potrete anche condividere i percorsi con i vostri amici, per pianificare al meglio la prossima sfida outdoor in Trentino e sulle Dolomiti!'},
+          {t:'h', text:'Mio Trentino'},
+          {t:'place',
+            name:'App Mio Trentino',
+            logoFull:'images/mio-trentino-app-logo.png',
+            desc:'L’app che vi permette di attivare e utilizzare la Trentino Guest Card: accesso gratuito o scontato a oltre 100 attività del territorio — musei, castelli, parchi — oltre alla possibilità di viaggiare liberamente su tutti i mezzi pubblici della provincia.',
+            url:'https://play.google.com/store/apps/details?id=it.visittrentino.app.miotrentino&pcampaignid=web_share', urlLabel:'Scarica su Google Play'
+          },
+          {t:'jump', to:'activateGuestCard', icon:'key', label:'Come attivare la Trentino Guest Card'},
+        ]
+      },
       contacts:{
         title:'Contatti & aiuto',
         blocks:[
@@ -1639,6 +1666,7 @@ const DATA = {
       {id:'emergency', icon:'bolt', label:'Home emergencies'},
       {id:'eventsToday', icon:'calendar', label:'Events Today', beta:true},
       {id:'guestbook', icon:'chat', label:'Leave feedback'},
+      {id:'usefulApps', icon:'appsGrid', label:'Useful apps'},
       {id:'contacts', icon:'gear', label:'Contacts & help'},
     ],
     sections:{
@@ -2655,6 +2683,31 @@ const DATA = {
           {t:'p', text:'Was something not quite right, or do you have a suggestion to improve the stay? Write to us — we really do take it to heart.'},
           {t:'form'},
           {t:'note', text:'If you enjoyed your stay, a review on Airbnb would mean a lot to us 💛'},
+        ]
+      },
+      usefulApps:{
+        title:'Useful apps',
+        blocks:[
+          {t:'p', text:'A few apps that can come in handy during your stay in Val di Sole and in Trentino.'},
+          {t:'h', text:'Trentino Outdoor'},
+          {t:'place',
+            name:'Trentino Outdoor App',
+            logoFull:'images/app-trentino-outdoor-icon.png',
+            desc:'Download routes and itineraries to discover the area: plan your outdoor activities in Trentino to have genuine experiences.',
+            url:'https://play.google.com/store/apps/details?id=de.alpstein.alpregio.Trentino', urlLabel:'Get it on Google Play'
+          },
+          {t:'p', text:'Hiking, trails across the Dolomites. Cycling, mountain bike routes. Enjoying the mountains in summer, trekking and climbing. Enjoying the mountains in winter, skiing, ski touring, snowshoeing and ice climbing. And many more outdoor sports.'},
+          {t:'p', text:'The app offers detailed descriptions, technical data, maps and downloadable GPX tracks, for both summer and winter sports.'},
+          {t:'p', text:'You’ll also find information on natural attractions worth visiting, the castles and monuments richest in history, facilities for skiing or other sports, places to rent equipment, playgrounds for children, adventure parks to have fun with friends, places to eat and places to stay.'},
+          {t:'p', text:'You can also share routes with your friends, to better plan your next outdoor challenge in Trentino and the Dolomites!'},
+          {t:'h', text:'Mio Trentino'},
+          {t:'place',
+            name:'Mio Trentino App',
+            logoFull:'images/mio-trentino-app-logo.png',
+            desc:'The app that lets you activate and use the Trentino Guest Card: free or discounted access to over 100 local activities — museums, castles, parks — plus free travel on all public transport in the province.',
+            url:'https://play.google.com/store/apps/details?id=it.visittrentino.app.miotrentino&pcampaignid=web_share', urlLabel:'Get it on Google Play'
+          },
+          {t:'jump', to:'activateGuestCard', icon:'key', label:'How to activate the Trentino Guest Card'},
         ]
       },
       contacts:{
