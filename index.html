@@ -115,6 +115,33 @@
     letter-spacing:.04em; padding:2px 5px; border-radius:6px; line-height:1;
     box-shadow:0 2px 6px -2px rgba(139,78,46,.6);
   }
+
+  /* ---------- Essential tiles (priority) ---------- */
+  .tile-essential{
+    background:linear-gradient(160deg,#F7ECCE,#EFDBA2);
+    border:1px solid #D9B565;
+    box-shadow:0 10px 24px -11px rgba(199,134,42,.4);
+  }
+  .tile-essential:hover{border-color:var(--gold-dk); box-shadow:0 12px 26px -11px rgba(199,134,42,.55);}
+  .tile-essential .tile-icon{
+    background:linear-gradient(160deg,var(--forest),var(--forest-dk));
+    color:#F8F2E7;
+  }
+  .tile-essential .tile-label{color:var(--forest-dk);}
+
+  /* ---------- Section labels ---------- */
+  .section-label{
+    display:inline-block;
+    font-size:11.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--forest-dk);
+    background:var(--line-soft);
+    border:1px solid var(--line);
+    padding:6px 14px;
+    border-radius:999px;
+    margin:0 0 10px;
+  }
+  .section-label-wrap{padding:14px 16px 0;}
+  .section-label-wrap:first-of-type{padding-top:0;}
   .sheet-head .beta-badge{
     background:var(--clay); color:#fff; font-size:10px; font-weight:800;
     letter-spacing:.04em; padding:3px 7px; border-radius:999px; margin-left:8px; flex:none;
@@ -380,7 +407,16 @@
   </div>
 
   <div class="tap-hint" id="t-hint">Tocca un'icona</div>
-  <div class="grid" id="grid"></div>
+
+  <div class="section-label-wrap">
+    <span class="section-label" id="t-essentialLabel"></span>
+  </div>
+  <div class="grid" id="gridEssential"></div>
+
+  <div class="section-label-wrap">
+    <span class="section-label" id="t-usefulLabel"></span>
+  </div>
+  <div class="grid" id="gridUseful"></div>
 
   <div class="cta-wrap">
     <button class="cta" id="ctaContact">
@@ -476,6 +512,8 @@ const DATA = {
     hostline:'Un rifugio di <b>Angelo & Silvia</b> — Val di Sole, Trentino',
     sheetContactTitle:'Contattaci',
     closeLabel:'Chiudi',
+    essentialLabel:'Informazioni essenziali',
+    usefulLabel:'Consigli utili per la vacanza',
     nav:[
       {id:'welcome', icon:'home', label:'Benvenuto'},
       {id:'location', icon:'pin', label:'Posizione'},
@@ -1641,6 +1679,8 @@ const DATA = {
     hostline:'A retreat by <b>Angelo & Silvia</b> — Val di Sole, Trentino',
     sheetContactTitle:'Contact us',
     closeLabel:'Close',
+    essentialLabel:'Essential Information',
+    usefulLabel:'Useful tips for your stay',
     nav:[
       {id:'welcome', icon:'home', label:'Welcome'},
       {id:'location', icon:'pin', label:'Location'},
@@ -2826,16 +2866,22 @@ function renderHome(){
   document.getElementById('t-hint').textContent=d.hint;
   document.getElementById('t-cta').textContent=d.cta;
   document.getElementById('t-hostline').innerHTML=d.hostline;
+  document.getElementById('t-essentialLabel').textContent=d.essentialLabel;
+  document.getElementById('t-usefulLabel').textContent=d.usefulLabel;
 
-  const grid=document.getElementById('grid');
-  grid.innerHTML='';
-  d.nav.forEach(item=>{
+  const ESSENTIAL_COUNT=6;
+  const gridEssential=document.getElementById('gridEssential');
+  const gridUseful=document.getElementById('gridUseful');
+  gridEssential.innerHTML='';
+  gridUseful.innerHTML='';
+  d.nav.forEach((item,i)=>{
+    const isEssential=i<ESSENTIAL_COUNT;
     const tile=document.createElement('button');
-    tile.className='tile';
+    tile.className='tile'+(isEssential?' tile-essential':'');
     tile.setAttribute('aria-label', item.label);
     tile.innerHTML=`${item.beta?'<span class="tile-beta">BETA</span>':''}<span class="tile-icon">${icon(item.icon)}</span><span class="tile-label">${item.label}</span>`;
     tile.onclick=()=>openSection(item.id);
-    grid.appendChild(tile);
+    (isEssential?gridEssential:gridUseful).appendChild(tile);
   });
 }
 
