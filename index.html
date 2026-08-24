@@ -264,6 +264,10 @@
     border-radius:999px; padding:7px 12px; font-size:12.5px; font-weight:700; color:var(--forest-dk); text-decoration:none;
   }
   .b-place .pl-actions a svg{width:13px;height:13px; color:var(--gold-dk); flex:none;}
+  .b-place-link{display:block; text-decoration:none; color:inherit; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease;}
+  .b-place-link:active{transform:scale(.98);}
+  .b-place-link .pl-cta{display:flex; align-items:center; gap:6px; font-weight:700; color:var(--forest-dk); font-size:13.5px; margin-top:6px;}
+  .b-place-link .pl-cta svg{width:15px; height:15px; color:var(--gold-dk); flex:none;}
   .b-code{
     display:flex; align-items:center; justify-content:space-between; gap:10px;
     background:var(--forest-dk); color:#fff; border-radius:var(--radius-sm); padding:13px 14px; margin:0 0 14px;
@@ -736,7 +740,7 @@ const DATA = {
         title:'Info / FAQ',
         blocks:[
           {t:'h', text:'A che ora posso accedere/lasciare l’appartamento?'},
-          {t:'p', text:'Salvo diverso accordo con i proprietari, il check-in è richiesto tra le 12 e le 18, poiché il portone in Galleria rimane aperto in quella fascia oraria. Qualora prevediate di giungere più tardi delle 18, mantenetici informati: provvederemo a farvi aprire da una persona presente in loco. Il check-out è richiesto entro le 10:00, ma se avete necessità di posticipare tale orario, comunicatecelo: cercheremo di venirvi incontro.'},
+          {t:'p', text:'Salvo diverso accordo con i proprietari, il check-in è richiesto tra le 12 e le 18, poiché il portone in Galleria rimane aperto in quella fascia oraria. Qualora prevediate di giungere più tardi delle 18, manteneteci informati: provvederemo a farvi aprire da una persona presente in loco. Il check-out è richiesto entro le 10:00, ma se avete necessità di posticipare tale orario, comunicatecelo: cercheremo di venirvi incontro.'},
           {t:'jump', to:'checkin', icon:'key', label:'Scheda “Check-in & Check-out”'},
           {t:'h', text:'Posso portare animali domestici?'},
           {t:'p', text:'Sì, nel numero massimo di uno. Resta a carico dell’ospite l’onere di predisporre lettiere.'},
@@ -1222,7 +1226,7 @@ const DATA = {
           {t:'link', icon:'mail', label:'info@boarderking.it', url:'mailto:info@boarderking.it'},
           {t:'note', text:'Consiglio: controllate sempre il bollettino neve e le condizioni meteo in quota prima di salire in pista.'},
           {t:'h', text:'Non solo sci'},
-          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK per bambini e ragazzi'},
+          {t:'jumpCard', to:'winterActivities', anchor:'snowparkKids', img:'images/snowpark-family-park-folgarida.jpg', name:'SNOWPARK per bambini e ragazzi', desc:'Tubing, slittini, gonfiabili e piste per i primi passi sugli sci: scopri tutti i parchi giochi sulla neve della valle.', cta:'Scopri gli Snowpark'},
         ]
       },
       winterActivities:{
@@ -1259,7 +1263,7 @@ const DATA = {
           {t:'h', text:'Snowpark per bambini', id:'snowparkKids'},
           {t:'p', text:'In Val di Sole non mancano parchi giochi sulla neve pensati apposta per i più piccoli, tra tubing, slittini, gonfiabili e piste per i primi passi sugli sci.'},
           {t:'place',
-            name:'Bruscadela', tag:'Raggiungibile in auto',
+            name:'Bruscadela', tag:'Raggiungibile in auto', distance:'La più economica',
             address:'Via della Prada, 31 — 38029 Vermiglio (TN)',
             desc:'Parco neve con un’adrenalinica pista tubing e airboard, oltre a discese per slitte e bob, collegate da un comodo tapis roulant per la risalita.',
             img:'images/snowpark-bruscadela.jpg',
@@ -2336,7 +2340,7 @@ const DATA = {
           {t:'link', icon:'mail', label:'info@boarderking.it', url:'mailto:info@boarderking.it'},
           {t:'note', text:'Tip: always check the snow report and high-altitude weather conditions before heading up to the slopes.'},
           {t:'h', text:'More than just skiing'},
-          {t:'jump', to:'winterActivities', anchor:'snowparkKids', icon:'snow', label:'SNOWPARK for kids and teens'},
+          {t:'jumpCard', to:'winterActivities', anchor:'snowparkKids', img:'images/snowpark-family-park-folgarida.jpg', name:'SNOWPARK for kids and teens', desc:'Tubing, sledging, inflatables and slopes for first-time skiers: discover all the snow playgrounds in the valley.', cta:'Discover the Snowparks'},
         ]
       },
       winterActivities:{
@@ -2373,7 +2377,7 @@ const DATA = {
           {t:'h', text:'Snowpark for kids', id:'snowparkKids'},
           {t:'p', text:'Val di Sole has no shortage of snow playgrounds designed just for children, with tubing, sledging, inflatables and slopes for first-time skiers.'},
           {t:'place',
-            name:'Bruscadela', tag:'Reachable by car',
+            name:'Bruscadela', tag:'Reachable by car', distance:'Best value',
             address:'Via della Prada, 31 — 38029 Vermiglio (TN)',
             desc:'A snow park with a thrilling tubing and airboard run, plus sledge and bob descents, connected by a convenient conveyor lift for the way back up.',
             img:'images/snowpark-bruscadela.jpg',
@@ -2742,6 +2746,14 @@ function blockHTML(b){
     case 'ph': return `<div class="b-ph">${b.text}</div>`;
     case 'link': return `<a class="b-link" href="${b.url}" target="_blank" rel="noopener">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
     case 'jump': return `<a class="b-link" href="#${b.to}" onclick="event.preventDefault(); openSection('${b.to}'${b.anchor?`,'${b.anchor}'`:''});">${icon(b.icon||'pin')}<span>${b.label}</span><span class="arrow">${icon('arrow')}</span></a>`;
+    case 'jumpCard': return `<a class="b-place b-place-link" href="#${b.to}" onclick="event.preventDefault(); openSection('${b.to}'${b.anchor?`,'${b.anchor}'`:''});">
+        ${b.img?`<img class="pl-photo" src="${b.img}" alt="${b.name}" loading="lazy">`:''}
+        <div class="pl-body">
+          <div class="pl-name">${b.name}</div>
+          ${b.desc?`<div class="pl-desc">${b.desc}</div>`:''}
+          <div class="pl-cta">${icon('arrow')}<span>${b.cta||'Scopri di più'}</span></div>
+        </div>
+      </a>`;
     case 'img': return `<div class="b-img"${b.center?' style="text-align:center"':''}><img src="${b.src}" alt="${b.alt||''}" loading="lazy"${b.width?` style="width:${b.width};display:inline-block;"`:''}>${b.caption? `<div class="cap">${b.caption}</div>`:''}</div>`;
     case 'mapembed': return `<div class="b-map"><iframe src="https://www.google.com/maps?q=${encodeURIComponent(b.query)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
     case 'brand': return `<a class="b-brand" href="${b.url}" target="_blank" rel="noopener"><div class="logostrip"><img src="${b.logo}" alt="${b.name}" loading="lazy"></div><div class="row"><span class="tag">${b.tagline}</span><span class="arrow">${icon('arrow')}</span></div></a>`;
