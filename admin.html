@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Cevedale 20 — Area Host</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#ECE4DB;--panel:#F8F2E7;--forest:#33513A;--forest-dk:#233A29;--gold:#E3A53A;--gold-dk:#C7862A;--clay:#A8633D;--ink:#2A2420;--ink-soft:#5B5346;--line:#E1D5B8;--danger:#B4482F;--radius-md:16px;--radius-sm:10px;--shadow-sm:0 4px 14px -6px rgba(43,36,25,.2);}
+*{box-sizing:border-box;}
+body{margin:0;background:radial-gradient(1200px 500px at 50% -10%,#FFFDF6 0%,var(--cream) 55%),var(--cream);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 40px;}
+.wrap{max-width:760px;margin:0 auto;padding:16px;}
+h1{font-family:'Baloo 2',sans-serif;font-size:24px;color:var(--forest-dk);margin:10px 0 2px;}
+h2{font-family:'Baloo 2',sans-serif;font-size:17px;color:var(--forest-dk);margin:0 0 10px;}
+.sub{color:var(--ink-soft);font-size:13.5px;margin:0 0 16px;}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px;margin:0 0 14px;box-shadow:var(--shadow-sm);}
+label{font-size:12px;font-weight:700;color:var(--forest-dk);display:block;margin-bottom:4px;}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px 11px;font:inherit;font-size:14px;margin-bottom:10px;background:#fff;color:var(--ink);}
+textarea{font-family:'JetBrains Mono',monospace;font-size:11px;}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 10px;}
+.btn{border:none;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;cursor:pointer;background:var(--forest);color:#fff;}
+.btn.ghost{background:transparent;color:var(--forest-dk);border:1.5px solid var(--forest);}
+.btn.gold{background:var(--gold);color:var(--forest-dk);}
+.btn.red{background:transparent;color:var(--danger);border:1.5px solid var(--danger);}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;color:#fff;background:var(--gold-dk);}
+.badge.ok{background:var(--forest);}
+.msg{font-size:13px;margin:6px 0;color:var(--ink-soft);} .msg.bad{color:var(--danger);font-weight:600;}
+.warn{background:#FCEBE4;border:1px solid #EFC1AE;border-left:4px solid var(--danger);border-radius:var(--radius-sm);padding:10px 12px;font-size:13px;margin:0 0 12px;color:#6E2A16;}
+.stay{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;}
+.stay:first-of-type{border:none;margin:0;padding:0;}
+.code{font-family:'JetBrains Mono',monospace;font-weight:700;letter-spacing:.06em;background:var(--forest-dk);color:#fff;padding:3px 9px;border-radius:8px;font-size:13px;}
+.sublist{margin:8px 0 0;padding:0;list-style:none;}
+.sublist li{display:flex;align-items:center;gap:8px;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:8px 10px;margin-bottom:6px;font-size:13px;}
+.modal{position:fixed;inset:0;background:rgba(35,29,22,.55);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:16px;z-index:50;}
+.modal.open{display:flex;}
+.modal .box{background:var(--cream);border-radius:20px;max-width:640px;width:100%;padding:18px;}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:4px 10px;font-size:14px;margin:0 0 12px;}
+.kv b{color:var(--forest-dk);font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px;}
+.imgs img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--line);margin-bottom:8px;display:block;cursor:zoom-in;}
+details{margin-top:10px;} summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--forest-dk);}
+[hidden]{display:none!important;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Cevedale 20 — Area Host</h1>
+  <p class="sub">Gestione registrazioni ospiti. I dati sono cifrati: vengono decifrati solo qui, nel tuo browser, con la tua chiave privata.</p>
+
+  <!-- LOGIN -->
+  <section id="login">
+    <div class="card">
+      <h2>Accesso</h2>
+      <label>Email</label><input id="em" type="email" autocomplete="username">
+      <label>Password</label><input id="pw" type="password" autocomplete="current-password">
+      <div id="loginMsg" class="msg"></div>
+      <button class="btn" id="btnLogin">Accedi</button>
+    </div>
+    <div class="card">
+      <details>
+        <summary>Prima configurazione: genera la coppia di chiavi di cifratura</summary>
+        <p class="sub" style="margin-top:10px">Da fare <b>una sola volta</b>, prima di pubblicare la scheda. La generazione avviene nel tuo browser (alcuni secondi).</p>
+        <div class="warn"><b>Importante:</b> il file della chiave privata è l’unico modo per leggere i dati. Conservalo in un password manager o in un posto sicuro e non condividerlo. Se lo perdi, i dati già inviati non sono più leggibili.</div>
+        <button class="btn gold" id="btnGen">Genera chiavi</button>
+        <div id="genMsg" class="msg"></div>
+        <div id="genOut" hidden>
+          <label style="margin-top:8px">Chiave PUBBLICA — da incollare in registrazione.js (campo publicKey)</label>
+          <textarea id="pubOut" rows="6" readonly onclick="this.select()"></textarea>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- AREA HOST -->
+  <section id="main" hidden>
+    <div class="card">
+      <h2>Chiave privata</h2>
+      <div id="keyState" class="msg">Non caricata. Serve per aprire i documenti (resta solo nella memoria del browser).</div>
+      <input type="file" id="keyFile" accept=".json,application/json">
+    </div>
+
+    <div class="card">
+      <h2>Nuovo soggiorno</h2>
+      <label>Nota (es. “Rossi – dicembre”; niente dati sensibili)</label><input id="nLabel">
+      <div class="row"><div><label>Check-in</label><input type="date" id="nIn"></div><div><label>Check-out</label><input type="date" id="nOut"></div></div>
+      <div class="row"><div><label>N. massimo ospiti</label><input type="number" id="nMax" min="1" max="10" value="4"></div>
+        <div><label>Combinazione cassetta di sicurezza</label><input id="nLock" autocomplete="off"></div></div>
+      <label>Quando mostrare il codice cassetta all’ospite</label>
+      <select id="nReveal"><option value="verified">Dopo che ho verificato i documenti (consigliato)</option><option value="submit">Subito dopo l’invio dei dati</option></select>
+      <div id="newMsg" class="msg"></div>
+      <button class="btn" id="btnNew">Crea soggiorno e link</button>
+    </div>
+
+    <div class="card">
+      <h2>Soggiorni</h2>
+      <div id="stays" class="msg">Caricamento…</div>
+      <div class="btns"><button class="btn ghost" id="btnReload">Aggiorna</button><button class="btn ghost" id="btnLogout">Esci</button></div>
+    </div>
+  </section>
+</div>
+
+<div class="modal" id="modal"><div class="box" id="modalBox"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+/* ===== CONFIGURAZIONE: stessi valori di registrazione.js ===== */
+const SUPABASE_URL = 'https://YOUR-PROJECT-REF.supabase.co';
+const ANON_KEY     = 'YOUR-ANON-PUBLIC-KEY';
+
+const sb = supabase.createClient(SUPABASE_URL, ANON_KEY, {auth:{storage:window.sessionStorage,persistSession:true}});
+const $ = id=>document.getElementById(id);
+const esc = s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const b64d = s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const fmtDate = d=>new Date(d+'T00:00:00').toLocaleDateString('it-IT');
+const fmtTs = d=>new Date(d).toLocaleString('it-IT');
+const pretty = c=>c.length===8?c.slice(0,4)+'-'+c.slice(4):c;
+let PRIV=null, STAYS=[];
+
+/* ---------- Chiavi ---------- */
+$('btnGen').onclick=async()=>{
+  $('genMsg').textContent='Generazione in corso…'; await new Promise(r=>setTimeout(r,50));
+  try{
+    const kp=await crypto.subtle.generateKey({name:'RSA-OAEP',modulusLength:4096,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['encrypt','decrypt']);
+    const pub=await crypto.subtle.exportKey('jwk',kp.publicKey), priv=await crypto.subtle.exportKey('jwk',kp.privateKey);
+    const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(priv)],{type:'application/json'}));
+    a.download='cevedale20-chiave-privata.json'; a.click();
+    $('pubOut').value=JSON.stringify(pub); $('genOut').hidden=false;
+    $('genMsg').textContent='Fatto. Il file della chiave privata è stato scaricato: mettilo al sicuro.';
+  }catch(e){ $('genMsg').className='msg bad'; $('genMsg').textContent='Errore: '+e.message; }
+};
+$('keyFile').onchange=async e=>{
+  const f=e.target.files[0]; if(!f) return;
+  try{
+    PRIV=await crypto.subtle.importKey('jwk',JSON.parse(await f.text()),{name:'RSA-OAEP',hash:'SHA-256'},false,['decrypt']);
+    $('keyState').className='msg'; $('keyState').textContent='✓ Chiave caricata (solo in memoria, scompare alla chiusura della pagina).';
+  }catch(err){ PRIV=null; $('keyState').className='msg bad'; $('keyState').textContent='File chiave non valido.'; }
+};
+async function decryptSub(s){
+  if(!PRIV) throw new Error('nokey');
+  const raw=await crypto.subtle.decrypt({name:'RSA-OAEP'},PRIV,b64d(s.enc_key));
+  const aes=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64d(s.iv)},aes,b64d(s.blob));
+  return JSON.parse(new TextDecoder().decode(pt));
+}
+
+/* ---------- Login ---------- */
+async function enter(){ $('login').hidden=true; $('main').hidden=false; await loadStays(); }
+$('btnLogin').onclick=async()=>{
+  $('loginMsg').className='msg'; $('loginMsg').textContent='Accesso…';
+  const {error}=await sb.auth.signInWithPassword({email:$('em').value.trim(),password:$('pw').value});
+  if(error){ $('loginMsg').className='msg bad'; $('loginMsg').textContent='Credenziali non valide.'; return; }
+  $('pw').value=''; enter();
+};
+$('btnLogout').onclick=async()=>{ await sb.auth.signOut(); PRIV=null; location.reload(); };
+$('btnReload').onclick=loadStays;
+sb.auth.getSession().then(({data})=>{ if(data.session) enter(); });
+
+/* ---------- Soggiorni ---------- */
+const ALPHA='ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+function genCode(){ const a=crypto.getRandomValues(new Uint8Array(8)); return [...a].map(x=>ALPHA[x%ALPHA.length]).join(''); }
+const guestLink = code=>new URL('./',location.href).href+'?s='+code+'#register';
+
+$('btnNew').onclick=async()=>{
+  const inn=$('nIn').value, out=$('nOut').value;
+  if(!inn||!out||out<inn){ $('newMsg').className='msg bad'; $('newMsg').textContent='Controlla le date.'; return; }
+  const row={code:genCode(),label:$('nLabel').value.trim()||null,check_in:inn,check_out:out,max_guests:+$('nMax').value||4,
+    lockbox_code:$('nLock').value.trim()||null,reveal_on:$('nReveal').value};
+  const {error}=await sb.from('stays').insert(row);
+  if(error){ $('newMsg').className='msg bad'; $('newMsg').textContent='Errore: '+error.message; return; }
+  $('newMsg').className='msg'; $('newMsg').innerHTML='Creato. Codice: <span class="code">'+pretty(row.code)+'</span> — link da inviare all’ospite: <br><span style="word-break:break-all">'+esc(guestLink(row.code))+'</span>';
+  loadStays();
+};
+
+async function loadStays(){
+  $('stays').className='msg'; $('stays').textContent='Caricamento…';
+  const {data,error}=await sb.from('stays').select('*, submissions(id,ref,created_at,verified_at)').order('check_in',{ascending:false});
+  if(error){ $('stays').className='msg bad'; $('stays').textContent='Errore: '+error.message+' (sei registrato come amministratore?)'; return; }
+  STAYS=data;
+  if(!data.length){ $('stays').textContent='Nessun soggiorno attivo.'; return; }
+  $('stays').className='';
+  $('stays').innerHTML=data.map(s=>{
+    const subs=(s.submissions||[]).sort((a,b)=>a.created_at<b.created_at?-1:1), v=subs.filter(x=>x.verified_at).length;
+    return `<div class="stay"><div><b>${esc(s.label||'Soggiorno')}</b> · ${fmtDate(s.check_in)} → ${fmtDate(s.check_out)}</div>
+      <div style="margin:6px 0">Codice <span class="code">${pretty(s.code)}</span> · ospiti ${subs.length}/${s.max_guests} · verificati ${v}/${subs.length}</div>
+      <ul class="sublist">${subs.map(x=>`<li><span>#${esc(x.ref)} · ${fmtTs(x.created_at)} <span class="badge ${x.verified_at?'ok':''}">${x.verified_at?'Verificato':'Da verificare'}</span></span><button class="btn" data-open="${x.id}">Apri</button></li>`).join('')||'<li>Nessun ospite ha ancora inviato i dati.</li>'}</ul>
+      <div class="btns"><button class="btn ghost" data-link="${s.code}">Copia link ospiti</button>
+      <button class="btn ghost" data-csv="${s.id}">Esporta CSV</button>
+      <button class="btn red" data-delstay="${s.id}">Elimina soggiorno e dati</button></div></div>`;
+  }).join('');
+}
+$('stays').onclick=async e=>{
+  const t=e.target.closest('button'); if(!t) return;
+  if(t.dataset.open) openSub(t.dataset.open);
+  if(t.dataset.link){ try{await navigator.clipboard.writeText(guestLink(t.dataset.link)); t.textContent='Copiato ✓';}catch(_){ prompt('Link:',guestLink(t.dataset.link)); } }
+  if(t.dataset.csv) exportCsv(t.dataset.csv);
+  if(t.dataset.delstay && confirm('Eliminare definitivamente il soggiorno e TUTTI i dati degli ospiti?')){
+    const {error}=await sb.from('stays').delete().eq('id',t.dataset.delstay); if(error) alert(error.message); loadStays();
+  }
+};
+
+/* ---------- Dettaglio ospite ---------- */
+const FIELDS=[['guestTypeLabel','Tipo ospite'],['surname','Cognome'],['name','Nome'],['sex','Sesso'],['birthDate','Data di nascita'],['birthPlace','Luogo di nascita'],['citizenship','Cittadinanza'],['docType','Tipo documento'],['docNumber','N. documento'],['docIssuer','Rilasciato da']];
+const okImg = u=>typeof u==='string' && /^data:image\/jpeg;base64,[A-Za-z0-9+\/=]+$/.test(u);
+function openBlob(u){ const b=b64d(u.split(',')[1]); window.open(URL.createObjectURL(new Blob([b],{type:'image/jpeg'})),'_blank'); }
+function closeModal(){ $('modal').classList.remove('open'); $('modalBox').innerHTML=''; }
+$('modal').onclick=e=>{ if(e.target===$('modal')) closeModal(); };
+
+async function openSub(id){
+  const {data:s,error}=await sb.from('submissions').select('*').eq('id',id).single();
+  if(error){ alert(error.message); return; }
+  let p; try{ p=await decryptSub(s); }catch(e){ alert(e.message==='nokey'?'Carica prima la chiave privata.':'Impossibile decifrare con questa chiave.'); return; }
+  const rows=FIELDS.map(([k,l])=>`<b>${l}</b><span>${esc(p[k]||'—')}</span>`).join('');
+  const imgs=[['front','Fronte'],['back','Retro']].filter(([k])=>okImg(p[k])).map(([k,l])=>`<div><b style="font-size:12px;color:var(--forest-dk)">${l}</b><img data-img="${k}" alt="${l}" src="${p[k]}"></div>`).join('');
+  $('modalBox').innerHTML=`<h2>Ospite · ricezione #${esc(s.ref)} <span class="badge ${s.verified_at?'ok':''}">${s.verified_at?'Verificato':'Da verificare'}</span></h2>
+    <div class="kv">${rows}</div><div class="imgs">${imgs||'<p class="msg">Nessuna immagine (minorenne senza documento).</p>'}</div>
+    <div class="btns"><button class="btn" id="mVer">${s.verified_at?'Annulla verifica':'✓ Ho controllato i documenti: segna come verificato'}</button>
+    <button class="btn ghost" id="mCopy">Copia dati</button><button class="btn red" id="mDel">Elimina ospite</button><button class="btn ghost" id="mClose">Chiudi</button></div>`;
+  $('modal').classList.add('open');
+  $('modalBox').querySelectorAll('img[data-img]').forEach(im=>im.onclick=()=>openBlob(p[im.dataset.img]));
+  $('mClose').onclick=closeModal;
+  $('mCopy').onclick=()=>navigator.clipboard.writeText(FIELDS.map(([k,l])=>l+': '+(p[k]||'')).join('\n'));
+  $('mVer').onclick=async()=>{
+    const {error}=await sb.from('submissions').update({verified_at:s.verified_at?null:new Date().toISOString()}).eq('id',s.id);
+    if(error) alert(error.message); closeModal(); loadStays();
+  };
+  $('mDel').onclick=async()=>{
+    if(!confirm('Eliminare questo ospite? L’ospite potrà reinviare i dati.')) return;
+    const {error}=await sb.from('submissions').delete().eq('id',s.id); if(error) alert(error.message); closeModal(); loadStays();
+  };
+}
+
+/* ---------- Export CSV (dati senza immagini) ---------- */
+async function exportCsv(stayId){
+  if(!PRIV){ alert('Carica prima la chiave privata.'); return; }
+  const {data,error}=await sb.from('submissions').select('*').eq('stay_id',stayId).order('created_at');
+  if(error){ alert(error.message); return; }
+  const cols=FIELDS.map(f=>f[0]), q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+  const lines=[FIELDS.map(f=>q(f[1])).join(';')];
+  for(const s of data){ try{ const p=await decryptSub(s); lines.push(cols.map(c=>q(p[c])).join(';')); }catch(_){} }
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv'}));
+  a.download='ospiti-'+stayId.slice(0,8)+'.csv'; a.click();
+  alert('Il CSV contiene dati personali in chiaro: eliminalo dopo l’uso.');
+}
+</script>
+</body>
+</html>
