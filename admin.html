@@ -149,9 +149,10 @@ async function decryptSub(s){
 /* ---------- Login ---------- */
 async function enter(){ $('login').hidden=true; $('main').hidden=false; await loadStays(); }
 $('btnLogin').onclick=async()=>{
+  if(SUPABASE_URL.indexOf('YOUR-')>=0||ANON_KEY.indexOf('YOUR-')>=0){ $('loginMsg').className='msg bad'; $('loginMsg').textContent='Mancano SUPABASE_URL e ANON_KEY nel file admin.html.'; return; }
   $('loginMsg').className='msg'; $('loginMsg').textContent='Accesso…';
   const {error}=await sb.auth.signInWithPassword({email:$('em').value.trim(),password:$('pw').value});
-  if(error){ $('loginMsg').className='msg bad'; $('loginMsg').textContent='Credenziali non valide.'; return; }
+  if(error){ $('loginMsg').className='msg bad'; $('loginMsg').textContent='Accesso non riuscito: '+error.message; return; }
   $('pw').value=''; enter();
 };
 $('btnLogout').onclick=async()=>{ await sb.auth.signOut(); PRIV=null; location.reload(); };
